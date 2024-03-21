@@ -45,9 +45,9 @@ For a single Galaxy 4U Server, you will need **9U of contiguous rack space**, an
 
 <img src=".\images\stack_1galaxy.png" style="zoom:50%;" />
 
-- T7000 4U Workstation (4U)
 - Galaxy 4U Server (4U)
 - Power Supply Unit (1U)
+- T7000 4U Workstation (4U)
 
 For dual Galaxy 4U Servers, you will need **13U of contiguous rack space**, and the units will need to be arranged in this order:
 

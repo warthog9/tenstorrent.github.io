@@ -12,8 +12,8 @@ Documentation and support for Tenstorrent add-in boards and the Active Cooling K
 
 Documentation and support for Tenstorrent add-in boards and the Active Cooling Kit:
 
-- **e75/e150 Machine Learning Accelerator**
-- **Active Cooling Kit**
+- [**e75/e150 Machine Learning Accelerator**](./aibs/grayskull/README.md)
+- [**Active Cooling Kit**](./aibs/ack.md)
 
 
 
@@ -22,6 +22,12 @@ Documentation and support for Tenstorrent add-in boards and the Active Cooling K
 Physical and software setup for Tenstorrent workstation and server solutions:
 
 ![](./images/galaxyservers.png)
+
+- [**T1000 Desktop Workstation**](./systems/t1000/README.md)
+
+- [**T3000 4U Workstation**](./systems/t3000/README.md)
+
+- [**T7000 4U Workstation**](./systems/t7000/README.md)
 
 - [**Galaxy 4U Server**](./galaxy4U/README.md)
 
@@ -49,12 +55,6 @@ Documentation and downloads for drivers, software, and utilities to manage Tenst
 
 ## Support
 
-For additional help with or information about Tenstorrent's technologies, please contact
+For support, forums, and community, visit Tenstorrent's [Discord channel](https://discord.gg/tvhGzHQwaj).
 
-[]: support@tenstorrent.com	"support@tenstorrent.com"
-
-  or visit our 
-
-[Discord]: https://discord.gg/tvhGzHQwaj
-
-.
+For additional support, you can contact us directly at [support@tenstorrent.com](mailto:support@tenstorrent.com).
