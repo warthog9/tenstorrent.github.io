@@ -8,7 +8,7 @@ Tenstorrent produces add-in boards, system solutions, APIs, IP, and more featuri
 
 Documentation and support for Tenstorrent add-in boards and the Active Cooling Kit:
 
-![](.\images\main_image1.png)
+![](./images/main_image1.png)
 
 Documentation and support for Tenstorrent add-in boards and the Active Cooling Kit:
 
@@ -21,7 +21,7 @@ Documentation and support for Tenstorrent add-in boards and the Active Cooling K
 
 Physical and software setup for Tenstorrent workstation and server solutions:
 
-![](.\images\galaxyservers.png)
+![](./images/galaxyservers.png)
 
 - [**Galaxy 4U Server**](./galaxy4U/README.md)
 
