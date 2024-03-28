@@ -2,7 +2,7 @@
 
 ## Grayskull™ AI Graph Processor
 
-The e75 and e150 AI graph processor add-in boards are built using the Tenstorrent Grayskull™ AI graph processor:
+The e75 and e150 AI Graph Processor add-in boards are built using the Tenstorrent Grayskull™ AI Graph Processor:
 
 - **Tensix Core Count:** 120
 - **SRAM:** 120MB (1MB per Tensix Core)

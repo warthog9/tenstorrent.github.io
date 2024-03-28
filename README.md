@@ -29,7 +29,7 @@ Physical and software setup for Tenstorrent workstation and server solutions:
 
 - [**T7000 4U Workstation**](./systems/t7000/README.md)
 
-- [**Galaxy 4U Server**](./galaxy4U/README.md)
+- [**Galaxy Wormhole 4U Server**](./galaxy4U/README.md)
 
   
 

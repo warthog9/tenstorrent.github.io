@@ -1,10 +1,11 @@
 # Specifications
 
-## Galaxy 4U Server Specifications
+## Galaxy Wormhole 4U Server Specifications
 
-| **Specification**                 | **Single Galaxy Module**                   | **Full Galaxy 4U Server**                |
+| **Specification**                 | **Single Galaxy Module**                   | **Full Galaxy Wormhole 4U Server**       |
 | --------------------------------- | ------------------------------------------ | ---------------------------------------- |
-| AI Graph Processor(s)             | Tenstorrent Wormhole                       | 32x Tenstorrent Wormhole                 |
+| Part Number                       | -                                          | TG-00001                                 |
+| AI Graph Processor(s)             | Tenstorrent Wormhole™                      | 32x Tenstorrent Wormhole™                |
 | Galaxy Modules                    | 1                                          | 32                                       |
 | Tensix Cores                      | 80                                         | 2,560                                    |
 | AI Clock                          | 1 GHz                                      | 1 GHz                                    |
@@ -17,11 +18,11 @@
 | Board Management Controller (BMC) | -                                          | IMX8                                     |
 | Weight                            | -                                          | 130 lbs. / 59 kg                         |
 
-## Power Supply Unit Specifications
+## Galaxy Wormhole Power Supply Specifications
 
-Tenstorrent Galaxy 4U Servers are shipped with one (1) power supply unit containing six (6) Murata MWOCP68-3600-B-RM Power Supply Modules for every two (2) Galaxy 4U Servers. The data sheet for the Murata Power Supply Module can be downloaded from Murata in PDF form [here](https://www.murata.com/-/media/webrenewal/products/power/datasheet/mwocp68-3600-b-rm.ashx?la=en&cvid=20230314020000000000).
+Tenstorrent Galaxy Wormhole 4U Servers are shipped with one (1) Galaxy Wormhole Power Supply containing six (6) Murata MWOCP68-3600-B-RM Power Supply Modules for every two (2) Galaxy Wormhole 4U Servers. The data sheet for the Murata Power Supply Module can be downloaded from Murata in PDF form [here](https://www.murata.com/-/media/webrenewal/products/power/datasheet/mwocp68-3600-b-rm.ashx?la=en&cvid=20230314020000000000).
 
-Under peak load of two (2) Galaxy 4U Servers, the Power Supply Unit will still only require five (5) of the individual power supply modules. In practice, this makes the Power Supply Unit a 5+1 redundant power supply, though most customer configurations can likely handle two or more supplies failing without bringing down the Galaxy 4U Server(s). The power supply modules are also hot-swappable.
+Under peak load of two (2) Galaxy Wormhole 4U Servers, the Galaxy Wormhole Power Supply will only require five (5) of the individual power supply modules. In practice, this makes the Galaxy Wormhole Power Supply a 5+1 redundant power supply, though most customer configurations can likely handle two or more supplies failing without bringing down the Galaxy Wormhole 4U Server(s). The power supply modules are also hot-swappable.
 
 ## Board Management Controller (BMC)
 
@@ -31,14 +32,14 @@ The BMC can report the following system parameters:
 
 - Power per Galaxy Module
 - Individual power reports from internal power modules
-- Temperatures across Galaxy 4U System
+- Temperatures across Galaxy Wormhole 4U Server
 - Fan Speed
 
 ## High-Speed Interconnectivity
 
 ![galaxy_interconnect_diagram](./images/galaxy_interconnect_diagram.png)
 
-Each Galaxy Module is connected via four (4) 100GbE Ethernet links to adjacent Galaxy Modules. Modules close to the front and back panels have two (2) 100GbE connections to the QSFP-DD Ethernet ports, enabling connectivity to other Galaxy 4U Server systems or the Host Computer within or outside of the rack.
+Each Galaxy Module is connected via four (4) 100GbE Ethernet links to adjacent Galaxy Modules. Modules close to the front and back panels have two (2) 100GbE connections to the QSFP-DD Ethernet ports, enabling connectivity to other Galaxy Wormhole 4U Server systems or the Host Computer within or outside of the rack.
 
 ## Front I/O
 
@@ -66,24 +67,24 @@ Each Galaxy Module is connected via four (4) 100GbE Ethernet links to adjacent G
 
 ## Package Contents
 
-Tenstorrent Galaxy 4U Servers are shipped palletized with one (1) Power Supply Unit for every two (2) Galaxy 4U Servers.
+Tenstorrent Galaxy Wormhole 4U Servers are shipped palletized with one (1) Galaxy Wormhole Power Supply for every two (2) Galaxy Wormhole 4U Servers.
 
-### Galaxy 4U Server
+### Galaxy Wormhole 4U Server
 
-Each Galaxy 4U Server box contains:
+Each Galaxy Wormhole 4U Server box contains:
 
-- One (1) Galaxy 4U Server system
+- One (1) Galaxy Wormhole 4U Server system
 - Two (2) rack shelves
 - Four (4) 2 ft. / 0.6 m QSFP-DD 400GbE cables
 - One (1) accessory box containing:
   - 20 M6x16 Torx T30 screws (2 spare)
   - 20 M6 cage nuts (2 spare)
 
-### Power Supply Unit
+### Galaxy Wormhole Power Supply
 
-Each Power Supply Unit box contains:
+Each Galaxy Wormhole Power Supply box contains:
 
-- One (1) Power Supply Unit populated with:
+- One (1) Galaxy Wormhole Power Supply populated with:
   - Six (6) Murata MWOCP68-3600-B-RM Power Supply Modules
 - Two (2) rack shelves
 - Six (6) 6 ft. / 1.8 m C19-to-C20 power cables
