@@ -102,7 +102,7 @@ When installing bus bars, washers must be placed between the screws and bus bars
 
 ### For Single Galaxy Wormhole 4U Server
 
-1. Locate **nine (+9) M5x10 T25 Torx screws**, **eight (8) M5 Belleville washers**, **lower bus bars**, and the **top bus bar cover**.
+1. Locate **nine (9) M5x10 T25 Torx screws**, **eight (8) M5 Belleville washers**, **lower bus bars**, and the **top bus bar cover**.
 2. Mount bus bars using **Torx screws** and **Belleville washers** using a torque screwdriver with **6.2 Nm** torque.
 
 <img src="./images/galaxy_busbars1.png" style="zoom:67%;" />
