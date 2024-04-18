@@ -1,4 +1,4 @@
-from ..conf2 import *
+from ..conf import *
 
 # extensions = extensions + [
 #     "custom.extension",
