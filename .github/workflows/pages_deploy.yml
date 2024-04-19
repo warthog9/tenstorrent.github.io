@@ -3,7 +3,7 @@ name: Build and Deploy Sphinx Documentation
 on:
   push:
     branches:
-      - jwilde/pages-deploy
+      - main
 
 jobs:
   build-and-deploy:
