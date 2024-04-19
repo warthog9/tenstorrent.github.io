@@ -17,6 +17,7 @@ Tenstorrent
 
 Systems
 =======================================
+
 .. toctree::
    :maxdepth: 2
 
@@ -24,9 +25,10 @@ Systems
 
 
 
-Indices and tables
-==================
+TT-Buda
+=======================================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. toctree::
+   :maxdepth: 2
+
+   pybuda/index
