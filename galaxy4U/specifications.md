@@ -88,9 +88,9 @@ Each Galaxy Wormhole Power Supply box contains:
   - Six (6) Murata MWOCP68-3600-B-RM Power Supply Modules
 - Two (2) rack shelves
 - Six (6) 6 ft. / 1.8 m C19-to-C20 power cables
-- Two (2) Murata PSU upper bus bars
-- One (1) Murata PSU lower bus bar, black
-- One (1) Murata PSU lower bus bar, red
+- Two (2) insulated PSU upper bus bars
+- One (1) insulated PSU lower bus bar, black
+- One (1) insulated PSU lower bus bar, red
 - One (1) upper bus bar cover
 - One (1) lower bus bar cover
 - One (1) Tenstorrent cosmetic cover
