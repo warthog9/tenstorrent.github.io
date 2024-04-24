@@ -18,7 +18,7 @@ The e75 and e150 AI Graph Processor add-in boards are built using the Tenstorren
 | Memory                               | 8GB LPDDR4                                  | 8GB LPDDR4                                     |
 | Memory Speed                         | 3.2 GT/sec                                  | 3.7 GT/sec                                     |
 | Memory Bandwidth                     | 102.4 GB/sec                                | 118.4 GB/sec                                   |
-| TFLOPs (FP4)                         | 221                                         | 332                                            |
+| TeraFLOPs (FP8)                      | 221                                         | 332                                            |
 | TBP (Total Board Power)              | 75W                                         | 200W                                           |
 | External Power                       | 1x 6-pin PCIe *(required for powering fan)* | 1x 6+2-pin PCIe 1x 6-pin PCIe                  |
 | System Interface                     | PCI Express 4.0 x16                         | PCI Express 4.0 x16                            |

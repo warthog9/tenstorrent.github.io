@@ -9,7 +9,7 @@
 | Galaxy Modules                    | 1                                          | 32                                       |
 | Tensix Cores                      | 80                                         | 2,560                                    |
 | AI Clock                          | 1 GHz                                      | 1 GHz                                    |
-| TFLOPs (BFP8)                     | 164                                        | 5,248 (5.24 PFLOPs)                      |
+| TeraFLOPs (FP8)                   | 328                                        | 10,496 (10.4 PetaFLOPs)                  |
 | SRAM                              | 120MB (1.5MB per Tensix Core)              | 3.8GB (120MB per Module)                 |
 | Memory                            | 12GB GDDR6 (192-bit memory bus, 12 GT/sec) | 384GB GDDR6, globally addressable        |
 | Power                             | 200W                                       | 7.5 kW                                   |
