@@ -2,3 +2,4 @@ core:
 - latest
 pybuda:
 - latest
+- test-pybuda-version
