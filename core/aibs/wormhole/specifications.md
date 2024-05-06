@@ -23,6 +23,7 @@ The n150 and n300 AI Graph Processor add-in boards are built using the Tenstorre
 | TeraFLOPs (FP8)                      | 295                                            | 524                                            |
 | TBP (Total Board Power)              | 160W                                           | 300W                                           |
 | External Power                       | 1x 4+4-pin EPS12V                              | 1x 4+4-pin EPS12V                              |
+| Connectivity                         | 2x Warp 100 Bridge<br />2x QSFP-DD 400GbE      | 2x Warp 100 Bridge<br />2x QSFP-DD 400GbE      |
 | System Interface                     | PCI Express 4.0 x16                            | PCI Express 4.0 x16                            |
 | Cooling                              | Passive *(Active Cooling Kit sold separately)* | Passive *(Active Cooling Kit sold separately)* |
 | Dimensions (w/o Cooling Kit) (WxDxH) | 36mm x 254mm x 111mm                           | 36mm x 254mm x 111mm                           |
@@ -31,6 +32,16 @@ The n150 and n300 AI Graph Processor add-in boards are built using the Tenstorre
 ![](./images/wh_dimensions.png)
 
 *n150/n300 without Active Cooling Kit*
+
+## Connectivity
+
+The n150 and n300 include two different methods for interconnecting cards.
+
+<img src="./images/wh_portspec.png" style="zoom:50%;" />
+
+The Warp 100 notches are for attaching internal Warp 100 bridges between n150 and n300 cards.
+
+The two QSFP-DD ports support QSFP-DD 400GbE connectivity between cards and/or the Galaxy Wormhole 4U Server.
 
 ## Data Precision Formats
 
