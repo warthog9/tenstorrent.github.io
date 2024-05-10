@@ -16,7 +16,7 @@ The n150 and n300 AI Graph Processor add-in boards are built using the Tenstorre
 | Wormhole™ ASICs                      | 1                                              | 2                                              |
 | Tensix Cores                         | 72                                             | 128 (64 per ASIC)                              |
 | AI Clock                             | 1 GHz                                          | 1 GHz                                          |
-| SRAM                                 | 108MB                                          | 192MB (96 per ASIC)                            |
+| SRAM                                 | 108MB                                          | 192MB (96MB per ASIC)                          |
 | Memory                               | 12GB GDDR6                                     | 24GB GDDR6                                     |
 | Memory Speed                         | 12 GT/sec                                      | 12 GT/sec                                      |
 | Memory Bandwidth                     | 288 GB/sec                                     | 576 GB/sec                                     |
@@ -74,4 +74,4 @@ The n150/n300 support the following data precision formats:
 
 ***To check your version, type* `cat /etc/os-release`.
 
-**NOTE:** The **n150 and n300 accelerator cards** come with a heatsink for passive cooling in systems which can provide airflow to the card. If your system does not (for example, a desktop workstation), the optional Active Cooling Kit is **strongly recommended**. If the card isn’t sufficiently cooled, performance will be  substantially reduced to stay in a safe operating temperature range.
+**NOTE:** The **n150 and n300 add-in cards** come with a heatsink for passive cooling in systems which can provide airflow to the card. If your system does not (for example, a desktop workstation), the optional Active Cooling Kit is **strongly recommended**. If the card isn’t sufficiently cooled, performance will be  substantially reduced to stay in a safe operating temperature range.

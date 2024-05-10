@@ -12,7 +12,7 @@ Follow these instructions to install your n150/n300 add-in board.
 
 1. **Disconnect power** to the host computer prior to installation.
 2. Verify that the system provides the following:
-   1. **PCI Express 4.0 x16 slot** *(For optimal performance, the card requires a x16 configuration without bifurcation. The e150 is a dual-width card and requires the adjacent expansion slot to be vacant.)*
+   1. **PCI Express 4.0 x16 slot** *(For optimal performance, the card requires a x16 configuration without bifurcation. The n150 and n300 are dual-width cards and require the adjacent expansion slot to be vacant.)*
    2. One (1) **EPS12V 4+4-pin power connector**
 3. Discharge your body's static electricity by wearing an **ESD wrist strap** *(recommended)* or touching a grounded surface before touching system components or the add-in card.
 
