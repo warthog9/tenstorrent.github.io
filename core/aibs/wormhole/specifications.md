@@ -20,7 +20,7 @@ The n150 and n300 AI Graph Processor add-in boards are built using the Tenstorre
 | Memory                               | 12GB GDDR6                                     | 24GB GDDR6                                     |
 | Memory Speed                         | 12 GT/sec                                      | 12 GT/sec                                      |
 | Memory Bandwidth                     | 288 GB/sec                                     | 576 GB/sec                                     |
-| TeraFLOPs (FP8)                      | 295                                            | 524                                            |
+| TeraFLOPs (FP8)                      | 262                                            | 466                                            |
 | TBP (Total Board Power)              | 160W                                           | 300W                                           |
 | External Power                       | 1x 4+4-pin EPS12V                              | 1x 4+4-pin EPS12V                              |
 | Connectivity                         | 2x Warp 100 Bridge<br />2x QSFP-DD 400GbE      | 2x Warp 100 Bridge<br />2x QSFP-DD 400GbE      |

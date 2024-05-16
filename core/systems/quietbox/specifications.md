@@ -4,7 +4,7 @@
 
 The Tenstorrent QuietBox system package includes:
 
-- TenstorrentQuietBox System
+- Tenstorrent QuietBox System
 - C13 Power Cable, 1.8m/6ft.
 - 2x QSFP-DD 400GbE Cable, 0.6m/2ft.
 
