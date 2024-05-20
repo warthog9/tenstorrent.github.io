@@ -13,7 +13,7 @@ Documentation and support for Tenstorrent add-in boards and the Active Cooling K
 Documentation and support for Tenstorrent add-in boards and the Active Cooling Kit:
 
 - [**Grayskull™ e75/e150 AI Graph Processor**](./aibs/grayskull/README.md)
-- [**Wormhole™ n150/n300 AI Graph Processor**](./aibs/wormhole/README.md)
+- [**Wormhole™ n150s/n300s AI Graph Processor**](./aibs/wormhole/README.md)
 - [**Active Cooling Kit**](./aibs/ack.md)
 
 

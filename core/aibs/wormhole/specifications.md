@@ -2,15 +2,15 @@
 
 ## Wormhole™ AI Graph Processor
 
-The n150 and n300 AI Graph Processor add-in boards are built using the Tenstorrent Wormhole™ AI Graph Processor:
+The Wormhole™ n150s and n300s AI Graph Processor add-in boards are built using the Tenstorrent Wormhole™ AI Graph Processor:
 
 - **Tensix Core Count:** 80
 - **SRAM:** 120MB (1.5MB per Tensix Core)
 - **Memory:** 12GB GDDR6, 192-bit memory bus
 
-## n150/n300 Comparison Table
+## n150s/n300s Comparison Table
 
-| Specification                        | n150                                           | n300                                           |
+| Specification                        | n150s                                          | n300s                                          |
 | ------------------------------------ | ---------------------------------------------- | ---------------------------------------------- |
 | Part Number                          | TC-02001                                       | TC-02003                                       |
 | Wormhole™ ASICs                      | 1                                              | 2                                              |
@@ -31,15 +31,15 @@ The n150 and n300 AI Graph Processor add-in boards are built using the Tenstorre
 
 ![](./images/wh_dimensions.png)
 
-*n150/n300 without Active Cooling Kit*
+*n150s/n300s without Active Cooling Kit*
 
 ## Connectivity
 
-The n150 and n300 include two different methods for interconnecting cards.
+The n150s and n300s include two different methods for interconnecting cards.
 
 <img src="./images/wh_portspec.png" style="zoom:50%;" />
 
-The Warp 100 notches are for attaching internal Warp 100 bridges between n150 and n300 cards.
+The Warp 100 notches are for attaching internal Warp 100 bridges between n150s and n300s cards.
 
 The two QSFP-DD ports support QSFP-DD 400GbE connectivity between cards and/or the Galaxy Wormhole 4U Server.
 
@@ -74,4 +74,4 @@ The n150/n300 support the following data precision formats:
 
 ***To check your version, type* `cat /etc/os-release`.
 
-**NOTE:** The **n150 and n300 add-in cards** come with a heatsink for passive cooling in systems which can provide airflow to the card. If your system does not (for example, a desktop workstation), the optional Active Cooling Kit is **strongly recommended**. If the card isn’t sufficiently cooled, performance will be  substantially reduced to stay in a safe operating temperature range.
+**NOTE:** The **n150s and n300s add-in cards** come with a heatsink for passive cooling in systems which can provide airflow to the card. If your system does not (for example, a desktop workstation), the optional Active Cooling Kit is **strongly recommended**. If the card isn’t sufficiently cooled, performance will be  substantially reduced to stay in a safe operating temperature range.
