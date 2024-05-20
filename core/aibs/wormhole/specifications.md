@@ -10,24 +10,26 @@ The Wormhole™ n150s and n300s AI Graph Processor add-in boards are built using
 
 ## n150s/n300s Comparison Table
 
-| Specification                        | n150s                                          | n300s                                          |
-| ------------------------------------ | ---------------------------------------------- | ---------------------------------------------- |
-| Part Number                          | TC-02001                                       | TC-02003                                       |
-| Wormhole™ ASICs                      | 1                                              | 2                                              |
-| Tensix Cores                         | 72                                             | 128 (64 per ASIC)                              |
-| AI Clock                             | 1 GHz                                          | 1 GHz                                          |
-| SRAM                                 | 108MB                                          | 192MB (96MB per ASIC)                          |
-| Memory                               | 12GB GDDR6                                     | 24GB GDDR6                                     |
-| Memory Speed                         | 12 GT/sec                                      | 12 GT/sec                                      |
-| Memory Bandwidth                     | 288 GB/sec                                     | 576 GB/sec                                     |
-| TeraFLOPs (FP8)                      | 262                                            | 466                                            |
-| TBP (Total Board Power)              | 160W                                           | 300W                                           |
-| External Power                       | 1x 4+4-pin EPS12V                              | 1x 4+4-pin EPS12V                              |
-| Connectivity                         | 2x Warp 100 Bridge<br />2x QSFP-DD 400GbE      | 2x Warp 100 Bridge<br />2x QSFP-DD 400GbE      |
-| System Interface                     | PCI Express 4.0 x16                            | PCI Express 4.0 x16                            |
-| Cooling                              | Passive *(Active Cooling Kit sold separately)* | Passive *(Active Cooling Kit sold separately)* |
-| Dimensions (w/o Cooling Kit) (WxDxH) | 36mm x 254mm x 111mm                           | 36mm x 254mm x 111mm                           |
-| Dimensions (w/ Cooling Kit) (WxDxH)  | 36mm x 393.5mm x 114mm                         | 36mm x 393.5mm x 114mm                         |
+**NOTE:** The **n150s and n300s add-in cards** come with a heatsink for passive cooling in systems which can provide sufficient forced airflow to the card. If your system does not (for example, a desktop workstation), installing the [Active Cooling Kit](..\ack.md) is **required**. If the card isn’t sufficiently cooled, performance will be  substantially reduced to stay in a safe operating temperature range and you risk damage to the card.
+
+| Specification                        | n150s                                     | n300s                                     |
+| ------------------------------------ | ----------------------------------------- | ----------------------------------------- |
+| Part Number                          | TC-02001                                  | TC-02003                                  |
+| Wormhole™ ASICs                      | 1                                         | 2                                         |
+| Tensix Cores                         | 72                                        | 128 (64 per ASIC)                         |
+| AI Clock                             | 1 GHz                                     | 1 GHz                                     |
+| SRAM                                 | 108MB                                     | 192MB (96MB per ASIC)                     |
+| Memory                               | 12GB GDDR6                                | 24GB GDDR6                                |
+| Memory Speed                         | 12 GT/sec                                 | 12 GT/sec                                 |
+| Memory Bandwidth                     | 288 GB/sec                                | 576 GB/sec                                |
+| TeraFLOPs (FP8)                      | 262                                       | 466                                       |
+| TBP (Total Board Power)              | 160W                                      | 300W                                      |
+| External Power                       | 1x 4+4-pin EPS12V                         | 1x 4+4-pin EPS12V                         |
+| Connectivity                         | 2x Warp 100 Bridge<br />2x QSFP-DD 400GbE | 2x Warp 100 Bridge<br />2x QSFP-DD 400GbE |
+| System Interface                     | PCI Express 4.0 x16                       | PCI Express 4.0 x16                       |
+| Cooling                              | Passive                                   | Passive                                   |
+| Dimensions (w/o Cooling Kit) (WxDxH) | 36mm x 254mm x 111mm                      | 36mm x 254mm x 111mm                      |
+| Dimensions (w/ Cooling Kit) (WxDxH)  | 36mm x 393.5mm x 114mm                    | 36mm x 393.5mm x 114mm                    |
 
 ![](./images/wh_dimensions.png)
 
@@ -39,7 +41,7 @@ The n150s and n300s include two different methods for interconnecting cards.
 
 <img src="./images/wh_portspec.png" style="zoom:50%;" />
 
-The Warp 100 notches are for attaching internal Warp 100 bridges between n150s and n300s cards.
+The Warp 100 notches are for attaching internal [Warp 100 bridges](..\warp100.md) between n150s and n300s cards.
 
 The two QSFP-DD ports support QSFP-DD 400GbE connectivity between cards and/or the Galaxy Wormhole 4U Server.
 
@@ -64,7 +66,7 @@ The n150/n300 support the following data precision formats:
 | Motherboard                       | PCI Express 4.0 x16 slot, dual-width                         |
 | Memory                            | 64 GB                                                        |
 | Storage                           | 100 GB (≥2TB recommended)                                    |
-| Power Connectors                  | 4+4-pin EPS12V<br />6+2-pin PCIe (if using active cooling kit) |
+| Power Connectors                  | 4+4-pin EPS12V<br />6+2-pin PCIe (if using Active Cooling Kit) |
 | Total Board Power                 | Up to 160W (n150) / 300W (n300)                              |
 | Operating Temperature Range (Die) | 0C - 75C                                                     |
 | Operating System                  | Ubuntu version 20.04 (Focal Fossa) **                        |
@@ -73,5 +75,3 @@ The n150/n300 support the following data precision formats:
 ** CPU core count and number of sockets will depend on the amount of host preprocessing and post-processing required before and after the accelerator processing.*
 
 ***To check your version, type* `cat /etc/os-release`.
-
-**NOTE:** The **n150s and n300s add-in cards** come with a heatsink for passive cooling in systems which can provide airflow to the card. If your system does not (for example, a desktop workstation), the optional Active Cooling Kit is **strongly recommended**. If the card isn’t sufficiently cooled, performance will be  substantially reduced to stay in a safe operating temperature range.

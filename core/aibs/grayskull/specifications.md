@@ -10,6 +10,8 @@ The Grayskull™ e75 and e150 AI Graph Processor add-in boards are built using t
 
 ## e75/e150 Comparison Table
 
+**NOTE:** The **e150 add-in card** come withs a heatsink for passive cooling in systems which can provide sufficient forced airflow to the card. If your system does not (for example, a desktop workstation), installing the [Active Cooling Kit](..\ack.md) is **required**. If the card isn’t sufficiently cooled, performance will be substantially reduced to stay in a safe operating temperature range and you risk damage to the card.
+
 | Specification                        | e75                                         | e150                                           |
 | ------------------------------------ | ------------------------------------------- | ---------------------------------------------- |
 | Part Number                          | TC-01001                                    | TC-01002                                       |
@@ -18,7 +20,7 @@ The Grayskull™ e75 and e150 AI Graph Processor add-in boards are built using t
 | SRAM                                 | 96MB                                        | 120MB                                          |
 | Memory                               | 8GB LPDDR4                                  | 8GB LPDDR4                                     |
 | Memory Speed                         | 3.2 GT/sec                                  | 3.7 GT/sec                                     |
-| Memory Bandwidth                     | 102.4 GB/sec                                | 118.4 GB/sec                                   |
+| Memory Bandwidth                     | 102 GB/sec                                  | 118 GB/sec                                     |
 | TeraFLOPs (FP8)                      | 221                                         | 332                                            |
 | TBP (Total Board Power)              | 75W                                         | 200W                                           |
 | External Power                       | 1x 6-pin PCIe *(required for powering fan)* | 1x 6+2-pin PCIe<br />1x 6-pin PCIe             |
