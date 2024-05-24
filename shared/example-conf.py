@@ -9,24 +9,15 @@
 project = 'Tenstorrent'
 copyright = '2024, Tenstorrent'
 author = 'Tenstorrent'
-release = '1.0'
 
-# -- General configuration ---------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
-
-templates_path = ['../shared/_templates']
+templates_path = ['shared/_templates']
 exclude_patterns = []
 extensions = ['myst_parser']
-
-
-# -- Options for HTML output -------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
-
-html_theme = "sphinx_rtd_theme"
+# Custom theme docs 
+html_theme = "sphinx_rtd_theme" 
 html_logo = "../shared/images/tt_logo.svg"
 html_favicon = "../shared/images/cropped-favicon-32x32.png"
 html_static_path = ['../shared/_static']
 
 def setup(app):
     app.add_css_file("tt_theme.css")
-
