@@ -3,3 +3,5 @@ core:
 pybuda:
 - latest
 - test-pybuda-version
+tt-metal:
+- latest
