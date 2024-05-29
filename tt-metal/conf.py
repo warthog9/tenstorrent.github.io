@@ -2,7 +2,7 @@ import yaml
 import os
 # from ..conf import *
 
-project = 'TT Buda'
+project = 'TT Metal'
 copyright = '2024, Tenstorrent'
 author = 'Tenstorrent'
 root_doc = "toc"
@@ -30,7 +30,7 @@ html_favicon = "../shared/images/cropped-favicon-32x32.png"
 html_static_path = ['../shared/_static']
 
 with open("../versions.yml", "r") as yaml_file:
-    versions = yaml.safe_load(yaml_file)["pybuda"]
+    versions = yaml.safe_load(yaml_file)["tt-metal"]
 
 html_context = {
     "versions": versions,
