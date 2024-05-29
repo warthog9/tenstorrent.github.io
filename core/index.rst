@@ -31,3 +31,4 @@ Systems
    :maxdepth: 2
 
    TT-Buda <https://tenstorrent.github.io/docs-test/pybuda/latest/index.html>
+   TT-Metal <https://tenstorrent.github.io/docs-test/tt-metal/latest/index.html>
