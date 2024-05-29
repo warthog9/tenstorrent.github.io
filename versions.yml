@@ -5,3 +5,4 @@ pybuda:
 - test-pybuda-version
 tt-metal:
 - latest
+- latest

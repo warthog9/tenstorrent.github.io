@@ -1,4 +1,4 @@
-TT-Buda
+TT-Metal
 ==============================
 
 .. toctree::
@@ -15,4 +15,4 @@ Links
    :maxdepth: 2
 
    TT-Core <https://tenstorrent.github.io/docs-test/core/latest>
-   TT-Metal <https://tenstorrent.github.io/docs-test/tt-metal/latest/index.html>
+   TT-Buda <https://tenstorrent.github.io/docs-test/pybuda/latest/index.html>
