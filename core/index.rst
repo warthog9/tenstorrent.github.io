@@ -32,3 +32,4 @@ Systems
 
    TT-Buda <https://tenstorrent.github.io/docs-test/pybuda/latest/index.html>
    TT-Metal <https://tenstorrent.github.io/docs-test/tt-metal/latest/index.html>
+   TTNN <https://tenstorrent.github.io/docs-test/ttnn/ttnn-latest/index.html>

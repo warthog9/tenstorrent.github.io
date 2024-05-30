@@ -5,3 +5,7 @@ pybuda:
 - test-pybuda-version
 tt-metal:
 - latest
+- tt-metal-latest
+ttnn:
+- latest
+- ttnn-latest
