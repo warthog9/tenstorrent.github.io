@@ -1,10 +1,14 @@
 # gelu_tile
 
-### template<bool fast_and_approx = true> void ckernel::gelu_tile_init()
+```cpp
+template<bool fast_and_approx = true> void ckernel::gelu_tile_init()
+```
 
 Please refer to documentation for any_init. 
 
-### template<bool fast_and_approx = true> void ckernel::gelu_tile(uint32_t idst)
+```cpp
+template<bool fast_and_approx = true> void ckernel::gelu_tile(uint32_t idst)
+```
 
 Performs element-wise computation of gelu on each element of a tile in DST register at index tile_index. The DST register buffer must be in acquired state via *acquire_dst* call. This call is blocking and is only available on the compute engine.
 

@@ -1,6 +1,8 @@
 # CreateSemaphore
 
-### uint32_t tt::tt_metal::CreateSemaphore(Program &program, const std::variant<CoreRange, CoreRangeSet> &core_spec, uint32_t initial_value, CoreType core_type = CoreType::WORKER)
+```cpp
+uint32_t tt::tt_metal::CreateSemaphore(Program &program, const std::variant<CoreRange, CoreRangeSet> &core_spec, uint32_t initial_value, CoreType core_type = CoreType::WORKER)
+```
 
 Initializes semaphore on all cores within core range (inclusive). Each core can have up to four 32B semaphores.
 

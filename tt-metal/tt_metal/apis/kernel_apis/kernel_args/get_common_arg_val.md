@@ -1,6 +1,8 @@
 # get_common_arg_val
 
-### template<typename T> T get_common_arg_val(int arg_idx)
+```cpp
+template<typename T> T get_common_arg_val(int arg_idx)
+```
 
 Returns the value at a given runtime argument index for common (all cores) runtime arguments set via SetCommonRuntimeArgs() API.
 

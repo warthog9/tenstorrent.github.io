@@ -2,7 +2,9 @@
 
 # DumpDeviceProfileResults
 
-### void tt::tt_metal::DumpDeviceProfileResults(Device *device, const Program &program)
+```cpp
+void tt::tt_metal::DumpDeviceProfileResults(Device *device, const Program &program)
+```
 
 Read device side profiler data and dump results into device side CSV log
 

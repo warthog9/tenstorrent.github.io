@@ -1,6 +1,8 @@
 # ReplayTrace
 
-### void tt::tt_metal::ReplayTrace(Device *device, const uint8_t cq_id, const uint32_t tid, const bool blocking)
+```cpp
+void tt::tt_metal::ReplayTrace(Device *device, const uint8_t cq_id, const uint32_t tid, const bool blocking)
+```
 
 Replay a trace of previously generated commands and data.
 

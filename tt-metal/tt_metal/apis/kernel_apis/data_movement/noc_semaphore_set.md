@@ -1,6 +1,8 @@
 # noc_semaphore_set
 
-### void noc_semaphore_set(volatile uint32_t *sem_addr, uint32_t val)
+```cpp
+void noc_semaphore_set(volatile uint32_t *sem_addr, uint32_t val)
+```
 
 Sets the value of a local L1 memory address on the Tensix core executing this function to a specific value. This L1 memory address is used as a semaphore of size 4 Bytes, as a synchronization mechanism. Also, see *noc_semaphore_wait*.
 

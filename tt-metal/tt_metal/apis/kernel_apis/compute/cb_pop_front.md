@@ -1,6 +1,8 @@
 # cb_pop_front
 
-### void ckernel::cb_pop_front(uint32_t cbid, uint32_t ntiles)
+```cpp
+void ckernel::cb_pop_front(uint32_t cbid, uint32_t ntiles)
+```
 
 Pops a specified number of tiles from the front of the specified CB. This also frees this number of tiles in the circular buffer. This call is used by the consumer to free up the space in the CB.
 

@@ -1,6 +1,8 @@
 # cb_push_back
 
-### void ckernel::cb_push_back(uint32_t cbid, uint32_t ntiles)
+```cpp
+void ckernel::cb_push_back(uint32_t cbid, uint32_t ntiles)
+```
 
 Pushes a given number of tiles in the back of the specified CB’s queue. Decreases the available space in the circular buffer by this number of tiles. This call is used by the producer to make the tiles visible to the consumer of the CB.
 

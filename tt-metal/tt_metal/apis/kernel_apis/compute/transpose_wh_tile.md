@@ -1,6 +1,8 @@
 # transpose_wh_tile
 
-### void ckernel::transpose_wh_init(uint32_t icb, uint32_t ocb = 16)
+```cpp
+void ckernel::transpose_wh_init(uint32_t icb, uint32_t ocb = 16)
+```
 
 Paired Init function for transpose_wh. For general information on init functions refer to any_init.
 
@@ -8,7 +10,9 @@ Paired Init function for transpose_wh. For general information on init functions
 |---------------|-------------------------------------------------------------|-----------|------------------|----------------|
 | icb           | The identifier of the circular buffer (CB) containing input | uint32_t  | 0 to 31          | True           |
 
-### void ckernel::transpose_wh_tile(uint32_t icb, uint32_t itile, uint32_t idst)
+```cpp
+void ckernel::transpose_wh_tile(uint32_t icb, uint32_t itile, uint32_t idst)
+```
 
 Performs a 32x32 transpose operation *B[w,h] = A[h,w]* on a tile in the CB at a given index and writes the result to the DST register at index dst_tile_index. The DST register buffer must be in acquired state via *acquire_dst* call.
 

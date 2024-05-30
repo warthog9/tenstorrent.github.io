@@ -1,6 +1,8 @@
 # cb_reserve_back
 
-### void ckernel::cb_reserve_back(uint32_t cbid, uint32_t ntiles)
+```cpp
+void ckernel::cb_reserve_back(uint32_t cbid, uint32_t ntiles)
+```
 
 A blocking call that waits for the specified number of tiles to be free in the specified circular buffer. This call is used by the producer to wait for the consumer to consume (ie. free up) the specified number of tiles.
 

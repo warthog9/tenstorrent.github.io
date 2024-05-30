@@ -1,6 +1,8 @@
 # EnqueueRecordEvent
 
-### void tt::tt_metal::EnqueueRecordEvent(CommandQueue &cq, std::shared_ptr<Event> event)
+```cpp
+void tt::tt_metal::EnqueueRecordEvent(CommandQueue &cq, std::shared_ptr<Event> event)
+```
 
 Enqueues a command to record an Event on the device for a given CQ, and updates the Event object for the user. Return value: void 
 

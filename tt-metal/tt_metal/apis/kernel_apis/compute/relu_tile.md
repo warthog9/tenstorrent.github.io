@@ -1,10 +1,14 @@
 # relu_tile
 
-### void ckernel::relu_tile_init()
+```cpp
+void ckernel::relu_tile_init()
+```
 
 Please refer to documentation for any_init. 
 
-### void ckernel::relu_tile(uint32_t idst)
+```cpp
+void ckernel::relu_tile(uint32_t idst)
+```
 
 Performs element-wise computation of relu (0 if negative else 1) on each element of a tile in DST register at index tile_index. The DST register buffer must be in acquired state via *acquire_dst* call. This call is blocking and is only available on the compute engine.
 
@@ -16,11 +20,15 @@ Return value: None
 
 # relu_max_tile
 
-### void ckernel::relu_max_tile_init()
+```cpp
+void ckernel::relu_max_tile_init()
+```
 
 Please refer to documentation for any_init. 
 
-### void ckernel::relu_max_tile(uint32_t idst, uint32_t param0)
+```cpp
+void ckernel::relu_max_tile(uint32_t idst, uint32_t param0)
+```
 
 Performs element-wise computation of relu max (relu(max(x, upper_limit))) on each element of a tile in DST register at index tile_index. The DST register buffer must be in acquired state via *acquire_dst* call. This call is blocking and is only available on the compute engine.
 
@@ -33,11 +41,15 @@ Return value: None
 
 # relu_min_tile
 
-### void ckernel::relu_min_tile_init()
+```cpp
+void ckernel::relu_min_tile_init()
+```
 
 Please refer to documentation for any_init. 
 
-### void ckernel::relu_min_tile(uint32_t idst, uint32_t param0)
+```cpp
+void ckernel::relu_min_tile(uint32_t idst, uint32_t param0)
+```
 
 Performs element-wise computation of relu min (relu(min(x, lower_limit))) on each element of a tile in DST register at index tile_index. The DST register buffer must be in acquired state via *acquire_dst* call. This call is blocking and is only available on the compute engine.
 
@@ -50,11 +62,15 @@ Return value: None
 
 # leaky_relu_tile
 
-### void ckernel::leaky_relu_tile_init()
+```cpp
+void ckernel::leaky_relu_tile_init()
+```
 
 Please refer to documentation for any_init. 
 
-### void ckernel::leaky_relu_tile(uint32_t idst, uint32_t param0)
+```cpp
+void ckernel::leaky_relu_tile(uint32_t idst, uint32_t param0)
+```
 
 Performs element-wise computation of leaky relu (relu(x) + slope\*-relu(-x)) on each element of a tile in DST register at index tile_index. The DST register buffer must be in acquired state via *acquire_dst* call. This call is blocking and is only available on the compute engine.
 
