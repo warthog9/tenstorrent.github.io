@@ -1,6 +1,8 @@
 # CreateKernel
 
-### KernelHandle tt::tt_metal::CreateKernel(Program &program, const std::string &file_name, const std::variant<CoreCoord, CoreRange, CoreRangeSet> &core_spec, const std::variant<DataMovementConfig, ComputeConfig, EthernetConfig> &config)
+```cpp
+KernelHandle tt::tt_metal::CreateKernel(Program &program, const std::string &file_name, const std::variant<CoreCoord, CoreRange, CoreRangeSet> &core_spec, const std::variant<DataMovementConfig, ComputeConfig, EthernetConfig> &config)
+```
 
 Creates a data movement kernel with no compile time arguments and adds it to the program.
 

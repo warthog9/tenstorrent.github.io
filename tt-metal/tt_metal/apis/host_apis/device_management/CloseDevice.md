@@ -1,6 +1,8 @@
 # CloseDevice
 
-### bool tt::tt_metal::CloseDevice(Device *device)
+```cpp
+bool tt::tt_metal::CloseDevice(Device *device)
+```
 
 Resets device and closes device
 

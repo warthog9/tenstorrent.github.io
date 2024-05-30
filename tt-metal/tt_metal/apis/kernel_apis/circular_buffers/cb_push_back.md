@@ -1,6 +1,8 @@
 # cb_push_back
 
-### void cb_push_back(const int32_t operand, const int32_t num_pages)
+```cpp
+void cb_push_back(const int32_t operand, const int32_t num_pages)
+```
 
 Pushes a given number of tiles in the back of the specified CB’s queue. Decreases the available space in the circular buffer by this number of tiles. This call is used by the producer to make the tiles visible to the consumer of the CB.
 

@@ -1,6 +1,8 @@
 # EventQuery
 
-### bool tt::tt_metal::EventQuery(std::shared_ptr<Event> event)
+```cpp
+bool tt::tt_metal::EventQuery(std::shared_ptr<Event> event)
+```
 
 Host will query an event for completion status on device. Return value: bool. True if event is completed, false otherwise. 
 

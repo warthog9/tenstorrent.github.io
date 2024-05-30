@@ -1,6 +1,8 @@
 # cb_wait_front
 
-### void ckernel::cb_wait_front(uint32_t cbid, uint32_t ntiles)
+```cpp
+void ckernel::cb_wait_front(uint32_t cbid, uint32_t ntiles)
+```
 
 A blocking call that waits for the specified number of tiles to be available in the specified circular buffer (CB). This call is used by the consumer of the CB to wait for the producer to fill the CB with at least the specfied number of tiles. Important note: in case multiple calls of cb_wait_front(n) are issued without a paired cb_pop_front() call, n is expected to be incremented by the user to be equal to a cumulative total of tiles. Example: 4 calls of cb_wait_front(8) followed by a cb_pop_front(32) would produce incorrect behavior. Instead 4 calls of cb_wait_front() waiting on 8, 16, 24, 32 tiles should be issued.
 

@@ -1,10 +1,14 @@
 # abs_tile
 
-### void ckernel::abs_tile_init()
+```cpp
+void ckernel::abs_tile_init()
+```
 
 Please refer to documentation for any_init. 
 
-### void ckernel::abs_tile(uint32_t idst)
+```cpp
+void ckernel::abs_tile(uint32_t idst)
+```
 
 Performs element-wise computation of absolute value on each element of a tile in DST register at index tile_index. The DST register buffer must be in acquired state via *acquire_dst* call. This call is blocking and is only available on the compute engine.
 

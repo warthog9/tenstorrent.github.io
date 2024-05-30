@@ -1,6 +1,8 @@
 # DeallocateBuffer
 
-### void tt::tt_metal::DeallocateBuffer(Buffer &buffer)
+```cpp
+void tt::tt_metal::DeallocateBuffer(Buffer &buffer)
+```
 
 Deallocates buffer from device by marking its memory as free.
 

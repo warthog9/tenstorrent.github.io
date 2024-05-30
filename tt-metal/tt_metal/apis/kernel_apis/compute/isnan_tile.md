@@ -1,6 +1,8 @@
 # isnan_tile
 
-### void ckernel::isnan_tile(uint32_t idst)
+```cpp
+void ckernel::isnan_tile(uint32_t idst)
+```
 
 Will store in the output of the compute core True if the input tile is nan. The DST register buffer must be in acquired state via *acquire_dst* call. This call is blocking and is only available on the compute engine.
 

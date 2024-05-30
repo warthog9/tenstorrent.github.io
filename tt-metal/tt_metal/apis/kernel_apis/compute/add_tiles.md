@@ -1,14 +1,20 @@
 # add_tiles
 
-### void ckernel::add_tiles_init_nof()
+```cpp
+void ckernel::add_tiles_init_nof()
+```
 
 Please refer to documentation for any_init. nof means low fidelity with resepect to accuracy this is set during createprogram 
 
-### void ckernel::add_tiles_init(uint32_t icb0 = 0, uint32_t icb1 = 1)
+```cpp
+void ckernel::add_tiles_init(uint32_t icb0 = 0, uint32_t icb1 = 1)
+```
 
 Please refer to documentation for any_init. 
 
-### void ckernel::add_tiles(uint32_t icb0, uint32_t icb1, uint32_t itile0, uint32_t itile1, uint32_t idst)
+```cpp
+void ckernel::add_tiles(uint32_t icb0, uint32_t icb1, uint32_t itile0, uint32_t itile1, uint32_t idst)
+```
 
 Performs element-wise addition C=A+B of tiles in two CBs at given indices and writes the result to the DST register at index dst_tile_index. The DST register buffer must be in acquired state via *acquire_dst* call. This call is blocking and is only available on the compute engine.
 

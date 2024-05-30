@@ -1,6 +1,8 @@
 # get_arg_val
 
-### template<typename T> T get_arg_val(int arg_idx)
+```cpp
+template<typename T> T get_arg_val(int arg_idx)
+```
 
 Returns the value at a given runtime argument index for unique (per-core) runtime arguments set via SetRuntimeArgs() API.
 

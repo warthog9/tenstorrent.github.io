@@ -1,6 +1,8 @@
 # get_common_arg_addr
 
-### static uint32_t get_common_arg_addr(int arg_idx)
+```cpp
+static uint32_t get_common_arg_addr(int arg_idx)
+```
 
 Returns the address in L1 for a given runtime argument index for common (all cores) runtime arguments set via SetCommonRuntimeArgs() API.
 

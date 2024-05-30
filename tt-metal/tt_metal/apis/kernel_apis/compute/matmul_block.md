@@ -1,6 +1,8 @@
 # matmul_block
 
-### void ckernel::mm_block_init(uint32_t in0_cb_id = 0, uint32_t in1_cb_id = 1, uint32_t out_cb_id = 16, const uint32_t transpose = 0, uint32_t ct_dim = 1, uint32_t rt_dim = 1, uint32_t kt_dim = 1)
+```cpp
+void ckernel::mm_block_init(uint32_t in0_cb_id = 0, uint32_t in1_cb_id = 1, uint32_t out_cb_id = 16, const uint32_t transpose = 0, uint32_t ct_dim = 1, uint32_t rt_dim = 1, uint32_t kt_dim = 1)
+```
 
 Initialization for matmul_block operation. Must be called before matmul_block.
 
@@ -15,7 +17,9 @@ Return value: None
 | rt_dim        | the number of rows of the output matrix in tiles        | uint32_t  | 1 to 8 in half-sync mode, 1 to 16 in full-sync mode | False          |
 | kt_dim        | the inner dim of the input matrices in tiles            | uint32_t  | 1 to 2^32-1                                         | False          |
 
-### void ckernel::mm_block_init_short(uint32_t in0_cb_id = 0, uint32_t in1_cb_id = 1, const uint32_t transpose = 0, uint32_t ct_dim = 1, uint32_t rt_dim = 1, uint32_t kt_dim = 1)
+```cpp
+void ckernel::mm_block_init_short(uint32_t in0_cb_id = 0, uint32_t in1_cb_id = 1, const uint32_t transpose = 0, uint32_t ct_dim = 1, uint32_t rt_dim = 1, uint32_t kt_dim = 1)
+```
 
 A short version of matmul_block initialization. Configure the unpacker and math engine to matmul mode.
 
@@ -30,7 +34,9 @@ Return value: None
 | rt_dim        | The row dimension for the output block.                    | uint32_t  | Must be equal to block A row dimension           | False          |
 | kt_dim        | The inner dimension.                                       | uint32_t  | Must be equal to block A column dimension        | False          |
 
-### void ckernel::mm_block_init_short_with_dt(uint32_t in0_cb_id = 0, uint32_t in1_cb_id = 1, uint32_t old_in1_cb_id = 2, const uint32_t transpose = 0, uint32_t ct_dim = 1, uint32_t rt_dim = 1, uint32_t kt_dim = 1)
+```cpp
+void ckernel::mm_block_init_short_with_dt(uint32_t in0_cb_id = 0, uint32_t in1_cb_id = 1, uint32_t old_in1_cb_id = 2, const uint32_t transpose = 0, uint32_t ct_dim = 1, uint32_t rt_dim = 1, uint32_t kt_dim = 1)
+```
 
 A short version of matmul_block initialization. It is used to reconfigure srcA of the compute engine back to matmul mode.
 
@@ -45,7 +51,9 @@ Return value: None
 | rt_dim        | The row dimension for the output block.                  | uint32_t  | Must be equal to block A row dimension    | False          |
 | kt_dim        | The inner dimension.                                     | uint32_t  | Must be equal to block A column dimension | False          |
 
-### void ckernel::matmul_block(uint32_t in0_cb_id, uint32_t in1_cb_id, uint32_t in0_tile_index, uint32_t in1_tile_index, uint32_t idst, const uint32_t transpose, uint32_t ct_dim, uint32_t rt_dim, uint32_t kt_dim)
+```cpp
+void ckernel::matmul_block(uint32_t in0_cb_id, uint32_t in1_cb_id, uint32_t in0_tile_index, uint32_t in1_tile_index, uint32_t idst, const uint32_t transpose, uint32_t ct_dim, uint32_t rt_dim, uint32_t kt_dim)
+```
 
 Performs block-sized matrix multiplication *C=A\*B* between the blocks in two different input CBs and writes the result to DST. The DST register buffer must be in acquired state via *acquire_dst* call. This call is blocking and is only available on the compute engine.
 
