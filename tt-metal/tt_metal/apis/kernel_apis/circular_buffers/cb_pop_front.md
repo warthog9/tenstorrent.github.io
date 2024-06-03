@@ -1,7 +1,8 @@
 # cb_pop_front
 
+---
 ```cpp
-void cb_pop_front(int32_t operand, int32_t num_pages)
+void cb_pop_front(int32_t operand, int32_t num_pages)void cb_pop_front(int32_t operand, int32_t num_pages)
 ```
 
 Pops a specified number of tiles from the front of the specified CB. This also frees this number of tiles in the circular buffer. This call is used by the consumer to free up the space in the CB.

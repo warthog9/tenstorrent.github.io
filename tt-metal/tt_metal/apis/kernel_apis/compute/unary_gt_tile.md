@@ -1,13 +1,15 @@
 # unary_gt_tile
 
+---
 ```cpp
-void ckernel::unary_gt_tile_init()
+void ckernel::unary_gt_tile_init()void ckernel::unary_gt_tile_init()
 ```
 
 Please refer to documentation for any_init. 
 
+---
 ```cpp
-void ckernel::unary_gt_tile(uint32_t idst, uint32_t param0)
+void ckernel::unary_gt_tile(uint32_t idst, uint32_t param0)void ckernel::unary_gt_tile(uint32_t idst, uint32_t param0)
 ```
 
 Performs element-wise computation of: result = 1 if x > value , where x is each element of a tile in DST register at index tile_index. The value is provided as const param0 The DST register buffer must be in acquired state via *acquire_dst* call. This call is blocking and is only available on the compute engine.

@@ -1,13 +1,15 @@
 # signbit_tile
 
+---
 ```cpp
-void ckernel::signbit_tile_init()
+void ckernel::signbit_tile_init()void ckernel::signbit_tile_init()
 ```
 
 Please refer to documentation for any_init. 
 
+---
 ```cpp
-void ckernel::signbit_tile(uint32_t idst)
+void ckernel::signbit_tile(uint32_t idst)void ckernel::signbit_tile(uint32_t idst)
 ```
 
 Sets the sign bit of each element of a tile in DST register at index tile_index. The DST register buffer must be in acquired state via *acquire_dst* call. This call is blocking and is only available on the compute engine.

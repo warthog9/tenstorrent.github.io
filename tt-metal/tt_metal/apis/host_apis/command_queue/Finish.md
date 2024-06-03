@@ -2,8 +2,9 @@
 
 # Finish
 
+---
 ```cpp
-void tt::tt_metal::Finish(CommandQueue &cq)
+void tt::tt_metal::Finish(CommandQueue &cq)void tt::tt_metal::Finish(CommandQueue &cq)
 ```
 
 Blocks until all previously dispatched commands on the device have completed

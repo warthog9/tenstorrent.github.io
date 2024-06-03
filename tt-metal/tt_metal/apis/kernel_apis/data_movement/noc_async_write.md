@@ -1,7 +1,8 @@
 # noc_async_write
 
+---
 ```cpp
-template<uint32_t max_page_size = NOC_MAX_BURST_SIZE + 1> inline void noc_async_write(std::uint32_t src_local_l1_addr, std::uint64_t dst_noc_addr, std::uint32_t size)
+template<uint32_t max_page_size = NOC_MAX_BURST_SIZE + 1> inline void noc_async_write(std::uint32_t src_local_l1_addr, std::uint64_t dst_noc_addr, std::uint32_t size)template<uint32_t max_page_size = NOC_MAX_BURST_SIZE + 1>inline void noc_async_write(std::uint32_t src_local_l1_addr, std::uint64_t dst_noc_addr, std::uint32_t size)
 ```
 
 Initiates an asynchronous write from a source address in L1 memory on the Tensix core executing this function call. The destination is specified using a uint64_t encoding referencing an on-chip node located at NOC coordinates (x,y) and a local address created using get_noc_addr function. Also, see *noc_async_write_barrier*.

@@ -15,5 +15,5 @@ Links
    :maxdepth: 2
 
    TT-Core <https://tenstorrent.github.io/docs-test/core/latest>
-   TT-Metal <https://tenstorrent.github.io/docs-test/tt-metal/latest/index.html>
-   TTNN <https://tenstorrent.github.io/docs-test/ttnn/ttnn-latest/index.html>
+   TT-Metalium <https://tenstorrent.github.io/docs-test/tt-metal/latest/index.html>
+   TT-NN <https://tenstorrent.github.io/docs-test/ttnn/ttnn-latest/index.html>

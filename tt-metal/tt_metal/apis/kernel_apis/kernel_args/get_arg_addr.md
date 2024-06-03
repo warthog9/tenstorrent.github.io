@@ -1,7 +1,8 @@
 # get_arg_addr
 
+---
 ```cpp
-static uint32_t get_arg_addr(int arg_idx)
+static uint32_t get_arg_addr(int arg_idx)static uint32_t get_arg_addr(int arg_idx)
 ```
 
 Returns the address in L1 for a given runtime argument index for unique (per core) runtime arguments set via SetRuntimeArgs() API.

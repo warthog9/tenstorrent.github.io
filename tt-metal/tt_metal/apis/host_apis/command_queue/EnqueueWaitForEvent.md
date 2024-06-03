@@ -1,7 +1,8 @@
 # EnqueueWaitForEvent
 
+---
 ```cpp
-void tt::tt_metal::EnqueueWaitForEvent(CommandQueue &cq, std::shared_ptr<Event> event)
+void tt::tt_metal::EnqueueWaitForEvent(CommandQueue &cq, std::shared_ptr<Event> event)void tt::tt_metal::EnqueueWaitForEvent(CommandQueue &cq, std::shared_ptr<Event> event)
 ```
 
 Enqueues a command on the device for a given CQ (non-blocking). The command on device will block and wait for completion of the specified event (which may be in another CQ). Return value: void 

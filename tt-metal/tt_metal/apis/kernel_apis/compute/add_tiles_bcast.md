@@ -1,19 +1,22 @@
 # add_tiles_bcast
 
+---
 ```cpp
-void ckernel::add_bcast_cols_init_short(uint32_t icb0 = 0, uint32_t icb1 = 1)
+void ckernel::add_bcast_cols_init_short(uint32_t icb0 = 0, uint32_t icb1 = 1)void ckernel::add_bcast_cols_init_short(uint32_t icb0 = 0, uint32_t icb1 = 1)
 ```
 
 Performs a first-call or switch-from-another-op tile hw reconfiguration step needed for add_bcast_cols to be executed correctly. Required to be called before add_tiles_bcast if using column as broadcast type 
 
+---
 ```cpp
-void ckernel::add_bcast_rows_init_short(uint32_t icb0 = 0, uint32_t icb1 = 1)
+void ckernel::add_bcast_rows_init_short(uint32_t icb0 = 0, uint32_t icb1 = 1)void ckernel::add_bcast_rows_init_short(uint32_t icb0 = 0, uint32_t icb1 = 1)
 ```
 
 Performs a first-call or switch-from-another-op tile hw reconfiguration step needed for add_bcast_rows to be executed correctly. Required to be called before add_tiles_bcast if using column as broadcast type 
 
+---
 ```cpp
-template<BroadcastType tBcastDim> void ckernel::add_tiles_bcast(uint32_t icb0, uint32_t icb1, uint32_t itile0, uint32_t itile1, uint32_t idst)
+template<BroadcastType tBcastDim> void ckernel::add_tiles_bcast(uint32_t icb0, uint32_t icb1, uint32_t itile0, uint32_t itile1, uint32_t idst)template<BroadcastType tBcastDim>void ckernel::add_tiles_bcast(uint32_t icb0, uint32_t icb1, uint32_t itile0, uint32_t itile1, uint32_t idst)
 ```
 
 This documentation applies to either one of the 3 broadcast operation variants - *add_tiles_bcast*, *sub_tiles_bcast* and *mul_tiles_bcast*.

@@ -1,7 +1,8 @@
 # noc_async_read
 
+---
 ```cpp
-inline void noc_async_read(std::uint64_t src_noc_addr, std::uint32_t dst_local_l1_addr, std::uint32_t size)
+inline void noc_async_read(std::uint64_t src_noc_addr, std::uint32_t dst_local_l1_addr, std::uint32_t size)inline void noc_async_read(std::uint64_t src_noc_addr, std::uint32_t dst_local_l1_addr, std::uint32_t size)
 ```
 
 Initiates an asynchronous read from a specified source node located at NOC coordinates (x,y) at a local address (encoded as a uint64_t using *get_noc_addr* function). The destination is in L1 memory on the Tensix core executing this function call. Also, see *noc_async_read_barrier*.

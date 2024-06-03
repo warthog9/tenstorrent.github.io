@@ -1,7 +1,8 @@
 # cb_reserve_back
 
+---
 ```cpp
-void cb_reserve_back(int32_t operand, int32_t num_pages)
+void cb_reserve_back(int32_t operand, int32_t num_pages)void cb_reserve_back(int32_t operand, int32_t num_pages)
 ```
 
 A blocking call that waits for the specified number of tiles to be free in the specified circular buffer. This call is used by the producer to wait for the consumer to consume (ie. free up) the specified number of tiles.
