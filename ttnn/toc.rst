@@ -5,7 +5,7 @@ TT-Metal
    :caption: Contents
    :maxdepth: 2
    :glob:
-
+   
    *
 
 Links
@@ -16,4 +16,4 @@ Links
 
    TT-Core <https://tenstorrent.github.io/docs-test/core/latest>
    TT-Buda <https://tenstorrent.github.io/docs-test/pybuda/latest/index.html>
-   TTNN <https://tenstorrent.github.io/docs-test/ttnn/ttnn-latest/index.html>
+   TT-Metalium <https://tenstorrent.github.io/docs-test/ttnn/ttnn-latest/index.html>
