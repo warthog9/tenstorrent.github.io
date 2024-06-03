@@ -1,19 +1,22 @@
 # mul_tiles
 
+---
 ```cpp
-void ckernel::mul_tiles_init_f()
+void ckernel::mul_tiles_init_f()void ckernel::mul_tiles_init_f()
 ```
 
 Please refer to documentation for any_init. f means high fidelity with resepect to accuracy this is set during createprogram 
 
+---
 ```cpp
-void ckernel::mul_tiles_init(uint32_t icb0 = 0, uint32_t icb1 = 1)
+void ckernel::mul_tiles_init(uint32_t icb0 = 0, uint32_t icb1 = 1)void ckernel::mul_tiles_init(uint32_t icb0 = 0, uint32_t icb1 = 1)
 ```
 
 Please refer to documentation for any_init. 
 
+---
 ```cpp
-void ckernel::mul_tiles(uint32_t icb0, uint32_t icb1, uint32_t itile0, uint32_t itile1, uint32_t idst)
+void ckernel::mul_tiles(uint32_t icb0, uint32_t icb1, uint32_t itile0, uint32_t itile1, uint32_t idst)void ckernel::mul_tiles(uint32_t icb0, uint32_t icb1, uint32_t itile0, uint32_t itile1, uint32_t idst)
 ```
 
 Performs element-wise multiplication C=A\*B of tiles in two CBs at given indices and writes the result to the DST register at index dst_tile_index. The DST register buffer must be in acquired state via *acquire_dst* call. This call is blocking and is only available on the compute engine.

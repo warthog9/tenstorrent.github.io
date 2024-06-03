@@ -1,7 +1,8 @@
 # reduce_tile
 
+---
 ```cpp
-template<PoolType reduce_type = REDUCE_OP, ReduceDim reduce_dim = REDUCE_DIM> void ckernel::reduce_tile(uint32_t icb0, uint32_t icb1, uint32_t itile0, uint32_t itile1, uint32_t idst)
+template<PoolType reduce_type = REDUCE_OP, ReduceDim reduce_dim = REDUCE_DIM> void ckernel::reduce_tile(uint32_t icb0, uint32_t icb1, uint32_t itile0, uint32_t itile1, uint32_t idst)template<PoolType reduce_type = REDUCE_OP, ReduceDim reduce_dim = REDUCE_DIM>void ckernel::reduce_tile(uint32_t icb0, uint32_t icb1, uint32_t itile0, uint32_t itile1, uint32_t idst)
 ```
 
 Performs a reduction operation *B = reduce(A)* using reduce_func for dimension reduction on a tile in the CB at a given index and writes the result to the DST register at index *dst_tile_index*. Reduction can be either of type *Reduce::R*, *Reduce::C* or *Reduce::RC*, identifying the dimension(s) to be reduced in size to 1. The DST register buffer must be in acquired state via *acquire_dst* call.

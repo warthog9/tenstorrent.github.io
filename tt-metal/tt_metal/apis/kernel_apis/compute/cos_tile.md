@@ -1,13 +1,15 @@
 # cos_tile
 
+---
 ```cpp
-void ckernel::cos_tile_init()
+void ckernel::cos_tile_init()void ckernel::cos_tile_init()
 ```
 
 Please refer to documentation for any_init. 
 
+---
 ```cpp
-void ckernel::cos_tile(uint32_t idst)
+void ckernel::cos_tile(uint32_t idst)void ckernel::cos_tile(uint32_t idst)
 ```
 
 Performs element-wise computation of the trigonometric cosine operation on each element of a tile in DST register at index tile_index. The DST register buffer must be in acquired state via *acquire_dst* call. This call is blocking and is only available on the compute engine.

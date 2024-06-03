@@ -1,7 +1,8 @@
 # pack_tile
 
+---
 ```cpp
-template<bool out_of_order_output = false> void ckernel::pack_tile(uint32_t ifrom_dst, uint32_t icb, std::uint32_t output_tile_index = 0)
+template<bool out_of_order_output = false> void ckernel::pack_tile(uint32_t ifrom_dst, uint32_t icb, std::uint32_t output_tile_index = 0)template<bool out_of_order_output = false>void ckernel::pack_tile(uint32_t ifrom_dst, uint32_t icb, std::uint32_t output_tile_index = 0)
 ```
 
 Copies a single tile from the DST register buffer at a specified index to a specified CB at a given index. For the out_tile_index to be valid for this call, cb_reserve_back(n) has to be called first to reserve at least some number n > 0 of tiles in the output CB. out_tile_index = 0 then references the first tile in the reserved section of the CB, up to index n - 1, which will then be visible to the consumer in the same order after a cb_push_back call. The DST register buffer must be in acquired state via *acquire_dst* call. This call is blocking and is only available on the compute engine.
@@ -20,8 +21,9 @@ Return value: None
 | icb           | The identifier of the output circular buffer (CB) | uint32_t  | 0 to 31                                             | True           |
 | icb_tile      | The index of the tile in the output CB to copy to | uint32_t  | Must be less than the size of the CB                | True           |
 
+---
 ```cpp
-void ckernel::matmul_pack_tile(uint32_t ifrom_dst, uint32_t icb, uint32_t ntiles)
+void ckernel::matmul_pack_tile(uint32_t ifrom_dst, uint32_t icb, uint32_t ntiles)void ckernel::matmul_pack_tile(uint32_t ifrom_dst, uint32_t icb, uint32_t ntiles)
 ```
 
 Copies a block of tiles from the DST register buffer at a start index to a specified CB at a given start index. cb_reserve_back(n) had to be called first to reserve at least some number n>0 of tiles in the output CB. The out_tile_index = 0 then references the first tile in the reserved section of the CB, up to index n-1 that will then be visible to the consumer in the same order after a cb_push_back call. The DST register buffer must be in acquired state via *acquire_dst* call. This call is blocking and is only available on the compute engine.

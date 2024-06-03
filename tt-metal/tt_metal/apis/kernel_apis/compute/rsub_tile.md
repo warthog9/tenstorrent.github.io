@@ -1,13 +1,15 @@
 # rsub_tile
 
+---
 ```cpp
-void ckernel::rsub_tile_init()
+void ckernel::rsub_tile_init()void ckernel::rsub_tile_init()
 ```
 
 Please refer to documentation for any_init. 
 
+---
 ```cpp
-void ckernel::rsub_tile(uint32_t idst, uint32_t param0)
+void ckernel::rsub_tile(uint32_t idst, uint32_t param0)void ckernel::rsub_tile(uint32_t idst, uint32_t param0)
 ```
 
 Performs element-wise computation of rsub ( rsub(x,y) = y -x) on each element of a tile and y is a constant param in DST register at index tile_index. The DST register buffer must be in acquired state via *acquire_dst* call. This call is blocking and is only available on the compute engine.

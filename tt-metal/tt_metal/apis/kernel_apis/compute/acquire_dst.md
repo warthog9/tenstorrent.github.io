@@ -1,7 +1,8 @@
 # acquire_dst
 
+---
 ```cpp
-void ckernel::acquire_dst(tt::DstMode mode)
+void ckernel::acquire_dst(tt::DstMode mode)void ckernel::acquire_dst(tt::DstMode mode)
 ```
 
 Acquires an exclusive lock on the internal DST register for the current Tensix core.

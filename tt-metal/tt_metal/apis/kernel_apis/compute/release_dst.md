@@ -1,7 +1,8 @@
 # release_dst
 
+---
 ```cpp
-void ckernel::release_dst(tt::DstMode mode)
+void ckernel::release_dst(tt::DstMode mode)void ckernel::release_dst(tt::DstMode mode)
 ```
 
 Releases the exclusive lock on the internal DST register for the current Tensix core. This lock had to be previously acquired with acquire_dst. This call is blocking and is only available on the compute engine.

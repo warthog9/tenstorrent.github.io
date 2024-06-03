@@ -1,13 +1,15 @@
 # log_with_base_tile
 
+---
 ```cpp
-void ckernel::log_with_base_tile_init()
+void ckernel::log_with_base_tile_init()void ckernel::log_with_base_tile_init()
 ```
 
 Please refer to documentation for any_init. 
 
+---
 ```cpp
-void ckernel::log_with_base_tile(uint32_t idst, uint32_t base_scale)
+void ckernel::log_with_base_tile(uint32_t idst, uint32_t base_scale)void ckernel::log_with_base_tile(uint32_t idst, uint32_t base_scale)
 ```
 
 Performs element-wise computation of logarithm with a specified base on each element of a tile in DST register at index tile_index. The DST register buffer must be in acquired state via *acquire_dst* call. This call is blocking and is only available on the compute engine.

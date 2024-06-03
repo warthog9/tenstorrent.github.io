@@ -43,3 +43,7 @@ body {
 .toctree-l1 a:hover {
     background-color: var(--main-accent-color);
 }
+
+pre {
+    overflow-x: scroll;
+}

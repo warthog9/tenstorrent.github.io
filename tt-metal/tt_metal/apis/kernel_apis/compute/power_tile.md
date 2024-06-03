@@ -1,13 +1,15 @@
 # power_tile
 
+---
 ```cpp
-void ckernel::power_tile_init()
+void ckernel::power_tile_init()void ckernel::power_tile_init()
 ```
 
 Please refer to documentation for any_init. 
 
+---
 ```cpp
-void ckernel::power_tile(uint32_t idst, uint32_t param0)
+void ckernel::power_tile(uint32_t idst, uint32_t param0)void ckernel::power_tile(uint32_t idst, uint32_t param0)
 ```
 
 Performs element-wise computation of power operation (x ^(const param0)) value on each element of a tile in DST register at index tile_index. The DST register buffer must be in acquired state via *acquire_dst* call. This call is blocking and is only available on the compute engine.

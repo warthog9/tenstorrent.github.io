@@ -1,7 +1,8 @@
 # EnqueueTrace
 
+---
 ```cpp
-void tt::tt_metal::EnqueueTrace(CommandQueue &cq, uint32_t trace_id, bool blocking)
+void tt::tt_metal::EnqueueTrace(CommandQueue &cq, uint32_t trace_id, bool blocking)void tt::tt_metal::EnqueueTrace(CommandQueue &cq, uint32_t trace_id, bool blocking)
 ```
 
 Enqueues a trace of previously generated commands and data.

@@ -1,7 +1,8 @@
 # EnqueueProgram
 
+---
 ```cpp
-void tt::tt_metal::EnqueueProgram(CommandQueue &cq, std::variant<std::reference_wrapper<Program>, std::shared_ptr<Program>> program, bool blocking)
+void tt::tt_metal::EnqueueProgram(CommandQueue &cq, std::variant<std::reference_wrapper<Program>, std::shared_ptr<Program>> program, bool blocking)void tt::tt_metal::EnqueueProgram(CommandQueue &cq, std::variant<std::reference_wrapper<Program>, std::shared_ptr<Program>> program, bool blocking)
 ```
 
 Writes a program to the device and launches it

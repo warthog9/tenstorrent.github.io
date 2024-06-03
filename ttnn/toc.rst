@@ -1,4 +1,4 @@
-TT-Metal
+TT-NN
 ==============================
 
 .. toctree::
@@ -16,4 +16,4 @@ Links
 
    TT-Core <https://tenstorrent.github.io/docs-test/core/latest>
    TT-Buda <https://tenstorrent.github.io/docs-test/pybuda/latest/index.html>
-   TT-Metalium <https://tenstorrent.github.io/docs-test/ttnn/ttnn-latest/index.html>
+   TT-Metalium <https://tenstorrent.github.io/docs-test/tt-metal/tt-metal-latest/index.html>

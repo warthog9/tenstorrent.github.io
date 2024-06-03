@@ -2,7 +2,7 @@ import yaml
 import os
 # from ..conf import *
 
-project = 'TT Metal'
+project = 'TT-Metalium'
 copyright = '2024, Tenstorrent'
 author = 'Tenstorrent'
 root_doc = "toc"
