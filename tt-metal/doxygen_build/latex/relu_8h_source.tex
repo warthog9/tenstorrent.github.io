@@ -1,0 +1,59 @@
+\doxysection{relu.\+h}
+\hypertarget{relu_8h_source}{}\label{relu_8h_source}\index{tt\_metal/include/compute\_kernel\_api/eltwise\_unary/relu.h@{tt\_metal/include/compute\_kernel\_api/eltwise\_unary/relu.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ SPDX-\/FileCopyrightText:\ ©\ 2023\ Tenstorrent\ Inc.}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ Apache-\/2.0}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}compute\_kernel\_api/common\_globals.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifdef\ TRISC\_MATH}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}llk\_math\_eltwise\_unary\_sfpu\_relu.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ MAIN\ math\_main()}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MATH(x)\ x}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ MATH(x)}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }ckernel\ \{}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00034\ ALWI\ \textcolor{keywordtype}{void}\ relu\_max\_tile(uint32\_t\ idst,uint32\_t\ param0)\ \{}
+\DoxyCodeLine{00035\ \ \ MATH((\ llk\_math\_eltwise\_unary\_sfpu\_relu\_max<APPROX>(idst,param0)\ ));}
+\DoxyCodeLine{00036\ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ ALWI\ \textcolor{keywordtype}{void}\ relu\_max\_tile\_init()\ \{}
+\DoxyCodeLine{00042\ \ \ MATH((\ llk\_math\_eltwise\_unary\_sfpu\_relu\_max\_init<APPROX>()\ ));}
+\DoxyCodeLine{00043\ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00058\ ALWI\ \textcolor{keywordtype}{void}\ relu\_min\_tile(uint32\_t\ idst,uint32\_t\ param0)\ \{}
+\DoxyCodeLine{00059\ \ \ MATH((\ llk\_math\_eltwise\_unary\_sfpu\_relu\_min<APPROX>(idst,param0)\ ));}
+\DoxyCodeLine{00060\ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ ALWI\ \textcolor{keywordtype}{void}\ relu\_min\_tile\_init()\ \{}
+\DoxyCodeLine{00066\ \ \ MATH((\ llk\_math\_eltwise\_unary\_sfpu\_relu\_min\_init<APPROX>()\ ));}
+\DoxyCodeLine{00067\ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00081\ ALWI\ \textcolor{keywordtype}{void}\ relu\_tile(uint32\_t\ idst)\ \{}
+\DoxyCodeLine{00082\ \ \ MATH((\ llk\_math\_eltwise\_unary\_sfpu\_relu<APPROX>(idst)\ ));}
+\DoxyCodeLine{00083\ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00088\ ALWI\ \textcolor{keywordtype}{void}\ relu\_tile\_init()\ \{}
+\DoxyCodeLine{00089\ \ \ MATH((\ llk\_math\_eltwise\_unary\_sfpu\_relu\_init<APPROX>()\ ));}
+\DoxyCodeLine{00090\ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00105\ ALWI\ \textcolor{keywordtype}{void}\ leaky\_relu\_tile(uint32\_t\ idst,uint32\_t\ param0)\ \{}
+\DoxyCodeLine{00106\ \ \ MATH((\ llk\_math\_eltwise\_unary\_sfpu\_lrelu<APPROX>(idst,param0)\ ));}
+\DoxyCodeLine{00107\ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00112\ ALWI\ \textcolor{keywordtype}{void}\ leaky\_relu\_tile\_init()\ \{}
+\DoxyCodeLine{00113\ \ \ MATH((\ llk\_math\_eltwise\_unary\_sfpu\_lrelu\_init<APPROX>()\ ));}
+\DoxyCodeLine{00114\ \}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \}\ \textcolor{comment}{//\ namespace\ ckernel}}
+
+\end{DoxyCode}

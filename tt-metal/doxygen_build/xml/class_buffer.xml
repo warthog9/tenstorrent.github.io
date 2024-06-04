@@ -1,0 +1,392 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="class_buffer" kind="class" language="C++" prot="public">
+    <compoundname>Buffer</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_buffer_1a4fcde15c4c0e5f58dc66954df5b2d9d1" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Buffer::bank_base_address</definition>
+        <argsstring></argsstring>
+        <name>bank_base_address</name>
+        <qualifiedname>Buffer::bank_base_address</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="1699" column="14" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="1699" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_buffer_1a9c646f4ddd9781c561e07349c77f6027" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Buffer::page_size_</definition>
+        <argsstring></argsstring>
+        <name>page_size_</name>
+        <qualifiedname>Buffer::page_size_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="1700" column="14" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="1700" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_buffer_1a741b8feb511462e572a305f19fa42b9c" prot="private" static="no" mutable="no">
+        <type>uint64_t(*</type>
+        <definition>uint64_t(* Buffer::get_noc_addr_helper) (const uint32_t, const uint32_t, const uint32_t, const uint32_t)</definition>
+        <argsstring>)(const uint32_t, const uint32_t, const uint32_t, const uint32_t)</argsstring>
+        <name>get_noc_addr_helper</name>
+        <qualifiedname>Buffer::get_noc_addr_helper</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="1701" column="5" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="1701" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_buffer_1a707c62bb98bf8441208b327feee25567" prot="private" static="no" mutable="no">
+        <type>BufferType</type>
+        <definition>BufferType Buffer::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>Buffer::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="1702" column="16" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="1702" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_buffer_1a0a530546e63032af005d4716073c0f63" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Buffer::sharded</definition>
+        <argsstring></argsstring>
+        <name>sharded</name>
+        <qualifiedname>Buffer::sharded</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="1703" column="10" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="1703" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_buffer_1a755c964266ffef77da45df548f8ffa99" prot="private" static="no" mutable="no">
+        <type>volatile uint32_t *</type>
+        <definition>volatile uint32_t* Buffer::base_command_addr_</definition>
+        <argsstring></argsstring>
+        <name>base_command_addr_</name>
+        <qualifiedname>Buffer::base_command_addr_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="1706" column="24" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="1706" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_buffer_1a238c96eb2c8f78e1bba599cbab638465" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Buffer::num_cores_</definition>
+        <argsstring></argsstring>
+        <name>num_cores_</name>
+        <qualifiedname>Buffer::num_cores_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="1707" column="14" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="1707" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_buffer_1a1f97c0e35e44c85c0df9e87b887c69c6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Buffer::set_type</definition>
+        <argsstring>(const BufferType type)</argsstring>
+        <name>set_type</name>
+        <qualifiedname>Buffer::set_type</qualifiedname>
+        <param>
+          <type>const BufferType</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="1709" column="10" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="1709" bodyend="1720"/>
+      </memberdef>
+      <memberdef kind="function" id="class_buffer_1afe5b3d787cc7240fe7d2027405f29c2f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t Buffer::get_noc_addr_</definition>
+        <argsstring>(const uint32_t id, const uint32_t offset=0)</argsstring>
+        <name>get_noc_addr_</name>
+        <qualifiedname>Buffer::get_noc_addr_</qualifiedname>
+        <param>
+          <type>const uint32_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>offset</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="1721" column="14" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="1721" bodyend="1724"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_buffer_1ae7ef2cd201190fde551dcb902627112b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Buffer::Buffer</definition>
+        <argsstring>()</argsstring>
+        <name>Buffer</name>
+        <qualifiedname>Buffer::Buffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="1728" column="5" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="1728" bodyend="1728"/>
+      </memberdef>
+      <memberdef kind="function" id="class_buffer_1afacc4743c31d1116b66c87bf1cff5207" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Buffer::Buffer</definition>
+        <argsstring>(const BufferType type, const uint32_t bank_base_address, const uint32_t page_size)</argsstring>
+        <name>Buffer</name>
+        <qualifiedname>Buffer::Buffer</qualifiedname>
+        <param>
+          <type>const BufferType</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>bank_base_address</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>page_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="1730" column="5" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="1730" bodyend="1732"/>
+      </memberdef>
+      <memberdef kind="function" id="class_buffer_1a0e0755ca6cd872218206f3810fcace2b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Buffer::Buffer</definition>
+        <argsstring>(uint32_t page_size, uint32_t num_cores, uint32_t addr, volatile uint32_t *command_ptr)</argsstring>
+        <name>Buffer</name>
+        <qualifiedname>Buffer::Buffer</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>page_size</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>num_cores</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>volatile uint32_t *</type>
+          <declname>command_ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="1734" column="5" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="1734" bodyend="1736"/>
+      </memberdef>
+      <memberdef kind="function" id="class_buffer_1a21650fb20bd71111f2610bbf8e670b6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Buffer::init</definition>
+        <argsstring>(const BufferType type, const uint32_t bank_base_address, const uint32_t page_size)</argsstring>
+        <name>init</name>
+        <qualifiedname>Buffer::init</qualifiedname>
+        <param>
+          <type>const BufferType</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>bank_base_address</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>page_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="1738" column="10" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="1738" bodyend="1743"/>
+      </memberdef>
+      <memberdef kind="function" id="class_buffer_1af83e5d4c89b13e27ae5fa6a7af43a817" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BufferType</type>
+        <definition>BufferType Buffer::get_type</definition>
+        <argsstring>()</argsstring>
+        <name>get_type</name>
+        <qualifiedname>Buffer::get_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="1745" column="16" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="1745" bodyend="1745"/>
+      </memberdef>
+      <memberdef kind="function" id="class_buffer_1a7c16bf384aecc72858a96bd890c0710e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Buffer::init_sharded</definition>
+        <argsstring>(uint32_t page_size, uint32_t num_cores, uint32_t addr, volatile uint32_t *command_ptr)</argsstring>
+        <name>init_sharded</name>
+        <qualifiedname>Buffer::init_sharded</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>page_size</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>num_cores</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>volatile uint32_t *</type>
+          <declname>command_ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="1747" column="10" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="1747" bodyend="1755"/>
+      </memberdef>
+      <memberdef kind="function" id="class_buffer_1a71147cfe8b83840caceeec89e0d23a2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t Buffer::page_size</definition>
+        <argsstring>()</argsstring>
+        <name>page_size</name>
+        <qualifiedname>Buffer::page_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="1756" column="14" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="1756" bodyend="1756"/>
+      </memberdef>
+      <memberdef kind="function" id="class_buffer_1ade497473777a2b889eadc29c50590f82" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Buffer::noc_async_write_buffer</definition>
+        <argsstring>(uint32_t src, const uint32_t id, const uint32_t num_pages, const uint32_t offset=0)</argsstring>
+        <name>noc_async_write_buffer</name>
+        <qualifiedname>Buffer::noc_async_write_buffer</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>num_pages</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>offset</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="1759" column="10" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="1759" bodyend="1793"/>
+      </memberdef>
+      <memberdef kind="function" id="class_buffer_1aaeb6821b61163828cda1c7db86d13609" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Buffer::noc_async_read_buffer</definition>
+        <argsstring>(uint32_t dst, const uint32_t id, const uint32_t num_pages, const uint32_t offset=0)</argsstring>
+        <name>noc_async_read_buffer</name>
+        <qualifiedname>Buffer::noc_async_read_buffer</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>num_pages</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>offset</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="1795" column="10" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="1795" bodyend="1816"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tt_metal/hw/inc/dataflow_api.h" line="1697" column="1" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="1697" bodyend="1817"/>
+    <listofallmembers>
+      <member refid="class_buffer_1a4fcde15c4c0e5f58dc66954df5b2d9d1" prot="private" virt="non-virtual"><scope>Buffer</scope><name>bank_base_address</name></member>
+      <member refid="class_buffer_1a755c964266ffef77da45df548f8ffa99" prot="private" virt="non-virtual"><scope>Buffer</scope><name>base_command_addr_</name></member>
+      <member refid="class_buffer_1ae7ef2cd201190fde551dcb902627112b" prot="public" virt="non-virtual"><scope>Buffer</scope><name>Buffer</name></member>
+      <member refid="class_buffer_1afacc4743c31d1116b66c87bf1cff5207" prot="public" virt="non-virtual"><scope>Buffer</scope><name>Buffer</name></member>
+      <member refid="class_buffer_1a0e0755ca6cd872218206f3810fcace2b" prot="public" virt="non-virtual"><scope>Buffer</scope><name>Buffer</name></member>
+      <member refid="class_buffer_1afe5b3d787cc7240fe7d2027405f29c2f" prot="private" virt="non-virtual"><scope>Buffer</scope><name>get_noc_addr_</name></member>
+      <member refid="class_buffer_1a741b8feb511462e572a305f19fa42b9c" prot="private" virt="non-virtual"><scope>Buffer</scope><name>get_noc_addr_helper</name></member>
+      <member refid="class_buffer_1af83e5d4c89b13e27ae5fa6a7af43a817" prot="public" virt="non-virtual"><scope>Buffer</scope><name>get_type</name></member>
+      <member refid="class_buffer_1a21650fb20bd71111f2610bbf8e670b6f" prot="public" virt="non-virtual"><scope>Buffer</scope><name>init</name></member>
+      <member refid="class_buffer_1a7c16bf384aecc72858a96bd890c0710e" prot="public" virt="non-virtual"><scope>Buffer</scope><name>init_sharded</name></member>
+      <member refid="class_buffer_1aaeb6821b61163828cda1c7db86d13609" prot="public" virt="non-virtual"><scope>Buffer</scope><name>noc_async_read_buffer</name></member>
+      <member refid="class_buffer_1ade497473777a2b889eadc29c50590f82" prot="public" virt="non-virtual"><scope>Buffer</scope><name>noc_async_write_buffer</name></member>
+      <member refid="class_buffer_1a238c96eb2c8f78e1bba599cbab638465" prot="private" virt="non-virtual"><scope>Buffer</scope><name>num_cores_</name></member>
+      <member refid="class_buffer_1a71147cfe8b83840caceeec89e0d23a2f" prot="public" virt="non-virtual"><scope>Buffer</scope><name>page_size</name></member>
+      <member refid="class_buffer_1a9c646f4ddd9781c561e07349c77f6027" prot="private" virt="non-virtual"><scope>Buffer</scope><name>page_size_</name></member>
+      <member refid="class_buffer_1a1f97c0e35e44c85c0df9e87b887c69c6" prot="private" virt="non-virtual"><scope>Buffer</scope><name>set_type</name></member>
+      <member refid="class_buffer_1a0a530546e63032af005d4716073c0f63" prot="private" virt="non-virtual"><scope>Buffer</scope><name>sharded</name></member>
+      <member refid="class_buffer_1a707c62bb98bf8441208b327feee25567" prot="private" virt="non-virtual"><scope>Buffer</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

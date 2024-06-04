@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="struct_interleaved_pow2_addr_gen" kind="struct" language="C++" prot="public">
+    <compoundname>InterleavedPow2AddrGen</compoundname>
+    <templateparamlist>
+      <param>
+        <type>bool</type>
+        <declname>DRAM</declname>
+        <defname>DRAM</defname>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_interleaved_pow2_addr_gen_1a9966522b70ca72090ad65cbec56a3aa6" prot="public" static="no" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t InterleavedPow2AddrGen&lt; DRAM &gt;::bank_base_address</definition>
+        <argsstring></argsstring>
+        <name>bank_base_address</name>
+        <qualifiedname>InterleavedPow2AddrGen::bank_base_address</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="815" column="20" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="815" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_interleaved_pow2_addr_gen_1a1bdda07b2df9e236c3b18683de154d96" prot="public" static="no" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t InterleavedPow2AddrGen&lt; DRAM &gt;::log_base_2_of_page_size</definition>
+        <argsstring></argsstring>
+        <name>log_base_2_of_page_size</name>
+        <qualifiedname>InterleavedPow2AddrGen::log_base_2_of_page_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="816" column="20" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="816" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_interleaved_pow2_addr_gen_1ab393848b387b4013278bd8d66bac3ee2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uint64_t</type>
+        <definition>std::uint64_t InterleavedPow2AddrGen&lt; DRAM &gt;::get_noc_addr</definition>
+        <argsstring>(const uint32_t id, const uint32_t offset=0) const</argsstring>
+        <name>get_noc_addr</name>
+        <qualifiedname>InterleavedPow2AddrGen::get_noc_addr</qualifiedname>
+        <param>
+          <type>const uint32_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>offset</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/hw/inc/dataflow_api.h" line="820" column="19" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="820" bodyend="854"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tt_metal/hw/inc/dataflow_api.h" line="814" column="1" bodyfile="tt_metal/hw/inc/dataflow_api.h" bodystart="814" bodyend="855"/>
+    <listofallmembers>
+      <member refid="struct_interleaved_pow2_addr_gen_1a9966522b70ca72090ad65cbec56a3aa6" prot="public" virt="non-virtual"><scope>InterleavedPow2AddrGen</scope><name>bank_base_address</name></member>
+      <member refid="struct_interleaved_pow2_addr_gen_1ab393848b387b4013278bd8d66bac3ee2" prot="public" virt="non-virtual"><scope>InterleavedPow2AddrGen</scope><name>get_noc_addr</name></member>
+      <member refid="struct_interleaved_pow2_addr_gen_1a1bdda07b2df9e236c3b18683de154d96" prot="public" virt="non-virtual"><scope>InterleavedPow2AddrGen</scope><name>log_base_2_of_page_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
