@@ -3,4 +3,4 @@ myst-parser
 sphinx-rtd-theme
 nbsphinx
 breathe
-sphinxcontrib.emai
+sphinxcontrib.email
