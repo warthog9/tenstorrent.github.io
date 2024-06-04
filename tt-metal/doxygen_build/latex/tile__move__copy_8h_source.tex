@@ -1,0 +1,54 @@
+\doxysection{tile\+\_\+move\+\_\+copy.\+h}
+\hypertarget{tile__move__copy_8h_source}{}\label{tile__move__copy_8h_source}\index{tt\_metal/include/compute\_kernel\_api/tile\_move\_copy.h@{tt\_metal/include/compute\_kernel\_api/tile\_move\_copy.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ SPDX-\/FileCopyrightText:\ ©\ 2023\ Tenstorrent\ Inc.}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ Apache-\/2.0}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}compute\_kernel\_api/common\_globals.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifdef\ TRISC\_MATH}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}llk\_math\_unary\_datacopy\_api.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifdef\ TRISC\_UNPACK}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}llk\_unpack\_A\_api.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }ckernel\ \{}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00027\ ALWI\ \textcolor{keywordtype}{void}\ copy\_tile\_to\_dst\_init\_short(uint32\_t\ cbid\ =\ 0,\ uint32\_t\ transpose\ =\ 0)}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ UNPACK((\ llk\_unpack\_A\_init<BroadcastType::NONE,\ false,\ EltwiseBinaryReuseDestType::NONE,\ UnpackToDestEn>(transpose,\ \textcolor{keyword}{false}\ \textcolor{comment}{/*transpose\ within\ 16x16\ face*/},\ cbid)\ \ ));}
+\DoxyCodeLine{00030\ \ \ \ \ MATH((\ llk\_math\_eltwise\_unary\_datacopy\_init<A2D,\ BroadcastType::NONE,\ DST\_ACCUM\_MODE>(\textcolor{keyword}{false}\ \textcolor{comment}{/*transpose\ of\ faces*/},\ \textcolor{keyword}{false}\ \textcolor{comment}{/*transpose\ within\ 16x16\ face*/},\ cbid)\ \ ));}
+\DoxyCodeLine{00031\ \}}
+\DoxyCodeLine{00035\ ALWI\ \textcolor{keywordtype}{void}\ copy\_tile\_init()}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ copy\_tile\_to\_dst\_init\_short();}
+\DoxyCodeLine{00038\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00049\ ALWI\ \textcolor{keywordtype}{void}\ copy\_tile\_to\_dst\_init\_short\_with\_dt(uint32\_t\ old\_cbid,\ uint32\_t\ new\_cbid,\ uint32\_t\ transpose\ =\ 0)}
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ This\ reconfig\ call\ checks\ if\ old\ operand\ has\ different\ data\ format\ to}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//\ new\ operand\ idx,\ otherwise\ no\ reconfig\ call\ occurs}}
+\DoxyCodeLine{00053\ \ \ \ \ UNPACK((\ llk\_unpack\_reconfig\_data\_format\_srca(old\_cbid,\ new\_cbid)\ ));}
+\DoxyCodeLine{00054\ \ \ \ \ copy\_tile\_to\_dst\_init\_short(new\_cbid,\ transpose);}
+\DoxyCodeLine{00055\ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00076\ ALWI\ \textcolor{keywordtype}{void}\ copy\_tile(uint32\_t\ in\_cb\_id,\ uint32\_t\ in\_tile\_index,\ uint32\_t\ dst\_tile\_index)}
+\DoxyCodeLine{00077\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ UNPACK((\ llk\_unpack\_A<BroadcastType::NONE,\ false,\ EltwiseBinaryReuseDestType::NONE,\ UnpackToDestEn>(in\_cb\_id,\ in\_tile\_index)\ \ ));}
+\DoxyCodeLine{00079\ \ \ \ \ MATH((\ llk\_math\_eltwise\_unary\_datacopy<A2D,\ BroadcastType::NONE,\ DST\_ACCUM\_MODE,\ UnpackToDestEn>(dst\_tile\_index,\ in\_cb\_id)\ \ ));}
+\DoxyCodeLine{00080\ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ ALWI\ \textcolor{keywordtype}{void}\ copy\_block\_matmul\_partials(uint32\_t\ in\_cb\_id,\ uint32\_t\ start\_in\_tile\_index,\ uint32\_t\ start\_dst\_tile\_index,\ uint32\_t\ ntiles)}
+\DoxyCodeLine{00083\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ UNPACK((\ llk\_unpack\_A\_block<BroadcastType::NONE,\ false,\ EltwiseBinaryReuseDestType::NONE,\ UnpackToDestEn>(in\_cb\_id,\ start\_in\_tile\_index,\ ntiles,\ \textcolor{keyword}{false})\ \ ));}
+\DoxyCodeLine{00085\ \ \ \ \ MATH((\ llk\_math\_eltwise\_unary\_datacopy\_block<A2D,\ BroadcastType::NONE,\ DST\_ACCUM\_MODE,\ UnpackToDestEn>(start\_dst\_tile\_index,\ ntiles,\ in\_cb\_id)\ \ ));}
+\DoxyCodeLine{00086\ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \}}
+
+\end{DoxyCode}

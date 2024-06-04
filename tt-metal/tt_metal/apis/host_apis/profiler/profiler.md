@@ -1,3 +1,0 @@
-# Profiler
-
-* [DumpDeviceProfileResults](DumpDeviceProfileResults.md)
