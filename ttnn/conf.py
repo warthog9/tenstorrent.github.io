@@ -30,7 +30,6 @@ project = metal_sphinx_config.fullname
 copyright = "Tenstorrent"
 author = "Tenstorrent"
 
-
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
