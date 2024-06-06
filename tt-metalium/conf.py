@@ -84,7 +84,7 @@ html_favicon = "../shared/images/cropped-favicon-32x32.png"
 html_static_path = ['../shared/_static']
 import yaml
 with open("../versions.yml", "r") as yaml_file:
-    versions = yaml.safe_load(yaml_file)["tt-metal"]
+    versions = yaml.safe_load(yaml_file)["tt-metalium"]
 
 html_context = {
     "versions": versions,

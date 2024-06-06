@@ -2,10 +2,7 @@ core:
 - latest
 pybuda:
 - latest
-- test-pybuda-version
-tt-metal:
+tt-metalium:
 - latest
-- tt-metal-latest
 ttnn:
 - latest
-- ttnn-latest
