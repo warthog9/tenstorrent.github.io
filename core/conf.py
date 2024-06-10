@@ -27,6 +27,10 @@ html_logo = "../shared/images/tt_logo.svg"
 html_favicon = "../shared/images/cropped-favicon-32x32.png"
 html_static_path = ['../shared/_static']
 
+html_context = {
+    "logo_link_url": "https://tenstorrent.github.io/docs-test/core/latest/"
+}
+
 def setup(app):
     app.add_css_file("tt_theme.css")
 
