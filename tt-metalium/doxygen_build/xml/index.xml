@@ -1,50 +1,50 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.11.0" xml:lang="en-US">
-  <compound refid="class_buffer" kind="class"><name>Buffer</name>
-    <member refid="class_buffer_1a4fcde15c4c0e5f58dc66954df5b2d9d1" kind="variable"><name>bank_base_address</name></member>
-    <member refid="class_buffer_1a9c646f4ddd9781c561e07349c77f6027" kind="variable"><name>page_size_</name></member>
-    <member refid="class_buffer_1a741b8feb511462e572a305f19fa42b9c" kind="variable"><name>get_noc_addr_helper</name></member>
-    <member refid="class_buffer_1a707c62bb98bf8441208b327feee25567" kind="variable"><name>type</name></member>
-    <member refid="class_buffer_1a0a530546e63032af005d4716073c0f63" kind="variable"><name>sharded</name></member>
-    <member refid="class_buffer_1a755c964266ffef77da45df548f8ffa99" kind="variable"><name>base_command_addr_</name></member>
-    <member refid="class_buffer_1a238c96eb2c8f78e1bba599cbab638465" kind="variable"><name>num_cores_</name></member>
-    <member refid="class_buffer_1a1f97c0e35e44c85c0df9e87b887c69c6" kind="function"><name>set_type</name></member>
-    <member refid="class_buffer_1afe5b3d787cc7240fe7d2027405f29c2f" kind="function"><name>get_noc_addr_</name></member>
-    <member refid="class_buffer_1ae7ef2cd201190fde551dcb902627112b" kind="function"><name>Buffer</name></member>
-    <member refid="class_buffer_1afacc4743c31d1116b66c87bf1cff5207" kind="function"><name>Buffer</name></member>
-    <member refid="class_buffer_1a0e0755ca6cd872218206f3810fcace2b" kind="function"><name>Buffer</name></member>
-    <member refid="class_buffer_1a21650fb20bd71111f2610bbf8e670b6f" kind="function"><name>init</name></member>
-    <member refid="class_buffer_1af83e5d4c89b13e27ae5fa6a7af43a817" kind="function"><name>get_type</name></member>
-    <member refid="class_buffer_1a7c16bf384aecc72858a96bd890c0710e" kind="function"><name>init_sharded</name></member>
-    <member refid="class_buffer_1a71147cfe8b83840caceeec89e0d23a2f" kind="function"><name>page_size</name></member>
-    <member refid="class_buffer_1ade497473777a2b889eadc29c50590f82" kind="function"><name>noc_async_write_buffer</name></member>
-    <member refid="class_buffer_1aaeb6821b61163828cda1c7db86d13609" kind="function"><name>noc_async_read_buffer</name></member>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.6" xml:lang="en-US">
+  <compound refid="classBuffer" kind="class"><name>Buffer</name>
+    <member refid="classBuffer_1a4fcde15c4c0e5f58dc66954df5b2d9d1" kind="variable"><name>bank_base_address</name></member>
+    <member refid="classBuffer_1a9c646f4ddd9781c561e07349c77f6027" kind="variable"><name>page_size_</name></member>
+    <member refid="classBuffer_1a741b8feb511462e572a305f19fa42b9c" kind="variable"><name>get_noc_addr_helper</name></member>
+    <member refid="classBuffer_1a707c62bb98bf8441208b327feee25567" kind="variable"><name>type</name></member>
+    <member refid="classBuffer_1a0a530546e63032af005d4716073c0f63" kind="variable"><name>sharded</name></member>
+    <member refid="classBuffer_1a755c964266ffef77da45df548f8ffa99" kind="variable"><name>base_command_addr_</name></member>
+    <member refid="classBuffer_1a238c96eb2c8f78e1bba599cbab638465" kind="variable"><name>num_cores_</name></member>
+    <member refid="classBuffer_1a1f97c0e35e44c85c0df9e87b887c69c6" kind="function"><name>set_type</name></member>
+    <member refid="classBuffer_1afe5b3d787cc7240fe7d2027405f29c2f" kind="function"><name>get_noc_addr_</name></member>
+    <member refid="classBuffer_1ae7ef2cd201190fde551dcb902627112b" kind="function"><name>Buffer</name></member>
+    <member refid="classBuffer_1afacc4743c31d1116b66c87bf1cff5207" kind="function"><name>Buffer</name></member>
+    <member refid="classBuffer_1a0e0755ca6cd872218206f3810fcace2b" kind="function"><name>Buffer</name></member>
+    <member refid="classBuffer_1a21650fb20bd71111f2610bbf8e670b6f" kind="function"><name>init</name></member>
+    <member refid="classBuffer_1af83e5d4c89b13e27ae5fa6a7af43a817" kind="function"><name>get_type</name></member>
+    <member refid="classBuffer_1a7c16bf384aecc72858a96bd890c0710e" kind="function"><name>init_sharded</name></member>
+    <member refid="classBuffer_1a71147cfe8b83840caceeec89e0d23a2f" kind="function"><name>page_size</name></member>
+    <member refid="classBuffer_1ade497473777a2b889eadc29c50590f82" kind="function"><name>noc_async_write_buffer</name></member>
+    <member refid="classBuffer_1aaeb6821b61163828cda1c7db86d13609" kind="function"><name>noc_async_read_buffer</name></member>
   </compound>
-  <compound refid="struct_interleaved_addr_gen" kind="struct"><name>InterleavedAddrGen</name>
-    <member refid="struct_interleaved_addr_gen_1a9a6b4336c1f9059c48f7dd38d3c223ba" kind="variable"><name>bank_base_address</name></member>
-    <member refid="struct_interleaved_addr_gen_1a990164fddbcfb10bbe0a7f2912dfc0f9" kind="variable"><name>page_size</name></member>
-    <member refid="struct_interleaved_addr_gen_1acdf9396fff622c57dd7eb42349d5dd0f" kind="function"><name>get_noc_addr</name></member>
-    <member refid="struct_interleaved_addr_gen_1a5f721b07e180187a4f7281789e626988" kind="function"><name>noc_async_read_page</name></member>
+  <compound refid="structInterleavedAddrGen" kind="struct"><name>InterleavedAddrGen</name>
+    <member refid="structInterleavedAddrGen_1a9a6b4336c1f9059c48f7dd38d3c223ba" kind="variable"><name>bank_base_address</name></member>
+    <member refid="structInterleavedAddrGen_1a990164fddbcfb10bbe0a7f2912dfc0f9" kind="variable"><name>page_size</name></member>
+    <member refid="structInterleavedAddrGen_1acdf9396fff622c57dd7eb42349d5dd0f" kind="function"><name>get_noc_addr</name></member>
+    <member refid="structInterleavedAddrGen_1a5f721b07e180187a4f7281789e626988" kind="function"><name>noc_async_read_page</name></member>
   </compound>
-  <compound refid="struct_interleaved_addr_gen_fast" kind="struct"><name>InterleavedAddrGenFast</name>
-    <member refid="struct_interleaved_addr_gen_fast_1abe6d0419b318f5b384c23dacdc06de01" kind="variable"><name>bank_base_address</name></member>
-    <member refid="struct_interleaved_addr_gen_fast_1adcda56d740e71d953bddfc7b3f9c9841" kind="variable"><name>page_size</name></member>
-    <member refid="struct_interleaved_addr_gen_fast_1a29203b200ccf0265e84f7720236d3c04" kind="variable"><name>data_format</name></member>
-    <member refid="struct_interleaved_addr_gen_fast_1add07fcdcff66fb5d819246f59b075672" kind="function"><name>get_noc_addr</name></member>
-    <member refid="struct_interleaved_addr_gen_fast_1adb2ddec50af80b9bd1327f4eadaed63b" kind="function"><name>noc_async_read_tile</name></member>
-    <member refid="struct_interleaved_addr_gen_fast_1a4221b39a7361b18dda2d406f52faad67" kind="function"><name>noc_async_write_tile</name></member>
+  <compound refid="structInterleavedAddrGenFast" kind="struct"><name>InterleavedAddrGenFast</name>
+    <member refid="structInterleavedAddrGenFast_1abe6d0419b318f5b384c23dacdc06de01" kind="variable"><name>bank_base_address</name></member>
+    <member refid="structInterleavedAddrGenFast_1adcda56d740e71d953bddfc7b3f9c9841" kind="variable"><name>page_size</name></member>
+    <member refid="structInterleavedAddrGenFast_1a29203b200ccf0265e84f7720236d3c04" kind="variable"><name>data_format</name></member>
+    <member refid="structInterleavedAddrGenFast_1add07fcdcff66fb5d819246f59b075672" kind="function"><name>get_noc_addr</name></member>
+    <member refid="structInterleavedAddrGenFast_1adb2ddec50af80b9bd1327f4eadaed63b" kind="function"><name>noc_async_read_tile</name></member>
+    <member refid="structInterleavedAddrGenFast_1a4221b39a7361b18dda2d406f52faad67" kind="function"><name>noc_async_write_tile</name></member>
   </compound>
-  <compound refid="struct_interleaved_pow2_addr_gen" kind="struct"><name>InterleavedPow2AddrGen</name>
-    <member refid="struct_interleaved_pow2_addr_gen_1a9966522b70ca72090ad65cbec56a3aa6" kind="variable"><name>bank_base_address</name></member>
-    <member refid="struct_interleaved_pow2_addr_gen_1a1bdda07b2df9e236c3b18683de154d96" kind="variable"><name>log_base_2_of_page_size</name></member>
-    <member refid="struct_interleaved_pow2_addr_gen_1ab393848b387b4013278bd8d66bac3ee2" kind="function"><name>get_noc_addr</name></member>
+  <compound refid="structInterleavedPow2AddrGen" kind="struct"><name>InterleavedPow2AddrGen</name>
+    <member refid="structInterleavedPow2AddrGen_1a9966522b70ca72090ad65cbec56a3aa6" kind="variable"><name>bank_base_address</name></member>
+    <member refid="structInterleavedPow2AddrGen_1a1bdda07b2df9e236c3b18683de154d96" kind="variable"><name>log_base_2_of_page_size</name></member>
+    <member refid="structInterleavedPow2AddrGen_1ab393848b387b4013278bd8d66bac3ee2" kind="function"><name>get_noc_addr</name></member>
   </compound>
-  <compound refid="struct_interleaved_pow2_addr_gen_fast" kind="struct"><name>InterleavedPow2AddrGenFast</name>
-    <member refid="struct_interleaved_pow2_addr_gen_fast_1ac18418a3bb8b3b3b424b8394ba20936f" kind="variable"><name>bank_base_address</name></member>
-    <member refid="struct_interleaved_pow2_addr_gen_fast_1a4df6258d8374687eca0ba28b5a0fc50f" kind="variable"><name>log_base_2_of_page_size</name></member>
-    <member refid="struct_interleaved_pow2_addr_gen_fast_1a764088893f2c2406f2b8f126d922950e" kind="function"><name>noc_async_read_page</name></member>
-    <member refid="struct_interleaved_pow2_addr_gen_fast_1a00f1b06cfc28aebf5a06ebf19020e981" kind="function"><name>noc_async_read_partial_page</name></member>
-    <member refid="struct_interleaved_pow2_addr_gen_fast_1afa84cb4c74013f4a405b0c50c76b4fd6" kind="function"><name>noc_async_write_page</name></member>
+  <compound refid="structInterleavedPow2AddrGenFast" kind="struct"><name>InterleavedPow2AddrGenFast</name>
+    <member refid="structInterleavedPow2AddrGenFast_1ac18418a3bb8b3b3b424b8394ba20936f" kind="variable"><name>bank_base_address</name></member>
+    <member refid="structInterleavedPow2AddrGenFast_1a4df6258d8374687eca0ba28b5a0fc50f" kind="variable"><name>log_base_2_of_page_size</name></member>
+    <member refid="structInterleavedPow2AddrGenFast_1a764088893f2c2406f2b8f126d922950e" kind="function"><name>noc_async_read_page</name></member>
+    <member refid="structInterleavedPow2AddrGenFast_1a00f1b06cfc28aebf5a06ebf19020e981" kind="function"><name>noc_async_read_partial_page</name></member>
+    <member refid="structInterleavedPow2AddrGenFast_1afa84cb4c74013f4a405b0c50c76b4fd6" kind="function"><name>noc_async_write_page</name></member>
   </compound>
   <compound refid="namespaceckernel" kind="namespace"><name>ckernel</name>
     <member refid="erf__erfc_8h_1a457fed1c2f71b59d1949d93479d54f8c" kind="function"><name>erf_tile_init</name></member>
@@ -128,7 +128,9 @@
     <member refid="eltwise__binary_8h_1a5d86448b624a24f6bf77c45334590835" kind="function"><name>mul_tiles</name></member>
     <member refid="eltwise__binary_8h_1a5a091c5371932422fc303adea3eec806" kind="function"><name>add_tiles</name></member>
     <member refid="eltwise__binary_8h_1acc846385166d37dbbab9e602e44e1fb3" kind="function"><name>sub_tiles</name></member>
-    <member refid="eltwise__binary_8h_1afb14e9ccbae9064ee806aec64840cfb6" kind="function"><name>binary_op_specific_init</name></member>
+    <member refid="eltwise__binary_8h_1ae239860fe24a16896deca931882e7bd6" kind="function"><name>binary_op_specific_init</name></member>
+    <member refid="eltwise__binary_8h_1a1ca6439309935d12d0f15ca795bb8985" kind="function"><name>binary_dest_reuse_tiles_init</name></member>
+    <member refid="eltwise__binary_8h_1a9f5d8b2767ab4f1e188aac1ee4a8c744" kind="function"><name>binary_dest_reuse_tiles</name></member>
     <member refid="matmul_8h_1adeadefda1b391d2924a635b87f264c9f" kind="function"><name>mm_init</name></member>
     <member refid="matmul_8h_1ae3b5c274614aec08a77df1f78829c39d" kind="function"><name>matmul_tiles</name></member>
     <member refid="matmul_8h_1a11c225636a89c5fbc8e3ab0f17902f88" kind="function"><name>matmul_tiles_math</name></member>
@@ -255,7 +257,7 @@
   <compound refid="namespacett" kind="namespace"><name>tt</name>
   </compound>
   <compound refid="namespacett_1_1tt__metal" kind="namespace"><name>tt::tt_metal</name>
-    <member refid="host__api_8hpp_1a7a1767aeb55abe39ded6de26e661a7e0" kind="typedef"><name>RuntimeArgs</name></member>
+    <member refid="host__api_8hpp_1af559e38779cb26844ec9a6b0bb41f940" kind="typedef"><name>RuntimeArgs</name></member>
     <member refid="host__api_8hpp_1a06ba0ab5eeb2da5af625a8b7f95ca48e" kind="function"><name>GetNumAvailableDevices</name></member>
     <member refid="host__api_8hpp_1aa18761d248b0a8081c84440f3aeafcfc" kind="function"><name>GetNumPCIeDevices</name></member>
     <member refid="host__api_8hpp_1a1c648a47154fd9c255f33943e313c9a8" kind="function"><name>CreateDevice</name></member>
@@ -370,6 +372,11 @@
     <member refid="dataflow__api_8h_1a9e9618b5b64ed1ae0d0a747ac0f10745" kind="function"><name>RISC_POST_HEARTBEAT</name></member>
     <member refid="dataflow__api_8h_1a29bd290aaee1b41529717b029dc14952" kind="function"><name>min</name></member>
     <member refid="dataflow__api_8h_1a901d9922d4a71afe3e51189d4f414b04" kind="function"><name>noc_async_sharded_read_write_helper</name></member>
+    <member refid="dataflow__api_8h_1a0de16ed70bc7231b31eb861b6d0a6842" kind="function"><name>noc_async_read_tile_dram_sharded_set_state</name></member>
+    <member refid="dataflow__api_8h_1a907a8339412ff90e99743a4ca71af910" kind="function"><name>noc_async_read_tile_dram_sharded_with_state</name></member>
+    <member refid="dataflow__api_8h_1ae92c034dfaaa6b841194aab8e7d5ec42" kind="function"><name>noc_async_read_tile_dram_sharded_with_state_with_trid</name></member>
+    <member refid="dataflow__api_8h_1a799ce34e86a34e05f3dd8f30cf958378" kind="function"><name>noc_async_read_tile_dram_sharded_set_trid</name></member>
+    <member refid="dataflow__api_8h_1a5515ebbed8b273697e2f44894cf3be28" kind="function"><name>noc_async_read_barrier_with_trid</name></member>
   </compound>
   <compound refid="ethernet_2dataflow__api_8h" kind="file"><name>dataflow_api.h</name>
     <member refid="ethernet_2dataflow__api_8h_1a9d454f81bcb8875f528a900fa9326bc6" kind="function"><name>eth_txq_is_busy</name></member>

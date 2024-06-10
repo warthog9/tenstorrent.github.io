@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
   <compounddef id="compute__kernel__api_8h" kind="file" language="C++">
     <compoundname>compute_kernel_api.h</compoundname>
     <includes local="yes">chlkc_list.h</includes>
@@ -51,7 +51,7 @@
       </node>
     </incdepgraph>
     <innernamespace refid="namespaceckernel">ckernel</innernamespace>
-    <sectiondef kind="define">
+      <sectiondef kind="define">
       <memberdef kind="define" id="compute__kernel__api_8h_1a102b55d753f30b2569dd7976e1917038" prot="public" static="no">
         <name>ALWI</name>
         <initializer>inline <ref refid="dataflow__api_8h_1aaeb67c582bba445a7c2e7eac520cd84e" kindref="member">__attribute__</ref>((always_inline))</initializer>
@@ -96,7 +96,7 @@
         </inbodydescription>
         <location file="tt_metal/include/compute_kernel_api.h" line="51" column="10" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="51" bodyend="-1"/>
       </memberdef>
-    </sectiondef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -194,12 +194,12 @@
 <codeline lineno="152"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="153"><highlight class="normal"></highlight></codeline>
 <codeline lineno="154"><highlight class="normal"></highlight><highlight class="comment">//TODO:<sp/>Move<sp/>to<sp/>trigonometry.h</highlight></codeline>
-<codeline lineno="158"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>tanh_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="comment"></highlight><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>tanh_tile_init()<sp/>{</highlight></codeline>
 <codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_tanh_init&lt;APPROX&gt;()<sp/>));<sp/></highlight><highlight class="comment">//<sp/>TODO(AP):<sp/>move<sp/>out<sp/>init</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="160"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="161"><highlight class="normal"></highlight></codeline>
 <codeline lineno="162"><highlight class="normal"></highlight><highlight class="comment">//TODO:<sp/>Move<sp/>to<sp/>trigonometry.h</highlight></codeline>
-<codeline lineno="175"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>tanh_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="comment"></highlight><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>tanh_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
 <codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_tanh&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
 <codeline lineno="177"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="178"><highlight class="normal"></highlight></codeline>
@@ -213,249 +213,250 @@
 <codeline lineno="201"><highlight class="normal"></highlight></codeline>
 <codeline lineno="202"><highlight class="normal"></highlight></codeline>
 <codeline lineno="203"><highlight class="normal"></highlight></codeline>
-<codeline lineno="216"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>abs_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_abs&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
-<codeline lineno="218"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>abs_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_abs&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="220"><highlight class="normal"></highlight></codeline>
-<codeline lineno="224"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>abs_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_abs_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="226"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="227"><highlight class="normal"></highlight></codeline>
-<codeline lineno="240"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sign_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
-<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_sign&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
-<codeline lineno="242"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="243"><highlight class="normal"></highlight></codeline>
-<codeline lineno="247"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sign_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_sign_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="249"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="250"><highlight class="normal"></highlight></codeline>
-<codeline lineno="263"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>square_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
-<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_square&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
-<codeline lineno="265"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="266"><highlight class="normal"></highlight></codeline>
-<codeline lineno="270"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>square_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_square_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="272"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="273"><highlight class="normal"></highlight></codeline>
-<codeline lineno="274"><highlight class="normal"></highlight><highlight class="comment">//compare<sp/>to<sp/>zero<sp/>operators</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>abs_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_abs_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sign_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_sign&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sign_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_sign_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="250"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>square_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_square&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
+<codeline lineno="266"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>square_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_square_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="273"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="comment">//compare<sp/>to<sp/>zero<sp/>operators</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="276"><highlight class="normal"></highlight></codeline>
 <codeline lineno="277"><highlight class="normal"></highlight></codeline>
 <codeline lineno="278"><highlight class="normal"></highlight></codeline>
-<codeline lineno="292"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ltz_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
-<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_ltz&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
-<codeline lineno="294"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ltz_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_ltz&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
+<codeline lineno="295"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="296"><highlight class="normal"></highlight></codeline>
-<codeline lineno="300"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ltz_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_ltz_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="302"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ltz_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_ltz_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="304"><highlight class="normal"></highlight></codeline>
-<codeline lineno="318"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>eqz_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
-<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_eqz&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
-<codeline lineno="320"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>eqz_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_eqz&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
+<codeline lineno="321"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="322"><highlight class="normal"></highlight></codeline>
-<codeline lineno="326"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>eqz_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_eqz_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="328"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="329"><highlight class="normal"></highlight></codeline>
-<codeline lineno="343"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>lez_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
-<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_lez&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
-<codeline lineno="345"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="346"><highlight class="normal"></highlight></codeline>
-<codeline lineno="350"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>lez_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_lez_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="352"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="353"><highlight class="normal"></highlight></codeline>
-<codeline lineno="366"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>tiled_prod_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
-<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_tiled_prod&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
-<codeline lineno="368"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="369"><highlight class="normal"></highlight></codeline>
-<codeline lineno="373"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>tiled_prod_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_tiled_prod_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="375"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="376"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>eqz_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_eqz_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="329"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>lez_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_lez&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
+<codeline lineno="346"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>lez_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_lez_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="353"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>tiled_prod_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_tiled_prod&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
+<codeline lineno="369"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>tiled_prod_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_tiled_prod_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="376"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="377"><highlight class="normal"></highlight></codeline>
-<codeline lineno="391"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gtz_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
-<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_gtz&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
-<codeline lineno="393"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="394"><highlight class="normal"></highlight></codeline>
-<codeline lineno="398"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gtz_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_gtz_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="400"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="401"><highlight class="normal"></highlight></codeline>
-<codeline lineno="414"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>nez_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
-<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_nez&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
-<codeline lineno="416"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="417"><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gtz_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_gtz&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
+<codeline lineno="394"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gtz_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_gtz_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="401"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="415"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>nez_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_nez&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
+<codeline lineno="417"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="418"><highlight class="normal"></highlight></codeline>
-<codeline lineno="422"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>nez_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_nez_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="424"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="425"><highlight class="normal"></highlight></codeline>
-<codeline lineno="438"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gez_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
-<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_gez&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
-<codeline lineno="440"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="441"><highlight class="normal"></highlight></codeline>
-<codeline lineno="445"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gez_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_gez_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="447"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="448"><highlight class="normal"></highlight></codeline>
+<codeline lineno="419"><highlight class="normal"></highlight></codeline>
+<codeline lineno="423"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>nez_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_nez_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="425"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight></codeline>
+<codeline lineno="439"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gez_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_gez&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
+<codeline lineno="441"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight></codeline>
+<codeline lineno="446"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gez_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_gez_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="448"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="449"><highlight class="normal"></highlight></codeline>
 <codeline lineno="450"><highlight class="normal"></highlight></codeline>
-<codeline lineno="451"><highlight class="normal"></highlight><highlight class="comment">//POWER<sp/>:<sp/>y<sp/>=<sp/>x^(const<sp/>param0)</highlight></codeline>
-<codeline lineno="465"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>power_tile(uint32_t<sp/>idst,uint32_t<sp/>param0)<sp/>{</highlight></codeline>
-<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_power&lt;APPROX&gt;(idst,param0)<sp/>));</highlight></codeline>
-<codeline lineno="467"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="468"><highlight class="normal"></highlight></codeline>
-<codeline lineno="472"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>power_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_power_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="474"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="475"><highlight class="normal"></highlight></codeline>
-<codeline lineno="476"><highlight class="normal"></highlight><highlight class="comment">//MAX<sp/>:<sp/>y<sp/>=<sp/>max(idst0,<sp/>idst1)</highlight></codeline>
-<codeline lineno="494"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>max_tile(uint32_t<sp/>idst0,<sp/>uint32_t<sp/>idst1)<sp/>{</highlight></codeline>
-<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_max&lt;APPROX&gt;(idst0)<sp/>));</highlight></codeline>
-<codeline lineno="496"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="497"><highlight class="normal"></highlight></codeline>
-<codeline lineno="501"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>max_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_max_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="503"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="504"><highlight class="normal"></highlight></codeline>
-<codeline lineno="505"><highlight class="normal"></highlight><highlight class="comment">//exp2<sp/>:<sp/>y<sp/>=<sp/>2<sp/>^<sp/>x<sp/><sp/>==&gt;<sp/>[y<sp/>=<sp/>exp(x<sp/>*<sp/>log(2))]</highlight></codeline>
-<codeline lineno="518"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>exp2_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
-<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_exp2&lt;true&gt;(idst)<sp/>));</highlight></codeline>
-<codeline lineno="520"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="521"><highlight class="normal"></highlight></codeline>
-<codeline lineno="525"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>exp2_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_exp2_init&lt;true&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="527"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="528"><highlight class="normal"></highlight></codeline>
-<codeline lineno="529"><highlight class="normal"></highlight><highlight class="comment">//heaviside<sp/>:<sp/>y<sp/>=<sp/>0<sp/>if<sp/>x<sp/>&lt;<sp/>0<sp/>,<sp/>1<sp/>if<sp/>x<sp/>&gt;<sp/>0<sp/>,<sp/>else<sp/>value</highlight></codeline>
-<codeline lineno="543"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>heaviside_tile(uint32_t<sp/>idst,uint32_t<sp/>param0)<sp/>{</highlight></codeline>
-<codeline lineno="544"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_heaviside&lt;APPROX&gt;(idst,param0)<sp/>));</highlight></codeline>
-<codeline lineno="545"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="546"><highlight class="normal"></highlight></codeline>
-<codeline lineno="550"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>heaviside_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="551"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_heaviside_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="552"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="553"><highlight class="normal"></highlight></codeline>
-<codeline lineno="554"><highlight class="normal"></highlight><highlight class="comment">//unary<sp/>ne<sp/>:<sp/>if<sp/>x<sp/>!=value<sp/>--&gt;<sp/>1.0,<sp/>else<sp/>0.0</highlight></codeline>
-<codeline lineno="568"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>unary_ne_tile(uint32_t<sp/>idst,uint32_t<sp/>param0)<sp/>{</highlight></codeline>
-<codeline lineno="569"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_unary_ne&lt;APPROX&gt;(idst,param0)<sp/>));</highlight></codeline>
-<codeline lineno="570"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="571"><highlight class="normal"></highlight></codeline>
-<codeline lineno="575"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>unary_ne_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="576"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_unary_ne_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="577"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="578"><highlight class="normal"></highlight></codeline>
-<codeline lineno="579"><highlight class="normal"></highlight><highlight class="comment">//expm1<sp/>:<sp/>(exp(x)<sp/>-<sp/>1)</highlight></codeline>
-<codeline lineno="592"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>expm1_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
-<codeline lineno="593"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_expm1&lt;true&gt;(idst)<sp/>));</highlight></codeline>
-<codeline lineno="594"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="595"><highlight class="normal"></highlight></codeline>
-<codeline lineno="599"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>expm1_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="600"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_expm1_init&lt;true&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="601"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="602"><highlight class="normal"></highlight></codeline>
-<codeline lineno="603"><highlight class="normal"></highlight><highlight class="comment">//TODO:<sp/>move<sp/>to<sp/>trigonometry.h</highlight></codeline>
-<codeline lineno="616"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>asin_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
-<codeline lineno="617"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_asin&lt;true&gt;(idst)<sp/>));</highlight></codeline>
-<codeline lineno="618"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="619"><highlight class="normal"></highlight></codeline>
-<codeline lineno="620"><highlight class="normal"></highlight><highlight class="comment">//TODO:<sp/>move<sp/>to<sp/>trigonometry.h</highlight></codeline>
-<codeline lineno="624"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>asin_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="625"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_asin_init&lt;true&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="626"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="627"><highlight class="normal"></highlight></codeline>
-<codeline lineno="628"><highlight class="normal"></highlight><highlight class="comment">//TODO:<sp/>move<sp/>to<sp/>trigonometry.h</highlight></codeline>
-<codeline lineno="641"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>atan_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
-<codeline lineno="642"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_atan&lt;true&gt;(idst)<sp/>));</highlight></codeline>
-<codeline lineno="643"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="644"><highlight class="normal"></highlight></codeline>
-<codeline lineno="645"><highlight class="normal"></highlight><highlight class="comment">//TODO:<sp/>move<sp/>to<sp/>trigonometry.h</highlight></codeline>
-<codeline lineno="649"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>atan_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="650"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_atan_init&lt;true&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="651"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="652"><highlight class="normal"></highlight></codeline>
-<codeline lineno="653"><highlight class="normal"></highlight><highlight class="comment">//TODO:<sp/>move<sp/>to<sp/>trigonometry.h</highlight></codeline>
-<codeline lineno="666"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>acos_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
-<codeline lineno="667"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_acos&lt;true&gt;(idst)<sp/>));</highlight></codeline>
-<codeline lineno="668"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="669"><highlight class="normal"></highlight></codeline>
-<codeline lineno="670"><highlight class="normal"></highlight><highlight class="comment">//TODO:<sp/>move<sp/>to<sp/>trigonometry.h</highlight></codeline>
-<codeline lineno="674"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>acos_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="675"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_acos_init&lt;true&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="676"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="677"><highlight class="normal"></highlight></codeline>
-<codeline lineno="678"><highlight class="normal"></highlight><highlight class="comment">//<sp/>silu</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="679"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>SILU<sp/>(same<sp/>as<sp/>Swish)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="680"><highlight class="normal"></highlight><highlight class="comment">//<sp/>use<sp/>activation<sp/>Silu[x]<sp/>=<sp/>x*Sigmoid[x]</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="681"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Ref:<sp/>https://pytorch.org/docs/stable/generated/torch.nn.SiLU.html?highlight=silu#torch.nn.SiLU</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="682"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>silu_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
-<codeline lineno="683"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_silu&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
-<codeline lineno="684"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="685"><highlight class="normal"></highlight></codeline>
-<codeline lineno="686"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>silu_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="687"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_silu_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="688"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="689"><highlight class="normal"></highlight></codeline>
-<codeline lineno="690"><highlight class="normal"></highlight><highlight class="comment">//topK<sp/>local<sp/>sort</highlight></codeline>
-<codeline lineno="727"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>topk_local_sort(uint32_t<sp/>idst,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idir,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_end_phase,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_start_phase=0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_end_step=0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_start_step=0)<sp/>{</highlight></codeline>
-<codeline lineno="728"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_topk_local_sort&lt;true&gt;(idst,<sp/>idir,<sp/>i_end_phase,<sp/>i_start_phase,<sp/>i_end_step,<sp/>i_start_step)<sp/>));</highlight></codeline>
-<codeline lineno="729"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="730"><highlight class="normal"></highlight></codeline>
-<codeline lineno="731"><highlight class="normal"></highlight><highlight class="comment">//topK<sp/>merge</highlight></codeline>
-<codeline lineno="759"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>topk_merge(uint32_t<sp/>idst,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_iter,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k)<sp/>{</highlight></codeline>
-<codeline lineno="760"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_topk_merge&lt;true&gt;(idst,<sp/>m_iter,<sp/>k)<sp/>));</highlight></codeline>
-<codeline lineno="761"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="762"><highlight class="normal"></highlight></codeline>
-<codeline lineno="763"><highlight class="normal"></highlight><highlight class="comment">//topK<sp/>rebuild</highlight></codeline>
-<codeline lineno="793"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>topk_rebuild(uint32_t<sp/>idst,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>idir,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_iter,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>logk,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>skip_second)<sp/>{</highlight></codeline>
-<codeline lineno="794"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_topk_rebuild&lt;true&gt;(idst,<sp/>idir,<sp/>m_iter,<sp/>k,<sp/>logk,<sp/>skip_second)<sp/>));</highlight></codeline>
-<codeline lineno="795"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="796"><highlight class="normal"></highlight></codeline>
-<codeline lineno="800"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>topk_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="801"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_topk_init&lt;true&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="802"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="803"><highlight class="normal"></highlight></codeline>
-<codeline lineno="809"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dbg_halt()<sp/>{</highlight></codeline>
-<codeline lineno="810"><highlight class="normal"><sp/><sp/><sp/><sp/>PACK<sp/>(dbg_thread_halt&lt;PackThreadId&gt;());</highlight></codeline>
-<codeline lineno="811"><highlight class="normal"><sp/><sp/><sp/><sp/>UNPACK<sp/>(dbg_thread_halt&lt;UnpackThreadId&gt;());</highlight></codeline>
-<codeline lineno="812"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH<sp/>(dbg_thread_halt&lt;MathThreadId&gt;());</highlight></codeline>
-<codeline lineno="813"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="814"><highlight class="normal"></highlight></codeline>
-<codeline lineno="820"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dbg_unhalt()<sp/>{</highlight></codeline>
-<codeline lineno="821"><highlight class="normal"><sp/><sp/><sp/><sp/>PACK<sp/>(dbg_thread_unhalt&lt;PackThreadId&gt;());</highlight></codeline>
-<codeline lineno="822"><highlight class="normal"><sp/><sp/><sp/><sp/>UNPACK<sp/>(dbg_thread_unhalt&lt;UnpackThreadId&gt;());</highlight></codeline>
-<codeline lineno="823"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH<sp/>(dbg_thread_unhalt&lt;MathThreadId&gt;());</highlight></codeline>
-<codeline lineno="824"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="825"><highlight class="normal"></highlight></codeline>
-<codeline lineno="836"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dbg_read_dest_acc_row(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row_addr,<sp/>uint32_t<sp/>*rd_data)<sp/>{</highlight></codeline>
-<codeline lineno="837"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH<sp/>((<sp/>dbg_get_array_row(dbg_array_id::DEST,<sp/>row_addr,<sp/>rd_data)));</highlight></codeline>
-<codeline lineno="838"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="839"><highlight class="normal"></highlight></codeline>
-<codeline lineno="840"><highlight class="normal"></highlight><highlight class="comment">//unary<sp/>gt<sp/>:<sp/>if<sp/>x<sp/>&gt;<sp/>value<sp/>--&gt;<sp/>1.0,<sp/>else<sp/>0.0</highlight></codeline>
-<codeline lineno="854"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>unary_gt_tile(uint32_t<sp/>idst,uint32_t<sp/>param0)<sp/>{</highlight></codeline>
-<codeline lineno="855"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_unary_gt&lt;APPROX&gt;(idst,param0)<sp/>));</highlight></codeline>
-<codeline lineno="856"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="857"><highlight class="normal"></highlight></codeline>
-<codeline lineno="861"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>unary_gt_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="862"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_unary_gt_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="863"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="864"><highlight class="normal"></highlight></codeline>
-<codeline lineno="865"><highlight class="normal"></highlight><highlight class="comment">//unary<sp/>lt<sp/>:<sp/>if<sp/>x<sp/>&lt;<sp/>value<sp/>--&gt;<sp/>1.0,<sp/>else<sp/>0.0</highlight></codeline>
-<codeline lineno="879"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>unary_lt_tile(uint32_t<sp/>idst,uint32_t<sp/>param0)<sp/>{</highlight></codeline>
-<codeline lineno="880"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_unary_lt&lt;APPROX&gt;(idst,param0)<sp/>));</highlight></codeline>
-<codeline lineno="881"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="882"><highlight class="normal"></highlight></codeline>
-<codeline lineno="886"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>unary_lt_tile_init()<sp/>{</highlight></codeline>
-<codeline lineno="887"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_unary_lt_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
-<codeline lineno="888"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="889"><highlight class="normal"></highlight></codeline>
-<codeline lineno="890"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ckernel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="451"><highlight class="normal"></highlight></codeline>
+<codeline lineno="452"><highlight class="normal"></highlight><highlight class="comment">//POWER<sp/>:<sp/>y<sp/>=<sp/>x^(const<sp/>param0)</highlight></codeline>
+<codeline lineno="466"><highlight class="comment"></highlight><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>power_tile(uint32_t<sp/>idst,uint32_t<sp/>param0)<sp/>{</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_power&lt;APPROX&gt;(idst,param0)<sp/>));</highlight></codeline>
+<codeline lineno="468"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"></highlight></codeline>
+<codeline lineno="473"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>power_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_power_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="475"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"></highlight></codeline>
+<codeline lineno="477"><highlight class="normal"></highlight><highlight class="comment">//MAX<sp/>:<sp/>y<sp/>=<sp/>max(idst0,<sp/>idst1)</highlight></codeline>
+<codeline lineno="495"><highlight class="comment"></highlight><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>max_tile(uint32_t<sp/>idst0,<sp/>uint32_t<sp/>idst1)<sp/>{</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_max&lt;APPROX&gt;(idst0)<sp/>));</highlight></codeline>
+<codeline lineno="497"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"></highlight></codeline>
+<codeline lineno="502"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>max_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_max_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="504"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="505"><highlight class="normal"></highlight></codeline>
+<codeline lineno="506"><highlight class="normal"></highlight><highlight class="comment">//exp2<sp/>:<sp/>y<sp/>=<sp/>2<sp/>^<sp/>x<sp/><sp/>==&gt;<sp/>[y<sp/>=<sp/>exp(x<sp/>*<sp/>log(2))]</highlight></codeline>
+<codeline lineno="519"><highlight class="comment"></highlight><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>exp2_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_exp2&lt;true&gt;(idst)<sp/>));</highlight></codeline>
+<codeline lineno="521"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="522"><highlight class="normal"></highlight></codeline>
+<codeline lineno="526"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>exp2_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_exp2_init&lt;true&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="528"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="529"><highlight class="normal"></highlight></codeline>
+<codeline lineno="530"><highlight class="normal"></highlight><highlight class="comment">//heaviside<sp/>:<sp/>y<sp/>=<sp/>0<sp/>if<sp/>x<sp/>&lt;<sp/>0<sp/>,<sp/>1<sp/>if<sp/>x<sp/>&gt;<sp/>0<sp/>,<sp/>else<sp/>value</highlight></codeline>
+<codeline lineno="544"><highlight class="comment"></highlight><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>heaviside_tile(uint32_t<sp/>idst,uint32_t<sp/>param0)<sp/>{</highlight></codeline>
+<codeline lineno="545"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_heaviside&lt;APPROX&gt;(idst,param0)<sp/>));</highlight></codeline>
+<codeline lineno="546"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="547"><highlight class="normal"></highlight></codeline>
+<codeline lineno="551"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>heaviside_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="552"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_heaviside_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="553"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="554"><highlight class="normal"></highlight></codeline>
+<codeline lineno="555"><highlight class="normal"></highlight><highlight class="comment">//unary<sp/>ne<sp/>:<sp/>if<sp/>x<sp/>!=value<sp/>--&gt;<sp/>1.0,<sp/>else<sp/>0.0</highlight></codeline>
+<codeline lineno="569"><highlight class="comment"></highlight><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>unary_ne_tile(uint32_t<sp/>idst,uint32_t<sp/>param0)<sp/>{</highlight></codeline>
+<codeline lineno="570"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_unary_ne&lt;APPROX&gt;(idst,param0)<sp/>));</highlight></codeline>
+<codeline lineno="571"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="572"><highlight class="normal"></highlight></codeline>
+<codeline lineno="576"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>unary_ne_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="577"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_unary_ne_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="578"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="579"><highlight class="normal"></highlight></codeline>
+<codeline lineno="580"><highlight class="normal"></highlight><highlight class="comment">//expm1<sp/>:<sp/>(exp(x)<sp/>-<sp/>1)</highlight></codeline>
+<codeline lineno="593"><highlight class="comment"></highlight><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>expm1_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
+<codeline lineno="594"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_expm1&lt;true&gt;(idst)<sp/>));</highlight></codeline>
+<codeline lineno="595"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="596"><highlight class="normal"></highlight></codeline>
+<codeline lineno="600"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>expm1_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="601"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_expm1_init&lt;true&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="602"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="603"><highlight class="normal"></highlight></codeline>
+<codeline lineno="604"><highlight class="normal"></highlight><highlight class="comment">//TODO:<sp/>move<sp/>to<sp/>trigonometry.h</highlight></codeline>
+<codeline lineno="617"><highlight class="comment"></highlight><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>asin_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
+<codeline lineno="618"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_asin&lt;true&gt;(idst)<sp/>));</highlight></codeline>
+<codeline lineno="619"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="620"><highlight class="normal"></highlight></codeline>
+<codeline lineno="621"><highlight class="normal"></highlight><highlight class="comment">//TODO:<sp/>move<sp/>to<sp/>trigonometry.h</highlight></codeline>
+<codeline lineno="625"><highlight class="comment"></highlight><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>asin_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="626"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_asin_init&lt;true&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="627"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="628"><highlight class="normal"></highlight></codeline>
+<codeline lineno="629"><highlight class="normal"></highlight><highlight class="comment">//TODO:<sp/>move<sp/>to<sp/>trigonometry.h</highlight></codeline>
+<codeline lineno="642"><highlight class="comment"></highlight><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>atan_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
+<codeline lineno="643"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_atan&lt;true&gt;(idst)<sp/>));</highlight></codeline>
+<codeline lineno="644"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="645"><highlight class="normal"></highlight></codeline>
+<codeline lineno="646"><highlight class="normal"></highlight><highlight class="comment">//TODO:<sp/>move<sp/>to<sp/>trigonometry.h</highlight></codeline>
+<codeline lineno="650"><highlight class="comment"></highlight><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>atan_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="651"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_atan_init&lt;true&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="652"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="653"><highlight class="normal"></highlight></codeline>
+<codeline lineno="654"><highlight class="normal"></highlight><highlight class="comment">//TODO:<sp/>move<sp/>to<sp/>trigonometry.h</highlight></codeline>
+<codeline lineno="667"><highlight class="comment"></highlight><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>acos_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
+<codeline lineno="668"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_acos&lt;true&gt;(idst)<sp/>));</highlight></codeline>
+<codeline lineno="669"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="670"><highlight class="normal"></highlight></codeline>
+<codeline lineno="671"><highlight class="normal"></highlight><highlight class="comment">//TODO:<sp/>move<sp/>to<sp/>trigonometry.h</highlight></codeline>
+<codeline lineno="675"><highlight class="comment"></highlight><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>acos_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="676"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_acos_init&lt;true&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="677"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="678"><highlight class="normal"></highlight></codeline>
+<codeline lineno="679"><highlight class="normal"></highlight><highlight class="comment">//<sp/>silu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="680"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>SILU<sp/>(same<sp/>as<sp/>Swish)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="681"><highlight class="normal"></highlight><highlight class="comment">//<sp/>use<sp/>activation<sp/>Silu[x]<sp/>=<sp/>x*Sigmoid[x]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="682"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Ref:<sp/>https://pytorch.org/docs/stable/generated/torch.nn.SiLU.html?highlight=silu#torch.nn.SiLU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="683"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>silu_tile(uint32_t<sp/>idst)<sp/>{</highlight></codeline>
+<codeline lineno="684"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_silu&lt;APPROX&gt;(idst)<sp/>));</highlight></codeline>
+<codeline lineno="685"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="686"><highlight class="normal"></highlight></codeline>
+<codeline lineno="687"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>silu_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="688"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_silu_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="689"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="690"><highlight class="normal"></highlight></codeline>
+<codeline lineno="691"><highlight class="normal"></highlight><highlight class="comment">//topK<sp/>local<sp/>sort</highlight></codeline>
+<codeline lineno="728"><highlight class="comment"></highlight><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>topk_local_sort(uint32_t<sp/>idst,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idir,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_end_phase,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_start_phase=0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_end_step=0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_start_step=0)<sp/>{</highlight></codeline>
+<codeline lineno="729"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_topk_local_sort&lt;true&gt;(idst,<sp/>idir,<sp/>i_end_phase,<sp/>i_start_phase,<sp/>i_end_step,<sp/>i_start_step)<sp/>));</highlight></codeline>
+<codeline lineno="730"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="731"><highlight class="normal"></highlight></codeline>
+<codeline lineno="732"><highlight class="normal"></highlight><highlight class="comment">//topK<sp/>merge</highlight></codeline>
+<codeline lineno="760"><highlight class="comment"></highlight><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>topk_merge(uint32_t<sp/>idst,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_iter,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k)<sp/>{</highlight></codeline>
+<codeline lineno="761"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_topk_merge&lt;true&gt;(idst,<sp/>m_iter,<sp/>k)<sp/>));</highlight></codeline>
+<codeline lineno="762"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="763"><highlight class="normal"></highlight></codeline>
+<codeline lineno="764"><highlight class="normal"></highlight><highlight class="comment">//topK<sp/>rebuild</highlight></codeline>
+<codeline lineno="794"><highlight class="comment"></highlight><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>topk_rebuild(uint32_t<sp/>idst,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>idir,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_iter,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>logk,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>skip_second)<sp/>{</highlight></codeline>
+<codeline lineno="795"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_topk_rebuild&lt;true&gt;(idst,<sp/>idir,<sp/>m_iter,<sp/>k,<sp/>logk,<sp/>skip_second)<sp/>));</highlight></codeline>
+<codeline lineno="796"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="797"><highlight class="normal"></highlight></codeline>
+<codeline lineno="801"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>topk_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="802"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_topk_init&lt;true&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="803"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="804"><highlight class="normal"></highlight></codeline>
+<codeline lineno="810"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dbg_halt()<sp/>{</highlight></codeline>
+<codeline lineno="811"><highlight class="normal"><sp/><sp/><sp/><sp/>PACK<sp/>(dbg_thread_halt&lt;PackThreadId&gt;());</highlight></codeline>
+<codeline lineno="812"><highlight class="normal"><sp/><sp/><sp/><sp/>UNPACK<sp/>(dbg_thread_halt&lt;UnpackThreadId&gt;());</highlight></codeline>
+<codeline lineno="813"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH<sp/>(dbg_thread_halt&lt;MathThreadId&gt;());</highlight></codeline>
+<codeline lineno="814"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="815"><highlight class="normal"></highlight></codeline>
+<codeline lineno="821"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dbg_unhalt()<sp/>{</highlight></codeline>
+<codeline lineno="822"><highlight class="normal"><sp/><sp/><sp/><sp/>PACK<sp/>(dbg_thread_unhalt&lt;PackThreadId&gt;());</highlight></codeline>
+<codeline lineno="823"><highlight class="normal"><sp/><sp/><sp/><sp/>UNPACK<sp/>(dbg_thread_unhalt&lt;UnpackThreadId&gt;());</highlight></codeline>
+<codeline lineno="824"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH<sp/>(dbg_thread_unhalt&lt;MathThreadId&gt;());</highlight></codeline>
+<codeline lineno="825"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="826"><highlight class="normal"></highlight></codeline>
+<codeline lineno="837"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dbg_read_dest_acc_row(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row_addr,<sp/>uint32_t<sp/>*rd_data)<sp/>{</highlight></codeline>
+<codeline lineno="838"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH<sp/>((<sp/>dbg_get_array_row(dbg_array_id::DEST,<sp/>row_addr,<sp/>rd_data)));</highlight></codeline>
+<codeline lineno="839"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="840"><highlight class="normal"></highlight></codeline>
+<codeline lineno="841"><highlight class="normal"></highlight><highlight class="comment">//unary<sp/>gt<sp/>:<sp/>if<sp/>x<sp/>&gt;<sp/>value<sp/>--&gt;<sp/>1.0,<sp/>else<sp/>0.0</highlight></codeline>
+<codeline lineno="855"><highlight class="comment"></highlight><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>unary_gt_tile(uint32_t<sp/>idst,uint32_t<sp/>param0)<sp/>{</highlight></codeline>
+<codeline lineno="856"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_unary_gt&lt;APPROX&gt;(idst,param0)<sp/>));</highlight></codeline>
+<codeline lineno="857"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="858"><highlight class="normal"></highlight></codeline>
+<codeline lineno="862"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>unary_gt_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="863"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_unary_gt_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="864"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="865"><highlight class="normal"></highlight></codeline>
+<codeline lineno="866"><highlight class="normal"></highlight><highlight class="comment">//unary<sp/>lt<sp/>:<sp/>if<sp/>x<sp/>&lt;<sp/>value<sp/>--&gt;<sp/>1.0,<sp/>else<sp/>0.0</highlight></codeline>
+<codeline lineno="880"><highlight class="comment"></highlight><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>unary_lt_tile(uint32_t<sp/>idst,uint32_t<sp/>param0)<sp/>{</highlight></codeline>
+<codeline lineno="881"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_unary_lt&lt;APPROX&gt;(idst,param0)<sp/>));</highlight></codeline>
+<codeline lineno="882"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="883"><highlight class="normal"></highlight></codeline>
+<codeline lineno="887"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>unary_lt_tile_init()<sp/>{</highlight></codeline>
+<codeline lineno="888"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((<sp/>llk_math_eltwise_unary_sfpu_unary_lt_init&lt;APPROX&gt;()<sp/>));</highlight></codeline>
+<codeline lineno="889"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="890"><highlight class="normal"></highlight></codeline>
+<codeline lineno="891"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ckernel</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="tt_metal/include/compute_kernel_api.h"/>
   </compounddef>

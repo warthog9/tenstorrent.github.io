@@ -1,5 +1,5 @@
-\doxysection{host\+\_\+api.\+hpp}
-\hypertarget{host__api_8hpp_source}{}\label{host__api_8hpp_source}\index{tt\_metal/host\_api.hpp@{tt\_metal/host\_api.hpp}}
+\hypertarget{host__api_8hpp_source}{}\doxysection{host\+\_\+api.\+hpp}
+\label{host__api_8hpp_source}\index{tt\_metal/host\_api.hpp@{tt\_metal/host\_api.hpp}}
 \mbox{\hyperlink{host__api_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{//\ SPDX-\/FileCopyrightText:\ ©\ 2023\ Tenstorrent\ Inc.}}
@@ -62,7 +62,7 @@
 \DoxyCodeLine{00124\ \textcolor{comment}{//\ ==================================================}}
 \DoxyCodeLine{00125\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ HOST\ API:\ buffers}}
 \DoxyCodeLine{00126\ \textcolor{comment}{//\ ==================================================}}
-\DoxyCodeLine{00143\ CBHandle\ \mbox{\hyperlink{host__api_8hpp_a62b10a9d4d6ed91eacaba5d27c9761fb}{CreateCircularBuffer}}(Program\ \&program,\ \textcolor{keyword}{const}\ std::variant<CoreCoord,\ CoreRange,\ CoreRangeSet>\ \&core\_spec,\ \textcolor{keyword}{const}\ CircularBufferConfig\ \&config);}
+\DoxyCodeLine{00143\ \textcolor{comment}{}CBHandle\ \mbox{\hyperlink{host__api_8hpp_a62b10a9d4d6ed91eacaba5d27c9761fb}{CreateCircularBuffer}}(Program\ \&program,\ \textcolor{keyword}{const}\ std::variant<CoreCoord,\ CoreRange,\ CoreRangeSet>\ \&core\_spec,\ \textcolor{keyword}{const}\ CircularBufferConfig\ \&config);}
 \DoxyCodeLine{00144\ }
 \DoxyCodeLine{00155\ \textcolor{keyword}{const}\ CircularBufferConfig\ \&\mbox{\hyperlink{host__api_8hpp_a95bdaeb43136c4db864dd95481fa0a16}{GetCircularBufferConfig}}(Program\ \&program,\ CBHandle\ cb\_handle);}
 \DoxyCodeLine{00156\ }
@@ -70,7 +70,7 @@
 \DoxyCodeLine{00169\ }
 \DoxyCodeLine{00182\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{host__api_8hpp_a92e93610eb6b826263eb803608c33889}{UpdateCircularBufferPageSize}}(Program\ \&program,\ CBHandle\ cb\_handle,\ uint8\_t\ buffer\_index,\ uint32\_t\ page\_size);}
 \DoxyCodeLine{00183\ }
-\DoxyCodeLine{00195\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{host__api_8hpp_aac851bed71135fa02e28caf0c0ae58b0}{UpdateDynamicCircularBufferAddress}}(Program\ \&program,\ CBHandle\ cb\_handle,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_buffer}{Buffer}}\ \&buffer);}
+\DoxyCodeLine{00195\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{host__api_8hpp_aac851bed71135fa02e28caf0c0ae58b0}{UpdateDynamicCircularBufferAddress}}(Program\ \&program,\ CBHandle\ cb\_handle,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classBuffer}{Buffer}}\ \&buffer);}
 \DoxyCodeLine{00196\ }
 \DoxyCodeLine{00209\ uint32\_t\ \mbox{\hyperlink{host__api_8hpp_a8860cbc40324a9cc2e18badc55a77a68}{CreateSemaphore}}(Program\ \&program,\ \textcolor{keyword}{const}\ std::variant<CoreRange,CoreRangeSet>\ \&core\_spec,\ uint32\_t\ initial\_value,\ CoreType\ core\_type=CoreType::WORKER);}
 \DoxyCodeLine{00210\ }
@@ -78,7 +78,7 @@
 \DoxyCodeLine{00221\ }
 \DoxyCodeLine{00231\ std::shared\_ptr<Buffer>\ \mbox{\hyperlink{host__api_8hpp_a44f12170a79821c7a1eb7dcad8e9014e}{CreateBuffer}}(\textcolor{keyword}{const}\ ShardedBufferConfig\ \&config);}
 \DoxyCodeLine{00232\ }
-\DoxyCodeLine{00242\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{host__api_8hpp_a6a064752ab55b4fac953ba8bde7daf52}{DeallocateBuffer}}(\mbox{\hyperlink{class_buffer}{Buffer}}\ \&buffer);}
+\DoxyCodeLine{00242\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{host__api_8hpp_a6a064752ab55b4fac953ba8bde7daf52}{DeallocateBuffer}}(\mbox{\hyperlink{classBuffer}{Buffer}}\ \&buffer);}
 \DoxyCodeLine{00243\ }
 \DoxyCodeLine{00254\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{host__api_8hpp_a4e29ca9df8b6f13424f2a392d8971483}{AssignGlobalBufferToProgram}}(std::shared\_ptr<Buffer>\ buffer,\ std::variant<std::reference\_wrapper<Program>,\ std::shared\_ptr<Program>>\ program);}
 \DoxyCodeLine{00255\ }

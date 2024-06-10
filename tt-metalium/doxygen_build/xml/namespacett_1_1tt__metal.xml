@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
   <compounddef id="namespacett_1_1tt__metal" kind="namespace" language="C++">
     <compoundname>tt::tt_metal</compoundname>
-    <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="host__api_8hpp_1a7a1767aeb55abe39ded6de26e661a7e0" prot="public" static="no">
-        <type>std::vector&lt; std::variant&lt; <ref refid="class_buffer" kindref="compound">Buffer</ref> *, uint32_t &gt; &gt;</type>
-        <definition>using tt::tt_metal::RuntimeArgs =  std::vector&lt;std::variant&lt;Buffer*, uint32_t&gt;&gt;</definition>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="host__api_8hpp_1af559e38779cb26844ec9a6b0bb41f940" prot="public" static="no">
+        <type>std::vector&lt; std::variant&lt; <ref refid="classBuffer" kindref="compound">Buffer</ref> *, uint32_t &gt; &gt;</type>
+        <definition>using tt::tt_metal::RuntimeArgs = typedef std::vector&lt;std::variant&lt;Buffer*, uint32_t&gt; &gt;</definition>
         <argsstring></argsstring>
         <name>RuntimeArgs</name>
         <qualifiedname>tt::tt_metal::RuntimeArgs</qualifiedname>
@@ -17,8 +17,8 @@
         </inbodydescription>
         <location file="tt_metal/host_api.hpp" line="259" column="1" bodyfile="tt_metal/host_api.hpp" bodystart="259" bodyend="-1"/>
       </memberdef>
-    </sectiondef>
-    <sectiondef kind="func">
+      </sectiondef>
+      <sectiondef kind="func">
       <memberdef kind="function" id="host__api_8hpp_1a06ba0ab5eeb2da5af625a8b7f95ca48e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
         <definition>size_t tt::tt_metal::GetNumAvailableDevices</definition>
@@ -280,9 +280,9 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Creates a Circular <ref refid="class_buffer" kindref="compound">Buffer</ref> (CB) in L1 memory of all cores within core ranges (inclusive) and adds it to the program. There can be a total of NUM_CIRCULAR_BUFFERS (32) circular buffers per core. Circular buffers hold data and have an associated config which indicates usage of the address space. If the config is specified for multiple buffer indices, the circular buffer address space is shared and each buffer index can potentially have a unique view of the shared space.</para>
+<para>Creates a Circular <ref refid="classBuffer" kindref="compound">Buffer</ref> (CB) in L1 memory of all cores within core ranges (inclusive) and adds it to the program. There can be a total of NUM_CIRCULAR_BUFFERS (32) circular buffers per core. Circular buffers hold data and have an associated config which indicates usage of the address space. If the config is specified for multiple buffer indices, the circular buffer address space is shared and each buffer index can potentially have a unique view of the shared space.</para>
 <para>Circular buffers can be dynamically allocated or program-local allocated. If the config is created with an L1 buffer or sets a globally allocated address it is dynamic and shares the same address space as the L1 buffer. Otherwise, the circular buffer address space is managed by the program. Address space for program-local circular buffers does not persist across programs.</para>
-<para>Return value: Circular <ref refid="class_buffer" kindref="compound">Buffer</ref> ID (uintptr_t)</para>
+<para>Return value: Circular <ref refid="classBuffer" kindref="compound">Buffer</ref> ID (uintptr_t)</para>
 <para><table rows="4" cols="5"><row>
 <entry thead="yes"><para>Argument   </para>
 </entry><entry thead="yes"><para>Description   </para>
@@ -493,7 +493,7 @@
           <declname>cb_handle</declname>
         </param>
         <param>
-          <type>const <ref refid="class_buffer" kindref="compound">Buffer</ref> &amp;</type>
+          <type>const <ref refid="classBuffer" kindref="compound">Buffer</ref> &amp;</type>
           <declname>buffer</declname>
         </param>
         <briefdescription>
@@ -516,7 +516,7 @@
 </entry><entry thead="no"><para>Yes   </para>
 </entry></row>
 </table>
-| cb_handle | ID of the circular buffer, returned by <computeroutput>CreateCircularBuffers</computeroutput> | CBHandle (uintptr_t) | | Yes | | | buffer | Dynamically allocated L1 buffer that shares address space of circular buffer <computeroutput>cb_handle</computeroutput> | const <ref refid="class_buffer" kindref="compound">Buffer</ref> &amp; | L1 buffer | Yes | </para>
+| cb_handle | ID of the circular buffer, returned by <computeroutput>CreateCircularBuffers</computeroutput> | CBHandle (uintptr_t) | | Yes | | | buffer | Dynamically allocated L1 buffer that shares address space of circular buffer <computeroutput>cb_handle</computeroutput> | const <ref refid="classBuffer" kindref="compound">Buffer</ref> &amp; | L1 buffer | Yes | </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -593,7 +593,7 @@
         <location file="tt_metal/host_api.hpp" line="209" column="10" declfile="tt_metal/host_api.hpp" declline="209" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="host__api_8hpp_1a44f12170a79821c7a1eb7dcad8e9014e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>std::shared_ptr&lt; <ref refid="class_buffer" kindref="compound">Buffer</ref> &gt;</type>
+        <type>std::shared_ptr&lt; <ref refid="classBuffer" kindref="compound">Buffer</ref> &gt;</type>
         <definition>std::shared_ptr&lt; Buffer &gt; tt::tt_metal::CreateBuffer</definition>
         <argsstring>(const InterleavedBufferConfig &amp;config)</argsstring>
         <name>CreateBuffer</name>
@@ -629,7 +629,7 @@
         <location file="tt_metal/host_api.hpp" line="220" column="17" declfile="tt_metal/host_api.hpp" declline="220" declcolumn="17"/>
       </memberdef>
       <memberdef kind="function" id="host__api_8hpp_1a8e5af0183154c8b303d43acec393ec29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>std::shared_ptr&lt; <ref refid="class_buffer" kindref="compound">Buffer</ref> &gt;</type>
+        <type>std::shared_ptr&lt; <ref refid="classBuffer" kindref="compound">Buffer</ref> &gt;</type>
         <definition>std::shared_ptr&lt; Buffer &gt; tt::tt_metal::CreateBuffer</definition>
         <argsstring>(const ShardedBufferConfig &amp;config)</argsstring>
         <name>CreateBuffer</name>
@@ -671,7 +671,7 @@
         <name>DeallocateBuffer</name>
         <qualifiedname>tt::tt_metal::DeallocateBuffer</qualifiedname>
         <param>
-          <type><ref refid="class_buffer" kindref="compound">Buffer</ref> &amp;</type>
+          <type><ref refid="classBuffer" kindref="compound">Buffer</ref> &amp;</type>
           <declname>buffer</declname>
         </param>
         <briefdescription>
@@ -689,7 +689,7 @@
 <row>
 <entry thead="no"><para>buffer   </para>
 </entry><entry thead="no"><para>The buffer to deallocate from device   </para>
-</entry><entry thead="no"><para><ref refid="class_buffer" kindref="compound">Buffer</ref> &amp;   </para>
+</entry><entry thead="no"><para><ref refid="classBuffer" kindref="compound">Buffer</ref> &amp;   </para>
 </entry><entry thead="no"><para></para>
 </entry><entry thead="no"><para>Yes   </para>
 </entry></row>
@@ -707,7 +707,7 @@
         <name>AssignGlobalBufferToProgram</name>
         <qualifiedname>tt::tt_metal::AssignGlobalBufferToProgram</qualifiedname>
         <param>
-          <type>std::shared_ptr&lt; <ref refid="class_buffer" kindref="compound">Buffer</ref> &gt;</type>
+          <type>std::shared_ptr&lt; <ref refid="classBuffer" kindref="compound">Buffer</ref> &gt;</type>
           <declname>buffer</declname>
         </param>
         <param>
@@ -1243,7 +1243,7 @@
           <declname>cq</declname>
         </param>
         <param>
-          <type>std::variant&lt; std::reference_wrapper&lt; <ref refid="class_buffer" kindref="compound">Buffer</ref> &gt;, std::shared_ptr&lt; <ref refid="class_buffer" kindref="compound">Buffer</ref> &gt; &gt;</type>
+          <type>std::variant&lt; std::reference_wrapper&lt; <ref refid="classBuffer" kindref="compound">Buffer</ref> &gt;, std::shared_ptr&lt; <ref refid="classBuffer" kindref="compound">Buffer</ref> &gt; &gt;</type>
           <declname>buffer</declname>
         </param>
         <param>
@@ -1276,7 +1276,7 @@
 <row>
 <entry thead="no"><para>buffer   </para>
 </entry><entry thead="no"><para>The device buffer we are reading from   </para>
-</entry><entry thead="no"><para><ref refid="class_buffer" kindref="compound">Buffer</ref> &amp; or std::shared_ptr&lt;Buffer&gt;   </para>
+</entry><entry thead="no"><para><ref refid="classBuffer" kindref="compound">Buffer</ref> &amp; or std::shared_ptr&lt;Buffer&gt;   </para>
 </entry><entry thead="no"><para></para>
 </entry><entry thead="no"><para>Yes    </para>
 </entry></row>
@@ -1312,7 +1312,7 @@
           <declname>cq</declname>
         </param>
         <param>
-          <type>std::variant&lt; std::reference_wrapper&lt; <ref refid="class_buffer" kindref="compound">Buffer</ref> &gt;, std::shared_ptr&lt; <ref refid="class_buffer" kindref="compound">Buffer</ref> &gt; &gt;</type>
+          <type>std::variant&lt; std::reference_wrapper&lt; <ref refid="classBuffer" kindref="compound">Buffer</ref> &gt;, std::shared_ptr&lt; <ref refid="classBuffer" kindref="compound">Buffer</ref> &gt; &gt;</type>
           <declname>buffer</declname>
         </param>
         <param>
@@ -1345,7 +1345,7 @@
 <row>
 <entry thead="no"><para>buffer   </para>
 </entry><entry thead="no"><para>The device buffer we are reading from   </para>
-</entry><entry thead="no"><para><ref refid="class_buffer" kindref="compound">Buffer</ref> &amp; or std::shared_ptr&lt;Buffer&gt;   </para>
+</entry><entry thead="no"><para><ref refid="classBuffer" kindref="compound">Buffer</ref> &amp; or std::shared_ptr&lt;Buffer&gt;   </para>
 </entry><entry thead="no"><para></para>
 </entry><entry thead="no"><para>Yes    </para>
 </entry></row>
@@ -1381,7 +1381,7 @@
           <declname>cq</declname>
         </param>
         <param>
-          <type>std::variant&lt; std::reference_wrapper&lt; <ref refid="class_buffer" kindref="compound">Buffer</ref> &gt;, std::shared_ptr&lt; <ref refid="class_buffer" kindref="compound">Buffer</ref> &gt; &gt;</type>
+          <type>std::variant&lt; std::reference_wrapper&lt; <ref refid="classBuffer" kindref="compound">Buffer</ref> &gt;, std::shared_ptr&lt; <ref refid="classBuffer" kindref="compound">Buffer</ref> &gt; &gt;</type>
           <declname>buffer</declname>
         </param>
         <param>
@@ -1414,7 +1414,7 @@
 <row>
 <entry thead="no"><para>buffer   </para>
 </entry><entry thead="no"><para>The device buffer we are writing to   </para>
-</entry><entry thead="no"><para><ref refid="class_buffer" kindref="compound">Buffer</ref> &amp; or std::shared_ptr&lt;Buffer&gt;   </para>
+</entry><entry thead="no"><para><ref refid="classBuffer" kindref="compound">Buffer</ref> &amp; or std::shared_ptr&lt;Buffer&gt;   </para>
 </entry><entry thead="no"><para></para>
 </entry><entry thead="no"><para>Yes    </para>
 </entry></row>
@@ -1450,7 +1450,7 @@
           <declname>cq</declname>
         </param>
         <param>
-          <type>std::variant&lt; std::reference_wrapper&lt; <ref refid="class_buffer" kindref="compound">Buffer</ref> &gt;, std::shared_ptr&lt; <ref refid="class_buffer" kindref="compound">Buffer</ref> &gt; &gt;</type>
+          <type>std::variant&lt; std::reference_wrapper&lt; <ref refid="classBuffer" kindref="compound">Buffer</ref> &gt;, std::shared_ptr&lt; <ref refid="classBuffer" kindref="compound">Buffer</ref> &gt; &gt;</type>
           <declname>buffer</declname>
         </param>
         <param>
@@ -1483,7 +1483,7 @@
 <row>
 <entry thead="no"><para>buffer   </para>
 </entry><entry thead="no"><para>The device buffer we are writing to   </para>
-</entry><entry thead="no"><para><ref refid="class_buffer" kindref="compound">Buffer</ref> &amp; or std::shared_ptr&lt;Buffer&gt;   </para>
+</entry><entry thead="no"><para><ref refid="classBuffer" kindref="compound">Buffer</ref> &amp; or std::shared_ptr&lt;Buffer&gt;   </para>
 </entry><entry thead="no"><para></para>
 </entry><entry thead="no"><para>Yes    </para>
 </entry></row>
@@ -2112,7 +2112,7 @@
         </inbodydescription>
         <location file="tt_metal/host_api.hpp" line="576" column="6" declfile="tt_metal/host_api.hpp" declline="576" declcolumn="6"/>
       </memberdef>
-    </sectiondef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

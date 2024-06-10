@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
   <compounddef id="ethernet_2dataflow__api_8h" kind="file" language="C++">
     <compoundname>dataflow_api.h</compoundname>
     <includes local="yes">risc_common.h</includes>
@@ -34,6 +34,8 @@
         <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -110,7 +112,7 @@
         <label>tunneling.h</label>
       </node>
     </incdepgraph>
-    <sectiondef kind="func">
+      <sectiondef kind="func">
       <memberdef kind="function" id="ethernet_2dataflow__api_8h_1a9d454f81bcb8875f528a900fa9326bc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool eth_txq_is_busy</definition>
@@ -1148,7 +1150,7 @@
         </inbodydescription>
         <location file="tt_metal/hw/inc/ethernet/dataflow_api.h" line="556" column="6" bodyfile="tt_metal/hw/inc/ethernet/dataflow_api.h" bodystart="556" bodyend="579"/>
       </memberdef>
-    </sectiondef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -1169,7 +1171,7 @@
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;tools/profiler/kernel_profiler.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;noc_nonblocking_api.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dataflow__api_8h" kindref="compound">../dataflow_api.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../dataflow_api.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;tunneling.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>

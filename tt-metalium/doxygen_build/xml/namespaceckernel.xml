@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
   <compounddef id="namespaceckernel" kind="namespace" language="C++">
     <compoundname>ckernel</compoundname>
-    <sectiondef kind="func">
+      <sectiondef kind="func">
       <memberdef kind="function" id="erf__erfc_8h_1a457fed1c2f71b59d1949d93479d54f8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
@@ -2343,7 +2343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="29" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="29" bodyend="41"/>
+        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="30" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="30" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="eltwise__binary_8h_1af20703c9d347ca4c998ca32e38762cd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2358,7 +2358,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="49" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="49" bodyend="49"/>
+        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="50" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="50" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="eltwise__binary_8h_1a5d7722fc6c62a98e87aa80dfd4addc04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2383,7 +2383,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="54" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="54" bodyend="57"/>
+        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="55" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="55" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="eltwise__binary_8h_1a38862808571447611983528275f91831" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2398,7 +2398,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="64" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="64" bodyend="64"/>
+        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="65" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="65" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="eltwise__binary_8h_1a186d8dc0e29058b3bd749c583219ee15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2423,7 +2423,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="70" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="70" bodyend="73"/>
+        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="71" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="71" bodyend="74"/>
       </memberdef>
       <memberdef kind="function" id="eltwise__binary_8h_1a136179be2361633cae3291b6d25fa2a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2438,7 +2438,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="80" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="80" bodyend="80"/>
+        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="81" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="81" bodyend="81"/>
       </memberdef>
       <memberdef kind="function" id="eltwise__binary_8h_1abb4df2d28f5221ece0d1e3eb455c4546" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2463,7 +2463,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="86" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="86" bodyend="89"/>
+        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="87" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="87" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="eltwise__binary_8h_1a5d86448b624a24f6bf77c45334590835" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2543,7 +2543,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="108" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="108" bodyend="121"/>
+        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="109" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="109" bodyend="122"/>
       </memberdef>
       <memberdef kind="function" id="eltwise__binary_8h_1a5a091c5371932422fc303adea3eec806" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2623,7 +2623,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="139" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="139" bodyend="143"/>
+        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="140" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="140" bodyend="144"/>
       </memberdef>
       <memberdef kind="function" id="eltwise__binary_8h_1acc846385166d37dbbab9e602e44e1fb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2703,9 +2703,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="161" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="161" bodyend="165"/>
+        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="162" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="162" bodyend="166"/>
       </memberdef>
-      <memberdef kind="function" id="eltwise__binary_8h_1afb14e9ccbae9064ee806aec64840cfb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="eltwise__binary_8h_1ae239860fe24a16896deca931882e7bd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>bool</type>
@@ -2713,20 +2713,100 @@
             <defname>full_init</defname>
             <defval>false</defval>
           </param>
+          <param>
+            <type>EltwiseBinaryType</type>
+            <declname>eltwise_binary_op_type</declname>
+            <defname>eltwise_binary_op_type</defname>
+            <defval>ELWADD</defval>
+          </param>
         </templateparamlist>
         <type>void</type>
         <definition>void ckernel::binary_op_specific_init</definition>
-        <argsstring>(int op_code)</argsstring>
+        <argsstring>()</argsstring>
         <name>binary_op_specific_init</name>
         <qualifiedname>ckernel::binary_op_specific_init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init function with a specified op template parameters: full_init: if true, the full init is performed (unpack+math), otherwise a nof init is performed (only math) eltwise_binary_op_type: the binary operation type </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="175" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="175" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="eltwise__binary_8h_1a1ca6439309935d12d0f15ca795bb8985" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>EltwiseBinaryType</type>
+            <declname>eltwise_binary_type</declname>
+            <defname>eltwise_binary_type</defname>
+            <defval>ELWADD</defval>
+          </param>
+          <param>
+            <type>EltwiseBinaryReuseDestType</type>
+            <declname>binary_reuse_dest</declname>
+            <defname>binary_reuse_dest</defname>
+            <defval>EltwiseBinaryReuseDestType::NONE</defval>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ckernel::binary_dest_reuse_tiles_init</definition>
+        <argsstring>(uint32_t icb0)</argsstring>
+        <name>binary_dest_reuse_tiles_init</name>
+        <qualifiedname>ckernel::binary_dest_reuse_tiles_init</qualifiedname>
         <param>
-          <type>int</type>
-          <declname>op_code</declname>
+          <type>uint32_t</type>
+          <declname>icb0</declname>
         </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Init function with a specified op <table rows="2" cols="5"><row>
+<para>Please refer to documentation for any_init. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="202" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="202" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="eltwise__binary_8h_1a9f5d8b2767ab4f1e188aac1ee4a8c744" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>EltwiseBinaryType</type>
+            <declname>eltwise_binary_type</declname>
+            <defname>eltwise_binary_type</defname>
+            <defval>ELWADD</defval>
+          </param>
+          <param>
+            <type>EltwiseBinaryReuseDestType</type>
+            <declname>binary_reuse_dest</declname>
+            <defname>binary_reuse_dest</defname>
+            <defval>EltwiseBinaryReuseDestType::NONE</defval>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ckernel::binary_dest_reuse_tiles</definition>
+        <argsstring>(uint32_t in_cb_id, uint32_t in_tile_index, uint32_t dst_tile_index)</argsstring>
+        <name>binary_dest_reuse_tiles</name>
+        <qualifiedname>ckernel::binary_dest_reuse_tiles</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>in_cb_id</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>in_tile_index</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>dst_tile_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Performs element-wise binary operations, such as multiply, add, or sub of tiles. If binary_reuse_dest = EltwiseBinaryReuseDestType::DST_TO_SRCA, then the tile specified by idst will be loaded from the DST register buffer into SRCA. The binary operation will operate on SRCA &amp; SRCB inputs, and the result will be written back to the DST register buffer specified by idst. Similar to DST_TO_SRCA, if binary_reuse_dest = EltwiseBinaryReuseDestType::DST_TO_SRCB, then tile specified by idst will be loaded from the DST into SRCB register buffer. DST_TO_SRCB feature is not available for Grayskull, only Wormhole.</para>
+<para>EltwiseBinaryReuseDestType::DST_TO_SRCA and EltwiseBinaryReuseDestType::DST_TO_SRCB assume that another operation has populated the dest register, otherwise dest will contain zeroes.</para>
+<para>The DST register buffer must be in acquired state via <emphasis>acquire_dst</emphasis> call. This call is blocking and is only available on the compute engine.</para>
+<para>Return value: None</para>
+<para><table rows="4" cols="5"><row>
 <entry thead="yes"><para>Argument   </para>
 </entry><entry thead="yes"><para>Description   </para>
 </entry><entry thead="yes"><para>Type   </para>
@@ -2734,10 +2814,24 @@
 </entry><entry thead="yes"><para>Required    </para>
 </entry></row>
 <row>
-<entry thead="no"><para>op_code   </para>
-</entry><entry thead="no"><para>op code corresponding to op   </para>
+<entry thead="no"><para>in_cb_id   </para>
+</entry><entry thead="no"><para>The identifier of the circular buffer (CB) containing A   </para>
 </entry><entry thead="no"><para>uint32_t   </para>
 </entry><entry thead="no"><para>0 to 31   </para>
+</entry><entry thead="no"><para>True    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>in_tile_index   </para>
+</entry><entry thead="no"><para>The index of tile A within the first CB   </para>
+</entry><entry thead="no"><para>uint32_t   </para>
+</entry><entry thead="no"><para>Must be less than the size of the CB   </para>
+</entry><entry thead="no"><para>True    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>dst_tile_index   </para>
+</entry><entry thead="no"><para>The index of tile B that will be moved to Src reg, and the index of the tile in DST REG for the result C   </para>
+</entry><entry thead="no"><para>uint32_t   </para>
+</entry><entry thead="no"><para>Must be less than the acquired size of DST REG   </para>
 </entry><entry thead="no"><para>True   </para>
 </entry></row>
 </table>
@@ -2745,7 +2839,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="174" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="174" bodyend="193"/>
+        <location file="tt_metal/include/compute_kernel_api/eltwise_binary.h" line="232" column="7" bodyfile="tt_metal/include/compute_kernel_api/eltwise_binary.h" bodystart="232" bodyend="236"/>
       </memberdef>
       <memberdef kind="function" id="matmul_8h_1adeadefda1b391d2924a635b87f264c9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5619,7 +5713,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="216" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="216" bodyend="218"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="217" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="217" bodyend="219"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1ac9164eb8233a4b5db0165ef3879c13d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5634,7 +5728,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="224" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="224" bodyend="226"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="225" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="225" bodyend="227"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1ab6168b98b6911e7e8d65bcce66a98703" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5670,7 +5764,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="240" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="240" bodyend="242"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="241" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="241" bodyend="243"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a6854705311e47923c390b236cdcec41e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5685,7 +5779,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="247" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="247" bodyend="249"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="248" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="248" bodyend="250"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1af987308b41a50236bc0a3850fd7165fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5721,7 +5815,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="263" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="263" bodyend="265"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="264" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="264" bodyend="266"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a9d8e08b22bbbbf7960311670af37750e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5736,7 +5830,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="270" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="270" bodyend="272"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="271" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="271" bodyend="273"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1ae87b691c6559e7b1435d83403abc4301" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5772,7 +5866,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="292" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="292" bodyend="294"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="293" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="293" bodyend="295"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1aa89f5e45a5227a1378526b21be12d62e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5787,7 +5881,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="300" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="300" bodyend="302"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="301" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="301" bodyend="303"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a77afa61bee15eebd67803d76c955f360" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5823,7 +5917,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="318" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="318" bodyend="320"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="319" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="319" bodyend="321"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a688933a08b41a8d5d283aa75216eae27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5838,7 +5932,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="326" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="326" bodyend="328"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="327" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="327" bodyend="329"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a1817972ea6391813a8948bfad83ab981" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5874,7 +5968,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="343" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="343" bodyend="345"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="344" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="344" bodyend="346"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a5ce91ef9087a7c7216fbe8032dafa49e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5889,7 +5983,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="350" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="350" bodyend="352"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="351" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="351" bodyend="353"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a015f70b923b3dc75073f42d5be952c9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5925,7 +6019,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="366" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="366" bodyend="368"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="367" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="367" bodyend="369"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a6b5c549b48da0bc2c9c6f22fd7932676" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5940,7 +6034,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="373" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="373" bodyend="375"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="374" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="374" bodyend="376"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1ade26cd0bc2247bd4eaf7685eadb88afd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5976,7 +6070,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="391" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="391" bodyend="393"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="392" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="392" bodyend="394"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1ae9e6fe3d6395ed10fe6c1a3774d0c591" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5991,7 +6085,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="398" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="398" bodyend="400"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="399" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="399" bodyend="401"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a114da0de25df24111f54d4ae54daf716" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6027,7 +6121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="414" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="414" bodyend="416"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="415" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="415" bodyend="417"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a724bcc13c2cecd7e12e2efbd31207b8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6042,7 +6136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="422" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="422" bodyend="424"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="423" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="423" bodyend="425"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a51558a724938976ece1be18997ced97f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6078,7 +6172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="438" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="438" bodyend="440"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="439" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="439" bodyend="441"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a4e1406d244d304ea48ce12568911df7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6093,7 +6187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="445" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="445" bodyend="447"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="446" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="446" bodyend="448"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a61fe18515827e58bdfea82fa99daee38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6140,7 +6234,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="465" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="465" bodyend="467"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="466" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="466" bodyend="468"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a7cd6f51f9220905884e315442843d2d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6155,7 +6249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="472" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="472" bodyend="474"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="473" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="473" bodyend="475"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a2d1714bd980954724d51080e29b5d0fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6203,7 +6297,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="494" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="494" bodyend="496"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="495" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="495" bodyend="497"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a92ba747a6e5b80c727984c62b7d0056e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6218,7 +6312,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="501" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="501" bodyend="503"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="502" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="502" bodyend="504"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a2febadfd150cb455955f67746253f116" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6254,7 +6348,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="518" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="518" bodyend="520"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="519" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="519" bodyend="521"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1aae54e275fe6d550c7cb151f24503e958" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6269,7 +6363,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="525" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="525" bodyend="527"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="526" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="526" bodyend="528"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1ad36c2e30b06007215d6b69568691ed3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6316,7 +6410,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="543" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="543" bodyend="545"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="544" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="544" bodyend="546"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1abb18b07f6934634afcb9ed022b36d858" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6331,7 +6425,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="550" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="550" bodyend="552"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="551" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="551" bodyend="553"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1adf08edc7ebeb842eb1addfc2ac53da34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6378,7 +6472,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="568" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="568" bodyend="570"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="569" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="569" bodyend="571"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a86f5e14f68cb732534c41d400843fced" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6393,7 +6487,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="575" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="575" bodyend="577"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="576" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="576" bodyend="578"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a44e2f1766f4513494f768cffa10b0737" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6429,7 +6523,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="592" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="592" bodyend="594"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="593" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="593" bodyend="595"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a7168260d89bae9c8cd208b0a636dc1bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6444,7 +6538,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="599" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="599" bodyend="601"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="600" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="600" bodyend="602"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a7300e956259f09f938aaf30d266145b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6480,7 +6574,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="616" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="616" bodyend="618"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="617" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="617" bodyend="619"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1ae301e69cc106f101a05c17943f50a709" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6495,7 +6589,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="624" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="624" bodyend="626"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="625" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="625" bodyend="627"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1ada371d824d49e63e32e718eea281959f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6531,7 +6625,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="641" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="641" bodyend="643"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="642" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="642" bodyend="644"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a74eef3940cc3f25fa0c5d99f4e1098ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6546,7 +6640,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="649" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="649" bodyend="651"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="650" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="650" bodyend="652"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1ac71f04a726285cd4b0bfadc31eb6cbeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6582,7 +6676,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="666" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="666" bodyend="668"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="667" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="667" bodyend="669"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1ae3124122e43788f56d6d93e3e668bd0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6597,7 +6691,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="674" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="674" bodyend="676"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="675" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="675" bodyend="677"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1adc4b7d15d9f6ca928626b1a246d7e2d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6615,7 +6709,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="682" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="682" bodyend="684"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="683" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="683" bodyend="685"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a77f006579d8fe02aa468eb8bf260c47e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6629,7 +6723,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="686" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="686" bodyend="688"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="687" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="687" bodyend="689"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1aa5210fb3aea6ef6c09eba614308a25c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6728,7 +6822,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="727" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="727" bodyend="729"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="728" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="728" bodyend="730"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a2938cab3b09934d9f491eb7e8e46a9c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6790,7 +6884,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="759" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="759" bodyend="761"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="760" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="760" bodyend="762"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1ae1cbdb83cc5bc20da93967c2252354b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6885,7 +6979,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="793" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="793" bodyend="795"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="794" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="794" bodyend="796"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a53c812a947f6d756ea625b7361174037" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6900,7 +6994,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="800" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="800" bodyend="802"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="801" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="801" bodyend="803"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a27956d536797fa0c3dad4eab6148d731" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6916,7 +7010,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="809" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="809" bodyend="813"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="810" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="810" bodyend="814"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1aa73b548e1869c77a4b1d2a4a345b942d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6932,7 +7026,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="820" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="820" bodyend="824"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="821" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="821" bodyend="825"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a5df20a0a40dac9e97e6b73b0d4fd0c88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -6979,7 +7073,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="836" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="836" bodyend="838"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="837" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="837" bodyend="839"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a3beb809d58bbce0ee44b0d9f6e3e0caf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -7026,7 +7120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="854" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="854" bodyend="856"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="855" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="855" bodyend="857"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1aa8a849876763dfccf446df2954aa531d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -7041,7 +7135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="861" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="861" bodyend="863"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="862" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="862" bodyend="864"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a3efdf48fde7c2df0e8236b387c1ff873" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -7088,7 +7182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="879" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="879" bodyend="881"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="880" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="880" bodyend="882"/>
       </memberdef>
       <memberdef kind="function" id="compute__kernel__api_8h_1a0c1307468c0b580c07969a1359769cff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -7103,9 +7197,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="tt_metal/include/compute_kernel_api.h" line="886" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="886" bodyend="888"/>
+        <location file="tt_metal/include/compute_kernel_api.h" line="887" column="7" bodyfile="tt_metal/include/compute_kernel_api.h" bodystart="887" bodyend="889"/>
       </memberdef>
-    </sectiondef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

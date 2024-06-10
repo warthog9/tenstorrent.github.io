@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
   <compounddef id="erf__erfc_8h" kind="file" language="C++">
     <compoundname>erf_erfc.h</compoundname>
     <includes local="yes">compute_kernel_api/common_globals.h</includes>
@@ -15,7 +15,7 @@
       </node>
     </incdepgraph>
     <innernamespace refid="namespaceckernel">ckernel</innernamespace>
-    <sectiondef kind="define">
+      <sectiondef kind="define">
       <memberdef kind="define" id="erf__erfc_8h_1a5f8a5b21f170f78a59c6aca4376e757d" prot="public" static="no">
         <name>MATH</name>
         <param><defname>x</defname></param>
@@ -27,7 +27,7 @@
         </inbodydescription>
         <location file="tt_metal/include/compute_kernel_api/eltwise_unary/erf_erfc.h" line="13" column="11" bodyfile="tt_metal/include/compute_kernel_api/eltwise_unary/erf_erfc.h" bodystart="13" bodyend="-1"/>
       </memberdef>
-    </sectiondef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -50,7 +50,7 @@
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">ckernel<sp/>{</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">/**************<sp/>ERF<sp/>*****************/</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">/**************<sp/>ERF<sp/>*****************/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fast_and_approx<sp/>=<sp/>true&gt;</highlight></codeline>
 <codeline lineno="23"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>erf_tile_init()<sp/>{</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>MATH((llk_math_eltwise_unary_sfpu_erf_init&lt;fast_and_approx&gt;()));</highlight></codeline>

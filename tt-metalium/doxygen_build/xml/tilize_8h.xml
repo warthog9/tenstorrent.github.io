@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
   <compounddef id="tilize_8h" kind="file" language="C++">
     <compoundname>tilize.h</compoundname>
     <includes local="yes">compute_kernel_api/common.h</includes>
@@ -56,7 +56,7 @@
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>UNPACK((<sp/>llk_unpack_tilize_init(icb,<sp/>block)<sp/>));</highlight></codeline>
 <codeline lineno="38"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(defined(REDUCE_OP)<sp/>and<sp/>defined(REDUCE_DIM))<sp/>or<sp/>defined(__DOXYGEN__)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(defined(REDUCE_OP)<sp/>and<sp/>defined(REDUCE_DIM))<sp/>or<sp/>defined(__DOXYGEN__)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>tilizeA_B_reduce_init(uint32_t<sp/>icb0,<sp/>uint32_t<sp/>icb1_scaler,<sp/>uint32_t<sp/>block,<sp/>uint32_t<sp/>ocb<sp/>=<sp/>16,<sp/>uint32_t<sp/>num_faces<sp/>=<sp/>4,<sp/>uint32_t<sp/>face_r_dim<sp/>=<sp/>16)</highlight></codeline>
 <codeline lineno="45"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>UNPACK((<sp/>llk_setup_operands()<sp/>));</highlight></codeline>
