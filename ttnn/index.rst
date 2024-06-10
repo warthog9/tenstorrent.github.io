@@ -40,13 +40,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
-Links
-==============================
-.. toctree::
-   :caption: Links
-   :maxdepth: 2
-
-   TT-Core <https://tenstorrent.github.io/docs-test/core/latest>
-   TT-Buda <https://tenstorrent.github.io/docs-test/pybuda/latest/index.html>
-   TT-Metalium <https://tenstorrent.github.io/docs-test/tt-metal/tt-metal-latest/index.html>

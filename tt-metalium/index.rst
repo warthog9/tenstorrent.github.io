@@ -10,6 +10,7 @@ Welcome to TT-Metalium documentation!
    :caption: Get Started
 
    get_started/get_started
+   installing
 
 .. toctree::
    :caption: TT-Metalium
@@ -31,13 +32,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
-Links
-==============================
-.. toctree::
-   :caption: Links
-   :maxdepth: 2
-
-   TT-Core <https://tenstorrent.github.io/docs-test/core/latest>
-   TT-Buda <https://tenstorrent.github.io/docs-test/pybuda/latest/index.html>
-   TT-NN <https://tenstorrent.github.io/docs-test/ttnn/ttnn-latest/index.html>
