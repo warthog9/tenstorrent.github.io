@@ -65,7 +65,6 @@ napoleon_attr_annotations = True
 email_automode = True
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['../shared/_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
@@ -81,6 +80,7 @@ html_theme = "sphinx_rtd_theme"
 html_logo = "../shared/images/tt_logo.svg"
 html_favicon = "../shared/images/cropped-favicon-32x32.png"
 html_static_path = ['../shared/_static']
+templates_path = ['../shared/_templates']
 
 import yaml
 
@@ -89,7 +89,8 @@ with open("../versions.yml", "r") as yaml_file:
 
 html_context = {
     "versions": versions,
-    "current_version": os.environ.get("current_version")
+    "current_version": os.environ.get("current_version"),
+    "logo_link_url": "https://tenstorrent.github.io/docs-test/core/latest/"
 }
 
 def setup(app):
