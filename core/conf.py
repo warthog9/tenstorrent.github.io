@@ -28,7 +28,7 @@ html_favicon = "../shared/images/cropped-favicon-32x32.png"
 html_static_path = ['../shared/_static']
 
 html_context = {
-    "versions": None,
+    "versions": None, # Do not render versions
     "logo_link_url": "https://tenstorrent.github.io/docs-test/core/latest/"
 }
 
