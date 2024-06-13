@@ -1,0 +1,62 @@
+\hypertarget{isinf__isnan_8h_source}{}\doxysection{isinf\+\_\+isnan.\+h}
+\label{isinf__isnan_8h_source}\index{tt\_metal/include/compute\_kernel\_api/eltwise\_unary/isinf\_isnan.h@{tt\_metal/include/compute\_kernel\_api/eltwise\_unary/isinf\_isnan.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ SPDX-\/FileCopyrightText:\ ©\ 2023\ Tenstorrent\ Inc.}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ Apache-\/2.0}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}compute\_kernel\_api/common\_globals.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifdef\ TRISC\_MATH}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}llk\_math\_eltwise\_unary\_sfpu\_isinf\_isnan.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ MAIN\ math\_main()}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ MATH(x)\ x}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MATH(x)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }ckernel\ \{}
+\DoxyCodeLine{00029\ ALWI\ \textcolor{keywordtype}{void}\ isinf\_tile(uint32\_t\ idst)\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ MATH((llk\_math\_eltwise\_unary\_sfpu\_isinf<APPROX>(idst)));}
+\DoxyCodeLine{00031\ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ ALWI\ \textcolor{keywordtype}{void}\ isinf\_tile\_init()\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ MATH((llk\_math\_eltwise\_unary\_sfpu\_isinf\_init<APPROX>()\ ));}
+\DoxyCodeLine{00038\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00052\ ALWI\ \textcolor{keywordtype}{void}\ isposinf\_tile(uint32\_t\ idst)\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ MATH((llk\_math\_eltwise\_unary\_sfpu\_isposinf<APPROX>(idst)\ ));}
+\DoxyCodeLine{00054\ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ ALWI\ \textcolor{keywordtype}{void}\ isposinf\_tile\_init()\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ MATH((llk\_math\_eltwise\_unary\_sfpu\_isposinf\_init<APPROX>()\ ));}
+\DoxyCodeLine{00061\ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00075\ ALWI\ \textcolor{keywordtype}{void}\ isneginf\_tile(uint32\_t\ idst)\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ MATH((llk\_math\_eltwise\_unary\_sfpu\_isneginf<APPROX>(idst)\ ));}
+\DoxyCodeLine{00077\ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ ALWI\ \textcolor{keywordtype}{void}\ isneginf\_tile\_init()\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ MATH((llk\_math\_eltwise\_unary\_sfpu\_isneginf\_init<APPROX>()\ ));}
+\DoxyCodeLine{00084\ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00098\ ALWI\ \textcolor{keywordtype}{void}\ isnan\_tile(uint32\_t\ idst)\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ MATH((llk\_math\_eltwise\_unary\_sfpu\_isnan<APPROX>(idst)\ ));}
+\DoxyCodeLine{00100\ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00105\ ALWI\ \textcolor{keywordtype}{void}\ isnan\_tile\_init()\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ MATH((llk\_math\_eltwise\_unary\_sfpu\_isnan\_init<APPROX>()\ ));}
+\DoxyCodeLine{00107\ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00121\ ALWI\ \textcolor{keywordtype}{void}\ isfinite\_tile(uint32\_t\ idst)\ \{}
+\DoxyCodeLine{00122\ \ \ \ \ MATH((llk\_math\_eltwise\_unary\_sfpu\_isfinite<APPROX>(idst)\ ));}
+\DoxyCodeLine{00123\ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00128\ ALWI\ \textcolor{keywordtype}{void}\ isfinite\_tile\_init()\ \{}
+\DoxyCodeLine{00129\ \ \ \ \ MATH((llk\_math\_eltwise\_unary\_sfpu\_isfinite\_init<APPROX>()\ ));}
+\DoxyCodeLine{00130\ \}}
+\DoxyCodeLine{00131\ \}\ \textcolor{comment}{//\ namespace\ ckernel}}
+
+\end{DoxyCode}

@@ -1,0 +1,49 @@
+\hypertarget{reg__api_8h_source}{}\doxysection{reg\+\_\+api.\+h}
+\label{reg__api_8h_source}\index{tt\_metal/include/compute\_kernel\_api/reg\_api.h@{tt\_metal/include/compute\_kernel\_api/reg\_api.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ SPDX-\/FileCopyrightText:\ ©\ 2023\ Tenstorrent\ Inc.}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ Apache-\/2.0}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}compute\_kernel\_api/common\_globals.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }ckernel\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00028\ ALWI\ \textcolor{keywordtype}{void}\ acquire\_dst(tt::DstMode\ mode)\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ MATH((\ llk\_math\_wait\_for\_dest\_available()\ \ ));}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ PACK((\ llk\_packer\_wait\_for\_math\_done()\ \ ));}
+\DoxyCodeLine{00032\ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ new\ APIs,\ TODO:\ migrate\ all\ kernels\ to\ these}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ ALWI\ \textcolor{keywordtype}{void}\ tile\_regs\_acquire()\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ MATH((\ llk\_math\_wait\_for\_dest\_available()\ \ ));}
+\DoxyCodeLine{00043\ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ ALWI\ \textcolor{keywordtype}{void}\ tile\_regs\_wait()\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ PACK((\ llk\_packer\_wait\_for\_math\_done()\ \ ));}
+\DoxyCodeLine{00052\ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00067\ ALWI\ \textcolor{keywordtype}{void}\ release\_dst(tt::DstMode\ mode)\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ MATH((\ llk\_math\_dest\_section\_done()\ \ ));}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ PACK((\ llk\_pack\_dest\_section\_done()\ \ ));}
+\DoxyCodeLine{00071\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{comment}{//\ new\ APIs,\ TODO:\ migrate\ all\ kernels\ to\ these}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00078\ ALWI\ \textcolor{keywordtype}{void}\ tile\_regs\_commit()\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ MATH((\ llk\_math\_dest\_section\_done()\ \ ));}
+\DoxyCodeLine{00080\ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00085\ ALWI\ \textcolor{keywordtype}{void}\ tile\_regs\_release()\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ PACK((\ llk\_pack\_dest\_section\_done()\ \ ));}
+\DoxyCodeLine{00087\ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \}\ \textcolor{comment}{//\ namespace\ ckernel}}
+
+\end{DoxyCode}

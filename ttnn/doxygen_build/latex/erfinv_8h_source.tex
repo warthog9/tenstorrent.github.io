@@ -1,0 +1,30 @@
+\hypertarget{erfinv_8h_source}{}\doxysection{erfinv.\+h}
+\label{erfinv_8h_source}\index{tt\_metal/include/compute\_kernel\_api/eltwise\_unary/erfinv.h@{tt\_metal/include/compute\_kernel\_api/eltwise\_unary/erfinv.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ SPDX-\/FileCopyrightText:\ ©\ 2023\ Tenstorrent\ Inc.}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ Apache-\/2.0}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}compute\_kernel\_api/common\_globals.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifdef\ TRISC\_MATH}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}llk\_math\_eltwise\_unary\_sfpu\_erfinv.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ MAIN\ math\_main()}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ MATH(x)\ x}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MATH(x)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }ckernel\ \{}
+\DoxyCodeLine{00029\ ALWI\ \textcolor{keywordtype}{void}\ erfinv\_tile(uint32\_t\ idst)\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ MATH((llk\_math\_eltwise\_unary\_sfpu\_erfinv\_op<APPROX>(idst)));}
+\DoxyCodeLine{00031\ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ ALWI\ \textcolor{keywordtype}{void}\ erfinv\_tile\_init()\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ MATH((llk\_math\_eltwise\_unary\_sfpu\_erfinv\_init<APPROX>()\ ));}
+\DoxyCodeLine{00038\ \}}
+\DoxyCodeLine{00039\ \}\ \textcolor{comment}{//\ namespace\ ckernel}}
+
+\end{DoxyCode}

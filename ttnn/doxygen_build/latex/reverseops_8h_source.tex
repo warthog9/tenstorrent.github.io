@@ -1,0 +1,43 @@
+\hypertarget{reverseops_8h_source}{}\doxysection{reverseops.\+h}
+\label{reverseops_8h_source}\index{tt\_metal/include/compute\_kernel\_api/eltwise\_unary/reverseops.h@{tt\_metal/include/compute\_kernel\_api/eltwise\_unary/reverseops.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ SPDX-\/FileCopyrightText:\ ©\ 2023\ Tenstorrent\ Inc.}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ Apache-\/2.0}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}compute\_kernel\_api/common\_globals.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifdef\ TRISC\_MATH}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}llk\_math\_eltwise\_unary\_sfpu\_reverseops.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ MAIN\ math\_main()}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MATH(x)\ x}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ MATH(x)}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }ckernel\ \{}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{//rpow:\ implemented\ as\ a\ composite\ operator}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//rpow(a,k)\ =\ k**(a)}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{//RDIV\ :\ rdiv(x,y)\ =\ y/x}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//implemented\ as\ tied\ multiply\ operator}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{//RSUB\ :\ rsub(x,y)\ =\ y-\/x}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00042\ ALWI\ \textcolor{keywordtype}{void}\ rsub\_tile(uint32\_t\ idst,uint32\_t\ param0)\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ MATH((\ llk\_math\_eltwise\_unary\_sfpu\_rsub<APPROX>(idst,param0)\ ));}
+\DoxyCodeLine{00044\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ ALWI\ \textcolor{keywordtype}{void}\ rsub\_tile\_init()\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ MATH((\ llk\_math\_eltwise\_unary\_sfpu\_rsub\_init<APPROX>()\ ));}
+\DoxyCodeLine{00051\ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \}\ \textcolor{comment}{//\ namespace\ ckerne}}
+
+\end{DoxyCode}

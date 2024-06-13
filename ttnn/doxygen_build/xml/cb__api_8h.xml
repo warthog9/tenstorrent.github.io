@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="cb__api_8h" kind="file" language="C++">
+    <compoundname>cb_api.h</compoundname>
+    <includes local="yes">compute_kernel_api/common_globals.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>tt_metal/include/compute_kernel_api/cb_api.h</label>
+        <link refid="cb__api_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>compute_kernel_api/common_globals.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceckernel">ckernel</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>SPDX-FileCopyrightText:<sp/>©<sp/>2023<sp/>Tenstorrent<sp/>Inc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;compute_kernel_api/common_globals.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>TRISC_PACK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;llk_io_pack.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>TRISC_UNPACK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;llk_io_unpack.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">ckernel<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dataflow__api_8h_1af6d8057bd05a650c3501c5208f7d9f8a" kindref="member">cb_wait_front</ref>(uint32_t<sp/>cbid,<sp/>uint32_t<sp/>ntiles)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>UNPACK((<sp/>llk_wait_tiles(cbid,<sp/>ntiles)<sp/><sp/>));</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dataflow__api_8h_1aa3daf8e5e7299140cf2607be1a8656b0" kindref="member">cb_pop_front</ref>(uint32_t<sp/>cbid,<sp/>uint32_t<sp/>ntiles)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>UNPACK((<sp/>llk_pop_tiles(cbid,<sp/>ntiles)<sp/><sp/>));</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dataflow__api_8h_1a29521dee07b0070674a988f66c01ffed" kindref="member">cb_reserve_back</ref>(uint32_t<sp/>cbid,<sp/>uint32_t<sp/>ntiles)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>PACK((<sp/>llk_wait_for_free_tiles&lt;false,false,false&gt;(cbid,ntiles)<sp/><sp/>));</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal">ALWI<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dataflow__api_8h_1a81357224b88562601b42833eec676ffb" kindref="member">cb_push_back</ref>(uint32_t<sp/>cbid,<sp/>uint32_t<sp/>ntiles)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>PACK((<sp/>llk_push_tiles&lt;false,false&gt;(cbid,<sp/>ntiles)<sp/><sp/>));</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ckernel</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="tt_metal/include/compute_kernel_api/cb_api.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1011 @@
+\hypertarget{host__api_8hpp}{}\doxysection{tt\+\_\+metal/host\+\_\+api.hpp File Reference}
+\label{host__api_8hpp}\index{tt\_metal/host\_api.hpp@{tt\_metal/host\_api.hpp}}
+{\ttfamily \#include $<$optional$>$}\newline
+{\ttfamily \#include $<$variant$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$future$>$}\newline
+{\ttfamily \#include \char`\"{}tt\+\_\+metal/common/core\+\_\+coord.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tt\+\_\+metal/impl/program/program.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tt\+\_\+metal/impl/buffers/buffer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tt\+\_\+metal/impl/event/event.\+hpp\char`\"{}}\newline
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{host__api_8hpp_af559e38779cb26844ec9a6b0bb41f940}\label{host__api_8hpp_af559e38779cb26844ec9a6b0bb41f940}} 
+using {\bfseries tt\+::tt\+\_\+metal\+::\+Runtime\+Args} = std\+::vector$<$ std\+::variant$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $\ast$, uint32\+\_\+t $>$ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{host__api_8hpp_a06ba0ab5eeb2da5af625a8b7f95ca48e}{tt\+::tt\+\_\+metal\+::\+Get\+Num\+Available\+Devices}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{host__api_8hpp_aa18761d248b0a8081c84440f3aeafcfc}{tt\+::tt\+\_\+metal\+::\+Get\+Num\+PCIe\+Devices}} ()
+\item 
+Device $\ast$ \mbox{\hyperlink{host__api_8hpp_a1c648a47154fd9c255f33943e313c9a8}{tt\+::tt\+\_\+metal\+::\+Create\+Device}} (chip\+\_\+id\+\_\+t device\+\_\+id, const uint8\+\_\+t num\+\_\+hw\+\_\+cqs=1, const size\+\_\+t l1\+\_\+small\+\_\+size=DEFAULT\+\_\+\+L1\+\_\+\+SMALL\+\_\+\+SIZE, const std\+::vector$<$ uint32\+\_\+t $>$ \&l1\+\_\+bank\+\_\+remap=\{\})
+\item 
+Device $\ast$ \mbox{\hyperlink{host__api_8hpp_a07e0aaf41772593d1d017db950e3b7b3}{tt\+::tt\+\_\+metal\+::\+Create\+Device\+Minimal}} (chip\+\_\+id\+\_\+t device\+\_\+id)
+\item 
+bool \mbox{\hyperlink{host__api_8hpp_a25ae925200ca85a3274824f1b945ebc1}{tt\+::tt\+\_\+metal\+::\+Close\+Device}} (Device $\ast$device)
+\item 
+Program \mbox{\hyperlink{host__api_8hpp_a48b1af1b20561d626ff34f39282f1dea}{tt\+::tt\+\_\+metal\+::\+Create\+Program}} ()
+\item 
+Kernel\+Handle \mbox{\hyperlink{host__api_8hpp_ae7930dd08bf0ae0c83c8ee55f3f604b9}{tt\+::tt\+\_\+metal\+::\+Create\+Kernel}} (Program \&program, const std\+::string \&file\+\_\+name, const std\+::variant$<$ Core\+Coord, Core\+Range, Core\+Range\+Set $>$ \&core\+\_\+spec, const std\+::variant$<$ Data\+Movement\+Config, Compute\+Config, Ethernet\+Config $>$ \&config)
+\item 
+CBHandle \mbox{\hyperlink{host__api_8hpp_a62b10a9d4d6ed91eacaba5d27c9761fb}{tt\+::tt\+\_\+metal\+::\+Create\+Circular\+Buffer}} (Program \&program, const std\+::variant$<$ Core\+Coord, Core\+Range, Core\+Range\+Set $>$ \&core\+\_\+spec, const Circular\+Buffer\+Config \&config)
+\item 
+const Circular\+Buffer\+Config \& \mbox{\hyperlink{host__api_8hpp_a95bdaeb43136c4db864dd95481fa0a16}{tt\+::tt\+\_\+metal\+::\+Get\+Circular\+Buffer\+Config}} (Program \&program, CBHandle cb\+\_\+handle)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_a39e124f62d4c172a44abc0c22fa3ee04}{tt\+::tt\+\_\+metal\+::\+Update\+Circular\+Buffer\+Total\+Size}} (Program \&program, CBHandle cb\+\_\+handle, uint32\+\_\+t total\+\_\+size)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_a92e93610eb6b826263eb803608c33889}{tt\+::tt\+\_\+metal\+::\+Update\+Circular\+Buffer\+Page\+Size}} (Program \&program, CBHandle cb\+\_\+handle, uint8\+\_\+t buffer\+\_\+index, uint32\+\_\+t page\+\_\+size)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_aac851bed71135fa02e28caf0c0ae58b0}{tt\+::tt\+\_\+metal\+::\+Update\+Dynamic\+Circular\+Buffer\+Address}} (Program \&program, CBHandle cb\+\_\+handle, const \mbox{\hyperlink{classBuffer}{Buffer}} \&buffer)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{host__api_8hpp_a8860cbc40324a9cc2e18badc55a77a68}{tt\+::tt\+\_\+metal\+::\+Create\+Semaphore}} (Program \&program, const std\+::variant$<$ Core\+Range, Core\+Range\+Set $>$ \&core\+\_\+spec, uint32\+\_\+t initial\+\_\+value, Core\+Type core\+\_\+type=Core\+Type\+::\+WORKER)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$ \mbox{\hyperlink{host__api_8hpp_a44f12170a79821c7a1eb7dcad8e9014e}{tt\+::tt\+\_\+metal\+::\+Create\+Buffer}} (const Interleaved\+Buffer\+Config \&config)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$ \mbox{\hyperlink{host__api_8hpp_a8e5af0183154c8b303d43acec393ec29}{tt\+::tt\+\_\+metal\+::\+Create\+Buffer}} (const Sharded\+Buffer\+Config \&config)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_a6a064752ab55b4fac953ba8bde7daf52}{tt\+::tt\+\_\+metal\+::\+Deallocate\+Buffer}} (\mbox{\hyperlink{classBuffer}{Buffer}} \&buffer)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_a4e29ca9df8b6f13424f2a392d8971483}{tt\+::tt\+\_\+metal\+::\+Assign\+Global\+Buffer\+To\+Program}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$ buffer, std\+::variant$<$ std\+::reference\+\_\+wrapper$<$ Program $>$, std\+::shared\+\_\+ptr$<$ Program $>$ $>$ program)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_a491996adcf69861c22eed34ce1ac68cc}{tt\+::tt\+\_\+metal\+::\+Set\+Runtime\+Args}} (const Program \&program, Kernel\+Handle kernel, const std\+::variant$<$ Core\+Coord, Core\+Range, Core\+Range\+Set $>$ \&core\+\_\+spec, const std\+::vector$<$ uint32\+\_\+t $>$ \&runtime\+\_\+args)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_af27c6b3f5c79fb792beb4ab2169683b7}{tt\+::tt\+\_\+metal\+::\+Set\+Runtime\+Args}} (const Program \&program, Kernel\+Handle kernel, const std\+::vector$<$ Core\+Coord $>$ \&core\+\_\+spec, const std\+::vector$<$ std\+::vector$<$ uint32\+\_\+t $>$ $>$ \&runtime\+\_\+args)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_a7c10cd46327ef8693169b3aee8846a7a}{tt\+::tt\+\_\+metal\+::\+Set\+Runtime\+Args}} (Device $\ast$device, const std\+::shared\+\_\+ptr$<$ Kernel $>$ kernel, const std\+::variant$<$ Core\+Coord, Core\+Range, Core\+Range\+Set $>$ \&core\+\_\+spec, std\+::shared\+\_\+ptr$<$ Runtime\+Args $>$ runtime\+\_\+args)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_a5abdf19459659b61a4c2bbcf172f6f35}{tt\+::tt\+\_\+metal\+::\+Set\+Runtime\+Args}} (Device $\ast$device, const std\+::shared\+\_\+ptr$<$ Kernel $>$ kernel, const std\+::vector$<$ Core\+Coord $>$ \&core\+\_\+spec, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ Runtime\+Args $>$ $>$ runtime\+\_\+args)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_a3b4cf7321eea21c21850b447312f02fa}{tt\+::tt\+\_\+metal\+::\+Set\+Common\+Runtime\+Args}} (const Program \&program, Kernel\+Handle kernel\+\_\+id, const std\+::vector$<$ uint32\+\_\+t $>$ \&runtime\+\_\+args)
+\item 
+Runtime\+Args\+Data \& \mbox{\hyperlink{host__api_8hpp_a8dd2e6d874b20a87745ae83cc88afb51}{tt\+::tt\+\_\+metal\+::\+Get\+Runtime\+Args}} (const Program \&program, Kernel\+Handle kernel\+\_\+id, const Core\+Coord \&logical\+\_\+core)
+\item 
+std\+::vector$<$ std\+::vector$<$ Runtime\+Args\+Data $>$ $>$ \& \mbox{\hyperlink{host__api_8hpp_a1b62db611a9ad2d24c90c043dae989a6}{tt\+::tt\+\_\+metal\+::\+Get\+Runtime\+Args}} (const Program \&program, Kernel\+Handle kernel\+\_\+id)
+\item 
+Runtime\+Args\+Data \& \mbox{\hyperlink{host__api_8hpp_a2af22a7fb7c71050de7ec2fc9d487ab6}{tt\+::tt\+\_\+metal\+::\+Get\+Common\+Runtime\+Args}} (const Program \&program, Kernel\+Handle kernel\+\_\+id)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_a72bce18ec81347c077fb802271a7c562}{tt\+::tt\+\_\+metal\+::\+Enqueue\+Read\+Buffer}} (Command\+Queue \&cq, std\+::variant$<$ std\+::reference\+\_\+wrapper$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$ $>$ buffer, std\+::vector$<$ uint32\+\_\+t $>$ \&dst, bool blocking)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_a769957ca9a07e91d82cac6fd682a7fd1}{tt\+::tt\+\_\+metal\+::\+Enqueue\+Read\+Buffer}} (Command\+Queue \&cq, std\+::variant$<$ std\+::reference\+\_\+wrapper$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$ $>$ buffer, void $\ast$dst, bool blocking)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_a41f4ff2e9c7fca0b1287446f57d37e34}{tt\+::tt\+\_\+metal\+::\+Enqueue\+Write\+Buffer}} (Command\+Queue \&cq, std\+::variant$<$ std\+::reference\+\_\+wrapper$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$ $>$ buffer, std\+::vector$<$ uint32\+\_\+t $>$ \&src, bool blocking)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_a474bb3622a9e2927298d2a2a70c90774}{tt\+::tt\+\_\+metal\+::\+Enqueue\+Write\+Buffer}} (Command\+Queue \&cq, std\+::variant$<$ std\+::reference\+\_\+wrapper$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$ $>$ buffer, Host\+Data\+Type src, bool blocking)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_a573978c2536748213de459b0a09477b7}{tt\+::tt\+\_\+metal\+::\+Enqueue\+Program}} (Command\+Queue \&cq, std\+::variant$<$ std\+::reference\+\_\+wrapper$<$ Program $>$, std\+::shared\+\_\+ptr$<$ Program $>$ $>$ program, bool blocking)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_afc3cc77a54213457805a878231ca3643}{tt\+::tt\+\_\+metal\+::\+Finish}} (Command\+Queue \&cq)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{host__api_8hpp_a45ec39a3364acba591a1792a5058b530}{tt\+::tt\+\_\+metal\+::\+Begin\+Trace\+Capture}} (Device $\ast$device, const uint8\+\_\+t cq\+\_\+id, const uint32\+\_\+t trace\+\_\+buff\+\_\+size)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_a3eaf4c5845ee7d8153c6ca9cc250df30}{tt\+::tt\+\_\+metal\+::\+End\+Trace\+Capture}} (Device $\ast$device, const uint8\+\_\+t cq\+\_\+id, const uint32\+\_\+t tid)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_a12e0b86cbb5a6ef9930562b684898d90}{tt\+::tt\+\_\+metal\+::\+Replay\+Trace}} (Device $\ast$device, const uint8\+\_\+t cq\+\_\+id, const uint32\+\_\+t tid, const bool blocking)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_a526ece1a413c039607e2973b97cdfa75}{tt\+::tt\+\_\+metal\+::\+Release\+Trace}} (Device $\ast$device, const uint32\+\_\+t tid)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_ac56da2798d8d1a093846845ff06fd773}{tt\+::tt\+\_\+metal\+::\+Enqueue\+Trace}} (Command\+Queue \&cq, uint32\+\_\+t trace\+\_\+id, bool blocking)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_a5087c491b5788ee5878cf049066c355a}{tt\+::tt\+\_\+metal\+::\+Dump\+Device\+Profile\+Results}} (Device $\ast$device, const Program \&program)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_a6c9d6bc143bf01946b145bb20c9a4ccd}{tt\+::tt\+\_\+metal\+::\+Enqueue\+Record\+Event}} (Command\+Queue \&cq, std\+::shared\+\_\+ptr$<$ Event $>$ event)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_a2560cd6db65a03de3e9aad52ff381b6e}{tt\+::tt\+\_\+metal\+::\+Enqueue\+Wait\+For\+Event}} (Command\+Queue \&cq, std\+::shared\+\_\+ptr$<$ Event $>$ event)
+\item 
+void \mbox{\hyperlink{host__api_8hpp_a503f5ffa5860947b42872b7fe326bac5}{tt\+::tt\+\_\+metal\+::\+Event\+Synchronize}} (std\+::shared\+\_\+ptr$<$ Event $>$ event)
+\item 
+bool \mbox{\hyperlink{host__api_8hpp_a017d64ee3fbb64880859d52a21f7f474}{tt\+::tt\+\_\+metal\+::\+Event\+Query}} (std\+::shared\+\_\+ptr$<$ Event $>$ event)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{host__api_8hpp_a4e29ca9df8b6f13424f2a392d8971483}\label{host__api_8hpp_a4e29ca9df8b6f13424f2a392d8971483}} 
+\index{host\_api.hpp@{host\_api.hpp}!AssignGlobalBufferToProgram@{AssignGlobalBufferToProgram}}
+\index{AssignGlobalBufferToProgram@{AssignGlobalBufferToProgram}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{AssignGlobalBufferToProgram()}{AssignGlobalBufferToProgram()}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Assign\+Global\+Buffer\+To\+Program (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$}]{buffer,  }\item[{std\+::variant$<$ std\+::reference\+\_\+wrapper$<$ Program $>$, std\+::shared\+\_\+ptr$<$ Program $>$ $>$}]{program }\end{DoxyParamCaption})}
+
+Gives the specified program ownership of the buffer\+: the buffer will remain on device at least until the program is enqueued. This is required for asynchronous Command Queues.
+
+Return value\+: void
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+buffer   &The buffer that will be owned by the program   &std\+::shared\+\_\+ptr$<$\+Buffer$>$ buffer   &&Yes    \\\cline{1-5}
+program   &The program getting ownership of the buffer   &std\+::shared\+\_\+ptr$<$\+Buffer$>$ buffer   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a45ec39a3364acba591a1792a5058b530}\label{host__api_8hpp_a45ec39a3364acba591a1792a5058b530}} 
+\index{host\_api.hpp@{host\_api.hpp}!BeginTraceCapture@{BeginTraceCapture}}
+\index{BeginTraceCapture@{BeginTraceCapture}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{BeginTraceCapture()}{BeginTraceCapture()}}
+{\footnotesize\ttfamily uint32\+\_\+t tt\+::tt\+\_\+metal\+::\+Begin\+Trace\+Capture (\begin{DoxyParamCaption}\item[{Device $\ast$}]{device,  }\item[{const uint8\+\_\+t}]{cq\+\_\+id,  }\item[{const uint32\+\_\+t}]{trace\+\_\+buff\+\_\+size }\end{DoxyParamCaption})}
+
+Begins capture on a trace, when the trace is in capture mode all programs pushed into the trace queue will have their execution delayed until the trace is instantiated and enqueued. The capture must be later ended via End\+Trace\+Capture, and finally scheduled to be executed via Replay\+Trace. Beginning a trace capture enabled buffer allocations until capture has ended.
+
+Return value\+: Trace ID
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+device   &The device holding being traced.   &Device $\ast$   &&Yes    \\\cline{1-5}
+cq\+\_\+id   &The command queue id associated with the trace.   &uint8\+\_\+t   &&Yes    \\\cline{1-5}
+trace\+\_\+buff\+\_\+size   &The size of the trace buffer to pre-\/allocate.   &uint32\+\_\+t   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a25ae925200ca85a3274824f1b945ebc1}\label{host__api_8hpp_a25ae925200ca85a3274824f1b945ebc1}} 
+\index{host\_api.hpp@{host\_api.hpp}!CloseDevice@{CloseDevice}}
+\index{CloseDevice@{CloseDevice}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{CloseDevice()}{CloseDevice()}}
+{\footnotesize\ttfamily bool tt\+::tt\+\_\+metal\+::\+Close\+Device (\begin{DoxyParamCaption}\item[{Device $\ast$}]{device }\end{DoxyParamCaption})}
+
+Resets device and closes device
+
+Return value\+: bool
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+device   &Pointer to a device object   &Device $\ast$   &&True   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a44f12170a79821c7a1eb7dcad8e9014e}\label{host__api_8hpp_a44f12170a79821c7a1eb7dcad8e9014e}} 
+\index{host\_api.hpp@{host\_api.hpp}!CreateBuffer@{CreateBuffer}}
+\index{CreateBuffer@{CreateBuffer}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{CreateBuffer()}{CreateBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$ tt\+::tt\+\_\+metal\+::\+Create\+Buffer (\begin{DoxyParamCaption}\item[{const Interleaved\+Buffer\+Config \&}]{config }\end{DoxyParamCaption})}
+
+Allocates an interleaved DRAM or L1 buffer on device
+
+Return value\+: std\+::shared\+\_\+ptr$<$\+Buffer$>$
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+config   &config for buffer   &Interleaved\+Buffer\+Config   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a8e5af0183154c8b303d43acec393ec29}\label{host__api_8hpp_a8e5af0183154c8b303d43acec393ec29}} 
+\index{host\_api.hpp@{host\_api.hpp}!CreateBuffer@{CreateBuffer}}
+\index{CreateBuffer@{CreateBuffer}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{CreateBuffer()}{CreateBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$ tt\+::tt\+\_\+metal\+::\+Create\+Buffer (\begin{DoxyParamCaption}\item[{const Sharded\+Buffer\+Config \&}]{config }\end{DoxyParamCaption})}
+
+Allocates a sharded DRAM or L1 buffer on device
+
+Return value\+: std\+::shared\+\_\+ptr$<$\+Buffer$>$
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+config   &config for buffer   &Sharded\+Buffer\+Config   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a62b10a9d4d6ed91eacaba5d27c9761fb}\label{host__api_8hpp_a62b10a9d4d6ed91eacaba5d27c9761fb}} 
+\index{host\_api.hpp@{host\_api.hpp}!CreateCircularBuffer@{CreateCircularBuffer}}
+\index{CreateCircularBuffer@{CreateCircularBuffer}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{CreateCircularBuffer()}{CreateCircularBuffer()}}
+{\footnotesize\ttfamily CBHandle tt\+::tt\+\_\+metal\+::\+Create\+Circular\+Buffer (\begin{DoxyParamCaption}\item[{Program \&}]{program,  }\item[{const std\+::variant$<$ Core\+Coord, Core\+Range, Core\+Range\+Set $>$ \&}]{core\+\_\+spec,  }\item[{const Circular\+Buffer\+Config \&}]{config }\end{DoxyParamCaption})}
+
+Creates a Circular \mbox{\hyperlink{classBuffer}{Buffer}} (CB) in L1 memory of all cores within core ranges (inclusive) and adds it to the program. There can be a total of NUM\+\_\+\+CIRCULAR\+\_\+\+BUFFERS (32) circular buffers per core. Circular buffers hold data and have an associated config which indicates usage of the address space. If the config is specified for multiple buffer indices, the circular buffer address space is shared and each buffer index can potentially have a unique view of the shared space.
+
+Circular buffers can be dynamically allocated or program-\/local allocated. If the config is created with an L1 buffer or sets a globally allocated address it is dynamic and shares the same address space as the L1 buffer. Otherwise, the circular buffer address space is managed by the program. Address space for program-\/local circular buffers does not persist across programs.
+
+Return value\+: Circular \mbox{\hyperlink{classBuffer}{Buffer}} ID (uintptr\+\_\+t)
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+program   &The program to which buffer will be added to   &Program \&   &&Yes    \\\cline{1-5}
+core\+\_\+spec   &Either a single logical core, a range of logical cores or a set of logical core ranges that indicate where the circular buffer will be configured   &const std\+::variant$<$\+Core\+Coord, Core\+Range, Core\+Range\+Set$>$ \&   &&Yes    \\\cline{1-5}
+config   &Config for circular buffer   &const Circular\+Buffer\+Config \&   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a1c648a47154fd9c255f33943e313c9a8}\label{host__api_8hpp_a1c648a47154fd9c255f33943e313c9a8}} 
+\index{host\_api.hpp@{host\_api.hpp}!CreateDevice@{CreateDevice}}
+\index{CreateDevice@{CreateDevice}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{CreateDevice()}{CreateDevice()}}
+{\footnotesize\ttfamily Device $\ast$ tt\+::tt\+\_\+metal\+::\+Create\+Device (\begin{DoxyParamCaption}\item[{chip\+\_\+id\+\_\+t}]{device\+\_\+id,  }\item[{const uint8\+\_\+t}]{num\+\_\+hw\+\_\+cqs = {\ttfamily 1},  }\item[{const size\+\_\+t}]{l1\+\_\+small\+\_\+size = {\ttfamily DEFAULT\+\_\+L1\+\_\+SMALL\+\_\+SIZE},  }\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{l1\+\_\+bank\+\_\+remap = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+Instantiates a device object.
+
+Return value\+: Device $\ast$
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+device\+\_\+id   &ID of the device to target   &chip\+\_\+id\+\_\+t (int)   &0 to (Get\+Num\+Available\+Devices -\/ 1)   &Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a07e0aaf41772593d1d017db950e3b7b3}\label{host__api_8hpp_a07e0aaf41772593d1d017db950e3b7b3}} 
+\index{host\_api.hpp@{host\_api.hpp}!CreateDeviceMinimal@{CreateDeviceMinimal}}
+\index{CreateDeviceMinimal@{CreateDeviceMinimal}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{CreateDeviceMinimal()}{CreateDeviceMinimal()}}
+{\footnotesize\ttfamily Device $\ast$ tt\+::tt\+\_\+metal\+::\+Create\+Device\+Minimal (\begin{DoxyParamCaption}\item[{chip\+\_\+id\+\_\+t}]{device\+\_\+id }\end{DoxyParamCaption})}
+
+Instantiates a device with minimal setup, used to attach to a device in a bad state.
+
+Return value\+: Device $\ast$
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+device\+\_\+id   &ID of the device to target   &chip\+\_\+id\+\_\+t (int)   &0 to (Get\+Num\+Available\+Devices -\/ 1)   &Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_ae7930dd08bf0ae0c83c8ee55f3f604b9}\label{host__api_8hpp_ae7930dd08bf0ae0c83c8ee55f3f604b9}} 
+\index{host\_api.hpp@{host\_api.hpp}!CreateKernel@{CreateKernel}}
+\index{CreateKernel@{CreateKernel}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{CreateKernel()}{CreateKernel()}}
+{\footnotesize\ttfamily Kernel\+Handle tt\+::tt\+\_\+metal\+::\+Create\+Kernel (\begin{DoxyParamCaption}\item[{Program \&}]{program,  }\item[{const std\+::string \&}]{file\+\_\+name,  }\item[{const std\+::variant$<$ Core\+Coord, Core\+Range, Core\+Range\+Set $>$ \&}]{core\+\_\+spec,  }\item[{const std\+::variant$<$ Data\+Movement\+Config, Compute\+Config, Ethernet\+Config $>$ \&}]{config }\end{DoxyParamCaption})}
+
+Creates a data movement kernel with no compile time arguments and adds it to the program.
+
+Return value\+: Kernel ID (uintptr\+\_\+t)
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+program   &The program to which this kernel will be added to   &Program \&   &&Yes    \\\cline{1-5}
+file\+\_\+name   &Path to kernel src. Assumed to be absolute path, but will fall back to relative path from TT\+\_\+\+METAL\+\_\+\+HOME if file doesn\textquotesingle{}t exist.   &const std\+::string \&   &&Yes    \\\cline{1-5}
+core\+\_\+spec   &Either a single logical core, a range of logical cores or a set of logical core ranges that indicate which cores kernel is placed on   &const std\+::variant$<$\+Core\+Coord, Core\+Range, Core\+Range\+Set$>$ \&   &&Yes    \\\cline{1-5}
+config   &Config for data movement or compute kernel   &const std\+::variant$<$\+Data\+Movement\+Config,\+Compute\+Config,\+Ethernet\+Config$>$ \&   &&No   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a48b1af1b20561d626ff34f39282f1dea}\label{host__api_8hpp_a48b1af1b20561d626ff34f39282f1dea}} 
+\index{host\_api.hpp@{host\_api.hpp}!CreateProgram@{CreateProgram}}
+\index{CreateProgram@{CreateProgram}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{CreateProgram()}{CreateProgram()}}
+{\footnotesize\ttfamily Program tt\+::tt\+\_\+metal\+::\+Create\+Program (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a Program object which is the main container that bundles kernels, circular buffers, and/or semaphores for execution on device
+
+Return value\+: Program \mbox{\Hypertarget{host__api_8hpp_a8860cbc40324a9cc2e18badc55a77a68}\label{host__api_8hpp_a8860cbc40324a9cc2e18badc55a77a68}} 
+\index{host\_api.hpp@{host\_api.hpp}!CreateSemaphore@{CreateSemaphore}}
+\index{CreateSemaphore@{CreateSemaphore}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{CreateSemaphore()}{CreateSemaphore()}}
+{\footnotesize\ttfamily uint32\+\_\+t tt\+::tt\+\_\+metal\+::\+Create\+Semaphore (\begin{DoxyParamCaption}\item[{Program \&}]{program,  }\item[{const std\+::variant$<$ Core\+Range, Core\+Range\+Set $>$ \&}]{core\+\_\+spec,  }\item[{uint32\+\_\+t}]{initial\+\_\+value,  }\item[{Core\+Type}]{core\+\_\+type = {\ttfamily CoreType\+:\+:WORKER} }\end{DoxyParamCaption})}
+
+Initializes semaphore on all cores within core range (inclusive). Each core can have up to four 32B semaphores.
+
+Return value\+: Semaphore address (uint32\+\_\+t)
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+program   &The program to which semaphore will be added to   &Program \&   &&Yes    \\\cline{1-5}
+core\+\_\+spec   &Range of the Tensix co-\/ordinates using the semaphore   &const std\+::variant$<$\+Core\+Range,\+Core\+Range\+Set$>$ \&   &&Yes    \\\cline{1-5}
+initial\+\_\+value   &Initial value of the semaphore   &uint32\+\_\+t   &&Yes    \\\cline{1-5}
+core\+\_\+type   &Tensix or Ethernet core to create semaphore on.   &Core\+Type   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a6a064752ab55b4fac953ba8bde7daf52}\label{host__api_8hpp_a6a064752ab55b4fac953ba8bde7daf52}} 
+\index{host\_api.hpp@{host\_api.hpp}!DeallocateBuffer@{DeallocateBuffer}}
+\index{DeallocateBuffer@{DeallocateBuffer}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{DeallocateBuffer()}{DeallocateBuffer()}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Deallocate\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuffer}{Buffer}} \&}]{buffer }\end{DoxyParamCaption})}
+
+Deallocates buffer from device by marking its memory as free.
+
+Return value\+: void
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+buffer   &The buffer to deallocate from device   &\mbox{\hyperlink{classBuffer}{Buffer}} \&   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a5087c491b5788ee5878cf049066c355a}\label{host__api_8hpp_a5087c491b5788ee5878cf049066c355a}} 
+\index{host\_api.hpp@{host\_api.hpp}!DumpDeviceProfileResults@{DumpDeviceProfileResults}}
+\index{DumpDeviceProfileResults@{DumpDeviceProfileResults}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{DumpDeviceProfileResults()}{DumpDeviceProfileResults()}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Dump\+Device\+Profile\+Results (\begin{DoxyParamCaption}\item[{Device $\ast$}]{device,  }\item[{const Program \&}]{program }\end{DoxyParamCaption})}
+
+Read device side profiler data and dump results into device side CSV log
+
+This function only works in PROFILER builds. Please refer to the \char`\"{}\+Device Program Profiler\char`\"{} section for more information.
+
+Return value\+: void
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+device   &The device holding the program being profiled.   &Device $\ast$   &&True    \\\cline{1-5}
+program   &The program being profiled.   &const Program \&   &&True   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a3eaf4c5845ee7d8153c6ca9cc250df30}\label{host__api_8hpp_a3eaf4c5845ee7d8153c6ca9cc250df30}} 
+\index{host\_api.hpp@{host\_api.hpp}!EndTraceCapture@{EndTraceCapture}}
+\index{EndTraceCapture@{EndTraceCapture}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{EndTraceCapture()}{EndTraceCapture()}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+End\+Trace\+Capture (\begin{DoxyParamCaption}\item[{Device $\ast$}]{device,  }\item[{const uint8\+\_\+t}]{cq\+\_\+id,  }\item[{const uint32\+\_\+t}]{tid }\end{DoxyParamCaption})}
+
+Completes capture on a trace, if captured commands do not conform to the rules of the trace, the trace will be invalidated. This trace can be enqueued for execution via Replay\+Trace on the same device command queue. After ending a trace capture, buffer allocations on device are disabled until either a new trace begins capture, or all traces on the device are released
+
+Return value\+: void
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+device   &The device holding being traced.   &Device $\ast$   &&Yes    \\\cline{1-5}
+cq\+\_\+id   &The command queue id associated with the trace.   &uint8\+\_\+t   &&Yes    \\\cline{1-5}
+tid   &A unique id from Begin\+Trace\+Capture for the trace being captured   &uint32\+\_\+t   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a573978c2536748213de459b0a09477b7}\label{host__api_8hpp_a573978c2536748213de459b0a09477b7}} 
+\index{host\_api.hpp@{host\_api.hpp}!EnqueueProgram@{EnqueueProgram}}
+\index{EnqueueProgram@{EnqueueProgram}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{EnqueueProgram()}{EnqueueProgram()}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Enqueue\+Program (\begin{DoxyParamCaption}\item[{Command\+Queue \&}]{cq,  }\item[{std\+::variant$<$ std\+::reference\+\_\+wrapper$<$ Program $>$, std\+::shared\+\_\+ptr$<$ Program $>$ $>$}]{program,  }\item[{bool}]{blocking }\end{DoxyParamCaption})}
+
+Writes a program to the device and launches it
+
+Return value\+: void
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+cq   &The command queue object which dispatches the command to the hardware   &Command\+Queue \&   &&Yes    \\\cline{1-5}
+program   &The program that will be executed on the device that cq is bound to   &Program \&   &&Yes    \\\cline{1-5}
+blocking   &Whether or not this is a blocking operation   &bool   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a72bce18ec81347c077fb802271a7c562}\label{host__api_8hpp_a72bce18ec81347c077fb802271a7c562}} 
+\index{host\_api.hpp@{host\_api.hpp}!EnqueueReadBuffer@{EnqueueReadBuffer}}
+\index{EnqueueReadBuffer@{EnqueueReadBuffer}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{EnqueueReadBuffer()}{EnqueueReadBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Enqueue\+Read\+Buffer (\begin{DoxyParamCaption}\item[{Command\+Queue \&}]{cq,  }\item[{std\+::variant$<$ std\+::reference\+\_\+wrapper$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$ $>$}]{buffer,  }\item[{std\+::vector$<$ uint32\+\_\+t $>$ \&}]{dst,  }\item[{bool}]{blocking }\end{DoxyParamCaption})}
+
+Reads a buffer from the device
+
+Return value\+: void
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+cq   &The command queue object which dispatches the command to the hardware   &Command\+Queue \&   &&Yes    \\\cline{1-5}
+buffer   &The device buffer we are reading from   &\mbox{\hyperlink{classBuffer}{Buffer}} \& or std\+::shared\+\_\+ptr$<$\+Buffer$>$   &&Yes    \\\cline{1-5}
+dst   &The vector where the results that are read will be stored   &vector$<$uint32\+\_\+t$>$ \&   &&Yes    \\\cline{1-5}
+blocking   &Whether or not this is a blocking operation   &bool   &Only blocking mode supported currently   &Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a769957ca9a07e91d82cac6fd682a7fd1}\label{host__api_8hpp_a769957ca9a07e91d82cac6fd682a7fd1}} 
+\index{host\_api.hpp@{host\_api.hpp}!EnqueueReadBuffer@{EnqueueReadBuffer}}
+\index{EnqueueReadBuffer@{EnqueueReadBuffer}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{EnqueueReadBuffer()}{EnqueueReadBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Enqueue\+Read\+Buffer (\begin{DoxyParamCaption}\item[{Command\+Queue \&}]{cq,  }\item[{std\+::variant$<$ std\+::reference\+\_\+wrapper$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$ $>$}]{buffer,  }\item[{void $\ast$}]{dst,  }\item[{bool}]{blocking }\end{DoxyParamCaption})}
+
+Reads a buffer from the device
+
+Return value\+: void
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+cq   &The command queue object which dispatches the command to the hardware   &Command\+Queue \&   &&Yes    \\\cline{1-5}
+buffer   &The device buffer we are reading from   &\mbox{\hyperlink{classBuffer}{Buffer}} \& or std\+::shared\+\_\+ptr$<$\+Buffer$>$   &&Yes    \\\cline{1-5}
+dst   &The memory where the result will be stored   &void$\ast$   &&Yes    \\\cline{1-5}
+blocking   &Whether or not this is a blocking operation   &bool   &Only blocking mode supported currently   &Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a6c9d6bc143bf01946b145bb20c9a4ccd}\label{host__api_8hpp_a6c9d6bc143bf01946b145bb20c9a4ccd}} 
+\index{host\_api.hpp@{host\_api.hpp}!EnqueueRecordEvent@{EnqueueRecordEvent}}
+\index{EnqueueRecordEvent@{EnqueueRecordEvent}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{EnqueueRecordEvent()}{EnqueueRecordEvent()}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Enqueue\+Record\+Event (\begin{DoxyParamCaption}\item[{Command\+Queue \&}]{cq,  }\item[{std\+::shared\+\_\+ptr$<$ Event $>$}]{event }\end{DoxyParamCaption})}
+
+Enqueues a command to record an Event on the device for a given CQ, and updates the Event object for the user. Return value\+: void \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+cq   &The command queue object which dispatches the command to the hardware   &Command\+Queue \&   &&Yes    \\\cline{1-5}
+event   &An event that will be populated by this function, and inserted in CQ   &std\+::shared\+\_\+ptr$<$\+Event$>$   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_ac56da2798d8d1a093846845ff06fd773}\label{host__api_8hpp_ac56da2798d8d1a093846845ff06fd773}} 
+\index{host\_api.hpp@{host\_api.hpp}!EnqueueTrace@{EnqueueTrace}}
+\index{EnqueueTrace@{EnqueueTrace}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{EnqueueTrace()}{EnqueueTrace()}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Enqueue\+Trace (\begin{DoxyParamCaption}\item[{Command\+Queue \&}]{cq,  }\item[{uint32\+\_\+t}]{trace\+\_\+id,  }\item[{bool}]{blocking }\end{DoxyParamCaption})}
+
+Enqueues a trace of previously generated commands and data.
+
+Return value\+: void
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+cq   &The command queue object which dispatches the command to the hardware   &Command\+Queue \&   &&Yes    \\\cline{1-5}
+trace\+\_\+id   &A unique id representing an existing on-\/device trace, which has been   &uint32\+\_\+t   &&Yes    \\\cline{1-5}
+&instantiated via Instantiate\+Trace where the trace\+\_\+id is returned   &&&\\\cline{1-5}
+blocking   &Whether or not this is a blocking operation   &bool   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a2560cd6db65a03de3e9aad52ff381b6e}\label{host__api_8hpp_a2560cd6db65a03de3e9aad52ff381b6e}} 
+\index{host\_api.hpp@{host\_api.hpp}!EnqueueWaitForEvent@{EnqueueWaitForEvent}}
+\index{EnqueueWaitForEvent@{EnqueueWaitForEvent}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{EnqueueWaitForEvent()}{EnqueueWaitForEvent()}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Enqueue\+Wait\+For\+Event (\begin{DoxyParamCaption}\item[{Command\+Queue \&}]{cq,  }\item[{std\+::shared\+\_\+ptr$<$ Event $>$}]{event }\end{DoxyParamCaption})}
+
+Enqueues a command on the device for a given CQ (non-\/blocking). The command on device will block and wait for completion of the specified event (which may be in another CQ). Return value\+: void \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+cq   &The command queue object which dispatches the command to the hardware   &Command\+Queue \&   &&Yes    \\\cline{1-5}
+&and waits for the event to complete.   &&&\\\cline{1-5}
+event   &The event object that this CQ will wait on for completion.   &std\+::shared\+\_\+ptr$<$\+Event$>$   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a474bb3622a9e2927298d2a2a70c90774}\label{host__api_8hpp_a474bb3622a9e2927298d2a2a70c90774}} 
+\index{host\_api.hpp@{host\_api.hpp}!EnqueueWriteBuffer@{EnqueueWriteBuffer}}
+\index{EnqueueWriteBuffer@{EnqueueWriteBuffer}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{EnqueueWriteBuffer()}{EnqueueWriteBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Enqueue\+Write\+Buffer (\begin{DoxyParamCaption}\item[{Command\+Queue \&}]{cq,  }\item[{std\+::variant$<$ std\+::reference\+\_\+wrapper$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$ $>$}]{buffer,  }\item[{Host\+Data\+Type}]{src,  }\item[{bool}]{blocking }\end{DoxyParamCaption})}
+
+Writes a buffer to the device
+
+Return value\+: void
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+cq   &The command queue object which dispatches the command to the hardware   &Command\+Queue \&   &&Yes    \\\cline{1-5}
+buffer   &The device buffer we are writing to   &\mbox{\hyperlink{classBuffer}{Buffer}} \& or std\+::shared\+\_\+ptr$<$\+Buffer$>$   &&Yes    \\\cline{1-5}
+src   &The memory we are writing to the device   &Host\+Data\+Type   &&Yes    \\\cline{1-5}
+blocking   &Whether or not this is a blocking operation   &bool   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a41f4ff2e9c7fca0b1287446f57d37e34}\label{host__api_8hpp_a41f4ff2e9c7fca0b1287446f57d37e34}} 
+\index{host\_api.hpp@{host\_api.hpp}!EnqueueWriteBuffer@{EnqueueWriteBuffer}}
+\index{EnqueueWriteBuffer@{EnqueueWriteBuffer}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{EnqueueWriteBuffer()}{EnqueueWriteBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Enqueue\+Write\+Buffer (\begin{DoxyParamCaption}\item[{Command\+Queue \&}]{cq,  }\item[{std\+::variant$<$ std\+::reference\+\_\+wrapper$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$ $>$}]{buffer,  }\item[{std\+::vector$<$ uint32\+\_\+t $>$ \&}]{src,  }\item[{bool}]{blocking }\end{DoxyParamCaption})}
+
+Writes a buffer to the device
+
+Return value\+: void
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+cq   &The command queue object which dispatches the command to the hardware   &Command\+Queue \&   &&Yes    \\\cline{1-5}
+buffer   &The device buffer we are writing to   &\mbox{\hyperlink{classBuffer}{Buffer}} \& or std\+::shared\+\_\+ptr$<$\+Buffer$>$   &&Yes    \\\cline{1-5}
+src   &The vector we are writing to the device   &vector$<$uint32\+\_\+t$>$ \&   &&Yes    \\\cline{1-5}
+blocking   &Whether or not this is a blocking operation   &bool   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a017d64ee3fbb64880859d52a21f7f474}\label{host__api_8hpp_a017d64ee3fbb64880859d52a21f7f474}} 
+\index{host\_api.hpp@{host\_api.hpp}!EventQuery@{EventQuery}}
+\index{EventQuery@{EventQuery}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{EventQuery()}{EventQuery()}}
+{\footnotesize\ttfamily bool tt\+::tt\+\_\+metal\+::\+Event\+Query (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ Event $>$}]{event }\end{DoxyParamCaption})}
+
+Host will query an event for completion status on device. Return value\+: bool. True if event is completed, false otherwise. \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+event   &The event object that host will query for completion.   &std\+::shared\+\_\+ptr$<$\+Event$>$   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a503f5ffa5860947b42872b7fe326bac5}\label{host__api_8hpp_a503f5ffa5860947b42872b7fe326bac5}} 
+\index{host\_api.hpp@{host\_api.hpp}!EventSynchronize@{EventSynchronize}}
+\index{EventSynchronize@{EventSynchronize}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{EventSynchronize()}{EventSynchronize()}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Event\+Synchronize (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ Event $>$}]{event }\end{DoxyParamCaption})}
+
+Blocking function for host to synchronize (wait) on an event completion on device. Return value\+: void \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+event   &The event object that host will wait on for completion.   &std\+::shared\+\_\+ptr$<$\+Event$>$   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_afc3cc77a54213457805a878231ca3643}\label{host__api_8hpp_afc3cc77a54213457805a878231ca3643}} 
+\index{host\_api.hpp@{host\_api.hpp}!Finish@{Finish}}
+\index{Finish@{Finish}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{Finish()}{Finish()}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Finish (\begin{DoxyParamCaption}\item[{Command\+Queue \&}]{cq }\end{DoxyParamCaption})}
+
+Blocks until all previously dispatched commands on the device have completed
+
+Return value\+: void
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+cq   &The command queue object which dispatches the command to the hardware   &Command\+Queue \&   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a95bdaeb43136c4db864dd95481fa0a16}\label{host__api_8hpp_a95bdaeb43136c4db864dd95481fa0a16}} 
+\index{host\_api.hpp@{host\_api.hpp}!GetCircularBufferConfig@{GetCircularBufferConfig}}
+\index{GetCircularBufferConfig@{GetCircularBufferConfig}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{GetCircularBufferConfig()}{GetCircularBufferConfig()}}
+{\footnotesize\ttfamily const Circular\+Buffer\+Config \& tt\+::tt\+\_\+metal\+::\+Get\+Circular\+Buffer\+Config (\begin{DoxyParamCaption}\item[{Program \&}]{program,  }\item[{CBHandle}]{cb\+\_\+handle }\end{DoxyParamCaption})}
+
+Gets a reference to the config owned by circular buffer at the given circular buffer ID.
+
+Return value\+: const Circular\+Buffer\+Config \&
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+program   &The program containing the circular buffer   &Program \&   &&Yes    \\\cline{1-5}
+cb\+\_\+handle   &ID of the circular buffer, returned by {\ttfamily Create\+Circular\+Buffers}   &CBHandle (uintptr\+\_\+t)   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a2af22a7fb7c71050de7ec2fc9d487ab6}\label{host__api_8hpp_a2af22a7fb7c71050de7ec2fc9d487ab6}} 
+\index{host\_api.hpp@{host\_api.hpp}!GetCommonRuntimeArgs@{GetCommonRuntimeArgs}}
+\index{GetCommonRuntimeArgs@{GetCommonRuntimeArgs}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{GetCommonRuntimeArgs()}{GetCommonRuntimeArgs()}}
+{\footnotesize\ttfamily Runtime\+Args\+Data \& tt\+::tt\+\_\+metal\+::\+Get\+Common\+Runtime\+Args (\begin{DoxyParamCaption}\item[{const Program \&}]{program,  }\item[{Kernel\+Handle}]{kernel\+\_\+id }\end{DoxyParamCaption})}
+
+Get the common runtime args for a kernel.
+
+Return value\+: Runtime\+Args\+Data \&
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+program   &The program containing kernels, circular buffers, semaphores   &const Program \&   &&Yes    \\\cline{1-5}
+kernel\+\_\+id   &ID of the kernel that will receive the runtime args   &Kernel\+Handle (uint64\+\_\+t)   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a06ba0ab5eeb2da5af625a8b7f95ca48e}\label{host__api_8hpp_a06ba0ab5eeb2da5af625a8b7f95ca48e}} 
+\index{host\_api.hpp@{host\_api.hpp}!GetNumAvailableDevices@{GetNumAvailableDevices}}
+\index{GetNumAvailableDevices@{GetNumAvailableDevices}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{GetNumAvailableDevices()}{GetNumAvailableDevices()}}
+{\footnotesize\ttfamily size\+\_\+t tt\+::tt\+\_\+metal\+::\+Get\+Num\+Available\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns number of Tenstorrent devices that can be targeted
+
+Return value\+: size\+\_\+t \mbox{\Hypertarget{host__api_8hpp_aa18761d248b0a8081c84440f3aeafcfc}\label{host__api_8hpp_aa18761d248b0a8081c84440f3aeafcfc}} 
+\index{host\_api.hpp@{host\_api.hpp}!GetNumPCIeDevices@{GetNumPCIeDevices}}
+\index{GetNumPCIeDevices@{GetNumPCIeDevices}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{GetNumPCIeDevices()}{GetNumPCIeDevices()}}
+{\footnotesize\ttfamily size\+\_\+t tt\+::tt\+\_\+metal\+::\+Get\+Num\+PCIe\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns number of Tenstorrent devices that are connected to host via PCIe and can be targeted
+
+Return value\+: size\+\_\+t \mbox{\Hypertarget{host__api_8hpp_a1b62db611a9ad2d24c90c043dae989a6}\label{host__api_8hpp_a1b62db611a9ad2d24c90c043dae989a6}} 
+\index{host\_api.hpp@{host\_api.hpp}!GetRuntimeArgs@{GetRuntimeArgs}}
+\index{GetRuntimeArgs@{GetRuntimeArgs}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{GetRuntimeArgs()}{GetRuntimeArgs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ Runtime\+Args\+Data $>$ $>$ \& tt\+::tt\+\_\+metal\+::\+Get\+Runtime\+Args (\begin{DoxyParamCaption}\item[{const Program \&}]{program,  }\item[{Kernel\+Handle}]{kernel\+\_\+id }\end{DoxyParamCaption})}
+
+Get the runtime args for a kernel.
+
+Return value\+: std\+::vector\texorpdfstring{$<$}{<} std\+::vector$<$ Runtime\+Args\+Data $>$ \texorpdfstring{$>$}{>} \&
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+program   &The program containing kernels, circular buffers, semaphores   &const Program \&   &&Yes    \\\cline{1-5}
+kernel\+\_\+id   &ID of the kernel that will receive the runtime args   &Kernel\+Handle (uint64\+\_\+t)   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a8dd2e6d874b20a87745ae83cc88afb51}\label{host__api_8hpp_a8dd2e6d874b20a87745ae83cc88afb51}} 
+\index{host\_api.hpp@{host\_api.hpp}!GetRuntimeArgs@{GetRuntimeArgs}}
+\index{GetRuntimeArgs@{GetRuntimeArgs}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{GetRuntimeArgs()}{GetRuntimeArgs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Runtime\+Args\+Data \& tt\+::tt\+\_\+metal\+::\+Get\+Runtime\+Args (\begin{DoxyParamCaption}\item[{const Program \&}]{program,  }\item[{Kernel\+Handle}]{kernel\+\_\+id,  }\item[{const Core\+Coord \&}]{logical\+\_\+core }\end{DoxyParamCaption})}
+
+Get the runtime args for a kernel.
+
+Return value\+: uint32\+\_\+t $\ast$
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+program   &The program containing kernels, circular buffers, semaphores   &const Program \&   &&Yes    \\\cline{1-5}
+kernel\+\_\+id   &ID of the kernel that will receive the runtime args   &Kernel\+Handle (uint64\+\_\+t)   &&Yes    \\\cline{1-5}
+logical\+\_\+core   &The location of the Tensix core where the runtime args will be written   &const Core\+Coord \&   &Any logical Tensix core coordinate   &Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a526ece1a413c039607e2973b97cdfa75}\label{host__api_8hpp_a526ece1a413c039607e2973b97cdfa75}} 
+\index{host\_api.hpp@{host\_api.hpp}!ReleaseTrace@{ReleaseTrace}}
+\index{ReleaseTrace@{ReleaseTrace}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{ReleaseTrace()}{ReleaseTrace()}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Release\+Trace (\begin{DoxyParamCaption}\item[{Device $\ast$}]{device,  }\item[{const uint32\+\_\+t}]{tid }\end{DoxyParamCaption})}
+
+Release a previously instantiated trace, deallocating the associated trace buffers on device This operation is not thread-\/safe, user must ensure that the trace being released is no longer needed by device threads If this releases the last trace on a device, then buffer allocations are re-\/enabled
+
+Return value\+: void
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+device   &The device holding the trace.   &Device $\ast$   &&Yes    \\\cline{1-5}
+trace\+\_\+id   &A unique id representing an existing captured trace.   &uint32\+\_\+t   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a12e0b86cbb5a6ef9930562b684898d90}\label{host__api_8hpp_a12e0b86cbb5a6ef9930562b684898d90}} 
+\index{host\_api.hpp@{host\_api.hpp}!ReplayTrace@{ReplayTrace}}
+\index{ReplayTrace@{ReplayTrace}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{ReplayTrace()}{ReplayTrace()}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Replay\+Trace (\begin{DoxyParamCaption}\item[{Device $\ast$}]{device,  }\item[{const uint8\+\_\+t}]{cq\+\_\+id,  }\item[{const uint32\+\_\+t}]{tid,  }\item[{const bool}]{blocking }\end{DoxyParamCaption})}
+
+Replay a trace of previously generated commands and data.
+
+Return value\+: void
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+device   &The device holding the trace.   &Device $\ast$   &&Yes    \\\cline{1-5}
+cq\+\_\+id   &The command queue id associated with the trace.   &uint8\+\_\+t   &&Yes    \\\cline{1-5}
+trace\+\_\+id   &A unique id representing an existing captured trace.   &uint32\+\_\+t   &&Yes    \\\cline{1-5}
+blocking   &Whether or not this is a blocking operation   &bool   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a3b4cf7321eea21c21850b447312f02fa}\label{host__api_8hpp_a3b4cf7321eea21c21850b447312f02fa}} 
+\index{host\_api.hpp@{host\_api.hpp}!SetCommonRuntimeArgs@{SetCommonRuntimeArgs}}
+\index{SetCommonRuntimeArgs@{SetCommonRuntimeArgs}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{SetCommonRuntimeArgs()}{SetCommonRuntimeArgs()}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Set\+Common\+Runtime\+Args (\begin{DoxyParamCaption}\item[{const Program \&}]{program,  }\item[{Kernel\+Handle}]{kernel\+\_\+id,  }\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{runtime\+\_\+args }\end{DoxyParamCaption})}
+
+Set common (shared by all cores) runtime args for a kernel that are sent to all cores during runtime. This API needs to be called to update the common runtime args for the kernel. Maximum of 255 allowed runtime args per core (unique and common runtime args count toward same limit).
+
+Return value\+: void
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+program   &The program containing kernels, circular buffers, semaphores   &const Program \&   &&Yes    \\\cline{1-5}
+kernel\+\_\+id   &ID of the kernel that will receive the runtime args   &Kernel\+Handle (uint64\+\_\+t)   &&Yes    \\\cline{1-5}
+runtime\+\_\+args   &The runtime args to be written   &const std\+::vector$<$uint32\+\_\+t$>$ \&   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a491996adcf69861c22eed34ce1ac68cc}\label{host__api_8hpp_a491996adcf69861c22eed34ce1ac68cc}} 
+\index{host\_api.hpp@{host\_api.hpp}!SetRuntimeArgs@{SetRuntimeArgs}}
+\index{SetRuntimeArgs@{SetRuntimeArgs}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{SetRuntimeArgs()}{SetRuntimeArgs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Set\+Runtime\+Args (\begin{DoxyParamCaption}\item[{const Program \&}]{program,  }\item[{Kernel\+Handle}]{kernel,  }\item[{const std\+::variant$<$ Core\+Coord, Core\+Range, Core\+Range\+Set $>$ \&}]{core\+\_\+spec,  }\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{runtime\+\_\+args }\end{DoxyParamCaption})}
+
+Set runtime args for a kernel that are sent to the core during runtime. This API needs to be called to update the runtime args for the kernel. Maximum of 255 allowed runtime args per core (unique and common runtime args count toward same limit).
+
+Return value\+: void
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+program   &The program containing kernels, circular buffers, semaphores   &const Program \&   &&Yes    \\\cline{1-5}
+kernel\+\_\+id   &ID of the kernel that will receive the runtime args   &Kernel\+Handle (uint64\+\_\+t)   &&Yes    \\\cline{1-5}
+core\+\_\+spec   &Location of Tensix core(s) where the runtime args will be written   &const std\+::variant$<$\+Core\+Coord,\+Core\+Range,\+Core\+Range\+Set$>$ \&   &Any logical Tensix core coordinate(s) on which the kernel is placed   &Yes    \\\cline{1-5}
+runtime\+\_\+args   &The runtime args to be written   &const std\+::vector$<$uint32\+\_\+t$>$ \&   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_af27c6b3f5c79fb792beb4ab2169683b7}\label{host__api_8hpp_af27c6b3f5c79fb792beb4ab2169683b7}} 
+\index{host\_api.hpp@{host\_api.hpp}!SetRuntimeArgs@{SetRuntimeArgs}}
+\index{SetRuntimeArgs@{SetRuntimeArgs}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{SetRuntimeArgs()}{SetRuntimeArgs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Set\+Runtime\+Args (\begin{DoxyParamCaption}\item[{const Program \&}]{program,  }\item[{Kernel\+Handle}]{kernel,  }\item[{const std\+::vector$<$ Core\+Coord $>$ \&}]{core\+\_\+spec,  }\item[{const std\+::vector$<$ std\+::vector$<$ uint32\+\_\+t $>$ $>$ \&}]{runtime\+\_\+args }\end{DoxyParamCaption})}
+
+Set multiple runtime arguments of a kernel at once during runtime, each mapping to a specific core. The runtime args for each core may be unique. Maximum of 255 allowed runtime args per core (unique and common runtime args count toward same limit).
+
+Return value\+: void
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+program   &The program containing kernels, circular buffers, semaphores   &const Program \&   &&Yes    \\\cline{1-5}
+kernel\+\_\+id   &ID of the kernel that will receive the runtime args   &Kernel\+Handle (uint64\+\_\+t)   &&Yes    \\\cline{1-5}
+core\+\_\+spec   &Location of Tensix core(s) where the runtime args will be written   &const std\+::vector$<$\+Core\+Coord$>$ \&   &Any set of logical Tensix core coordinates on which the kernel is placed   &Yes    \\\cline{1-5}
+runtime\+\_\+args   &The runtime args to be written   &const std\+::vector\texorpdfstring{$<$}{<} vector$<$uint32\+\_\+t$>$ \texorpdfstring{$>$}{>} \&   &Outer vector size must be equal to size of core\+\_\+spec vector   &Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a7c10cd46327ef8693169b3aee8846a7a}\label{host__api_8hpp_a7c10cd46327ef8693169b3aee8846a7a}} 
+\index{host\_api.hpp@{host\_api.hpp}!SetRuntimeArgs@{SetRuntimeArgs}}
+\index{SetRuntimeArgs@{SetRuntimeArgs}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{SetRuntimeArgs()}{SetRuntimeArgs()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Set\+Runtime\+Args (\begin{DoxyParamCaption}\item[{Device $\ast$}]{device,  }\item[{const std\+::shared\+\_\+ptr$<$ Kernel $>$}]{kernel,  }\item[{const std\+::variant$<$ Core\+Coord, Core\+Range, Core\+Range\+Set $>$ \&}]{core\+\_\+spec,  }\item[{std\+::shared\+\_\+ptr$<$ Runtime\+Args $>$}]{runtime\+\_\+args }\end{DoxyParamCaption})}
+
+Set runtime args for a kernel that are sent to the specified cores using the command queue. This API must be used when Asynchronous Command Queue Mode is enabled. Maximum of 255 allowed runtime args per core (unique and common runtime args count toward same limit).
+
+Return value\+: void
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+device   &The device that runtime args are being written to.   &Device$\ast$   &&Yes    \\\cline{1-5}
+kernel   &The kernel that will recieve these runtime args.   &std\+::shared\+\_\+ptr$<$\+Kernel$>$   &&Yes    \\\cline{1-5}
+core\+\_\+spec   &Location of Tensix core(s) where the runtime args will be written   &const std\+::variant$<$\+Core\+Coord,\+Core\+Range,\+Core\+Range\+Set$>$ \&   &Any set of logical Tensix core coordinates on which the kernel is placed   &Yes    \\\cline{1-5}
+runtime\+\_\+args   &The runtime args to be written   &std\+::shared\+\_\+ptr$<$\+Runtime\+Args$>$   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a5abdf19459659b61a4c2bbcf172f6f35}\label{host__api_8hpp_a5abdf19459659b61a4c2bbcf172f6f35}} 
+\index{host\_api.hpp@{host\_api.hpp}!SetRuntimeArgs@{SetRuntimeArgs}}
+\index{SetRuntimeArgs@{SetRuntimeArgs}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{SetRuntimeArgs()}{SetRuntimeArgs()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Set\+Runtime\+Args (\begin{DoxyParamCaption}\item[{Device $\ast$}]{device,  }\item[{const std\+::shared\+\_\+ptr$<$ Kernel $>$}]{kernel,  }\item[{const std\+::vector$<$ Core\+Coord $>$ \&}]{core\+\_\+spec,  }\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ Runtime\+Args $>$ $>$}]{runtime\+\_\+args }\end{DoxyParamCaption})}
+
+Set multiple runtime arguments of a kernel using the command queue. Each core can have distinct arguments. This API must be used when Asynchronous Command Queue Mode is enabled. Maximum of 255 allowed runtime args per core (unique and common runtime args count toward same limit).
+
+Return value\+: void \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+device   &The device that runtime args are being written to.   &Device$\ast$   &&Yes    \\\cline{1-5}
+kernel   &The kernel that will recieve these runtime args.   &std\+::shared\+\_\+ptr$<$\+Kernel$>$   &&Yes    \\\cline{1-5}
+core\+\_\+spec   &Location of Tensix core(s) where the runtime args will be written   &const std\+::vector$<$ Core\+Coord $>$ \&   &Any set of logical Tensix core coordinates on which the kernel is placed   &Yes    \\\cline{1-5}
+runtime\+\_\+args   &The runtime args to be written   &const std\+::vector$<$std\+::shared\+\_\+ptr$<$\+Runtime\+Args$>$$>$   &Outer vector size must be equal to size of core\+\_\+spec vector   &Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a92e93610eb6b826263eb803608c33889}\label{host__api_8hpp_a92e93610eb6b826263eb803608c33889}} 
+\index{host\_api.hpp@{host\_api.hpp}!UpdateCircularBufferPageSize@{UpdateCircularBufferPageSize}}
+\index{UpdateCircularBufferPageSize@{UpdateCircularBufferPageSize}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{UpdateCircularBufferPageSize()}{UpdateCircularBufferPageSize()}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Update\+Circular\+Buffer\+Page\+Size (\begin{DoxyParamCaption}\item[{Program \&}]{program,  }\item[{CBHandle}]{cb\+\_\+handle,  }\item[{uint8\+\_\+t}]{buffer\+\_\+index,  }\item[{uint32\+\_\+t}]{page\+\_\+size }\end{DoxyParamCaption})}
+
+Update the page size at specified {\ttfamily buffer\+\_\+index} of the circular buffer at the given circular buffer handle.
+
+Return value\+: void
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+program   &The program containing the circular buffer   &Program \&   &&Yes    \\\cline{1-5}
+cb\+\_\+handle   &ID of the circular buffer, returned by {\ttfamily Create\+Circular\+Buffers}   &CBHandle (uintptr\+\_\+t)   &&Yes    \\\cline{1-5}
+buffer\+\_\+index   &Circular buffer index to update page size. {\ttfamily cb\+\_\+handle} must be a circular buffer that had previously programmed this index   &uint8\+\_\+t   &0 to NUM\+\_\+\+CIRCULAR\+\_\+\+BUFFERS -\/ 1   &Yes    \\\cline{1-5}
+page\+\_\+size   &Updated page size in bytes   &uint32\+\_\+t   &&Yes   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{host__api_8hpp_a39e124f62d4c172a44abc0c22fa3ee04}\label{host__api_8hpp_a39e124f62d4c172a44abc0c22fa3ee04}} 
+\index{host\_api.hpp@{host\_api.hpp}!UpdateCircularBufferTotalSize@{UpdateCircularBufferTotalSize}}
+\index{UpdateCircularBufferTotalSize@{UpdateCircularBufferTotalSize}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{UpdateCircularBufferTotalSize()}{UpdateCircularBufferTotalSize()}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Update\+Circular\+Buffer\+Total\+Size (\begin{DoxyParamCaption}\item[{Program \&}]{program,  }\item[{CBHandle}]{cb\+\_\+handle,  }\item[{uint32\+\_\+t}]{total\+\_\+size }\end{DoxyParamCaption})}
+
+Update the total size of the circular buffer at the given circular buffer handle. Updating a program-\/local circular buffer requires all circular buffers in the program to be reallocated.
+
+Return value\+: void
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+program   &The program containing the circular buffer   &Program \&   &&Yes   \\\cline{1-5}
+\end{longtabu}
+$\vert$ cb\+\_\+handle $\vert$ ID of the circular buffer, returned by {\ttfamily Create\+Circular\+Buffers} $\vert$ CBHandle (uintptr\+\_\+t) $\vert$ $\vert$ Yes $\vert$ $\vert$ $\vert$ total\+\_\+size $\vert$ New size of the circular buffer in bytes $\vert$ uint32\+\_\+t $\vert$ $\vert$ Yes $\vert$ \mbox{\Hypertarget{host__api_8hpp_aac851bed71135fa02e28caf0c0ae58b0}\label{host__api_8hpp_aac851bed71135fa02e28caf0c0ae58b0}} 
+\index{host\_api.hpp@{host\_api.hpp}!UpdateDynamicCircularBufferAddress@{UpdateDynamicCircularBufferAddress}}
+\index{UpdateDynamicCircularBufferAddress@{UpdateDynamicCircularBufferAddress}!host\_api.hpp@{host\_api.hpp}}
+\doxysubsubsection{\texorpdfstring{UpdateDynamicCircularBufferAddress()}{UpdateDynamicCircularBufferAddress()}}
+{\footnotesize\ttfamily void tt\+::tt\+\_\+metal\+::\+Update\+Dynamic\+Circular\+Buffer\+Address (\begin{DoxyParamCaption}\item[{Program \&}]{program,  }\item[{CBHandle}]{cb\+\_\+handle,  }\item[{const \mbox{\hyperlink{classBuffer}{Buffer}} \&}]{buffer }\end{DoxyParamCaption})}
+
+Update the address of a dynamic circular buffer. Dynamic circular buffers share the same address space as L1 buffers.
+
+Return value\+: void
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+program   &The program containing the circular buffer   &Program \&   &&Yes   \\\cline{1-5}
+\end{longtabu}
+$\vert$ cb\+\_\+handle $\vert$ ID of the circular buffer, returned by {\ttfamily Create\+Circular\+Buffers} $\vert$ CBHandle (uintptr\+\_\+t) $\vert$ $\vert$ Yes $\vert$ $\vert$ $\vert$ buffer $\vert$ Dynamically allocated L1 buffer that shares address space of circular buffer {\ttfamily cb\+\_\+handle} $\vert$ const \mbox{\hyperlink{classBuffer}{Buffer}} \& $\vert$ L1 buffer $\vert$ Yes $\vert$ 

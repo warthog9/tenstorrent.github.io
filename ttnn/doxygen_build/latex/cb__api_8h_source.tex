@@ -1,0 +1,46 @@
+\hypertarget{cb__api_8h_source}{}\doxysection{cb\+\_\+api.\+h}
+\label{cb__api_8h_source}\index{tt\_metal/include/compute\_kernel\_api/cb\_api.h@{tt\_metal/include/compute\_kernel\_api/cb\_api.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ SPDX-\/FileCopyrightText:\ ©\ 2023\ Tenstorrent\ Inc.}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ Apache-\/2.0}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}compute\_kernel\_api/common\_globals.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifdef\ TRISC\_PACK}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}llk\_io\_pack.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifdef\ TRISC\_UNPACK}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}llk\_io\_unpack.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }ckernel\ \{}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00041\ ALWI\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dataflow__api_8h_af6d8057bd05a650c3501c5208f7d9f8a}{cb\_wait\_front}}(uint32\_t\ cbid,\ uint32\_t\ ntiles)\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ UNPACK((\ llk\_wait\_tiles(cbid,\ ntiles)\ \ ));}
+\DoxyCodeLine{00043\ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00073\ ALWI\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dataflow__api_8h_aa3daf8e5e7299140cf2607be1a8656b0}{cb\_pop\_front}}(uint32\_t\ cbid,\ uint32\_t\ ntiles)\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ UNPACK((\ llk\_pop\_tiles(cbid,\ ntiles)\ \ ));}
+\DoxyCodeLine{00075\ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00091\ ALWI\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dataflow__api_8h_a29521dee07b0070674a988f66c01ffed}{cb\_reserve\_back}}(uint32\_t\ cbid,\ uint32\_t\ ntiles)}
+\DoxyCodeLine{00092\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ PACK((\ llk\_wait\_for\_free\_tiles<false,false,false>(cbid,ntiles)\ \ ));}
+\DoxyCodeLine{00094\ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00125\ ALWI\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dataflow__api_8h_a81357224b88562601b42833eec676ffb}{cb\_push\_back}}(uint32\_t\ cbid,\ uint32\_t\ ntiles)}
+\DoxyCodeLine{00126\ \{}
+\DoxyCodeLine{00127\ \ \ \ \ PACK((\ llk\_push\_tiles<false,false>(cbid,\ ntiles)\ \ ));}
+\DoxyCodeLine{00128\ \}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \}\ \textcolor{comment}{//\ namespace\ ckernel}}
+
+\end{DoxyCode}
