@@ -12,24 +12,24 @@ The Wormhole™ n150s and n300s AI Graph Processor add-in boards are built using
 
 **NOTE:** The **n150s and n300s add-in cards** come with a heatsink for passive cooling in systems which can provide sufficient forced airflow to the card. If your system does not (for example, a desktop workstation), installing the [Active Cooling Kit](..\ack.md) is **required**. If the card isn’t sufficiently cooled, performance will be  substantially reduced to stay in a safe operating temperature range and you risk damage to the card.
 
-| Specification                        | n150s                                     | n300s                                     |
-| ------------------------------------ | ----------------------------------------- | ----------------------------------------- |
-| Part Number                          | TC-02001                                  | TC-02003                                  |
-| Wormhole™ ASICs                      | 1                                         | 2                                         |
-| Tensix Cores                         | 72                                        | 128 (64 per ASIC)                         |
-| AI Clock                             | 1 GHz                                     | 1 GHz                                     |
-| SRAM                                 | 108MB                                     | 192MB (96MB per ASIC)                     |
-| Memory                               | 12GB GDDR6                                | 24GB GDDR6                                |
-| Memory Speed                         | 12 GT/sec                                 | 12 GT/sec                                 |
-| Memory Bandwidth                     | 288 GB/sec                                | 576 GB/sec                                |
-| TeraFLOPs (FP8)                      | 262                                       | 466                                       |
-| TBP (Total Board Power)              | 160W                                      | 300W                                      |
-| External Power                       | 1x 4+4-pin EPS12V                         | 1x 4+4-pin EPS12V                         |
-| Connectivity                         | 2x Warp 100 Bridge<br />2x QSFP-DD 400GbE | 2x Warp 100 Bridge<br />2x QSFP-DD 400GbE |
-| System Interface                     | PCI Express 4.0 x16                       | PCI Express 4.0 x16                       |
-| Cooling                              | Passive                                   | Passive                                   |
-| Dimensions (w/o Cooling Kit) (WxDxH) | 36mm x 254mm x 111mm                      | 36mm x 254mm x 111mm                      |
-| Dimensions (w/ Cooling Kit) (WxDxH)  | 36mm x 393.5mm x 114mm                    | 36mm x 393.5mm x 114mm                    |
+| Specification                        | n150s                                     | n300s                                     | n300d                                     |
+| ------------------------------------ | ----------------------------------------- | ----------------------------------------- | ----------------------------------------- |
+| Part Number                          | TC-02001                                  | TC-02003                                  | TC-02004                                  |
+| Wormhole™ ASICs                      | 1                                         | 2                                         | 2                                         |
+| Tensix Cores                         | 72                                        | 128 (64 per ASIC)                         | 128 (64 per ASIC)                         |
+| AI Clock                             | 1 GHz                                     | 1 GHz                                     | 1 GHz                                     |
+| SRAM                                 | 108MB                                     | 192MB (96MB per ASIC)                     | 192MB (96MB per ASIC)                     |
+| Memory                               | 12GB GDDR6                                | 24GB GDDR6                                | 24GB GDDR6                                |
+| Memory Speed                         | 12 GT/sec                                 | 12 GT/sec                                 | 12 GT/sec                                 |
+| Memory Bandwidth                     | 288 GB/sec                                | 576 GB/sec                                | 576 GB/sec                                |
+| TeraFLOPs (FP8)                      | 262                                       | 466                                       | 466                                       |
+| TBP (Total Board Power)              | 160W                                      | 300W                                      | 300W                                      |
+| External Power                       | 1x 4+4-pin EPS12V                         | 1x 4+4-pin EPS12V                         | 1x 4+4-pin EPS12V                         |
+| Connectivity                         | 2x Warp 100 Bridge<br />2x QSFP-DD 400GbE | 2x Warp 100 Bridge<br />2x QSFP-DD 400GbE | 2x Warp 100 Bridge<br />2x QSFP-DD 400GbE |
+| System Interface                     | PCI Express 4.0 x16                       | PCI Express 4.0 x16                       | PCI Express 4.0 x16                       |
+| Cooling                              | Passive                                   | Passive                                   | Active, 2.5-slot                          |
+| Dimensions (w/o Cooling Kit) (WxDxH) | 36mm x 254mm x 111mm                      | 36mm x 254mm x 111mm                      | N/A                                       |
+| Dimensions (w/ Cooling Kit) (WxDxH)  | 36mm x 393.5mm x 114mm                    | 36mm x 393.5mm x 114mm                    | 52.2mm x 256mm x 111mm                    |
 
 ![](./images/wh_dimensions.png)
 
