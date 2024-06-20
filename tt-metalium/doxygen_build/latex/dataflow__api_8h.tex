@@ -36,8 +36,8 @@ class \mbox{\hyperlink{classBuffer}{Buffer}}
 \mbox{\Hypertarget{dataflow__api_8h_a49104913a904db0ef5c642d10a33c923}\label{dataflow__api_8h_a49104913a904db0ef5c642d10a33c923}} 
 \#define {\bfseries NOC\+\_\+\+DISPATCH\+\_\+\+MULTICAST\+\_\+\+WRITE\+\_\+\+VC}~5
 \item 
-\mbox{\Hypertarget{dataflow__api_8h_a025f94b4ff640f3542c106d954c59e55}\label{dataflow__api_8h_a025f94b4ff640f3542c106d954c59e55}} 
-\#define {\bfseries COMMON\+\_\+\+RT\+\_\+\+ARGS\+\_\+\+OFFSET}~0
+\mbox{\Hypertarget{dataflow__api_8h_a30875365be2fa364de8962ef1d25630a}\label{dataflow__api_8h_a30875365be2fa364de8962ef1d25630a}} 
+\#define {\bfseries COMMON\+\_\+\+RT\+\_\+\+ARGS\+\_\+\+INDEX}~0
 \item 
 \#define \mbox{\hyperlink{dataflow__api_8h_ab97f9dbfbb4150cb324f21520b8e6cfe}{get\+\_\+compile\+\_\+time\+\_\+arg\+\_\+val}}(arg\+\_\+idx)~KERNEL\+\_\+\+COMPILE\+\_\+\+TIME\+\_\+\+ARG\+\_\+\#\#arg\+\_\+idx
 \end{DoxyCompactItemize}
@@ -166,8 +166,7 @@ void {\bfseries noc\+\_\+semaphore\+\_\+set\+\_\+remote} (std\+::uint32\+\_\+t s
 \item 
 void \mbox{\hyperlink{dataflow__api_8h_af1debd77eb9592540a899290fb2a1709}{noc\+\_\+semaphore\+\_\+set\+\_\+multicast}} (std\+::uint32\+\_\+t src\+\_\+local\+\_\+l1\+\_\+addr, std\+::uint64\+\_\+t dst\+\_\+noc\+\_\+addr\+\_\+multicast, std\+::uint32\+\_\+t num\+\_\+dests, bool linked=false, bool multicast\+\_\+path\+\_\+reserve=true)
 \item 
-\mbox{\Hypertarget{dataflow__api_8h_ab629fc4e0e17a8ed09e5a6b264927b18}\label{dataflow__api_8h_ab629fc4e0e17a8ed09e5a6b264927b18}} 
-void {\bfseries noc\+\_\+semaphore\+\_\+set\+\_\+multicast\+\_\+loopback\+\_\+src} (std\+::uint32\+\_\+t src\+\_\+local\+\_\+l1\+\_\+addr, std\+::uint64\+\_\+t dst\+\_\+noc\+\_\+addr\+\_\+multicast, std\+::uint32\+\_\+t num\+\_\+dests, bool linked=false, bool multicast\+\_\+path\+\_\+reserve=true)
+void \mbox{\hyperlink{dataflow__api_8h_ab629fc4e0e17a8ed09e5a6b264927b18}{noc\+\_\+semaphore\+\_\+set\+\_\+multicast\+\_\+loopback\+\_\+src}} (std\+::uint32\+\_\+t src\+\_\+local\+\_\+l1\+\_\+addr, std\+::uint64\+\_\+t dst\+\_\+noc\+\_\+addr\+\_\+multicast, std\+::uint32\+\_\+t num\+\_\+dests, bool linked=false, bool multicast\+\_\+path\+\_\+reserve=true)
 \item 
 \mbox{\Hypertarget{dataflow__api_8h_a4ac57ae59ef98d40b2081b80e5636d20}\label{dataflow__api_8h_a4ac57ae59ef98d40b2081b80e5636d20}} 
 void {\bfseries noc\+\_\+async\+\_\+write\+\_\+multicast\+\_\+loopback\+\_\+src} (std\+::uint32\+\_\+t src\+\_\+local\+\_\+l1\+\_\+addr, std\+::uint64\+\_\+t dst\+\_\+noc\+\_\+addr\+\_\+multicast, std\+::uint32\+\_\+t size, std\+::uint32\+\_\+t num\+\_\+dests, bool linked=false, bool multicast\+\_\+path\+\_\+reserve=true)
@@ -219,6 +218,9 @@ void {\bfseries noc\+\_\+async\+\_\+read\+\_\+barrier\+\_\+with\+\_\+trid} (uint
 \item 
 \mbox{\Hypertarget{dataflow__api_8h_a58bc3a01e945dbd421fce21906e94441}\label{dataflow__api_8h_a58bc3a01e945dbd421fce21906e94441}} 
 uint8\+\_\+t {\bfseries noc\+\_\+index}
+\item 
+\mbox{\Hypertarget{dataflow__api_8h_ae9b846802ae938aab4c8c7d55647d902}\label{dataflow__api_8h_ae9b846802ae938aab4c8c7d55647d902}} 
+uint32\+\_\+t $\ast$ {\bfseries l1\+\_\+arg\+\_\+base}
 \end{DoxyCompactItemize}
 
 
@@ -270,7 +272,7 @@ Return value\+: None
 \hline
 \PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
 \endhead
-operand   &The index of the cirular buffer (CB)   &uint32\+\_\+t   &0 to 31   &True   \\\cline{1-5}
+operand   &The index of the circular buffer (CB)   &uint32\+\_\+t   &0 to 31   &True   \\\cline{1-5}
 \end{longtabu}
 
 
@@ -288,7 +290,7 @@ Return value\+: None
 \hline
 \PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
 \endhead
-operand   &The index of the cirular buffer (CB)   &uint32\+\_\+t   &0 to 31   &True   \\\cline{1-5}
+operand   &The index of the circular buffer (CB)   &uint32\+\_\+t   &0 to 31   &True   \\\cline{1-5}
 \end{longtabu}
 \mbox{\Hypertarget{dataflow__api_8h_aa3daf8e5e7299140cf2607be1a8656b0}\label{dataflow__api_8h_aa3daf8e5e7299140cf2607be1a8656b0}} 
 \index{dataflow\_api.h@{dataflow\_api.h}!cb\_pop\_front@{cb\_pop\_front}}
@@ -314,7 +316,7 @@ Return value\+: None
 \hline
 \PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
 \endhead
-cb\+\_\+id   &The index of the cirular buffer (CB)   &uint32\+\_\+t   &0 to 31   &True    \\\cline{1-5}
+cb\+\_\+id   &The index of the circular buffer (CB)   &uint32\+\_\+t   &0 to 31   &True    \\\cline{1-5}
 num\+\_\+tiles   &The number of tiles to be popped   &uint32\+\_\+t   &It must be less or equal than the size of the CB (the total number of tiles that fit into the CB)   &True   \\\cline{1-5}
 \end{longtabu}
 \mbox{\Hypertarget{dataflow__api_8h_a81357224b88562601b42833eec676ffb}\label{dataflow__api_8h_a81357224b88562601b42833eec676ffb}} 
@@ -341,7 +343,7 @@ Return value\+: None
 \hline
 \PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
 \endhead
-cb\+\_\+id   &The index of the cirular buffer (CB)   &uint32\+\_\+t   &0 to 31   &True    \\\cline{1-5}
+cb\+\_\+id   &The index of the circular buffer (CB)   &uint32\+\_\+t   &0 to 31   &True    \\\cline{1-5}
 num\+\_\+tiles   &The number of tiles to be pushed   &uint32\+\_\+t   &It must be less or equal than the size of the CB (the total number of tiles that fit into the CB)   &True   \\\cline{1-5}
 \end{longtabu}
 \mbox{\Hypertarget{dataflow__api_8h_a29521dee07b0070674a988f66c01ffed}\label{dataflow__api_8h_a29521dee07b0070674a988f66c01ffed}} 
@@ -366,7 +368,7 @@ Return value\+: None
 \hline
 \PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
 \endhead
-cb\+\_\+id   &The index of the cirular buffer (CB)   &uint32\+\_\+t   &0 to 31   &True    \\\cline{1-5}
+cb\+\_\+id   &The index of the circular buffer (CB)   &uint32\+\_\+t   &0 to 31   &True    \\\cline{1-5}
 num\+\_\+tiles   &The number of free tiles to wait for   &uint32\+\_\+t   &It must be less or equal than the size of the CB (the total number of tiles that fit into the CB)   &True   \\\cline{1-5}
 \end{longtabu}
 \mbox{\Hypertarget{dataflow__api_8h_af6d8057bd05a650c3501c5208f7d9f8a}\label{dataflow__api_8h_af6d8057bd05a650c3501c5208f7d9f8a}} 
@@ -375,7 +377,7 @@ num\+\_\+tiles   &The number of free tiles to wait for   &uint32\+\_\+t   &It mu
 \doxysubsubsection{\texorpdfstring{cb\_wait\_front()}{cb\_wait\_front()}}
 {\footnotesize\ttfamily void cb\+\_\+wait\+\_\+front (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{operand,  }\item[{int32\+\_\+t}]{num\+\_\+pages }\end{DoxyParamCaption})}
 
-A blocking call that waits for the specified number of tiles to be available in the specified circular buffer (CB). This call is used by the consumer of the CB to wait for the producer to fill the CB with at least the specfied number of tiles. Important note\+: in case multiple calls of cb\+\_\+wait\+\_\+front(n) are issued without a paired \mbox{\hyperlink{dataflow__api_8h_aa3daf8e5e7299140cf2607be1a8656b0}{cb\+\_\+pop\+\_\+front()}} call, n is expected to be incremented by the user to be equal to a cumulative total of tiles. Example\+: 4 calls of cb\+\_\+wait\+\_\+front(8) followed by a cb\+\_\+pop\+\_\+front(32) would produce incorrect behavior. Instead 4 calls of \mbox{\hyperlink{dataflow__api_8h_af6d8057bd05a650c3501c5208f7d9f8a}{cb\+\_\+wait\+\_\+front()}} waiting on 8, 16, 24, 32 tiles should be issued.
+A blocking call that waits for the specified number of tiles to be available in the specified circular buffer (CB). This call is used by the consumer of the CB to wait for the producer to fill the CB with at least the specified number of tiles. Important note\+: in case multiple calls of cb\+\_\+wait\+\_\+front(n) are issued without a paired \mbox{\hyperlink{dataflow__api_8h_aa3daf8e5e7299140cf2607be1a8656b0}{cb\+\_\+pop\+\_\+front()}} call, n is expected to be incremented by the user to be equal to a cumulative total of tiles. Example\+: 4 calls of cb\+\_\+wait\+\_\+front(8) followed by a cb\+\_\+pop\+\_\+front(32) would produce incorrect behavior. Instead 4 calls of \mbox{\hyperlink{dataflow__api_8h_af6d8057bd05a650c3501c5208f7d9f8a}{cb\+\_\+wait\+\_\+front()}} waiting on 8, 16, 24, 32 tiles should be issued.
 
 Important note\+: number of tiles used in all cb\+\_\+$\ast$ calls must evenly divide the cb size and must be the same number in all cb\+\_\+wait\+\_\+front calls in the same kernel. Example 1\+: cb\+\_\+wait\+\_\+front(32), cb\+\_\+wait\+\_\+front(40), cb\+\_\+pop\+\_\+front(32+8) tiles on a CB of size 64 would produce incorrect behavior. Example 2\+: cb\+\_\+wait\+\_\+front(3) on a cb of size 32 would also produce incorrect behavior. These limitations are due to performance optimizations in the CB implementation.
 
@@ -393,7 +395,7 @@ Return value\+: None
 \hline
 \PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
 \endhead
-cb\+\_\+id   &The index of the cirular buffer (CB)   &uint32\+\_\+t   &0 to 31   &True    \\\cline{1-5}
+cb\+\_\+id   &The index of the circular buffer (CB)   &uint32\+\_\+t   &0 to 31   &True    \\\cline{1-5}
 num\+\_\+tiles   &The number of tiles to wait for   &uint32\+\_\+t   &It must be less or equal than the size of the CB (the total number of tiles that fit into the CB)   &\\\cline{1-5}
 \end{longtabu}
 \mbox{\Hypertarget{dataflow__api_8h_a6a5074e8cd2732fcecab57fced3ebd1f}\label{dataflow__api_8h_a6a5074e8cd2732fcecab57fced3ebd1f}} 
@@ -534,7 +536,7 @@ The destination nodes can only be a set of Tensix cores + L1 memory address. The
 
 With this API, the multicast sender cannot be part of the multicast destinations. If the multicast sender has to be in the multicast destinations (i.\+e. must perform a local L1 write), the other API variant {\itshape noc\+\_\+async\+\_\+write\+\_\+multicast\+\_\+loopback\+\_\+src} can be used.
 
-Note\+: there is no restriction on the number of destinations, i.\+e. the multicast destinations can span the full chip. However, as mentioned previosuly, the multicast source cannot be part of the destinations. So, the maximum number of destinations is 119.
+Note\+: The number of destinations needs to be non-\/zero. Besides that, there is no restriction on the number of destinations, i.\+e. the multicast destinations can span the full chip. However, as mentioned previously, the multicast source cannot be part of the destinations. So, the maximum number of destinations is 119.
 
 Return value\+: None
 
@@ -638,6 +640,34 @@ val   &Value to set the semaphore to   &uint32\+\_\+t   &Any uint32\+\_\+t value
 {\footnotesize\ttfamily void noc\+\_\+semaphore\+\_\+set\+\_\+multicast (\begin{DoxyParamCaption}\item[{std\+::uint32\+\_\+t}]{src\+\_\+local\+\_\+l1\+\_\+addr,  }\item[{std\+::uint64\+\_\+t}]{dst\+\_\+noc\+\_\+addr\+\_\+multicast,  }\item[{std\+::uint32\+\_\+t}]{num\+\_\+dests,  }\item[{bool}]{linked = {\ttfamily false},  }\item[{bool}]{multicast\+\_\+path\+\_\+reserve = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Initiates an asynchronous write from a source address in L1 memory on the Tensix core executing this function call to a rectangular destination grid. The destinations are specified using a uint64\+\_\+t encoding referencing an on-\/chip grid of nodes located at NOC coordinate range (x\+\_\+start,y\+\_\+start,x\+\_\+end,y\+\_\+end) and a local address created using {\itshape get\+\_\+noc\+\_\+multicast\+\_\+addr} function. The size of data that is sent is 4 Bytes. This is usually used to set a semaphore value at the destination nodes, as a way of a synchronization mechanism. The same as {\itshape noc\+\_\+async\+\_\+write\+\_\+multicast} with preset size of 4 Bytes.
+
+With this API, the multicast sender cannot be part of the multicast destinations. If the multicast sender has to be in the multicast destinations (i.\+e. must perform a local L1 write), the other API variant {\itshape noc\+\_\+semaphore\+\_\+set\+\_\+multicast\+\_\+loopback\+\_\+src} can be used.
+
+Return value\+: None
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
+\endhead
+src\+\_\+local\+\_\+l1\+\_\+addr   &Source address in local L1 memory   &uint32\+\_\+t   &0..1MB   &True    \\\cline{1-5}
+dst\+\_\+noc\+\_\+addr\+\_\+multicast   &Encoding of the destinations nodes (x\+\_\+start,y\+\_\+start,x\+\_\+end,y\+\_\+end)+address   &uint64\+\_\+t   &DOX-\/\+TODO(insert a reference to what constitutes valid coords)   &True    \\\cline{1-5}
+num\+\_\+dests   &Number of destinations that the multicast source is targetting   &uint32\+\_\+t   &0..119   &True   \\\cline{1-5}
+\end{longtabu}
+\mbox{\Hypertarget{dataflow__api_8h_ab629fc4e0e17a8ed09e5a6b264927b18}\label{dataflow__api_8h_ab629fc4e0e17a8ed09e5a6b264927b18}} 
+\index{dataflow\_api.h@{dataflow\_api.h}!noc\_semaphore\_set\_multicast\_loopback\_src@{noc\_semaphore\_set\_multicast\_loopback\_src}}
+\index{noc\_semaphore\_set\_multicast\_loopback\_src@{noc\_semaphore\_set\_multicast\_loopback\_src}!dataflow\_api.h@{dataflow\_api.h}}
+\doxysubsubsection{\texorpdfstring{noc\_semaphore\_set\_multicast\_loopback\_src()}{noc\_semaphore\_set\_multicast\_loopback\_src()}}
+{\footnotesize\ttfamily void noc\+\_\+semaphore\+\_\+set\+\_\+multicast\+\_\+loopback\+\_\+src (\begin{DoxyParamCaption}\item[{std\+::uint32\+\_\+t}]{src\+\_\+local\+\_\+l1\+\_\+addr,  }\item[{std\+::uint64\+\_\+t}]{dst\+\_\+noc\+\_\+addr\+\_\+multicast,  }\item[{std\+::uint32\+\_\+t}]{num\+\_\+dests,  }\item[{bool}]{linked = {\ttfamily false},  }\item[{bool}]{multicast\+\_\+path\+\_\+reserve = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initiates an asynchronous write from a source address in L1 memory on the Tensix core executing this function call to a rectangular destination grid. The destinations are specified using a uint64\+\_\+t encoding referencing an on-\/chip grid of nodes located at NOC coordinate range (x\+\_\+start,y\+\_\+start,x\+\_\+end,y\+\_\+end) and a local address created using {\itshape get\+\_\+noc\+\_\+multicast\+\_\+addr} function. The size of data that is sent is 4 Bytes. This is usually used to set a semaphore value at the destination nodes, as a way of a synchronization mechanism. The same as {\itshape noc\+\_\+async\+\_\+write\+\_\+multicast} with preset size of 4 Bytes.
+
+With this API, you cannot send data only to the source node. That is, if num\+\_\+dests is 1 and the encoded destination nodes consist of the node sending the data, then no data will be sent. The method call will be a no-\/op.
 
 Return value\+: None
 

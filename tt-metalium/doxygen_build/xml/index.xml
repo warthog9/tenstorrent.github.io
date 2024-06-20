@@ -122,9 +122,9 @@
     <member refid="eltwise__binary_8h_1af20703c9d347ca4c998ca32e38762cd5" kind="function"><name>mul_tiles_init_f</name></member>
     <member refid="eltwise__binary_8h_1a5d7722fc6c62a98e87aa80dfd4addc04" kind="function"><name>mul_tiles_init</name></member>
     <member refid="eltwise__binary_8h_1a38862808571447611983528275f91831" kind="function"><name>add_tiles_init_nof</name></member>
-    <member refid="eltwise__binary_8h_1a186d8dc0e29058b3bd749c583219ee15" kind="function"><name>add_tiles_init</name></member>
+    <member refid="eltwise__binary_8h_1ab15f8bb9e954453c9391caf073cbb2ee" kind="function"><name>add_tiles_init</name></member>
     <member refid="eltwise__binary_8h_1a136179be2361633cae3291b6d25fa2a5" kind="function"><name>sub_tiles_init_nof</name></member>
-    <member refid="eltwise__binary_8h_1abb4df2d28f5221ece0d1e3eb455c4546" kind="function"><name>sub_tiles_init</name></member>
+    <member refid="eltwise__binary_8h_1a1b96384bfa2d9947faea6cd7d7f61b6c" kind="function"><name>sub_tiles_init</name></member>
     <member refid="eltwise__binary_8h_1a5d86448b624a24f6bf77c45334590835" kind="function"><name>mul_tiles</name></member>
     <member refid="eltwise__binary_8h_1a5a091c5371932422fc303adea3eec806" kind="function"><name>add_tiles</name></member>
     <member refid="eltwise__binary_8h_1acc846385166d37dbbab9e602e44e1fb3" kind="function"><name>sub_tiles</name></member>
@@ -260,7 +260,7 @@
     <member refid="host__api_8hpp_1af559e38779cb26844ec9a6b0bb41f940" kind="typedef"><name>RuntimeArgs</name></member>
     <member refid="host__api_8hpp_1a06ba0ab5eeb2da5af625a8b7f95ca48e" kind="function"><name>GetNumAvailableDevices</name></member>
     <member refid="host__api_8hpp_1aa18761d248b0a8081c84440f3aeafcfc" kind="function"><name>GetNumPCIeDevices</name></member>
-    <member refid="host__api_8hpp_1a1c648a47154fd9c255f33943e313c9a8" kind="function"><name>CreateDevice</name></member>
+    <member refid="host__api_8hpp_1a8332bdd9a9ffe6e0cedf921e438fe7ed" kind="function"><name>CreateDevice</name></member>
     <member refid="host__api_8hpp_1a07e0aaf41772593d1d017db950e3b7b3" kind="function"><name>CreateDeviceMinimal</name></member>
     <member refid="host__api_8hpp_1a25ae925200ca85a3274824f1b945ebc1" kind="function"><name>CloseDevice</name></member>
     <member refid="host__api_8hpp_1a48b1af1b20561d626ff34f39282f1dea" kind="function"><name>CreateProgram</name></member>
@@ -289,7 +289,7 @@
     <member refid="host__api_8hpp_1a474bb3622a9e2927298d2a2a70c90774" kind="function"><name>EnqueueWriteBuffer</name></member>
     <member refid="host__api_8hpp_1a573978c2536748213de459b0a09477b7" kind="function"><name>EnqueueProgram</name></member>
     <member refid="host__api_8hpp_1afc3cc77a54213457805a878231ca3643" kind="function"><name>Finish</name></member>
-    <member refid="host__api_8hpp_1a45ec39a3364acba591a1792a5058b530" kind="function"><name>BeginTraceCapture</name></member>
+    <member refid="host__api_8hpp_1a2bb0ca68f1afddfbefc78b497d21943c" kind="function"><name>BeginTraceCapture</name></member>
     <member refid="host__api_8hpp_1a3eaf4c5845ee7d8153c6ca9cc250df30" kind="function"><name>EndTraceCapture</name></member>
     <member refid="host__api_8hpp_1a12e0b86cbb5a6ef9930562b684898d90" kind="function"><name>ReplayTrace</name></member>
     <member refid="host__api_8hpp_1a526ece1a413c039607e2973b97cdfa75" kind="function"><name>ReleaseTrace</name></member>
@@ -306,7 +306,7 @@
     <member refid="dataflow__api_8h_1a56cf50350ff87477df00fb899480ff2d" kind="define"><name>NOC_UNICAST_WRITE_VC</name></member>
     <member refid="dataflow__api_8h_1a5fb39d71d6c419e9ad7aa0f43e5a91d8" kind="define"><name>NOC_MULTICAST_WRITE_VC</name></member>
     <member refid="dataflow__api_8h_1a49104913a904db0ef5c642d10a33c923" kind="define"><name>NOC_DISPATCH_MULTICAST_WRITE_VC</name></member>
-    <member refid="dataflow__api_8h_1a025f94b4ff640f3542c106d954c59e55" kind="define"><name>COMMON_RT_ARGS_OFFSET</name></member>
+    <member refid="dataflow__api_8h_1a30875365be2fa364de8962ef1d25630a" kind="define"><name>COMMON_RT_ARGS_INDEX</name></member>
     <member refid="dataflow__api_8h_1ab97f9dbfbb4150cb324f21520b8e6cfe" kind="define"><name>get_compile_time_arg_val</name></member>
     <member refid="dataflow__api_8h_1a49d45df0fdb5ae1977850c809e49c448" kind="enum"><name>BufferType</name></member>
     <member refid="dataflow__api_8h_1a49d45df0fdb5ae1977850c809e49c448aebae17841ce69e653df838d8c20ace8d" kind="enumvalue"><name>DRAM</name></member>
@@ -314,10 +314,11 @@
     <member refid="dataflow__api_8h_1a49d45df0fdb5ae1977850c809e49c448a704a03105a5df911d6656c3c740277e2" kind="enumvalue"><name>SYSTEM_MEMORY</name></member>
     <member refid="dataflow__api_8h_1a49d45df0fdb5ae1977850c809e49c448a208d7cc5d68aaefe0e5182d068264040" kind="enumvalue"><name>L1_SMALL</name></member>
     <member refid="dataflow__api_8h_1a58bc3a01e945dbd421fce21906e94441" kind="variable"><name>noc_index</name></member>
+    <member refid="dataflow__api_8h_1ae9b846802ae938aab4c8c7d55647d902" kind="variable"><name>l1_arg_base</name></member>
     <member refid="dataflow__api_8h_1a6738833d9844f57ccbb71859a4b8de05" kind="variable"><name>cb_interface</name></member>
     <member refid="dataflow__api_8h_1ac4752c4d9a07974ce99aaa671a675fe2" kind="function"><name>align</name></member>
-    <member refid="dataflow__api_8h_1acf81ba6d15c0139ffb8f30dccf363a40" kind="function"><name>get_arg_addr</name></member>
-    <member refid="dataflow__api_8h_1aaea415293c63cd37b9eb263c2df1fb06" kind="function"><name>get_common_arg_addr</name></member>
+    <member refid="dataflow__api_8h_1a25d62dac426c2869489c6a658de97058" kind="function"><name>get_arg_addr</name></member>
+    <member refid="dataflow__api_8h_1aca9717f94b44990fc7fca49678eda5a0" kind="function"><name>get_common_arg_addr</name></member>
     <member refid="dataflow__api_8h_1a6a5074e8cd2732fcecab57fced3ebd1f" kind="function"><name>get_arg_val</name></member>
     <member refid="dataflow__api_8h_1abba486e3732fb5ea715651f92234e60a" kind="function"><name>get_common_arg_val</name></member>
     <member refid="dataflow__api_8h_1aaeb67c582bba445a7c2e7eac520cd84e" kind="function"><name>__attribute__</name></member>

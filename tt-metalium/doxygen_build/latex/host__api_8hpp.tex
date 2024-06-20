@@ -8,6 +8,7 @@
 {\ttfamily \#include \char`\"{}tt\+\_\+metal/impl/program/program.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}tt\+\_\+metal/impl/buffers/buffer.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}tt\+\_\+metal/impl/event/event.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tt\+\_\+metal/impl/device/device\+\_\+pool.\+hpp\char`\"{}}\newline
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
@@ -21,7 +22,7 @@ size\+\_\+t \mbox{\hyperlink{host__api_8hpp_a06ba0ab5eeb2da5af625a8b7f95ca48e}{t
 \item 
 size\+\_\+t \mbox{\hyperlink{host__api_8hpp_aa18761d248b0a8081c84440f3aeafcfc}{tt\+::tt\+\_\+metal\+::\+Get\+Num\+PCIe\+Devices}} ()
 \item 
-Device $\ast$ \mbox{\hyperlink{host__api_8hpp_a1c648a47154fd9c255f33943e313c9a8}{tt\+::tt\+\_\+metal\+::\+Create\+Device}} (chip\+\_\+id\+\_\+t device\+\_\+id, const uint8\+\_\+t num\+\_\+hw\+\_\+cqs=1, const size\+\_\+t l1\+\_\+small\+\_\+size=DEFAULT\+\_\+\+L1\+\_\+\+SMALL\+\_\+\+SIZE, const std\+::vector$<$ uint32\+\_\+t $>$ \&l1\+\_\+bank\+\_\+remap=\{\})
+Device $\ast$ \mbox{\hyperlink{host__api_8hpp_a8332bdd9a9ffe6e0cedf921e438fe7ed}{tt\+::tt\+\_\+metal\+::\+Create\+Device}} (chip\+\_\+id\+\_\+t device\+\_\+id, const uint8\+\_\+t num\+\_\+hw\+\_\+cqs=1, const size\+\_\+t l1\+\_\+small\+\_\+size=DEFAULT\+\_\+\+L1\+\_\+\+SMALL\+\_\+\+SIZE, const size\+\_\+t trace\+\_\+region\+\_\+size=DEFAULT\+\_\+\+TRACE\+\_\+\+REGION\+\_\+\+SIZE, const std\+::vector$<$ uint32\+\_\+t $>$ \&l1\+\_\+bank\+\_\+remap=\{\})
 \item 
 Device $\ast$ \mbox{\hyperlink{host__api_8hpp_a07e0aaf41772593d1d017db950e3b7b3}{tt\+::tt\+\_\+metal\+::\+Create\+Device\+Minimal}} (chip\+\_\+id\+\_\+t device\+\_\+id)
 \item 
@@ -79,7 +80,7 @@ void \mbox{\hyperlink{host__api_8hpp_a573978c2536748213de459b0a09477b7}{tt\+::tt
 \item 
 void \mbox{\hyperlink{host__api_8hpp_afc3cc77a54213457805a878231ca3643}{tt\+::tt\+\_\+metal\+::\+Finish}} (Command\+Queue \&cq)
 \item 
-uint32\+\_\+t \mbox{\hyperlink{host__api_8hpp_a45ec39a3364acba591a1792a5058b530}{tt\+::tt\+\_\+metal\+::\+Begin\+Trace\+Capture}} (Device $\ast$device, const uint8\+\_\+t cq\+\_\+id, const uint32\+\_\+t trace\+\_\+buff\+\_\+size)
+uint32\+\_\+t \mbox{\hyperlink{host__api_8hpp_a2bb0ca68f1afddfbefc78b497d21943c}{tt\+::tt\+\_\+metal\+::\+Begin\+Trace\+Capture}} (Device $\ast$device, const uint8\+\_\+t cq\+\_\+id)
 \item 
 void \mbox{\hyperlink{host__api_8hpp_a3eaf4c5845ee7d8153c6ca9cc250df30}{tt\+::tt\+\_\+metal\+::\+End\+Trace\+Capture}} (Device $\ast$device, const uint8\+\_\+t cq\+\_\+id, const uint32\+\_\+t tid)
 \item 
@@ -125,11 +126,11 @@ Return value\+: void
 buffer   &The buffer that will be owned by the program   &std\+::shared\+\_\+ptr$<$\+Buffer$>$ buffer   &&Yes    \\\cline{1-5}
 program   &The program getting ownership of the buffer   &std\+::shared\+\_\+ptr$<$\+Buffer$>$ buffer   &&Yes   \\\cline{1-5}
 \end{longtabu}
-\mbox{\Hypertarget{host__api_8hpp_a45ec39a3364acba591a1792a5058b530}\label{host__api_8hpp_a45ec39a3364acba591a1792a5058b530}} 
+\mbox{\Hypertarget{host__api_8hpp_a2bb0ca68f1afddfbefc78b497d21943c}\label{host__api_8hpp_a2bb0ca68f1afddfbefc78b497d21943c}} 
 \index{host\_api.hpp@{host\_api.hpp}!BeginTraceCapture@{BeginTraceCapture}}
 \index{BeginTraceCapture@{BeginTraceCapture}!host\_api.hpp@{host\_api.hpp}}
 \doxysubsubsection{\texorpdfstring{BeginTraceCapture()}{BeginTraceCapture()}}
-{\footnotesize\ttfamily uint32\+\_\+t tt\+::tt\+\_\+metal\+::\+Begin\+Trace\+Capture (\begin{DoxyParamCaption}\item[{Device $\ast$}]{device,  }\item[{const uint8\+\_\+t}]{cq\+\_\+id,  }\item[{const uint32\+\_\+t}]{trace\+\_\+buff\+\_\+size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily uint32\+\_\+t tt\+::tt\+\_\+metal\+::\+Begin\+Trace\+Capture (\begin{DoxyParamCaption}\item[{Device $\ast$}]{device,  }\item[{const uint8\+\_\+t}]{cq\+\_\+id }\end{DoxyParamCaption})}
 
 Begins capture on a trace, when the trace is in capture mode all programs pushed into the trace queue will have their execution delayed until the trace is instantiated and enqueued. The capture must be later ended via End\+Trace\+Capture, and finally scheduled to be executed via Replay\+Trace. Beginning a trace capture enabled buffer allocations until capture has ended.
 
@@ -146,8 +147,7 @@ Return value\+: Trace ID
 \PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
 \endhead
 device   &The device holding being traced.   &Device $\ast$   &&Yes    \\\cline{1-5}
-cq\+\_\+id   &The command queue id associated with the trace.   &uint8\+\_\+t   &&Yes    \\\cline{1-5}
-trace\+\_\+buff\+\_\+size   &The size of the trace buffer to pre-\/allocate.   &uint32\+\_\+t   &&Yes   \\\cline{1-5}
+cq\+\_\+id   &The command queue id associated with the trace.   &uint8\+\_\+t   &&Yes   \\\cline{1-5}
 \end{longtabu}
 \mbox{\Hypertarget{host__api_8hpp_a25ae925200ca85a3274824f1b945ebc1}\label{host__api_8hpp_a25ae925200ca85a3274824f1b945ebc1}} 
 \index{host\_api.hpp@{host\_api.hpp}!CloseDevice@{CloseDevice}}
@@ -241,11 +241,11 @@ program   &The program to which buffer will be added to   &Program \&   &&Yes   
 core\+\_\+spec   &Either a single logical core, a range of logical cores or a set of logical core ranges that indicate where the circular buffer will be configured   &const std\+::variant$<$\+Core\+Coord, Core\+Range, Core\+Range\+Set$>$ \&   &&Yes    \\\cline{1-5}
 config   &Config for circular buffer   &const Circular\+Buffer\+Config \&   &&Yes   \\\cline{1-5}
 \end{longtabu}
-\mbox{\Hypertarget{host__api_8hpp_a1c648a47154fd9c255f33943e313c9a8}\label{host__api_8hpp_a1c648a47154fd9c255f33943e313c9a8}} 
+\mbox{\Hypertarget{host__api_8hpp_a8332bdd9a9ffe6e0cedf921e438fe7ed}\label{host__api_8hpp_a8332bdd9a9ffe6e0cedf921e438fe7ed}} 
 \index{host\_api.hpp@{host\_api.hpp}!CreateDevice@{CreateDevice}}
 \index{CreateDevice@{CreateDevice}!host\_api.hpp@{host\_api.hpp}}
 \doxysubsubsection{\texorpdfstring{CreateDevice()}{CreateDevice()}}
-{\footnotesize\ttfamily Device $\ast$ tt\+::tt\+\_\+metal\+::\+Create\+Device (\begin{DoxyParamCaption}\item[{chip\+\_\+id\+\_\+t}]{device\+\_\+id,  }\item[{const uint8\+\_\+t}]{num\+\_\+hw\+\_\+cqs = {\ttfamily 1},  }\item[{const size\+\_\+t}]{l1\+\_\+small\+\_\+size = {\ttfamily DEFAULT\+\_\+L1\+\_\+SMALL\+\_\+SIZE},  }\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{l1\+\_\+bank\+\_\+remap = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Device $\ast$ tt\+::tt\+\_\+metal\+::\+Create\+Device (\begin{DoxyParamCaption}\item[{chip\+\_\+id\+\_\+t}]{device\+\_\+id,  }\item[{const uint8\+\_\+t}]{num\+\_\+hw\+\_\+cqs = {\ttfamily 1},  }\item[{const size\+\_\+t}]{l1\+\_\+small\+\_\+size = {\ttfamily DEFAULT\+\_\+L1\+\_\+SMALL\+\_\+SIZE},  }\item[{const size\+\_\+t}]{trace\+\_\+region\+\_\+size = {\ttfamily DEFAULT\+\_\+TRACE\+\_\+REGION\+\_\+SIZE},  }\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{l1\+\_\+bank\+\_\+remap = {\ttfamily \{\}} }\end{DoxyParamCaption})}
 
 Instantiates a device object.
 
@@ -306,7 +306,7 @@ Return value\+: Kernel ID (uintptr\+\_\+t)
 \PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Argument   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valid Range   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Required    }\\\cline{1-5}
 \endhead
 program   &The program to which this kernel will be added to   &Program \&   &&Yes    \\\cline{1-5}
-file\+\_\+name   &Path to kernel src. Assumed to be absolute path, but will fall back to relative path from TT\+\_\+\+METAL\+\_\+\+HOME if file doesn\textquotesingle{}t exist.   &const std\+::string \&   &&Yes    \\\cline{1-5}
+file\+\_\+name   &Path to kernel src. Assumed to be absolute/relative to CWD, but will fall back to relative path from TT\+\_\+\+METAL\+\_\+\+HOME.   &const std\+::string \&   &&Yes    \\\cline{1-5}
 core\+\_\+spec   &Either a single logical core, a range of logical cores or a set of logical core ranges that indicate which cores kernel is placed on   &const std\+::variant$<$\+Core\+Coord, Core\+Range, Core\+Range\+Set$>$ \&   &&Yes    \\\cline{1-5}
 config   &Config for data movement or compute kernel   &const std\+::variant$<$\+Data\+Movement\+Config,\+Compute\+Config,\+Ethernet\+Config$>$ \&   &&No   \\\cline{1-5}
 \end{longtabu}

@@ -7,7 +7,7 @@ var searchData=
   ['closedevice_4',['CloseDevice',['../host__api_8hpp.html#a25ae925200ca85a3274824f1b945ebc1',1,'tt::tt_metal']]],
   ['createbuffer_5',['CreateBuffer',['../host__api_8hpp.html#a44f12170a79821c7a1eb7dcad8e9014e',1,'tt::tt_metal::CreateBuffer(const InterleavedBufferConfig &amp;config)'],['../host__api_8hpp.html#a8e5af0183154c8b303d43acec393ec29',1,'tt::tt_metal::CreateBuffer(const ShardedBufferConfig &amp;config)']]],
   ['createcircularbuffer_6',['CreateCircularBuffer',['../host__api_8hpp.html#a62b10a9d4d6ed91eacaba5d27c9761fb',1,'tt::tt_metal']]],
-  ['createdevice_7',['CreateDevice',['../host__api_8hpp.html#a1c648a47154fd9c255f33943e313c9a8',1,'tt::tt_metal']]],
+  ['createdevice_7',['CreateDevice',['../host__api_8hpp.html#a8332bdd9a9ffe6e0cedf921e438fe7ed',1,'tt::tt_metal']]],
   ['createdeviceminimal_8',['CreateDeviceMinimal',['../host__api_8hpp.html#a07e0aaf41772593d1d017db950e3b7b3',1,'tt::tt_metal']]],
   ['createkernel_9',['CreateKernel',['../host__api_8hpp.html#ae7930dd08bf0ae0c83c8ee55f3f604b9',1,'tt::tt_metal']]],
   ['createprogram_10',['CreateProgram',['../host__api_8hpp.html#a48b1af1b20561d626ff34f39282f1dea',1,'tt::tt_metal']]],

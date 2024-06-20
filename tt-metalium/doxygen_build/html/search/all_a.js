@@ -11,6 +11,7 @@ var searchData=
   ['noc_5fsemaphore_5finc_8',['noc_semaphore_inc',['../dataflow__api_8h.html#a4eda1737bf554c8bfe4bc603f4d41a43',1,'dataflow_api.h']]],
   ['noc_5fsemaphore_5fset_9',['noc_semaphore_set',['../dataflow__api_8h.html#af02a9af640679b00da874318535aa397',1,'dataflow_api.h']]],
   ['noc_5fsemaphore_5fset_5fmulticast_10',['noc_semaphore_set_multicast',['../dataflow__api_8h.html#af1debd77eb9592540a899290fb2a1709',1,'dataflow_api.h']]],
-  ['noc_5fsemaphore_5fwait_11',['noc_semaphore_wait',['../dataflow__api_8h.html#a4f714cc4a08a2eaac5e3f7fae9d1383a',1,'dataflow_api.h']]],
-  ['noc_5fsemaphore_5fwait_5fmin_12',['noc_semaphore_wait_min',['../dataflow__api_8h.html#a84a965a61b65152c42835f35dca007af',1,'dataflow_api.h']]]
+  ['noc_5fsemaphore_5fset_5fmulticast_5floopback_5fsrc_11',['noc_semaphore_set_multicast_loopback_src',['../dataflow__api_8h.html#ab629fc4e0e17a8ed09e5a6b264927b18',1,'dataflow_api.h']]],
+  ['noc_5fsemaphore_5fwait_12',['noc_semaphore_wait',['../dataflow__api_8h.html#a4f714cc4a08a2eaac5e3f7fae9d1383a',1,'dataflow_api.h']]],
+  ['noc_5fsemaphore_5fwait_5fmin_13',['noc_semaphore_wait_min',['../dataflow__api_8h.html#a84a965a61b65152c42835f35dca007af',1,'dataflow_api.h']]]
 ];
