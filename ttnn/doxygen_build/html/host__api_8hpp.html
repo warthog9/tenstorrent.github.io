@@ -87,6 +87,7 @@ $(function() {
 <code>#include &quot;tt_metal/impl/program/program.hpp&quot;</code><br />
 <code>#include &quot;tt_metal/impl/buffers/buffer.hpp&quot;</code><br />
 <code>#include &quot;tt_metal/impl/event/event.hpp&quot;</code><br />
+<code>#include &quot;tt_metal/impl/device/device_pool.hpp&quot;</code><br />
 </div>
 <p><a href="host__api_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -102,8 +103,8 @@ Functions</h2></td></tr>
 <tr class="separator:a06ba0ab5eeb2da5af625a8b7f95ca48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa18761d248b0a8081c84440f3aeafcfc"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="host__api_8hpp.html#aa18761d248b0a8081c84440f3aeafcfc">tt::tt_metal::GetNumPCIeDevices</a> ()</td></tr>
 <tr class="separator:aa18761d248b0a8081c84440f3aeafcfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c648a47154fd9c255f33943e313c9a8"><td class="memItemLeft" align="right" valign="top">Device *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="host__api_8hpp.html#a1c648a47154fd9c255f33943e313c9a8">tt::tt_metal::CreateDevice</a> (chip_id_t device_id, const uint8_t num_hw_cqs=1, const size_t l1_small_size=DEFAULT_L1_SMALL_SIZE, const std::vector&lt; uint32_t &gt; &amp;l1_bank_remap={})</td></tr>
-<tr class="separator:a1c648a47154fd9c255f33943e313c9a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8332bdd9a9ffe6e0cedf921e438fe7ed"><td class="memItemLeft" align="right" valign="top">Device *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="host__api_8hpp.html#a8332bdd9a9ffe6e0cedf921e438fe7ed">tt::tt_metal::CreateDevice</a> (chip_id_t device_id, const uint8_t num_hw_cqs=1, const size_t l1_small_size=DEFAULT_L1_SMALL_SIZE, const size_t trace_region_size=DEFAULT_TRACE_REGION_SIZE, const std::vector&lt; uint32_t &gt; &amp;l1_bank_remap={})</td></tr>
+<tr class="separator:a8332bdd9a9ffe6e0cedf921e438fe7ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07e0aaf41772593d1d017db950e3b7b3"><td class="memItemLeft" align="right" valign="top">Device *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="host__api_8hpp.html#a07e0aaf41772593d1d017db950e3b7b3">tt::tt_metal::CreateDeviceMinimal</a> (chip_id_t device_id)</td></tr>
 <tr class="separator:a07e0aaf41772593d1d017db950e3b7b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25ae925200ca85a3274824f1b945ebc1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="host__api_8hpp.html#a25ae925200ca85a3274824f1b945ebc1">tt::tt_metal::CloseDevice</a> (Device *device)</td></tr>
@@ -160,8 +161,8 @@ Functions</h2></td></tr>
 <tr class="separator:a573978c2536748213de459b0a09477b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc3cc77a54213457805a878231ca3643"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="host__api_8hpp.html#afc3cc77a54213457805a878231ca3643">tt::tt_metal::Finish</a> (CommandQueue &amp;cq)</td></tr>
 <tr class="separator:afc3cc77a54213457805a878231ca3643"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45ec39a3364acba591a1792a5058b530"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="host__api_8hpp.html#a45ec39a3364acba591a1792a5058b530">tt::tt_metal::BeginTraceCapture</a> (Device *device, const uint8_t cq_id, const uint32_t trace_buff_size)</td></tr>
-<tr class="separator:a45ec39a3364acba591a1792a5058b530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bb0ca68f1afddfbefc78b497d21943c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="host__api_8hpp.html#a2bb0ca68f1afddfbefc78b497d21943c">tt::tt_metal::BeginTraceCapture</a> (Device *device, const uint8_t cq_id)</td></tr>
+<tr class="separator:a2bb0ca68f1afddfbefc78b497d21943c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3eaf4c5845ee7d8153c6ca9cc250df30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="host__api_8hpp.html#a3eaf4c5845ee7d8153c6ca9cc250df30">tt::tt_metal::EndTraceCapture</a> (Device *device, const uint8_t cq_id, const uint32_t tid)</td></tr>
 <tr class="separator:a3eaf4c5845ee7d8153c6ca9cc250df30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12e0b86cbb5a6ef9930562b684898d90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="host__api_8hpp.html#a12e0b86cbb5a6ef9930562b684898d90">tt::tt_metal::ReplayTrace</a> (Device *device, const uint8_t cq_id, const uint32_t tid, const bool blocking)</td></tr>
@@ -220,8 +221,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a45ec39a3364acba591a1792a5058b530" name="a45ec39a3364acba591a1792a5058b530"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45ec39a3364acba591a1792a5058b530">&#9670;&#160;</a></span>BeginTraceCapture()</h2>
+<a id="a2bb0ca68f1afddfbefc78b497d21943c" name="a2bb0ca68f1afddfbefc78b497d21943c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bb0ca68f1afddfbefc78b497d21943c">&#9670;&#160;</a></span>BeginTraceCapture()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -236,13 +237,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const uint8_t&#160;</td>
-          <td class="paramname"><em>cq_id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uint32_t&#160;</td>
-          <td class="paramname"><em>trace_buff_size</em>&#160;</td>
+          <td class="paramname"><em>cq_id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -259,9 +254,7 @@ Functions</h2></td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">device   </td><td class="markdownTableBodyNone">The device holding being traced.   </td><td class="markdownTableBodyNone">Device *   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Yes    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">cq_id   </td><td class="markdownTableBodyNone">The command queue id associated with the trace.   </td><td class="markdownTableBodyNone">uint8_t   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Yes    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">trace_buff_size   </td><td class="markdownTableBodyNone">The size of the trace buffer to pre-allocate.   </td><td class="markdownTableBodyNone">uint32_t   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Yes   </td></tr>
+<td class="markdownTableBodyNone">cq_id   </td><td class="markdownTableBodyNone">The command queue id associated with the trace.   </td><td class="markdownTableBodyNone">uint8_t   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Yes   </td></tr>
 </table>
 
 </div>
@@ -391,8 +384,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1c648a47154fd9c255f33943e313c9a8" name="a1c648a47154fd9c255f33943e313c9a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c648a47154fd9c255f33943e313c9a8">&#9670;&#160;</a></span>CreateDevice()</h2>
+<a id="a8332bdd9a9ffe6e0cedf921e438fe7ed" name="a8332bdd9a9ffe6e0cedf921e438fe7ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8332bdd9a9ffe6e0cedf921e438fe7ed">&#9670;&#160;</a></span>CreateDevice()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -414,6 +407,12 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">const size_t&#160;</td>
           <td class="paramname"><em>l1_small_size</em> = <code>DEFAULT_L1_SMALL_SIZE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>trace_region_size</em> = <code>DEFAULT_TRACE_REGION_SIZE</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -510,7 +509,7 @@ Functions</h2></td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">program   </td><td class="markdownTableBodyNone">The program to which this kernel will be added to   </td><td class="markdownTableBodyNone">Program &amp;   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Yes    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">file_name   </td><td class="markdownTableBodyNone">Path to kernel src. Assumed to be absolute path, but will fall back to relative path from TT_METAL_HOME if file doesn't exist.   </td><td class="markdownTableBodyNone">const std::string &amp;   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Yes    </td></tr>
+<td class="markdownTableBodyNone">file_name   </td><td class="markdownTableBodyNone">Path to kernel src. Assumed to be absolute/relative to CWD, but will fall back to relative path from TT_METAL_HOME.   </td><td class="markdownTableBodyNone">const std::string &amp;   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Yes    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">core_spec   </td><td class="markdownTableBodyNone">Either a single logical core, a range of logical cores or a set of logical core ranges that indicate which cores kernel is placed on   </td><td class="markdownTableBodyNone">const std::variant&lt;CoreCoord, CoreRange, CoreRangeSet&gt; &amp;   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Yes    </td></tr>
 <tr class="markdownTableRowEven">

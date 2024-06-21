@@ -222,6 +222,8 @@ Reduction
    ttnn/std
    ttnn/sum
    ttnn/var
+   ttnn/argmax
+   ttnn/topk
 
 Data Movement
 =============
@@ -233,7 +235,6 @@ Data Movement
    ttnn/pad
    ttnn/permute
    ttnn/reshape
-   ttnn/split
    ttnn/repeat
    ttnn/repeat_interleave
 

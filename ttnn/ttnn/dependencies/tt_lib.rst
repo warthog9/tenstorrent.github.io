@@ -297,12 +297,6 @@ Enums
 Tensor elementwise operations
 =============================
 
-.. autofunction:: tt_lib.tensor.add
-
-.. autofunction:: tt_lib.tensor.sub
-
-.. autofunction:: tt_lib.tensor.mul
-
 .. autofunction:: tt_lib.tensor.div
 
 .. autofunction:: tt_lib.tensor.div_no_nan
@@ -403,8 +397,6 @@ Tensor elementwise operations
 
 .. autofunction:: tt_lib.tensor.asin
 
-.. autofunction:: tt_lib.tensor.squared_difference
-
 .. autofunction:: tt_lib.tensor.elu
 
 .. autofunction:: tt_lib.tensor.exp2
@@ -413,9 +405,13 @@ Tensor elementwise operations
 
 .. autofunction:: tt_lib.tensor.heaviside
 
-.. autofunction:: tt_lib.tensor.logaddexp
+.. autofunction:: tt_lib.tensor.right_shift
 
-.. autofunction:: tt_lib.tensor.logaddexp2
+.. autofunction:: tt_lib.tensor.left_shift
+
+.. autofunction:: tt_lib.tensor.unary_remainder
+
+.. autofunction:: tt_lib.tensor.remainder
 
 .. autofunction:: tt_lib.tensor.atan
 
@@ -435,10 +431,6 @@ Tensor elementwise operations
 
 .. autofunction:: tt_lib.tensor.addalpha
 
-.. autofunction:: tt_lib.tensor.ldexp
-
-.. autofunction:: tt_lib.tensor.bias_gelu
-
 .. autofunction:: tt_lib.tensor.bias_gelu_unary
 
 .. autofunction:: tt_lib.tensor.isfinite
@@ -454,8 +446,6 @@ Tensor elementwise operations
 .. autofunction:: tt_lib.tensor.logit
 
 .. autofunction:: tt_lib.tensor.lgamma
-
-.. autofunction:: tt_lib.tensor.logical_and
 
 .. autofunction:: tt_lib.tensor.logical_andi
 
@@ -473,11 +463,17 @@ Tensor elementwise operations
 
 .. autofunction:: tt_lib.tensor.tan
 
-.. autofunction:: tt_lib.tensor.logical_or
-
 .. autofunction:: tt_lib.tensor.logical_ori
 
 .. autofunction:: tt_lib.tensor.polygamma
+
+.. autofunction:: tt_lib.tensor.floor
+
+.. autofunction:: tt_lib.tensor.trunc
+
+.. autofunction:: tt_lib.tensor.round
+
+.. autofunction:: tt_lib.tensor.floor_div
 
 Tensor relational operations
 ============================
@@ -492,18 +488,6 @@ Tensor relational operations
 .. autofunction:: tt_lib.tensor.eqz
 
 .. autofunction:: tt_lib.tensor.nez
-
-.. autofunction:: tt_lib.tensor.gt
-
-.. autofunction:: tt_lib.tensor.gte
-
-.. autofunction:: tt_lib.tensor.lt
-
-.. autofunction:: tt_lib.tensor.lte
-
-.. autofunction:: tt_lib.tensor.eq
-
-.. autofunction:: tt_lib.tensor.ne
 
 .. autofunction:: tt_lib.tensor.unary_ne
 
