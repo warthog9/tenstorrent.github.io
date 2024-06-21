@@ -1,8 +1,7 @@
-# build all versions of the documentation
-
 import os
 import subprocess
 import yaml
+
 
 def build_doc(project, version):
     print(f"Building {project} {version}")
@@ -11,7 +10,7 @@ def build_doc(project, version):
         subprocess.run(f"cd {project} && make html", shell=True)
         return
     
-    subprocess.run("git checkout " + version, shell=True)
+    subprocess.run(f"git checkout {project}_{version}", shell=True)
     subprocess.run("git checkout main -- conf.py", shell=True)
     subprocess.run("git checkout main -- versions.yaml", shell=True)
 
@@ -19,7 +18,7 @@ def build_doc(project, version):
 
 def move_dir(src, dst):
     subprocess.run(["mkdir", "-p", dst])
-    subprocess.run("mv "+src+'* ' + dst, shell=True)
+    subprocess.run("mv " + src + "* " + dst, shell=True)
 
 os.environ["pages_root"] = "https://tenstorrent.github.io/docs-test/"
 
@@ -31,4 +30,3 @@ with open("versions.yml", "r") as yaml_file:
             build_doc(project, version)
             move_dir(f"{project}/_build/html/", f"output/{project}/{version}/")
             print(f"Built {project} {version}")
-    
