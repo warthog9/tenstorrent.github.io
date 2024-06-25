@@ -22,13 +22,13 @@ Attach the provided **duct** to the card via three (3) **M3 screws**.
 
 Insert the **blower fan** into the **duct**.
 
-<img src="./grayskull/images/gs_ack2.png" style="zoom:80%;" />
+![](./grayskull/images/gs_ack2.png)
 
 ### Step 3. Fasten the Blower Fan
 
 Fasten the **blower fan** to the **duct plate** through the top of the fan with two (2) **M4 screws**.
 
-<img src="./grayskull/images/gs_ack3.png" style="zoom:80%;" />
+![](./grayskull/images/gs_ack3.png)
 
 ### Step 4. Connect Fan Power
 
@@ -38,7 +38,7 @@ The blower fan includes a **passthrough 6-pin PCIe harness**. Connection will de
 
 The **male end** connects to the **6-pin PCIe plug** on the **e150 card**, and the **female end** connects to a **6-pin PCIe cable** from the **power supply**.
 
-<img src="./grayskull/images/gs_e150_kit_power.png" style="zoom:60%;" />
+![](./grayskull/images/gs_e150_kit_power.png)
 
 #### Wormhole™ n150s and n300s (Passive Cooled)
 
