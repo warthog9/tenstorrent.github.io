@@ -14,6 +14,12 @@ T1000
    t1000/specifications
    t1000/support
 
+Quietbox
+=======================================
+.. toctree::
+   :maxdepth: 2
+
+   quietbox/README
 
 T3000
 =======================================
