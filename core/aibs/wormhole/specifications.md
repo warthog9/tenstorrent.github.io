@@ -10,7 +10,7 @@ The Wormhole™ n150s, n300s, and n300d Tensix Processor add-in boards are built
 
 ## n150s/n300s/n300d Comparison Table
 
-**NOTE:** The **n150s and n300s add-in cards** come with a heatsink for passive cooling in systems which can provide sufficient forced airflow to the card. If your system does not (for example, a desktop workstation), installing the [Active Cooling Kit](..\ack.md) is **required**. If the card isn’t sufficiently cooled, performance will be  substantially reduced to stay in a safe operating temperature range and you risk damage to the card.
+**NOTE:** The **n150s and n300s add-in cards** come with a heatsink for passive cooling in systems which can provide sufficient forced airflow to the card. If your system does not (for example, a desktop workstation), installing the [Active Cooling Kit](../ack.md) is **required**. If the card isn’t sufficiently cooled, performance will be  substantially reduced to stay in a safe operating temperature range and you risk damage to the card.
 
 | Specification                        | n150s                                     | n300s                                     | n300d                                     |
 | ------------------------------------ | ----------------------------------------- | ----------------------------------------- | ----------------------------------------- |
