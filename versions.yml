@@ -1,5 +1,7 @@
 core:
 - latest
+syseng:
+- latest
 pybuda:
 - latest
 tt-metalium:

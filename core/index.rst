@@ -19,6 +19,7 @@ Tenstorrent
    :caption: Software
    :maxdepth: 2
 
+   Software/Utilities <https://tenstorrent.github.io/docs-test/syseng/latest/index.html>
    TT-Buda <https://tenstorrent.github.io/docs-test/pybuda/latest/index.html>
    TT-Metalium <https://tenstorrent.github.io/docs-test/tt-metalium/latest/index.html>
    TT-NN <https://tenstorrent.github.io/docs-test/ttnn/latest/index.html>
