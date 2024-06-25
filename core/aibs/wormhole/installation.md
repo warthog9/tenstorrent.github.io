@@ -1,12 +1,13 @@
 # Hardware Installation
 
-Follow these instructions to install your n150/n300 add-in board.
+Follow these instructions to install your Tenstorrent Wormhole™ n150s/n300s/n300d add-in board.
 
 1. [Pre-Installation](#pre-installation)
 2. System Installation
    - [Desktop Workstation](#desktop-workstation-installation)
    - [Server](#server-installation)
 3. [Connecting Power](#connecting-power)
+4. [Software Setup](#software-setup)
 
 ## Pre-Installation
 
@@ -26,7 +27,7 @@ Insert the **card** into the **PCIe x16 slot** and secure with necessary screws.
 
 ![](./images/wh_d_install.png)
 
-## Server Installation
+## Server Installation (n150s/n300s Only)
 
 *(NOTE: Images shown may not be fully representative of your system.)*
 
@@ -46,7 +47,8 @@ Lower the **encased card** into the **chassis** and secure with the required scr
 
 Connect an **4+4-pin EPS12V power cable** to the **8-pin plug**. *(NOTE: Do **not*** *connect a 6+2-pin PCIe power cable to the 8-pin port on the card.)*
 
-<img src="./images/wh_power.png" style="zoom:50%;" />
+<img src="./images/wh_power.png" style="zoom:30%;" />
 
+# Software Setup
 
-
+To get your Wormhole™ n150s/n300s/n300d Tensix Processor up and running, visit the [software setup](../../../syseng/softwaresetup.md) page.

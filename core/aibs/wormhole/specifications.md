@@ -1,14 +1,14 @@
 # Specifications/Requirements
 
-## Wormhole™ AI Graph Processor
+## Wormhole™ Tensix Processor
 
-The Wormhole™ n150s and n300s AI Graph Processor add-in boards are built using the Tenstorrent Wormhole™ AI Graph Processor:
+The Wormhole™ n150s, n300s, and n300d Tensix Processor add-in boards are built using the Tenstorrent Wormhole™ Tensix Processor:
 
 - **Tensix Core Count:** 80
 - **SRAM:** 120MB (1.5MB per Tensix Core)
 - **Memory:** 12GB GDDR6, 192-bit memory bus
 
-## n150s/n300s Comparison Table
+## n150s/n300s/n300d Comparison Table
 
 **NOTE:** The **n150s and n300s add-in cards** come with a heatsink for passive cooling in systems which can provide sufficient forced airflow to the card. If your system does not (for example, a desktop workstation), installing the [Active Cooling Kit](..\ack.md) is **required**. If the card isn’t sufficiently cooled, performance will be  substantially reduced to stay in a safe operating temperature range and you risk damage to the card.
 
@@ -23,9 +23,12 @@ The Wormhole™ n150s and n300s AI Graph Processor add-in boards are built using
 | Memory Speed                         | 12 GT/sec                                 | 12 GT/sec                                 | 12 GT/sec                                 |
 | Memory Bandwidth                     | 288 GB/sec                                | 576 GB/sec                                | 576 GB/sec                                |
 | TeraFLOPs (FP8)                      | 262                                       | 466                                       | 466                                       |
+| TeraFLOPs (FP16)                     | 74                                        | 131                                       | 131                                       |
+| TeraFLOPs (BFP8)                     | 148                                       | 262                                       | 262                                       |
 | TBP (Total Board Power)              | 160W                                      | 300W                                      | 300W                                      |
 | External Power                       | 1x 4+4-pin EPS12V                         | 1x 4+4-pin EPS12V                         | 1x 4+4-pin EPS12V                         |
 | Connectivity                         | 2x Warp 100 Bridge<br />2x QSFP-DD 400GbE | 2x Warp 100 Bridge<br />2x QSFP-DD 400GbE | 2x Warp 100 Bridge<br />2x QSFP-DD 400GbE |
+| Internal Interconnect                | N/A                                       | 400GbE                                    | 400GbE                                    |
 | System Interface                     | PCI Express 4.0 x16                       | PCI Express 4.0 x16                       | PCI Express 4.0 x16                       |
 | Cooling                              | Passive                                   | Passive                                   | Active, 2.5-slot                          |
 | Dimensions (w/o Cooling Kit) (WxDxH) | 36mm x 254mm x 111mm                      | 36mm x 254mm x 111mm                      | N/A                                       |
@@ -63,11 +66,11 @@ The n150/n300 support the following data precision formats:
 | Part                              | Requirement                                                  |
 | --------------------------------- | ------------------------------------------------------------ |
 | CPU                               | x86_64 architecture*                                         |
-| Motherboard                       | PCI Express 4.0 x16 slot, dual-width                         |
+| Motherboard                       | PCI Express 4.0 x16 slot<br />Dual-slot-width (n150s/n300s)<br />2.5-slot-width (n300d) |
 | Memory                            | 64 GB                                                        |
 | Storage                           | 100 GB (≥2TB recommended)                                    |
 | Power Connectors                  | 4+4-pin EPS12V<br />6+2-pin PCIe (if using Active Cooling Kit) |
-| Total Board Power                 | Up to 160W (n150) / 300W (n300)                              |
+| Total Board Power                 | Up to 160W (n150s) / 300W (n300s/n300d)                      |
 | Operating Temperature Range (Die) | 0C - 75C                                                     |
 | Operating System                  | Ubuntu version 20.04 (Focal Fossa) **                        |
 | Internet Connection               | Required for driver and stack installation.                  |

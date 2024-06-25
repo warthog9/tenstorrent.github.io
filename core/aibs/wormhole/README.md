@@ -1,8 +1,8 @@
-# Wormhole™ n150/n300 AI Graph Processor
+# Wormhole™ n150s/n300s/n300d Tensix Processor
 
-This section outlines the system requirements, physical installation instructions, and initial software set-up for Wormhole™ n150 and n300 AI Graph Processor add-in boards.
+This section outlines the system requirements, physical installation instructions, and initial software set-up for Wormhole™ n150s, n300s, and n300d Tensix Processor add-in boards.
 
 - [Specifications/Requirements](./specifications.md)
-- [Hardware Installation](./installation.md)
-- [Software Setup and First 5 Things to Do](./softwaresetup.md)
-- [Regulatory Compliance](./compliance.md)
+- [Installation](./installation.md)
+- [Software Setup](../../../syseng/softwaresetup.md)
+- [Regulatory Compliance](../compliance.md)

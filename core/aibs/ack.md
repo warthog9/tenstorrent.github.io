@@ -2,7 +2,7 @@
 
 ## Compatibility
 
-The Active Cooling Kit is compatible with the following AI Graph Processor cards:
+The Active Cooling Kit is compatible with the following Tenstorrent Tensix Processor cards:
 
 - Grayskull™ e150 (TC-01002)
 - Wormhole™ n150s with Passive Cooler (TC-02001)
@@ -10,7 +10,7 @@ The Active Cooling Kit is compatible with the following AI Graph Processor cards
 
 ## Installation
 
-If your Grayskull™ e150, Wormhole™ n150s, or Wormhole™ n300s AI Graph Processor card requires active cooling in your system (for example, in a desktop workstation), follow these steps to install the Active Cooling Kit.
+If your Grayskull™ e150, Wormhole™ n150s, or Wormhole™ n300s Tensix Processor card requires active cooling in your system (for example, in a desktop workstation), follow these steps to install the Active Cooling Kit.
 
 ### Step 1. Attach the Duct
 

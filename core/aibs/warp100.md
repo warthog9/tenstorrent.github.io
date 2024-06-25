@@ -6,6 +6,7 @@ The Warp 100 bridge is compatible with the following AI Graph Processor cards:
 
 - Wormhole™ n150s with Passive Cooler (TC-02001)
 - Wormhole™ n300s with Passive Cooler (TC-02003)
+- Wormhole™ n300d with Active Cooler (TC-02004)
 
 Each card supports up to two Warp 100 bridges.
 
