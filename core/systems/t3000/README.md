@@ -1,4 +1,4 @@
-# LoudBox (T3000) Desktop/4U Workstation
+# TT-LoudBox (T3000) 4U/Desktop Workstation
 
 This section outlines the specifications, requirements, and initial set-up for the Tenstorrent LoudBox (T3000) workstation.
 

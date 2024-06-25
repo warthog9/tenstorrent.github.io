@@ -1,9 +1,7 @@
 .. toctree::
    :maxdepth: 2
 
-   README
-
-T1000
+T1000 Desktop Workstation
 =======================================
 
 .. toctree::
@@ -24,7 +22,7 @@ Quietbox
    quietbox/specifications
    quietbox/support
 
-T3000
+TT-LoudBox (T3000) 4U/Desktop Workstation
 =======================================
 .. toctree::
    :maxdepth: 2
@@ -34,7 +32,7 @@ T3000
    t3000/specifications
    t3000/support
 
-T7000
+T7000 4U Workstation
 =======================================
 .. toctree::
    :maxdepth: 2

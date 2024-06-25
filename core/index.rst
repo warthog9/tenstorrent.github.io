@@ -5,9 +5,9 @@ Tenstorrent
    :caption: Add-in Boards / Cards
    :maxdepth: 2
 
-   aibs/ack
    aibs/grayskull/README
    aibs/wormhole/README
+   aibs/ack
 
 .. toctree::
    :caption: Systems
