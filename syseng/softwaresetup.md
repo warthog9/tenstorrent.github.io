@@ -1,6 +1,6 @@
 # Software Setup
 
-Once the e75/e150 card is installed, you'll need to follow these steps in this order to update the firmware  and install the necessary utilities to get the most from your Grayskull™ card.
+Once your Tenstorrent hardware is physically set up, you'll need to follow these steps in this order to update the firmware and install the necessary utilities.
 
 
 
@@ -72,7 +72,7 @@ Install the Tenstorrent Software Management Interface (**<u>TT-SMI</u>**) by ent
 pip install git+https://github.com/tenstorrent/tt-smi
 ```
 
-## 
+ 
 
 ## Run Software Management Interface (TT-SMI)
 
@@ -84,7 +84,7 @@ tt-smi
 
 If the tool runs without error, you're ready to get started! 
 
-## 
+ 
 
 ## First 5 Things to Do
 
