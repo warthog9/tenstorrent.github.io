@@ -20,6 +20,9 @@ Quietbox
    :maxdepth: 2
 
    quietbox/README
+   quietbox/softwaresetup
+   quietbox/specifications
+   quietbox/support
 
 T3000
 =======================================
