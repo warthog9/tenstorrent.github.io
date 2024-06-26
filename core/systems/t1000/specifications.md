@@ -22,6 +22,10 @@ The Tenstorrent T1000 Desktop Workstation system package includes:
 | **Base System**      | [SuperMicro SuperServer SYS-E403-12P-FN2T](https://www.supermicro.com/en/products/system/IoT/Box_PC/SYS-E403-12P-FN2T) |
 | **Operating System** | None                                                         |
 
+**NOTE:** The MAC address and password for the BMC (baseboard management controller) can be found on labels on both the system chassis and the motherboard. The label will look like this:
+
+![](../bmclabel.png)
+
 
 
 ## Operating System Requirements
