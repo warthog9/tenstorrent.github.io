@@ -42,7 +42,7 @@ The Wormhole™ n150s, n300s, and n300d Tensix Processor add-in boards are built
 
 The n150s and n300s include two different methods for interconnecting cards.
 
-<img src="./images/wh_portspec.png" style="zoom:50%;" />
+![](./images/wh_portspec.png)
 
 The Warp 100 notches are for attaching internal [Warp 100 bridges](..\warp100.md) between n150s and n300s cards.
 

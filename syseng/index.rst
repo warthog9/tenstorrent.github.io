@@ -1,4 +1,4 @@
-SysEng
+Software and Utilities
 ==============================
 
 .. toctree::

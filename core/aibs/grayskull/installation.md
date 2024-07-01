@@ -36,13 +36,13 @@ Insert the **card** into the **PCIe x16 slot** and secure with necessary screws.
 
 House the **card** in the **casing**.
 
-<img src="./images/gs_ws_install1.png" style="zoom: 50%;" />
+![](./images/gs_ws_install1.png)
 
 ### 2. Card Installation
 
 Lower the **encased card** into the **chassis** and secure with the required screws.
 
-<img src="./images/gs_ws_install2.png" style="zoom:50%;" />
+![](./images/gs_ws_install2.png)
 
 ## Connecting Power
 
@@ -50,20 +50,20 @@ Lower the **encased card** into the **chassis** and secure with the required scr
 
 Connect a **6-pin PCIe power cable** to the **6-pin plug** attached to the blower fan.
 
-<img src="./images/gs_e75_power.png" style="zoom:50%;" />
+![](./images/gs_e75_power.png)
 
 ### e150 (No Active Cooling Kit)
 
 Connect an **6+2-pin PCIe power cable** to the **8-pin plug** and a **6-pin PCIe power cable** to the **6-pin plug** on the **e150 card**. *(NOTE: Do* ***not*** *connect an 8-pin EPS12V power cable to the 8-pin port on the card.)*
 
-<img src="./images/gs_e150_power.png" style="zoom:50%;" />
+![](./images/gs_e150_power.png)
 
 ### e150 (With Active Cooling Kit)
 
 Connect a **6+2pin PCIe power cable** to the **8-pin plug** on the **e150 card**. *(NOTE: Do* ***not*** *connect an 8-pin EPS12V power cable to the 8-pin port on the card.)* Connect a **6-pin PCIe power cable** to the **female 6-pin plug** of the **fan harness**, then connect the **male 6-pin plug** of the **fan harness** to the **6-pin plug** of the **e150 card**.
 
-<img src="./images/gs_e150_kit_power.png" style="zoom: 60%;" />
-
 # Software Setup
 
 To get your Grayskull™ e75/e150 Tensix Processor up and running, visit the [software setup](../../../syseng/softwaresetup.md) page.
+
+![](./images/gs_e150_kit_power.png)

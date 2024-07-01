@@ -35,19 +35,19 @@ Insert the **card** into the **PCIe x16 slot** and secure with necessary screws.
 
 House the **card** in the **casing**.
 
-<img src="./images/wh_ws_install1.png" style="zoom: 50%;" />
+![](./images/wh_ws_install1.png)
 
 ### 2. Card Installation
 
 Lower the **encased card** into the **chassis** and secure with the required screws.
 
-<img src="./images/wh_ws_install2.png" style="zoom:50%;" />
+![](./images/wh_ws_install2.png)
 
 ## Connecting Power
 
 Connect an **4+4-pin EPS12V power cable** to the **8-pin plug**. *(NOTE: Do **not*** *connect a 6+2-pin PCIe power cable to the 8-pin port on the card.)*
 
-<img src="./images/wh_power.png" style="zoom:30%;" />
+![](./images/wh_power.png)
 
 # Software Setup
 

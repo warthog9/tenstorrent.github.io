@@ -49,11 +49,11 @@ The Tenstorrent TT-LoudBox ships assembled for desktop use. Instructions to rack
 
 The Tenstorrent TT-LoudBox configuration in TW-02002 includes four Wormhole™ n300s Tensix Processors and internal Warp 100 bridges and external QSFP-DD cables that enable the Tensix Processor mesh.
 
-<img src="../../aibs/wormhole/images/wh_portspec.png" style="zoom:50%;" />
+![](../../aibs/wormhole/images/wh_portspec.png)
 
 The TT-LoudBox ships with the Warp 100 bridges connected, but the two QSFP-DD cables will need to be connected. This diagram displays the system topology and how the cards are enumerated, along with where the Warp 100 bridges are connected and where the included QSFP-DD cables need to be connected. 
 
-<img src="loudbox_topology.png" style="zoom:50%;" />
+![](./loudbox_topology.png)
 
 One QSFP-DD cable will need to be connected to **Port 1** on the cards in **Slots 1 and 4**.
 
