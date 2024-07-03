@@ -1,7 +1,5 @@
 # Specifications and Requirements
 
-
-
 ## Package Contents
 
 The Tenstorrent T7000 system package includes:
@@ -9,8 +7,6 @@ The Tenstorrent T7000 system package includes:
 - Tenstorrent T7000 System
 - 8x QSFP-DD 400GbE Cable, 2ft/0.6m
 - 4x QSFP-DD 400GbE Cable, 3ft/1m
-
-
 
 ## System Specifications
 
@@ -28,8 +24,12 @@ The Tenstorrent T7000 system package includes:
 
 **200V or higher input voltage required.*
 
-
-
 ## Operating System Requirements
 
 The Tenstorrent T7000 system ships without an operating system installed. We recommend installing Ubuntu 20.04 (Focal Fossa) to properly use the Tenstorrent Tensix Processors.
+
+## Environment Specifications
+
+Please visit the Tenstorrent Wormhole n150s and n300s [specification page](../../aibs/wormhole/specifications.md) for environment specifications for those cards.
+
+Please visit the [SuperMicro A+ Server 4124GS-TNR](https://www.supermicro.com/en/Aplus/system/4U/4124/AS-4124GS-TNR.cfm) page for environment specifications for this system.

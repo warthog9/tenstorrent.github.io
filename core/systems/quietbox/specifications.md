@@ -8,8 +8,6 @@ The Tenstorrent TT-QuietBox Liquid-Cooled Desktop Workstation system package inc
 - C13 Power Cable, 1.8m/6ft.
 - 2x QSFP-DD 400GbE Cable, 0.6m/2ft.
 
-
-
 ## System Specifications
 
 | Specification         | TT-QuietBox (TW-04001)                                       |
@@ -24,13 +22,9 @@ The Tenstorrent TT-QuietBox Liquid-Cooled Desktop Workstation system package inc
 | **Power Supply**      | 1650W 80 PLUS Platinum                                       |
 | **Operating System**  | None                                                         |
 
-
-
 ## Operating System Requirements
 
 The TT-QuietBox system ships without an operating system installed. We recommend installing Ubuntu 20.04 (Focal Fossa) to properly use the Tenstorrent n300 Tensix Processors.
-
-
 
 ## QSFP-DD Connections and System Topology
 
@@ -45,3 +39,7 @@ The TT-QuietBox ships with the Warp 100 bridges connected, but the two QSFP-DD c
 One QSFP-DD cable will need to be connected to **Port 1** on the cards in **Slots 1 and 4**.
 
 One QSFP-DD cable will need to be connected to **Port 2** on the cards in **Slots 3 and 2**.
+
+## Environment Specifications
+
+The TT-QuietBox Liquid-Cooled Desktop Workstation is designed to operate at up to 35°C/95°F external ambient temperatures.

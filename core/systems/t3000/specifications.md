@@ -9,8 +9,6 @@ The Tenstorrent TT-LoudBox (T3000) 4U/Desktop Workstation system package include
 - 4U Rack-Mounting Kit
 - 2x QSFP-DD 400GbE Cable, 0.6m/2ft. (TW-02002 only)
 
-
-
 ## System Specifications
 
 | Specification         | TT-LoudBox (TW-02001)                                        | TT-LoudBox (TW-02002)                                        |
@@ -31,19 +29,13 @@ The Tenstorrent TT-LoudBox (T3000) 4U/Desktop Workstation system package include
 
 ![](/Users/dsklavos/Documents/GitHub/docs/core/systems/bmclabel.png)
 
-
-
 ## Operating System Requirements
 
 The Tenstorrent TT-LoudBox system ships without an operating system installed. We recommend installing Ubuntu 20.04 (Focal Fossa) to properly use the Tenstorrent Tensix Processors.
 
-
-
 ## 4U Rack-Mounting Instructions
 
 The Tenstorrent TT-LoudBox ships assembled for desktop use. Instructions to rack-mount the system using the included 4U rack-mounting kit are available in Chapter 2 of the Manual for the [SuperMicro SuperServer SYS-740GP-TNRT](https://www.supermicro.com/en/products/system/gpu/4u/sys-740gp-tnrt).
-
-
 
 ## QSFP-DD Connections and System Topology (TW-02002)
 
@@ -58,3 +50,9 @@ The TT-LoudBox ships with the Warp 100 bridges connected, but the two QSFP-DD ca
 One QSFP-DD cable will need to be connected to **Port 1** on the cards in **Slots 1 and 4**.
 
 One QSFP-DD cable will need to be connected to **Port 2** on the cards in **Slots 3 and 2**.
+
+## Environment Specifications
+
+Please visit the Tenstorrent Wormhole n150s and n300s [specification page](../../aibs/wormhole/specifications.md) for environment specifications for those cards.
+
+Please visit the [SuperMicro SuperServer SYS-740GP-TNRT](https://www.supermicro.com/en/products/system/gpu/4u/sys-740gp-tnrt) page for environment specifications for this system.

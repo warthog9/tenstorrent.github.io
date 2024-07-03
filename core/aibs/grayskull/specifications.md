@@ -62,3 +62,15 @@ The e75/e150 support the following data precision formats:
 ** CPU core count and number of sockets will depend on the amount of host preprocessing and post-processing required before and after the accelerator processing.*
 
 ***To check your version, type* `cat /etc/os-release`.
+
+## Environment Specifications
+
+The Grayskull™ e75 and e150 Tensix Processor add-in boards are designed to meet these environmental specifications:
+
+| Specification                         | Requirement               |
+| ------------------------------------- | ------------------------- |
+| Operating Temperature Range           | 10°C/50°F - 35°C/95°F     |
+| Storage Temperature Range             | -40°C/-40°F - 75°C/167°F  |
+| Elevation                             | -5 ft. to 10,000 ft.      |
+| Air Flow (without Active Cooling Kit) | ≥30 CFM @ up to 35°C/95°F |
+

@@ -7,8 +7,6 @@ The Tenstorrent T1000 Desktop Workstation system package includes:
 - Tenstorrent T1000 Desktop Workstation system
 - C13 Power Cable, 1.8m/6ft.
 
-
-
 ## System Specifications
 
 | Specification        | T1000 (TW-01001)                                             |
@@ -26,8 +24,12 @@ The Tenstorrent T1000 Desktop Workstation system package includes:
 
 ![](../bmclabel.png)
 
-
-
 ## Operating System Requirements
 
 The Tenstorrent T1000 system ships without an operating system installed. We recommend installing Ubuntu 20.04 (Focal Fossa) to properly use the n150s Tensix Processor.
+
+## Environment Specifications
+
+Please visit the Tenstorrent Wormhole n150s and n300s [specification page](../../aibs/wormhole/specifications.md) for environment specifications for those cards.
+
+Please visit the [SuperMicro SuperServer SYS-E403-12P-FN2T](https://www.supermicro.com/en/products/system/IoT/Box_PC/SYS-E403-12P-FN2T) page for environment specifications for this system.
