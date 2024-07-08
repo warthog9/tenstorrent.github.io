@@ -1,7 +1,27 @@
 .. toctree::
    :maxdepth: 2
 
-T1000 Desktop Workstation
+TT-QuietBox
+=======================================
+.. toctree::
+   :maxdepth: 2
+
+   quietbox/README
+   quietbox/softwaresetup
+   quietbox/specifications
+   quietbox/support
+
+TT-LoudBox
+=======================================
+.. toctree::
+   :maxdepth: 2
+
+   t3000/README
+   t3000/softwaresetup
+   t3000/specifications
+   t3000/support
+
+T1000
 =======================================
 
 .. toctree::
@@ -12,27 +32,7 @@ T1000 Desktop Workstation
    t1000/specifications
    t1000/support
 
-Quietbox
-=======================================
-.. toctree::
-   :maxdepth: 2
-
-   quietbox/README
-   quietbox/softwaresetup
-   quietbox/specifications
-   quietbox/support
-
-TT-LoudBox (T3000) 4U/Desktop Workstation
-=======================================
-.. toctree::
-   :maxdepth: 2
-
-   t3000/README
-   t3000/softwaresetup
-   t3000/specifications
-   t3000/support
-
-T7000 4U Workstation
+T7000
 =======================================
 .. toctree::
    :maxdepth: 2
