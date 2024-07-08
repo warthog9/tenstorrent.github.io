@@ -2,7 +2,7 @@ import yaml
 import os
 # from ..conf import *
 
-project = 'SysEng'
+project = 'Software and Utilities'
 copyright = '2024, Tenstorrent'
 author = 'Tenstorrent'
 root_doc = "index"
