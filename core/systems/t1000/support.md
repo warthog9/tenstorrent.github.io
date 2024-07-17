@@ -6,7 +6,7 @@
 
 The MAC address and password for the BMC (baseboard management controller) can be found on labels on both the system chassis and the motherboard. The label will look like this:
 
-![](/Users/dsklavos/Documents/GitHub/docs/core/systems/bmclabel.png)
+![](../bmclabel.png)
 
 
 

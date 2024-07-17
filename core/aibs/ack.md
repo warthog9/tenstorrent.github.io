@@ -2,7 +2,7 @@
 
 ## Compatibility
 
-The Active Cooling Kit is compatible with the following Tenstorrent Tensix Processor cards:
+The Active Cooling Kit (TX-01001) is compatible with the following Tenstorrent Tensix Processor cards:
 
 - Grayskull™ e150 (TC-01002)
 - Wormhole™ n150s with Passive Cooler (TC-02001)

@@ -27,7 +27,7 @@ The Tenstorrent TT-LoudBox (T3000) 4U/Desktop Workstation system package include
 
 **NOTE:** The MAC address and password for the BMC (baseboard management controller) can be found on labels on both the system chassis and the motherboard. A small slide-out tray with the label is hidden behind the front cover, at the bottom of the system. The label will look like this:
 
-![](/Users/dsklavos/Documents/GitHub/docs/core/systems/bmclabel.png)
+![](../bmclabel.png)
 
 ## Operating System Requirements
 
