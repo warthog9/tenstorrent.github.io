@@ -29,7 +29,7 @@ html_static_path = ['../shared/_static']
 
 html_context = {
     "versions": None, # Do not render versions
-    "logo_link_url": "https://tenstorrent.github.io/docs-test/core/latest/"
+    "logo_link_url": os.environ.get("homepage")
 }
 
 def setup(app):

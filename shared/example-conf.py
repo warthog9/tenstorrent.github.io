@@ -5,6 +5,7 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+import os
 
 project = 'Tenstorrent'
 copyright = '2024, Tenstorrent'
@@ -20,7 +21,7 @@ html_favicon = "../shared/images/cropped-favicon-32x32.png"
 html_static_path = ['../shared/_static']
 
 html_context = {
-    "logo_link_url": "https://tenstorrent.github.io/docs-test/core/latest/"
+    "logo_link_url": os.environ.get("homepage")
 }
 
 def setup(app):

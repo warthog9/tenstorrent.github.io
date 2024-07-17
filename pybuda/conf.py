@@ -36,7 +36,7 @@ html_context = {
     "versions": versions,
     "project_code": "pybuda",
     "current_version": os.environ.get("current_version"),
-    "logo_link_url": "https://tenstorrent.github.io/docs-test/core/latest/"
+    "logo_link_url": os.environ.get("homepage")
 }
 
 version = os.environ.get("current_version")
