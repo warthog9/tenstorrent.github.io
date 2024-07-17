@@ -28,5 +28,9 @@ with open("versions.yml", "r") as yaml_file:
     for project, versions in docs.items():
         for version in versions:
             build_doc(project, version)
-            move_dir(f"{project}/_build/html/", f"output/{project}/{version}/")
+            if project == "core" and version == "latest":
+                # This is a special case to populate the root folder and home page
+                move_dir(f"{project}/_build/html/", f"output/")
+            else:    
+                move_dir(f"{project}/_build/html/", f"output/{project}/{version}/")
             print(f"Built {project} {version}")
