@@ -20,7 +20,7 @@ def move_dir(src, dst):
     subprocess.run(["mkdir", "-p", dst])
     subprocess.run("mv " + src + "* " + dst, shell=True)
 
-os.environ["pages_root"] = "https://tenstorrent.github.io/docs-test/"
+os.environ["pages_root"] = "https://tenstorrent.github.io/"
 
 with open("versions.yml", "r") as yaml_file:
     subprocess.run("rm -rf output", shell=True)
