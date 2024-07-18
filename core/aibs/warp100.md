@@ -15,4 +15,4 @@ Warp 100 Bridges are typically pre-installed in systems. However, if they requir
 
 ![](./warp100diagram.png)
 
-Do **not** try to install it in the opposite orientation, as you risk damaging the card and the Warp 100 Bridge.
+Do **not** try to install it in the opposite orientation, as you risk damaging the card, your system, and the Warp 100 bridge.
