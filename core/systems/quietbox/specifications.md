@@ -7,6 +7,7 @@ The Tenstorrent TT-QuietBox Liquid-Cooled Desktop Workstation system package inc
 - Tenstorrent TT-QuietBox Liquid-Cooled Desktop Workstation
 - C13 Power Cable, 1.8m/6ft.
 - 2x QSFP-DD 400GbE Cable, 0.6m/2ft.
+- Remote Control for RGB Lighting
 
 ## System Specifications
 
@@ -43,3 +44,7 @@ One QSFP-DD cable will need to be connected to **Port 2** on the cards in **Slot
 ## Environment Specifications
 
 The TT-QuietBox Liquid-Cooled Desktop Workstation is designed to operate at up to 35°C/95°F external ambient temperatures.
+
+## Lighting Control
+
+The TT-QuietBox uses a Bitspower RF Remote Controller Hub to control the lighting and the remote is included with the system. For details on how to operate it, please review the Bitspower documentation [here](BPTA-RFCHUB_IG_V3.pdf).
