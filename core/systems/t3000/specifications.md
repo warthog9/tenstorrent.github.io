@@ -56,3 +56,7 @@ One QSFP-DD cable will need to be connected to **Port 2** on the cards in **Slot
 Please visit the Tenstorrent Wormhole n150s and n300s [specification page](../../aibs/wormhole/specifications.md) for environment specifications for those cards.
 
 Please visit the [SuperMicro SuperServer SYS-740GP-TNRT](https://www.supermicro.com/en/products/system/gpu/4u/sys-740gp-tnrt) page for environment specifications for this system.
+
+## Software Setup
+
+Instructions on how to set up software on TT-LoudBox are available [here](../../../syseng/softwaresetup.html).

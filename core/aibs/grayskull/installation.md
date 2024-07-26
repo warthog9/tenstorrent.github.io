@@ -62,8 +62,8 @@ Connect an **6+2-pin PCIe power cable** to the **8-pin plug** and a **6-pin PCIe
 
 Connect a **6+2pin PCIe power cable** to the **8-pin plug** on the **e150 card**. *(NOTE: Do* ***not*** *connect an 8-pin EPS12V power cable to the 8-pin port on the card.)* Connect a **6-pin PCIe power cable** to the **female 6-pin plug** of the **fan harness**, then connect the **male 6-pin plug** of the **fan harness** to the **6-pin plug** of the **e150 card**.
 
-# Software Setup
-
-To get your Grayskull™ e75/e150 Tensix Processor up and running, visit the [software setup](../../../syseng/softwaresetup.md) page.
-
 ![](./images/gs_e150_kit_power.png)
+
+## Software Setup
+
+Instructions on how to set up software on your e75/e150 are available [here](../../../syseng/softwaresetup.html).

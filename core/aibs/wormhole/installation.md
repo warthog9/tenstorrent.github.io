@@ -49,6 +49,6 @@ Connect an **4+4-pin EPS12V power cable** to the **8-pin plug**. *(NOTE: Do **no
 
 ![](./images/wh_power.png)
 
-# Software Setup
+## Software Setup
 
-To get your Wormhole™ n150s/n300s Tensix Processor up and running, visit the [software setup](../../../syseng/softwaresetup.md) page.
+Instructions on how to set up software on your n150s/n300s are available [here](../../../syseng/softwaresetup.html).

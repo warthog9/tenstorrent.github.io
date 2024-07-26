@@ -48,3 +48,7 @@ The TT-QuietBox Liquid-Cooled Desktop Workstation is designed to operate at up t
 ## Lighting Control
 
 The TT-QuietBox uses a Bitspower RF Remote Controller Hub to control the lighting and the remote is included with the system. For details on how to operate it, please review the Bitspower documentation [here](BPTA-RFCHUB_IG_V3.pdf).
+
+## Software Setup
+
+Instructions on how to set up software on TT-QuietBox are available [here](../../../syseng/softwaresetup.html).

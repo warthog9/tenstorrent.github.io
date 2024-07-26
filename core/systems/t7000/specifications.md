@@ -33,3 +33,7 @@ The Tenstorrent T7000 system ships without an operating system installed. We rec
 Please visit the Tenstorrent Wormhole n150s and n300s [specification page](../../aibs/wormhole/specifications.md) for environment specifications for those cards.
 
 Please visit the [SuperMicro A+ Server 4124GS-TNR](https://www.supermicro.com/en/Aplus/system/4U/4124/AS-4124GS-TNR.cfm) page for environment specifications for this system.
+
+## Software Setup
+
+Instructions on how to set up software on T7000 are available [here](../../../syseng/softwaresetup.html).
