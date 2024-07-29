@@ -26,7 +26,7 @@ html_theme_options = {
 }
 
 html_logo = "../shared/images/tt_logo.svg"
-html_favicon = "../shared/images/cropped-favicon-32x32.png"
+html_favicon = "../shared/images/favicon.png"
 html_static_path = ['../shared/_static']
 
 with open("../versions.yml", "r") as yaml_file:

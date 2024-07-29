@@ -25,7 +25,7 @@ extensions = ['myst_parser']
 
 html_theme = "sphinx_rtd_theme"
 html_logo = "../shared/images/tt_logo.svg"
-html_favicon = "../shared/images/cropped-favicon-32x32.png"
+html_favicon = "../shared/images/favicon.png"
 html_static_path = ['../shared/_static']
 
 html_context = {
