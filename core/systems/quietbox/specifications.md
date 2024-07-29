@@ -14,7 +14,7 @@ The Tenstorrent TT-QuietBox Liquid-Cooled Desktop Workstation system package inc
 | Specification         | TT-QuietBox (TW-04001)                                       |
 | --------------------- | ------------------------------------------------------------ |
 | **CPU**               | AMD EPYC™ 8124P<br />(16C/32T, up to 3GHz, 125W, [AMD](https://www.amd.com/en/products/cpu/amd-epyc-8124p)) |
-| **Motherboard**       | TYAN Tomcat HX S8040 MB ([S8040GM2NE-2T](https://www.tyan.com/Motherboards_S8040_S8040GM4NE-2T)) |
+| **Motherboard**       | TYAN Tomcat HX S8040 MB ([S8040GM4NE-2T](https://www.tyan.com/Motherboards_S8040_S8040GM4NE-2T)) |
 | **Memory**            | 512GB (8x64GB)<br />DDR5-4800 ECC RDIMM<br />(0 Slots Free)  |
 | **Storage**           | 3.8TB U.2 NVMe PCIe 4.0 x4                                   |
 | **Tensix Processors** | 4x Tenstorrent Wormhole™ n300 Tensix Processor               |
