@@ -27,7 +27,10 @@ To build the Sphinx documentation, follow these steps:
 
 ### Local Dev
 
-When making changes locally, you can run `make html` in the directory of the project you are working on, rather than building the whole doc site. This will build that project's html to the _build directory in that project. Make sure to delete the `_build` directory between builds, as this can sometimes cause issues with updates not getting built.
+When making changes locally, you can run `make watch` in the directory of the project you are working on, rather than building the whole doc site. This will build the project's html and serve it on [port 3000](http://127.0.0.1:3000), watching for changes and rebuilding as needed.
+
+> ⚠️
+> Make sure to delete the `_build` directory between builds, as this can sometimes cause issues with updates not getting built.
 
 ## Repo Structure
 
