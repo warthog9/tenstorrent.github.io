@@ -8,14 +8,14 @@
  SOURCEDIR     = .
  BUILDDIR      = _build
 
- # Put it first so that "make" without argument is like "make help".
- help:
- 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+# Put it first so that "make" without argument is like "make help".
+help:
+	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
- # Development (watch): build the documentation and watch for changes.
- # Served on port 3000 (http://localhost:3000)
- watch:
- 	@$(SPHINXWATCH) "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O) --port 3000 --watch '../shared' --open-browser
+# Development (watch): build the documentation and watch for changes.
+# Served on port 3000 (http://localhost:3000)
+watch:
+	@$(SPHINXWATCH) "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O) --port 3000 --watch '../shared' --open-browser
 
  .PHONY: help Makefile
 
