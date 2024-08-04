@@ -10,7 +10,7 @@ BUILDDIR      = _build
 
 # Put it first so that "make" without argument is like "make help".
 help:
-@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 # Development (watch): build the documentation and watch for changes.
 # Served on port 3000 (http://localhost:3000)
