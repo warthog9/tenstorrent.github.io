@@ -1,4 +1,4 @@
-Home
+Tenstorrent
 ==============================
 
 .. toctree::
