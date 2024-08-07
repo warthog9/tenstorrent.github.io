@@ -91,4 +91,4 @@ If the tool runs without error, you're ready to get started!
 Now that your Grayskull™ e75/e150 AI graph processor is installed and up and running, there are two SDKs you can work with to familiarize yourself with the hardware and associated utilities and software. Each SDK lists five tasks to start with.
 
 - [First 5 Things](https://github.com/tenstorrent/tt-buda-demos?tab=readme-ov-file#first-5-things-to-do) for **TT-Buda**, our high level SDK
-- [First 5 Things](https://tenstorrent-metal.github.io/tt-metal/latest/get_started/get_started.html) for **TT-Metalium**, our open source, low level SDK
+- [First 5 Things](https://tenstorrent.github.io/tt-metalium/latest/get_started/get_started.html) for **TT-Metalium**, our open source, low level SDK

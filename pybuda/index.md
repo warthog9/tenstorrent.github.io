@@ -4,7 +4,7 @@ PyBuda ™ is a compute framework used to develop, run, and analyze ML workloads
 
 For a quick start, follow [installation](installation.md) steps, and then look at the user guide [user_guide](user_guide.md).
 
-# Table of Contents
+## Table of Contents
 
 * [Introduction to PyBuda]()
 * [TT-BUDA Installation](installation.md)
@@ -72,6 +72,6 @@ For a quick start, follow [installation](installation.md) steps, and then look a
 * [Developer Reference](developer.md)
   * [Low Level Kernels](developer.md#low-level-kernels)
 
-# Index
+## Index
 
 * [Index](genindex.md)
