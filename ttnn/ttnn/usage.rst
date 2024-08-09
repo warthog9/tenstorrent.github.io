@@ -14,35 +14,35 @@ Basic Examples
 1. Converting from and to torch tensor
 --------------------------------------
 
-.. literalinclude:: ../../../../ttnn/examples/usage/convert_to_from_torch.py
+.. literalinclude:: examples/usage/convert_to_from_torch.py
    :language: python
 
 
 2. Running an operation on the device
 --------------------------------------
 
-.. literalinclude:: ../../../../ttnn/examples/usage/run_op_on_device.py
+.. literalinclude:: examples/usage/run_op_on_device.py
    :language: python
 
 
 3. Using __getitem__ to slice the tensor
 ----------------------------------------
 
-.. literalinclude:: ../../../../ttnn/examples/usage/get_item.py
+.. literalinclude:: examples/usage/get_item.py
    :language: python
 
 
 4. Enabling program cache
 --------------------------------------
 
-.. literalinclude:: ../../../../ttnn/examples/usage/program_cache.py
+.. literalinclude:: examples/usage/program_cache.py
    :language: python
 
 
 5. Debugging intermediate tensors
 ---------------------------------
 
-.. literalinclude:: ../../../../ttnn/examples/usage/debugging_intermediate_tensors.py
+.. literalinclude:: examples/usage/debugging_intermediate_tensors.py
    :language: python
 
 
@@ -157,7 +157,7 @@ Please refer to :doc:`Profiling ttnn Operations </ttnn/profiling_ttnn_operations
 .. note::
    This basic snippet is under construction, and may not work on all hardware architectures.
 
-.. literalinclude:: ../../../../ttnn/examples/usage/string_repr.py
+.. literalinclude:: examples/usage/string_repr.py
    :language: python
 
 
@@ -207,7 +207,7 @@ Set the following environment variables as needed
 
 Run the code. i.e.:
 
-.. literalinclude:: ../../../../ttnn/examples/usage/visualizer_example.py
+.. literalinclude:: examples/usage/visualizer_example.py
    :language: python
 
 Open the visualizer by running the following command:
