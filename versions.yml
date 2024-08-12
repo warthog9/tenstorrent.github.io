@@ -6,6 +6,5 @@ pybuda:
 - latest
 tt-metalium:
 - latest
-- v0.49.0
 ttnn:
 - latest
