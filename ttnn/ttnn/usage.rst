@@ -77,7 +77,7 @@ Basic Examples
 
 `tt_lib` operations are missing some of the features of ttnn operations such as graph tracing and in order to support these features, ttnn provides a different to call `tt_lib` operations that enabled the missing features.
 
-.. literalinclude:: ../../../../ttnn/examples/usage/using_tt_lib.py
+.. literalinclude:: examples/usage/using_tt_lib.py
    :language: python
 
 

@@ -45,6 +45,8 @@ extensions = [
     "breathe",
 ]
 
+source_suffix = ['.rst', '.md']
+
 # Napoleon settings
 napoleon_google_docstring = False
 napoleon_numpy_docstring = True
