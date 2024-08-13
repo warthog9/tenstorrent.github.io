@@ -4,7 +4,7 @@
 
 ## Software Setup Support
 
-For software setup, visit our [software setup](../../../syseng/softwaresetup.md) page.
+For software setup, visit our [software setup](https://docs.tenstorrent.com/syseng/latest/softwaresetup.html) page.
 
 
 
