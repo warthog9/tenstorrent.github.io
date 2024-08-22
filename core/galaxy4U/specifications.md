@@ -5,7 +5,7 @@
 | **Specification**                 | **Single Galaxy Module**                   | **Full Galaxy Wormhole 4U Server**       |
 | --------------------------------- | ------------------------------------------ | ---------------------------------------- |
 | Part Number                       | -                                          | TG-00001                                 |
-| AI Graph Processor(s)             | Tenstorrent Wormhole™                      | 32x Tenstorrent Wormhole™                |
+| Tensix Processor(s)               | Tenstorrent Wormhole™                      | 32x Tenstorrent Wormhole™                |
 | Galaxy Modules                    | 1                                          | 32                                       |
 | Tensix Cores                      | 80                                         | 2,560                                    |
 | AI Clock                          | 1 GHz                                      | 1 GHz                                    |
