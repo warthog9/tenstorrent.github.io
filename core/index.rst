@@ -1,20 +1,11 @@
 Tenstorrent
 ==============================
 
-.. toctree::
-   :caption: Add-in Boards
-   :maxdepth: 2
-
-   aibs/grayskull/README
-   aibs/wormhole/README
-   aibs/ack
-   aibs/warp100
-   aibs/compliance
 
 .. toctree::
-   :caption: Systems
-   :maxdepth: 2
+   :caption: Hardware
 
+   aibs/index
    systems/index
 
 .. toctree::
