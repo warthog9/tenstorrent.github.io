@@ -14,7 +14,7 @@ if project in ["ttnn", "tt-metalium"]:
     additional_cmd = \
         f"wget https://github.com/tenstorrent/tt-metal/releases/download/{version}/metal_libs-{version_no_v}+wormhole.b0-cp38-cp38-linux_x86_64.whl\n"
     additional_cmd += \
-        f"pip install --extra-index-url https://download.pytorch.org/whl/cpu metal_libs-{version_no_v}+wormhole.b0-cp38-cp38-linux_x86_64.whl"
+        f"pip install --extra-index-url https://download.pytorch.org/whl/cpu metal_libs-{version_no_v}+wormhole.b0-cp38-cp38-linux_x86_64.whl --force-reinstall"
     version_structure = {version: {"additional_cmd": additional_cmd}}
 
 versions[project]["versions"].update(version_structure)
