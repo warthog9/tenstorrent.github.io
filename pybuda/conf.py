@@ -28,6 +28,7 @@ html_theme_options = {
 html_logo = "../shared/images/tt_logo.svg"
 html_favicon = "../shared/images/favicon.png"
 html_static_path = ['../shared/_static']
+html_last_updated_fmt = "%b %d, %Y"
 
 with open("../versions.yml", "r") as yaml_file:
     versions = yaml.safe_load(yaml_file)["pybuda"]

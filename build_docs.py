@@ -12,8 +12,7 @@ def build_doc(project, version, additional_cmd):
     
     subprocess.run(f"git checkout {project}_{version}", shell=True)
     subprocess.run("git checkout main -- versions.yml", shell=True)
-    subprocess.run("git checkout main -- tt-metalium/conf.py", shell=True)
-    subprocess.run("git checkout main -- ttnn/conf.py", shell=True)
+    subprocess.run("git checkout main -- */conf.py", shell=True)
 
     version_no_v = version.replace("v", "")
 
