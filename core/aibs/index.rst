@@ -4,8 +4,8 @@ Add-In Boards / Cards
    :caption: Add-In Boards
    :maxdepth: 2
 
-   grayskull/README
-   wormhole/README
+   grayskull/index
+   wormhole/index
    ack
    warp100
    compliance
