@@ -16,9 +16,12 @@
 #
 import os
 import sys
+import site
 import collections
+from pathlib import Path
 
-sys.path.insert(0, os.path.abspath("."))
+ttnn_src_location = str(Path(site.getsitepackages()[0], "ttnn").resolve())
+sys.path.insert(0, ttnn_src_location)
 
 MetalSphinxConfig = collections.namedtuple("MetalSphinxConfig", ["fullname", "shortname"])
 
