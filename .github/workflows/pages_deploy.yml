@@ -22,15 +22,15 @@ jobs:
           sudo apt-get update -y
           sudo apt-get install -y pandoc
           sudo apt install software-properties-common=0.99.9.12 build-essential=12.8ubuntu1.1 python3.8-venv libhwloc-dev graphviz
-      - name: Install dependencies
-        run: |
-          python3 -m venv .docs-env
-          source .docs-env/bin/activate
-          pip install -r requirements.txt
-      - name: Convert Installation.md to .rst in ttnn and tt-metallium docs
-        run: |
-          pandoc --from=markdown --to=rst --output=ttnn/ttnn/installing.rst ttnn/ttnn/installing.md
-          pandoc --from=markdown --to=rst --output=tt-metalium/installing.rst tt-metalium/installing.md
+      # - name: Install dependencies
+      #   run: |
+      #     python3 -m venv .docs-env
+      #     source .docs-env/bin/activate
+      #     pip install -r requirements.txt
+      # - name: Convert Installation.md to .rst in ttnn and tt-metallium docs
+      #   run: |
+      #     pandoc --from=markdown --to=rst --output=ttnn/ttnn/installing.rst ttnn/ttnn/installing.md
+      #     pandoc --from=markdown --to=rst --output=tt-metalium/installing.rst tt-metalium/installing.md
       - name: Build documentation
         run: |
 
