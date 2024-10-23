@@ -10,10 +10,8 @@ def build_doc(project, version, additional_cmd):
         subprocess.run(f"git checkout {project}_{version} -- {project} ", shell=True)
         subprocess.run("git checkout main -- */conf.py", shell=True)
 
-    version_no_v = version.replace("v", "")
-
-    command = f"python3 -m venv .{version} && . .{version}/bin/activate\n"
-    
+    #command = f"python3 -m venv .env_{version}_{project} && . .env_{version}_{project}/bin/activate\n"
+    command = ""
     if additional_cmd:
         command += additional_cmd + "\n"
 
