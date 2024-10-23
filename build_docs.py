@@ -6,12 +6,9 @@ import yaml
 def build_doc(project, version, additional_cmd):
     print(f"Building {project} {version} with {additional_cmd}")
     os.environ[f"current_version"] = version
-    if version == "latest":
-        subprocess.run(f"cd {project} && make html", shell=True)
-        return
-    
-    subprocess.run(f"git checkout {project}_{version} -- {project} ", shell=True)
-    subprocess.run("git checkout main -- */conf.py", shell=True)
+    if version != "latest":
+        subprocess.run(f"git checkout {project}_{version} -- {project} ", shell=True)
+        subprocess.run("git checkout main -- */conf.py", shell=True)
 
     version_no_v = version.replace("v", "")
 
