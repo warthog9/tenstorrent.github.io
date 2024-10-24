@@ -20,6 +20,7 @@ jobs:
       - name: Install the wheel
         run: |
           sudo apt-get update -y
+          sudo apt-get install -y pandoc
           sudo apt install software-properties-common=0.99.9.12 build-essential=12.8ubuntu1.1 python3.8-venv libhwloc-dev graphviz
       - name: Install Clang-17
         shell: bash
@@ -28,9 +29,22 @@ jobs:
           chmod u+x llvm.sh
           sudo ./llvm.sh 17
           sudo apt install -y libc++-17-dev libc++abi-17-dev
-      - name: Install Wheel
-        shell: bash
+      - name: Install dependencies
         run: |
-          wget https://github.com/tenstorrent/tt-metal/releases/download/v0.52.0/metal_libs-0.52.0+wormhole.b0-cp38-cp38-linux_x86_64.whl
-          pip install --extra-index-url https://download.pytorch.org/whl/cpu metal_libs-0.52.0+wormhole.b0-cp38-cp38-linux_x86_64.whl --force-reinstall
-          python3 -c "import ttnn"
+          python3 -m venv .docs-env
+          source .docs-env/bin/activate
+          pip install -r requirements.txt
+      - name: Convert Installation.md to .rst in ttnn and tt-metallium docs
+        run: |
+          pandoc --from=markdown --to=rst --output=ttnn/ttnn/installing.rst ttnn/ttnn/installing.md
+          pandoc --from=markdown --to=rst --output=tt-metalium/installing.rst tt-metalium/installing.md
+      - name: Build documentation
+        run: |
+          source .docs-env/bin/activate
+          python build_docs.py
+      # - name: Install Wheel
+      #   shell: bash
+      #   run: |
+      #     wget https://github.com/tenstorrent/tt-metal/releases/download/v0.52.0/metal_libs-0.52.0+wormhole.b0-cp38-cp38-linux_x86_64.whl
+      #     pip install --extra-index-url https://download.pytorch.org/whl/cpu metal_libs-0.52.0+wormhole.b0-cp38-cp38-linux_x86_64.whl --force-reinstall
+      #     python3 -c "import ttnn"
