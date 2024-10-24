@@ -15,7 +15,7 @@ def build_doc(project, version, additional_cmd):
     if additional_cmd:
         command += additional_cmd + "\n"
 
-    command += f"cd {project} && env && python3 -c 'import ttnn' && env\n"
+    command += f"cd {project} && make html\n"
     command += "deactivate\n"
     print("Full command to execute", command)
     subprocess.run(command, shell=True)
