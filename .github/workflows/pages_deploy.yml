@@ -21,7 +21,7 @@ jobs:
         run: |
           sudo apt-get update -y
           sudo apt-get install -y pandoc
-          sudo apt install software-properties-common=0.99.9.12 build-essential=12.8ubuntu1.1 python3.8-venv libhwloc-dev graphviz
+          sudo apt install software-properties-common=0.99.9.12 build-essential=12.8ubuntu1.1 python3.8-venv libhwloc-dev graphviz libunwind8
       # - name: Install dependencies
       #   run: |
       #     python3 -m venv .docs-env
