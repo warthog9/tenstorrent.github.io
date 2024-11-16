@@ -26,7 +26,7 @@ hardware.
 
 Install and build the project by following the instructions in the
 `installation guide
-<https://github.com/tenstorrent/tt-metal/blob/main/INSTALLING.mdl>`_.
+<https://github.com/tenstorrent/tt-metal/blob/main/INSTALLING.md>`_.
 
 2. Beginner Metalium Usage: Single-core Matrix Multiplication Kernel
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
