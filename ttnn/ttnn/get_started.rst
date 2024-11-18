@@ -8,9 +8,6 @@ TT-NN is a user-friendly API running ML workloads on Tenstorrent hardware.
 The GitHub page for the project is located here:
 https://github.com/tenstorrent/tt-metal
 
-Installation and environment setup instructions are in the
-`installation guide <https://github.com/tenstorrent/tt-metal/blob/main/INSTALLING.md>`_.
-
 1. Install and Build
 ^^^^^^^^^^^^^^^^^^^^
 

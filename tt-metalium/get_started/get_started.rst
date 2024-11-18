@@ -8,9 +8,6 @@ TT-Metalium is designed with the needs for non-ML and ML use cases.
 The GitHub page for the project is located here:
 https://github.com/tenstorrent/tt-metal
 
-Installation and environment setup instructions are in the GitHub repository
-front-page README: https://github.com/tenstorrent/tt-metal/blob/main/INSTALLING.md
-
 Quick Start Guide
 -----------------
 
