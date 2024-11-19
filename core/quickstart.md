@@ -15,13 +15,13 @@ Welcome to Tenstorrent! This guide will walk you through setting up your Tensix 
 
 Before you begin, ensure you have the following:
 
-- **A compatible host machine** with minimum hardware and OS requirements as specified by each product's minimum system requirements:
+- A **compatible host machine** with minimum hardware and OS requirements as specified by each product's minimum system requirements:
   - [Add-In Boards / Cards](https://docs.tenstorrent.com/aibs/index.html)
   - [Systems](https://docs.tenstorrent.com/systems/index.html)
 - **Network access** to download software packages.
 - **Administrator privileges** on the host machine.
 
-> **Note**: The recommended OS for all Tenstorrent software is **Ubuntu 20.04 LTS (Focal Fossa)**. Each SDK may support newer distributions of Ubuntu; however, compatibility should be consider experimental at this time.
+***NOTE**: The recommended OS for all Tenstorrent software is **Ubuntu 20.04 LTS (Focal Fossa)**. Each SDK may support newer distributions of Ubuntu; however, compatibility should be consider experimental at this time.*
 
 ## 2. Unboxing and Hardware Setup
 
@@ -37,17 +37,17 @@ To interact with the Tensix Processor, you’ll need to install the system-level
 
 Presently, each software package is organized into separate repositories hosted publicly on [GitHub](https://github.com/tenstorrent).
 
-> [!IMPORTANT]
->
-> The Starting Guide will reference each software utility where the latest version is available. However, each SDK will have it's own compatibility matrix associated with each release. It is strongly recommended to consult each SDK's release compatibility matrix to ensure you are installing the correct versions of the system software packages.
+**Important!**
+
+The Starting Guide will reference each software utility where the latest version is available. However, each SDK will have it's own compatibility matrix associated with each release. It is strongly recommended to consult each SDK's release compatibility matrix to ensure you are installing the correct versions of the system software packages.
 
 ### Step 1: Install the Driver (TT-KMD)
 
-Please navigate to [tt-kmd](https://github.com/tenstorrent/tt-kmd) homepage and follow instructions within the README.
+Please navigate to [TT-KMD](https://github.com/tenstorrent/tt-kmd) homepage and follow instructions within the README.
 
 ### Step 2: Device Firmware Update (TT-Flash / TT-Firmware)
 
-The [tt-firmware](https://github.com/tenstorrent/tt-firmware) file needs to be installed using the [tt-flash](https://github.com/tenstorrent/tt-flash) utility, for more details visit [TT-Flash homepage](https://github.com/tenstorrent/tt-flash?tab=readme-ov-file#firmware-files:~:text=Firmware%20files,of%20the%20images.) and follow instructions within the README.
+The [TT-Firmware](https://github.com/tenstorrent/tt-firmware) file needs to be installed using the [TT-Flash](https://github.com/tenstorrent/tt-flash) utility, for more details visit [TT-Flash homepage](https://github.com/tenstorrent/tt-flash?tab=readme-ov-file#firmware-files:~:text=Firmware%20files,of%20the%20images.) and follow instructions within the README.
 
 ### Step 3: Setup HugePages
 
@@ -74,15 +74,15 @@ sudo systemctl enable --now 'dev-hugepages\x2d1G.mount'
 sudo reboot
 ```
 
-> **Note**: This is a temporary solution for configuring hugepages. If the above fails, please check the latest available release from [TT-System-Tools](https://github.com/tenstorrent/tt-system-tools.git)
+***NOTE:** This is a temporary solution for configuring hugepages. If the above fails, please check the latest available release from [TT-System-Tools](https://github.com/tenstorrent/tt-system-tools.git).*
 
 ### Step 4: Install the System Management Interface (TT-SMI)
 
-Please navigate to [tt-smi](https://github.com/tenstorrent/tt-smi) homepage and follow instructions within the README.
+Please navigate to [TT-SMI](https://github.com/tenstorrent/tt-smi) homepage and follow instructions within the README.
 
-### Step 5: (Optional) Multi-card Configuration (TT-Topology)
+### Step 5: (Optional) Multi-Card Configuration (TT-Topology)
 
-If you are running on a TT-LoudBox or TT-QuietBox system, please navigate to [tt-topology](https://github.com/tenstorrent/tt-topology) homepage and follow instructions within the README.
+If you are running on a TT-LoudBox or TT-QuietBox system, please navigate to [TT-Topology](https://github.com/tenstorrent/tt-topology) homepage and follow instructions within the README.
 
 ### Step 6: Verify System Configuration
 
