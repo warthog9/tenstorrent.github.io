@@ -1,6 +1,6 @@
-# Getting Started
+# Starting Guide
 
-Welcome to Tenstorrent! This guide will walk you through setting up your Tensix Processor, installing necessary software, and running your first "Hello World" program.
+Welcome to Tenstorrent! This guide will walk you through setting up your Tensix Processor(s), installing necessary software, and running your first "Hello World" program.
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@ Before you begin, ensure you have the following:
 - **Network access** to download software packages.
 - **Administrator privileges** on the host machine.
 
-***NOTE**: The recommended OS for all Tenstorrent software is **Ubuntu 20.04 LTS (Focal Fossa)**. Each SDK may support newer distributions of Ubuntu; however, compatibility should be consider experimental at this time.*
+***NOTE**: The recommended OS for all Tenstorrent software is **Ubuntu 20.04 LTS (Focal Fossa)**. Each SDK may support newer distributions of Ubuntu; however, compatibility should be considered experimental at this time.*
 
 ## 2. Unboxing and Hardware Setup
 
@@ -33,21 +33,21 @@ Before you begin, ensure you have the following:
 
 ## 3. Software Installation
 
-To interact with the Tensix Processor, you’ll need to install the system-level dependencies and SDK on your host machine.
+To interact with the Tensix Processor(s), you’ll need to install the system-level dependencies and SDK on your host machine.
 
-Presently, each software package is organized into separate repositories hosted publicly on [GitHub](https://github.com/tenstorrent).
+Each software package is organized into separate repositories hosted publicly on [GitHub](https://github.com/tenstorrent).
 
 **Important!**
 
-The Starting Guide will reference each software utility where the latest version is available. However, each SDK will have it's own compatibility matrix associated with each release. It is strongly recommended to consult each SDK's release compatibility matrix to ensure you are installing the correct versions of the system software packages.
+This Starting Guide will reference each software utility where the latest version is available. However, each SDK will have it's own compatibility matrix associated with each release. It is strongly recommended to consult each SDK's release compatibility matrix to ensure you are installing the correct versions of the system software packages.
 
 ### Step 1: Install the Driver (TT-KMD)
 
-Please navigate to [TT-KMD](https://github.com/tenstorrent/tt-kmd) homepage and follow instructions within the README.
+Navigate to the [TT-KMD](https://github.com/tenstorrent/tt-kmd) homepage and follow instructions within the README.
 
 ### Step 2: Device Firmware Update (TT-Flash / TT-Firmware)
 
-The [TT-Firmware](https://github.com/tenstorrent/tt-firmware) file needs to be installed using the [TT-Flash](https://github.com/tenstorrent/tt-flash) utility, for more details visit [TT-Flash homepage](https://github.com/tenstorrent/tt-flash?tab=readme-ov-file#firmware-files:~:text=Firmware%20files,of%20the%20images.) and follow instructions within the README.
+The [TT-Firmware](https://github.com/tenstorrent/tt-firmware) file needs to be installed using the [TT-Flash](https://github.com/tenstorrent/tt-flash) utility. For more details, visit the [TT-Flash homepage](https://github.com/tenstorrent/tt-flash?tab=readme-ov-file#firmware-files:~:text=Firmware%20files,of%20the%20images.) and follow instructions within the README.
 
 ### Step 3: Setup HugePages
 
@@ -78,11 +78,11 @@ sudo reboot
 
 ### Step 4: Install the System Management Interface (TT-SMI)
 
-Please navigate to [TT-SMI](https://github.com/tenstorrent/tt-smi) homepage and follow instructions within the README.
+Navigate to [TT-SMI](https://github.com/tenstorrent/tt-smi) homepage and follow instructions within the README.
 
 ### Step 5: (Optional) Multi-Card Configuration (TT-Topology)
 
-If you are running on a TT-LoudBox or TT-QuietBox system, please navigate to [TT-Topology](https://github.com/tenstorrent/tt-topology) homepage and follow instructions within the README.
+If you are running on a TT-LoudBox or TT-QuietBox system, please navigate to the [TT-Topology](https://github.com/tenstorrent/tt-topology) homepage and follow instructions within the README.
 
 ### Step 6: Verify System Configuration
 
@@ -94,7 +94,7 @@ This should bring up a display that looks as below.
 
 ![tt-smi](./images/tt_smi.png)
 
-This is the default mode where user can see device information, telemetry and firmware.
+This is the default mode where the user can see device information, telemetry, and firmware.
 
 ### Step 7: SDK Installation
 
@@ -106,7 +106,7 @@ Tenstorrent provides three SDKs for developing on Tensix Processors:
 
 Each SDK will have it's own system dependency requirements and installation process.
 
-To help you get started, we have provided a *First 5 Things* guide, which include installation steps, for TT-Buda and TT-Metalium.
+To help you get started, we have provided *First 5 Things* guides, which include installation steps, for TT-Buda and TT-Metalium.
 
 - [First 5 Things](https://github.com/tenstorrent/tt-buda-demos/tree/main/first_5_steps) for **TT-Buda**, our open source, high level SDK
 - [First 5 Things](https://docs.tenstorrent.com/ttnn/latest/ttnn/get_started.html) for **TT-Metalium/TT-NN**, our open source, low level SDK
