@@ -46,8 +46,8 @@ pip install git+https://github.com/tenstorrent/tt-flash.git
 To update the firmware for your Tenstorrent card, enter this series of commands in the terminal:
 
 ```
-wget https://github.com/tenstorrent/tt-firmware/raw/main/fw_pack-80.10.0.0.fwbundle
-tt-flash --fw-tar fw_pack-80.10.0.0.fwbundle
+wget https://github.com/tenstorrent/tt-firmware/raw/main/fw_pack-80.13.2.0.fwbundle
+tt-flash --fw-tar fw_pack-80.13.2.0.fwbundle
 ```
 
 If this process worked, reboot the system and go to the next section. 
@@ -55,7 +55,7 @@ If this process worked, reboot the system and go to the next section.
 If running this last command results in an error that says the firmware is too old, enter the following command:
 
 ```
-tt-flash --fw-tar fw_pack-80.10.0.0.fwbundle --force
+tt-flash --fw-tar fw_pack-80.13.2.0.fwbundle --force
 ```
 
 Then reboot the system.
