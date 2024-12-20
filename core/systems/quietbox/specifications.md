@@ -9,7 +9,7 @@ The Tenstorrent TT-QuietBox Liquid-Cooled Desktop Workstation system package inc
 - 2x QSFP-DD 400GbE Cable, 0.6m/2ft.
 - Remote Control for RGB Lighting
 
-**NOTE:** TT-QuietBox is shipped in a wooden crate weighing 131 lbs. / 59.4 kg. We strongly recommend at least two people move and uncrate the system.
+**WARNING:** TT-QuietBox is shipped in a wooden crate weighing a total of 131 lbs. / 59.4 kg. The system itself weighs 96 lbs. / 43.5 kg. We strongly recommend at least two people for moving and uncrating the system.
 
 ## System Specifications
 
@@ -24,7 +24,7 @@ The Tenstorrent TT-QuietBox Liquid-Cooled Desktop Workstation system package inc
 | **Connectivity**                      | 2x RJ45 10GBase-T via Intel® X710<br /><br />2x RJ45 1GBase-T via Intel® I210<br />4x USB 3.1 Gen 1 (5GBps) Type-A (2x Front, 2x Rear)<br />1x COM<br />1x VGA<br />1x IPMI |
 | **Power Supply**                      | 1650W 80 PLUS Gold                                           |
 | **Operating System**                  | None                                                         |
-| **Dimensions (System)<br />(WxDxH)**  | 10" x 21.5" x 20"<br />254mm x 546mm x 508mm                 |
+| **Dimensions (System)<br />(WxDxH)**  | 10" x 21.5" x 20" (96 lbs.)<br />254mm x 546mm x 508mm (43.5 kg) |
 | **Dimensions (Shipped)<br />(WxDxH)** | 18" x 33" x 27" (131 lbs.)<br />453mm x 839mm x 686mm (59.4 kg) |
 
 ## Operating System Requirements
