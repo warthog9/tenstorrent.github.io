@@ -41,7 +41,7 @@ The e75/e150 support the following data precision formats:
 
 | Format               | Bit Depth                    |
 | -------------------- | ---------------------------- |
-| Floating point       | FP8, FP16, BF16              |
+| Floating point       | FP8, FP16, BFLOAT16          |
 | Block floating point | BLOCKFP2, BLOCKFP4, BLOCKFP8 |
 | Vector               | VTF19                        |
 

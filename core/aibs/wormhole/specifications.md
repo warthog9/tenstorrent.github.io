@@ -54,14 +54,14 @@ The two QSFP-DD ports are active and support 400GbE connectivity between cards a
 
 The n150/n300 support the following data precision formats:
 
-| Format               | Bit Depth                               |
-| -------------------- | --------------------------------------- |
-| Floating point       | FP8, FP16, BF16<br />FP32 (Output Only) |
-| Block floating point | BLOCKFP2, BLOCKFP4, BLOCKFP8            |
-| Integer              | INT8<br />INT32 (Output Only)           |
-| Unsigned Integer     | UINT8                                   |
-| TensorFloat          | TF32                                    |
-| Vector               | VTF19, VFP32                            |
+| Format               | Bit Depth                                   |
+| -------------------- | ------------------------------------------- |
+| Floating point       | FP8, FP16, BFLOAT16<br />FP32 (Output Only) |
+| Block floating point | BLOCKFP2, BLOCKFP4, BLOCKFP8                |
+| Integer              | INT8<br />INT32 (Output Only)               |
+| Unsigned Integer     | UINT8                                       |
+| TensorFloat          | TF32                                        |
+| Vector               | VTF19, VFP32                                |
 
 ## Minimum System Requirements
 
