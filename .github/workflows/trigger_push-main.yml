@@ -1,0 +1,16 @@
+name: Trigger - Push to the Main branch
+run-name: Trigger - Push to the Main branch
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  buildall:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building"
+  buildd-and-deploy:
+      uses: ./.github/workflows/pages_deploy.yml
+      secrets: inherit

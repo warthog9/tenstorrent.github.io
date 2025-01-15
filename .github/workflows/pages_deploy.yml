@@ -2,9 +2,8 @@ name: Build and Deploy Sphinx Documentation
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
+  workflow_call:
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-20.04
