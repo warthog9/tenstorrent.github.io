@@ -1,4 +1,4 @@
-# Installation
+# Hardware Installation
 
 Follow these instructions to install your Tenstorrent Grayskull™ e75/e150 Tensix Processor add-in board.
 
