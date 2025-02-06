@@ -66,7 +66,7 @@ sudo modprobe tenstorrent
 
 ### Step 3: Device Firmware Update (TT-Flash / TT-Firmware)
 
-The [TT-Firmware](https://github.com/tenstorrent/tt-firmware) file needs to be installed using the [TT-Flash](https://github.com/tenstorrent/tt-flash) utility.
+The [**TT-Firmware**](https://github.com/tenstorrent/tt-firmware) file needs to be installed using the [TT-Flash](https://github.com/tenstorrent/tt-flash) utility.
 
 #### Install TT-Flash
 
@@ -94,14 +94,14 @@ If running that command results in an error that says the firmware is too old, e
 
 ```{code-block} bash
 :substitutions:
-tt-flash --fw-tar fw_pack-80.13.2.0.fwbundle --force
+tt-flash --fw-tar fw_pack-80.14.0.0.fwbundle --force
 ```
 
 Then reboot the system.
 
-### Step 4: Setup HugePages
+### Step 4: Set Up HugePages
 
-HugePages lets your system allocate dedicated memory to accelerate communication with Tenstorrent devices. Setup HugePages by running these commands in the terminal:
+HugePages lets your system allocate dedicated memory to accelerate communication with Tenstorrent devices. Set up HugePages by running these commands in the terminal:
 
 ```{code-block} bash
 :substitutions:
@@ -119,8 +119,10 @@ sudo reboot
 
 **\*NOTE:** This is a temporary solution for configuring hugepages. If the above fails, please check the latest available release from [TT-System-Tools](https://github.com/tenstorrent/tt-system-tools.git).\*
 
-### Step 5: (Optional) Multi-card Configuration (TT-Topology)
-If you are running on a multi-card Wormhole system such as TT-LoudBox or TT-QuietBox, install the Tenstorrent Topology utility (TT-Topology) and configure a mesh topology by running these commands in the terminal:
+### Step 5: (Optional) Multi-Card Configuration (TT-Topology)
+**NOTE:** TT-LoudBox and TT-QuietBox ship with their topology already configured. Use this application *only if you have modified or are trying to modify the topology of your Wormhole-based TT-LoudBox or TT-QuietBox*. If you are not doing so, *skip this step*. TT-Topology is provided as-is.
+
+If you are running on a multi-card Wormhole system such as TT-LoudBox or TT-QuietBox, install the Tenstorrent Topology utility (**[TT-Topology**](https://github.com/tenstorrent/tt-topology)) and configure a mesh topology by running these commands in the terminal:
 
 ```
 pip install git+https://github.com/tenstorrent/tt-topology
@@ -144,7 +146,7 @@ This should bring up a display that looks as below.
 
 ![tt-smi](/images/tt_smi.png)
 
-This is the default mode where the user can see device information, telemetry, and firmware. If TT-smi runs without errors, congratulations! You're ready to use your Tenstorrent device.
+This is the default mode where the user can see device information, telemetry, and firmware. If TT-SMI runs without errors, congratulations! You're ready to use your Tenstorrent device.
 
 ## Installation
 
@@ -156,7 +158,7 @@ Tenstorrent provides three open-source SDKs for developing on Tensix Processors:
 
 Each SDK will have its own system dependency requirements and installation process.
 
-To help you get started, check out these _First 5 Things_ guides, which include installation steps, for TT-Buda and TT-Metalium.
+To help you get started, check out these _First 5 Things_ guides - which include installation steps - for TT-Buda and TT-Metalium.
 
 - [First 5 Things](https://github.com/tenstorrent/tt-buda-demos/tree/main/first_5_steps) for **TT-Buda**
 - [First 5 Things](https://docs.tenstorrent.com/ttnn/latest/ttnn/get_started.html) for **TT-Metalium/TT-NN**
