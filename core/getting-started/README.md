@@ -21,7 +21,14 @@ Before you begin, ensure you have the following:
 - **Network access** to download software packages.
 - **Administrator privileges** on the host machine.
 
-**\*NOTE**: The recommended OS for all Tenstorrent software is **Ubuntu 20.04 LTS (Focal Fossa)**. Each SDK may support newer distributions of Ubuntu; however, compatibility should be considered experimental at this time.\*
+**NOTE**: The recommended OS for all Tenstorrent software is **Ubuntu 20.04 LTS (Focal Fossa)**. Each SDK may support newer distributions of Ubuntu; however, compatibility should be considered experimental at this time.
+
+***NOTE:** Software support for Grayskull has been discontinued. The last supported versions of Tenstorrent's software for Grayskull are as follows:*
+
+- ***TT-Firmware:** `fw_pack-80.14.0.0.fwbundle`*
+- ***TT-KMD:** `ttkmd_1.31`*
+- ***TT-Buda:** `v0.19.3`*
+- ***TT-Metalium:** `v0.55`*
 
 ## 2. Unboxing and Hardware Setup
 
