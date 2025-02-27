@@ -110,4 +110,6 @@ breathe_default_project = "ttmetaldoxygen"
 
 redirects = {
      "index": "https://docs.tenstorrent.com/tt-metal/latest/ttnn/",
+     "ttnn/about.html": "https://docs.tenstorrent.com/tt-metal/latest/ttnn/ttnn/about.html",
+
 }

@@ -109,4 +109,5 @@ breathe_default_project = "ttmetaldoxygen"
 
 redirects = {
      "index": "https://docs.tenstorrent.com/tt-metal/latest/tt-metalium/",
+     "get_started/get_started.html": "https://docs.tenstorrent.com/tt-metal/latest/tt-metalium/get_started/get_started.html"
 }
