@@ -10,7 +10,7 @@ For software setup, visit our [software setup](https://docs.tenstorrent.com/gett
 
 ## BIOS and Hardware Support
 
-For BIOS updates, non-Tenstorrent drivers, and other hardware support, visit the TYAN [product page](https://www.tyan.com/Motherboards_S8040_S8040GM4NE-2T). 
+For BIOS updates, non-Tenstorrent drivers, and other hardware support, visit the ASRock [product page](https://www.asrockrack.com/general/productdetail.asp?Model=SIENAD8-2L2T#Specifications). 
 
 
 
