@@ -130,8 +130,7 @@ These Terms will be binding on and will inure to the benefit of the legal repres
 
 | Category | Definition | Examples |  Payment Range  (US Dollars) |
 | :---- | :---- | :---- | :---- |
-| difficulty/warmup | Tasks suitable for first-time contributors. Straightforward and low complexity. | \- Minor bug fixes. \- Documentation improvements. \- Adding or fixing a test case. \- Basic logging updates. \- Updating a README or sample script. |  1 – 200 |
-| difficulty/easy | Tasks requiring basic familiarity with the repo and some understanding of the architecture. | \- Extending an existing feature. \- Updating API calls. \- Simple refactoring tasks. \- Adding a new test suite. |  201 – 500 |
-| difficulty/medium | Tasks requiring significant familiarity with the code base, architecture, or domain knowledge  | \- Implementing a new feature. \- Adding support for a new model. \- Debugging and fixing non-trivial performance issues. \- Integration of a library or external tool. |  501 – 1999 |
-| difficulty/hard | Complex tasks demanding deep architectural understanding and significant effort. | \- Major feature implementation. \- Core system redesign. \- Implementing a new kernel or low-level ops. \- Optimizing performance-critical code paths. |  2000 – 3000 |
-
+| bounty_difficulty/warmup | Tasks suitable for first-time contributors. Straightforward and low complexity. | \- Minor bug fixes. \- Documentation improvements. \- Adding or fixing a test case. \- Basic logging updates. \- Updating a README or sample script. |  1 – 200 |
+| bounty_difficulty/easy | Tasks requiring basic familiarity with the repo and some understanding of the architecture. | \- Extending an existing feature. \- Updating API calls. \- Simple refactoring tasks. \- Adding a new test suite. |  201 – 500 |
+| bounty_difficulty/medium | Tasks requiring significant familiarity with the code base, architecture, or domain knowledge  | \- Implementing a new feature. \- Adding support for a new model. \- Debugging and fixing non-trivial performance issues. \- Integration of a library or external tool. |  501 – 1999 |
+| bounty_difficulty/hard | Complex tasks demanding deep architectural understanding and significant effort. | \- Major feature implementation. \- Core system redesign. \- Implementing a new kernel or low-level ops. \- Optimizing performance-critical code paths. |  2000 – 3000 |
