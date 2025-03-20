@@ -30,6 +30,14 @@ Before you begin, ensure you have the following:
 - ***TT-Buda:** `v0.19.3`*
 - ***TT-Metalium:** `v0.55`*
 
+### TT-QuietBox BIOS Requirement
+
+The BIOS for the host motherboard is configured at the factory with the setting for **PCIe AER Reporting Mechanism** set to **OS First**. Tenstorrent's TT-SMI software will fail if this setting is not configured properly. *You should not have to change this setting when first setting up your TT-QuietBox.*
+
+If for whatever reason the BIOS needs to be updated or is reset, this setting must be configured again to ensure TT-SMI is able to function. It is located in the BIOS here:
+
+`Chipset -> AMD CBS -> NBIO Common Options -> NBIO RAS Common Options -> PCIe AER Reporting Mechanism`
+
 ## 2. Unboxing and Hardware Setup
 
 1. **Unpack the hardware** and check all components against the provided list.

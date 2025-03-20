@@ -55,6 +55,14 @@ The TT-QuietBox Liquid-Cooled Desktop Workstation is designed to operate at up t
 
 The TT-QuietBox uses a Bitspower RF Remote Controller Hub to control the lighting and the remote is included with the system. For details on how to operate it, please review the Bitspower documentation [here](BPTA-RFCHUB_IG_V3.pdf).
 
+## TT-QuietBox BIOS Requirement
+
+The BIOS for the host motherboard is configured at the factory with the setting for **PCIe AER Reporting Mechanism** set to **OS First**. Tenstorrent's TT-SMI software will fail if this setting is not configured properly. *You should not have to change this setting when first setting up your TT-QuietBox.*
+
+If for whatever reason the BIOS needs to be updated or is reset, this setting must be configured again to ensure TT-SMI is able to function. It is located in the BIOS here:
+
+`Chipset -> AMD CBS -> NBIO Common Options -> NBIO RAS Common Options -> PCIe AER Reporting Mechanism`
+
 ## Software Setup
 
 Instructions on how to set up software on TT-QuietBox are available [here](https://docs.tenstorrent.com/getting-started/README.html).
