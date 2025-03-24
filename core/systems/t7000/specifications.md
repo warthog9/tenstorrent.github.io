@@ -16,7 +16,7 @@ The Tenstorrent T7000 system package includes:
 | **Memory**            | 1TB (32x32GB) DDR4-3200 ECC RDIMM (No Slots Free)            |
 | **Storage**           | 2x1TB U.2 NVMe PCIe 4.0 x4                                   |
 | **Tensix Processors** | 8x Tenstorrent Wormhole™ n150s Tensix Processor              |
-| **Cables**            | 8x QSFP-DD 400GbE Cable, 2ft/0.6m<br />4x QSFP-DD 400GbE Cable, 3ft/1m |
+| **Cables**            | 8x QSFP-DD 400G Cable, 2ft/0.6m<br />4x QSFP-DD 400G Cable, 3ft/1m |
 | **Connectivity**      | 2x RJ45 1000Base-T via CPU<br />2x 100GbE QSFP56 via NVIDIA ConnectX-6 VPI<br />2x USB 3.0 (5GBps) Type-A<br />1x VGA |
 | **Power Supply**      | 2+2 Titanium Level PSUs<br />1000W: 100-127Vac<br />1800W: 200-240Vac<br />2000W: 220-240Vac* |
 | **Base System**       | [SuperMicro A+ Server 4124GS-TNR+](https://www.supermicro.com/en/products/system/gpu/4u/as-4124gs-tnr+) |

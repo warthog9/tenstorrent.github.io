@@ -17,7 +17,7 @@ The Tenstorrent TT-LoudBox (T3000) 4U/Desktop Workstation system package include
 | **Memory**            | 256GB (8x32GB)<br />DDR4-3200 ECC RDIMM<br />(12 Slots Free) | 512GB (16x32GB)<br />DDR4-3200 ECC RDIMM<br />(12 Slots Free) |
 | **Storage**           | 3.8TB U.2 NVMe PCIe 4.0 x4                                   | 3.8TB U.2 NVMe PCIe 4.0 x4                                   |
 | **Tensix Processors** | 4x Tenstorrent Wormhole™ n150s Tensix Processor              | 4x Tenstorrent Wormhole™ n300s Tensix Processor*<br />4x Warp 100 Interconnects |
-| **Cables**            | -                                                            | 2x QSFP-DD 400GbE Cable, 0.6m/2ft.                           |
+| **Cables**            | -                                                            | 2x QSFP-DD 400G Cable, 0.6m/2ft.                             |
 | **Connectivity**      | 2x RJ45 10GBase-T via Intel® X550-AT<br />5x USB 3.1 Gen 1 (5GBps) Type-A (2x Front, 3x Rear)<br />1x USB 3.1 Gen 1 (5GBps) Type-C<br />1x COM<br />1x VGA<br />1x IPMI | 2x RJ45 10GBase-T via Intel® X550-AT<br />5x USB 3.1 Gen 1 (5GBps) Type-A (2x Front, 3x Rear)<br />1x USB 3.1 Gen 1 (5GBps) Type-C<br />1x COM<br />1x VGA<br />1x IPMI |
 | **Power Supply**      | 1+1 Titanium Level PSUs<br />1200W: 100-127Vac<br />1800W-2090W: 200-240Vac<br />2200W: 220-240Vac | 1+1 Titanium Level PSUs<br />1200W: 100-127Vac<br />1800W-2090W: 200-240Vac<br />2200W: 220-240Vac* |
 | **Base System**       | [SuperMicro SuperServer SYS-740GP-TNRT](https://www.supermicro.com/en/products/system/gpu/4u/sys-740gp-tnrt) | [SuperMicro SuperServer SYS-740GP-TNRT](https://www.supermicro.com/en/products/system/gpu/4u/sys-740gp-tnrt) |
