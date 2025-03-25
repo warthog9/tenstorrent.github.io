@@ -1,8 +1,7 @@
-# Blackhole™ p100a/p150a/p150b Tensix Processor
+# TT-QuietBox Liquid-Cooled Desktop Workstation
 
-This section outlines the system requirements, physical installation instructions, and initial software set-up for Blackhole™ p100a, p150a, and p150b Tensix Processor add-in boards.
+This section outlines the specifications, requirements, and initial set-up for the Tenstorrent TT-QuietBox Liquid-Cooled Desktop Workstation.
 
-- [Specifications/Requirements](./specifications.md)
-- [Hardware Installation](./installation.md)
+- [Specifications and Requirements](./specifications.md)
 - [Software Setup](https://docs.tenstorrent.com/getting-started/README.html)
-- [Regulatory Compliance](../compliance.md)
+- [Support](./support.md)
