@@ -1,69 +1,95 @@
-# Specifications, Requirements, and Setup
+# Specifications/Requirements
 
-## Package Contents
+## Blackhole™ Tensix Processor
 
-The Tenstorrent TT-QuietBox Liquid-Cooled Desktop Workstation system package includes:
+The Blackhole™ p100a, p150a, and p150b Tensix Processor add-in boards are built using the Tenstorrent Blackhole™ Tensix Processor:
 
-- Tenstorrent TT-QuietBox Liquid-Cooled Desktop Workstation
-- C13 Power Cable, 1.8m/6ft.
-- 2x QSFP-DD 400GbE Cable, 0.6m/2ft.
-- Remote Control for RGB Lighting
+- **Tensix Core Count:** 140
+- **SiFive x280 "Big RISC-V" Cores:** 16
+- **SRAM:** 210MB (1.5MB per Tensix Core)
+- **Memory:** 32GB GDDR6, 256-bit memory bus
 
-**WARNING:** TT-QuietBox is shipped in a wooden crate weighing a total of 131 lbs. / 59.4 kg. The system itself weighs 96 lbs. / 43.5 kg. We strongly recommend at least two people for moving and uncrating the system.
+## Card Comparison Table
 
-## System Specifications
+**NOTE:** The **p100a** and **p150a** add-in cards are designed for desktop workstations where active cooling is required. For rack-mounted servers with sufficient forced air cooling, use the **p150b** add-in card.
 
-| Specification                         | TT-QuietBox (TW-04001)                                       |
-| ------------------------------------- | ------------------------------------------------------------ |
-| **CPU**                               | AMD EPYC™ 8124P<br />(16C/32T, up to 3GHz, 125W, [AMD](https://www.amd.com/en/products/cpu/amd-epyc-8124p)) |
-| **Motherboard**                       | ASRock Rack [SIENAD8-2L2T](https://www.asrockrack.com/general/productdetail.asp?Model=SIENAD8-2L2T#Specifications)* |
-| **Memory**                            | 512GB (8x64GB)<br />DDR5-4800 ECC RDIMM<br />(0 Slots Free)  |
-| **Storage**                           | 4TB NVMe NVMe PCIe 4.0 x4                                    |
-| **Tensix Processors**                 | 4x Tenstorrent Wormhole™ n300 Tensix Processor               |
-| **Cables**                            | 4x [Warp 100 Bridge](../../aibs/warp100.md)<br />2x QSFP-DD 400GbE |
-| **Host System Connectivity**          | 2x RJ45 10GBase-T via Intel® X710<br /><br />2x RJ45 1GBase-T via Intel® I210<br />4x USB 3.1 Gen 1 (5GBps) Type-A (2x Front, 2x Rear)<br />1x VGA<br />1x IPMI |
-| **Tensix Processor Connectivity**     | 8x QSFP-DD Active 200G (2 per card)<br />*Connects to other Wormhole Tensix Processors only.* |
-| **Power Supply**                      | 1650W 80 PLUS Gold                                           |
-| **Operating System**                  | None                                                         |
-| **Dimensions (System)<br />(WxDxH)**  | 10" x 21.5" x 20" (96 lbs.)<br />254mm x 546mm x 508mm (43.5 kg) |
-| **Dimensions (Shipped)<br />(WxDxH)** | 18" x 33" x 27" (131 lbs.)<br />453mm x 839mm x 686mm (59.4 kg) |
+| Specification             | p100a                       | p150a                       | p150b                       |
+| ------------------------- | --------------------------- | --------------------------- | --------------------------- |
+| Part Number               | TC-03008                    | TC-03003                    | TC-03002                    |
+| Tensix Cores              | 120                         | 140                         | 140                         |
+| AI Clock                  | Up to 1.35 GHz              | Up to 1.35 GHz              | Up to 1.35 GHz              |
+| "Big RISC-V" Cores        | 16                          | 16                          | 16                          |
+| SRAM                      | 180MB                       | 210MB                       | 210MB                       |
+| Memory                    | 28GB GDDR6                  | 32GB GDDR6                  | 32GB GDDR6                  |
+| Memory Speed              | 16 GT/sec                   | 16 GT/sec                   | 16 GT/sec                   |
+| Memory Bandwidth          | 448 GB/sec                  | 512 GB/sec                  | 512 GB/sec                  |
+| TBP (Total Board Power)   | 300W                        | 300W                        | 300W                        |
+| External Power            | 1x 12+4-pin 12VHPWR         | 1x 12+4-pin 12VHPWR         | 1x 12+4-pin 12VHPWR         |
+| Power Supply Requirements | ATX 3.0 Certified or better | ATX 3.0 Certified or better | ATX 3.0 Certified or better |
+| Connectivity              | -                           | 4x QSFP-DD 800G (Passive)*  | 4x QSFP-DD 800G (Passive)*  |
+| System Interface          | PCI Express 5.0 x16         | PCI Express 5.0 x16         | PCI Express 5.0 x16         |
+| Cooling                   | Active                      | Active                      | Passive                     |
+| Dimensions (WxDxH)        | 42mm x 270mm x 111mm        | 42mm x 270mm x 111mm        | 42mm x 270mm x 111mm        |
 
-**Early prototypes employed the TYAN Tomcat HX S8040 MB ([S8040GM4NE-2T](https://www.tyan.com/Motherboards_S8040_S8040GM4NE-2T)).*
+**For connecting to Tenstorrent Blackhole™-based cards only.*
 
-## Operating System Requirements
+### Card Dimensions
 
-The TT-QuietBox system ships without an operating system installed. We recommend installing Ubuntu 20.04 (Focal Fossa) to properly use the Tenstorrent n300 Tensix Processors.
+#### p100a
 
-## QSFP-DD Connections and System Topology
+![](./images/bh_p100a_dimensions.png)
 
-The Tenstorrent TT-QuietBox includes four Wormhole™ n300 Tensix Processors and internal Warp 100 bridges and external QSFP-DD cables that enable the Tensix Processor mesh.
+#### p150a
 
-![](../../aibs/wormhole/images/wh_portspec.png)
+![](./images/bh_p150a_dimensions.png)
 
-The TT-QuietBox ships with the Warp 100 bridges connected, but the two QSFP-DD cables will need to be connected by the user. This diagram displays the system topology and how the cards are enumerated, along with where the Warp 100 bridges are connected and where the included QSFP-DD cables need to be connected. 
+#### p150b
 
-![](qb_topology.png)
+![](./images/bh_p150b_dimensions.png)
 
-One QSFP-DD cable will need to be connected to **Port 1** on the cards in **Slots 1 and 4**.
+## Connectivity (p150a/p150b)
 
-One QSFP-DD cable will need to be connected to **Port 2** on the cards in **Slots 3 and 2**.
+Blackhole™ cards feature four ports for connecting to other cards. *(p150b pictured; p150a will have the same ports.)*
+
+![](./images/bh_portspec.png)
+
+The four (4) QSFP-DD ports are passive, with each providing 800 Gbps connectivity and able to support cable length of up to 2m/6.5 ft. These ports are strictly for connecting Blackhole™-based cards.
+
+## Data Precision Formats
+
+The Blackhole™ Tensix Processor supports the following data precision formats:
+
+| Format               | Bit Depth (Tensix Cores)                    | Bit Depth (Big RISC-V Cores)    |
+| -------------------- | ------------------------------------------- | ------------------------------- |
+| Floating point       | FP8, FP16, BFLOAT16<br />FP32 (Output Only) | FP8, FP16, BFLOAT16, FP32, FP64 |
+| Block floating point | BLOCKFP2, BLOCKFP4, BLOCKFP8                | -                               |
+| Integer              | INT8<br />INT32 (Output Only)               | INT8, INT16, INT32, INT64       |
+| Unsigned Integer     | UINT8                                       | -                               |
+| TensorFloat          | TF32                                        | -                               |
+| Vector               | VTF19, VFP32                                | VFP64                           |
+
+## Minimum System Requirements
+
+| Part                | Requirement                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| CPU                 | x86_64 architecture<br />*CPU core count and number of sockets will depend on the amount of host preprocessing and post-processing required before and after the accelerator processing.* |
+| Motherboard         | PCI Express 5.0 x16 slot<br />Dual-slot width<br />*Cards can function in slots with reduced connectivity at potentially reduced performance.* |
+| Memory              | 64 GB                                                        |
+| Storage             | 100 GB (≥2TB recommended)                                    |
+| Power Connectors    | 12+4-pin 12VHPWR                                             |
+| Total Board Power   | Up to 300W                                                   |
+| Power Supply        | ATX 3.0 Certified or better                                  |
+| Operating System    | Ubuntu version 20.04 (Focal Fossa)<br />*To check your version, type `cat /etc/os-release`*. |
+| Internet Connection | Required for driver and stack installation.                  |
 
 ## Environment Specifications
 
-The TT-QuietBox Liquid-Cooled Desktop Workstation is designed to operate at up to 35°C/95°F external ambient temperatures.
+The Blackhole™ Tensix Processor add-in boards are designed to meet these environmental specifications:
 
-## Lighting Control
+| Specification               | Requirement               |
+| --------------------------- | ------------------------- |
+| Operating Temperature Range | 10°C/50°F - 35°C/95°F     |
+| Storage Temperature Range   | -40°C/-40°F - 75°C/167°F  |
+| Elevation                   | -5 ft. to 10,000 ft.      |
+| Air Flow                    | ≥30 CFM @ up to 35°C/95°F |
 
-The TT-QuietBox uses a Bitspower RF Remote Controller Hub to control the lighting and the remote is included with the system. For details on how to operate it, please review the Bitspower documentation [here](BPTA-RFCHUB_IG_V3.pdf).
-
-## TT-QuietBox BIOS Requirement
-
-The BIOS for the host motherboard is configured at the factory with the setting for **PCIe AER Reporting Mechanism** set to **OS First**. Tenstorrent's TT-SMI software will fail if this setting is not configured properly. *You should not have to change this setting when first setting up your TT-QuietBox.*
-
-If for whatever reason the BIOS needs to be updated or is reset, this setting must be configured again to ensure TT-SMI is able to function. It is located in the BIOS here:
-
-`Chipset -> AMD CBS -> NBIO Common Options -> NBIO RAS Common Options -> PCIe AER Reporting Mechanism`
-
-## Software Setup
-
-Instructions on how to set up software on TT-QuietBox are available [here](https://docs.tenstorrent.com/getting-started/README.html).
