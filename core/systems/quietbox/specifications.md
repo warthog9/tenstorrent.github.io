@@ -47,7 +47,7 @@ The Tenstorrent TT-QuietBox Wormhole (TW-04001) includes four Wormhole™ n300 T
 
 ![](../../aibs/wormhole/images/wh_portspec.png)
 
-The TT-QuietBox ships with the Warp 100 bridges connected, but the two QSFP-DD cables will need to be connected. This diagram displays the system topology and how the cards are enumerated, along with where the Warp 100 bridges are connected and where the included QSFP-DD cables need to be connected. 
+The TT-QuietBox ships with the Warp 100 bridges connected, but the two QSFP-DD cables will need to be connected by the customer. This diagram displays the system topology and how the cards are enumerated, along with where the Warp 100 bridges are connected and where the included QSFP-DD cables need to be connected. 
 
 ![](qb_topology.png)
 
