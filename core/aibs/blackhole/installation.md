@@ -17,8 +17,8 @@ Follow these instructions to install your Tenstorrent Blackhole™ p100a/p150a/p
       1. For optimal performance, the card requires a x16 configuration without bifurcation.
       2. The p100a and p150a are dual-slot width cards with active coolers; it is recommended to leave the adjacent slot unoccupied to ensure best airflow.
       3. The p150b is a dual-slot width card with a passive heatsink intended for rack-mounted systems with sufficient active airflow.
-   2. **ATX 3.0 Certified power supply or better**; using an older or otherwise inadequate power supply may result in stability issues.
-   3. One (1) **12+4-pin 12VHPWR power connector**
+   2. **ATX 3.1 Certified power supply or better**; using an older or otherwise inadequate power supply may result in stability issues.
+   3. One (1) **12+4-pin 12V-2x6 power connector**
 3. Discharge your body's static electricity by wearing an **ESD wrist strap** *(recommended)* or touching a grounded surface before touching system components or the add-in card.
 
 ## Desktop Workstation Installation (p100a/p150a)
@@ -49,7 +49,7 @@ Lower the **encased card** into the **chassis** and secure with the required scr
 
 ## Connecting Power
 
-Connect a **12+4-pin 12VHPWR power cable** to the plug on the back of the card. **Ensure the cable is fully and securely connected.**
+Connect a **12+4-pin 12V-2x6 power cable** to the plug on the back of the card. **Ensure the cable is fully and securely connected.**
 
 ![](./images/bh_power.png)
 

@@ -21,7 +21,7 @@ Before you begin, ensure you have the following:
 - **Network access** to download software packages.
 - **Administrator privileges** on the host machine.
 
-**NOTE**: The recommended OS for all Tenstorrent software is **Ubuntu 20.04 LTS (Focal Fossa)**. Each SDK may support newer distributions of Ubuntu; however, compatibility should be considered experimental at this time.
+**NOTE**: The recommended OS for all Tenstorrent software is **Ubuntu 22.04 LTS (Jammy Jellyfish)**. Each SDK may support newer distributions of Ubuntu; however, compatibility should be considered experimental at this time.
 
 ***NOTE:** Software support for Grayskull has been discontinued. The last supported versions of Tenstorrent's software for Grayskull are as follows:*
 
@@ -163,18 +163,21 @@ Within TT-SMI, you can see device information, telemetry, and firmware. If TT-SM
 
 ## Installation
 
-Tenstorrent provides three open-source SDKs for developing on Tensix Processors:
+Tenstorrent provides open-source software stacks for developing on Tensix Processors:
 
-- [TT-Buda](https://github.com/tenstorrent/tt-buda) to run existing models
 - [TT-Metalium/TT-NN](https://github.com/tenstorrent/tt-metal) to build your own kernels and models
 - [TT-Forge/TT-MLIR](https://github.com/tenstorrent/tt-forge-fe) to create, compile, and optimize graph operations
 
 Each SDK will have its own system dependency requirements and installation process.
 
-To help you get started, check out these _First 5 Things_ guides - which include installation steps - for TT-Buda and TT-Metalium.
+To help you get started, check out the [First 5 Things](https://docs.tenstorrent.com/ttnn/latest/ttnn/get_started.html) guide - which includes installation steps - for TT-Metalium.
 
+#### TT-Buda (Deprecated)
+
+Tenstorrent has discontinued development and support for the TT-Buda stack; these links are provided for reference and for developers still using Grayskull® cards.
+
+- [TT-Buda GitHub Repo](https://github.com/tenstorrent/tt-buda)
 - [First 5 Things](https://github.com/tenstorrent/tt-buda-demos/tree/main/first_5_steps) for **TT-Buda**
-- [First 5 Things](https://docs.tenstorrent.com/ttnn/latest/ttnn/get_started.html) for **TT-Metalium/TT-NN**
 
 ## Support & FAQ
 

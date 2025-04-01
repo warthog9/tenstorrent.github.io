@@ -6,8 +6,8 @@ The Blackhole™ p100a, p150a, and p150b Tensix Processor add-in boards are buil
 
 - **Tensix Core Count:** 140
 - **SiFive x280 "Big RISC-V" Cores:** 16
-- **SRAM:** 210MB (1.5MB per Tensix Core)
-- **Memory:** 32GB GDDR6, 256-bit memory bus
+- **SRAM:** 210 MB (1.5 MB per Tensix Core)
+- **Memory:** 32 GB GDDR6, 256-bit memory bus
 
 ## Card Comparison Table
 
@@ -19,13 +19,13 @@ The Blackhole™ p100a, p150a, and p150b Tensix Processor add-in boards are buil
 | Tensix Cores              | 120                         | 140                         | 140                         |
 | AI Clock                  | Up to 1.35 GHz              | Up to 1.35 GHz              | Up to 1.35 GHz              |
 | "Big RISC-V" Cores        | 16                          | 16                          | 16                          |
-| SRAM                      | 180MB                       | 210MB                       | 210MB                       |
-| Memory                    | 28GB GDDR6                  | 32GB GDDR6                  | 32GB GDDR6                  |
+| SRAM                      | 180 MB                      | 210 MB                      | 210 MB                      |
+| Memory                    | 28 GB GDDR6                 | 32 GB GDDR6                 | 32 GB GDDR6                 |
 | Memory Speed              | 16 GT/sec                   | 16 GT/sec                   | 16 GT/sec                   |
 | Memory Bandwidth          | 448 GB/sec                  | 512 GB/sec                  | 512 GB/sec                  |
 | TBP (Total Board Power)   | 300W                        | 300W                        | 300W                        |
-| External Power            | 1x 12+4-pin 12VHPWR         | 1x 12+4-pin 12VHPWR         | 1x 12+4-pin 12VHPWR         |
-| Power Supply Requirements | ATX 3.0 Certified or better | ATX 3.0 Certified or better | ATX 3.0 Certified or better |
+| External Power            | 1x 12+4-pin 12V-2x6         | 1x 12+4-pin 12V-2x6         | 1x 12+4-pin 12V-2x6         |
+| Power Supply Requirements | ATX 3.1 Certified or better | ATX 3.1 Certified or better | ATX 3.1 Certified or better |
 | Connectivity              | -                           | 4x QSFP-DD 800G (Passive)*  | 4x QSFP-DD 800G (Passive)*  |
 | System Interface          | PCI Express 5.0 x16         | PCI Express 5.0 x16         | PCI Express 5.0 x16         |
 | Cooling                   | Active                      | Active                      | Passive                     |
@@ -75,11 +75,11 @@ The Blackhole™ Tensix Processor supports the following data precision formats:
 | CPU                 | x86_64 architecture<br />*CPU core count and number of sockets will depend on the amount of host preprocessing and post-processing required before and after the accelerator processing.* |
 | Motherboard         | PCI Express 5.0 x16 slot<br />Dual-slot width<br />*Cards can function in slots with reduced connectivity at potentially reduced performance.* |
 | Memory              | 64 GB                                                        |
-| Storage             | 100 GB (≥2TB recommended)                                    |
-| Power Connectors    | 12+4-pin 12VHPWR                                             |
+| Storage             | 100 GB (≥2 TB recommended)                                   |
+| Power Connectors    | 12+4-pin 12V-2x6                                             |
 | Total Board Power   | Up to 300W                                                   |
-| Power Supply        | ATX 3.0 Certified or better                                  |
-| Operating System    | Ubuntu version 20.04 (Focal Fossa)<br />*To check your version, type `cat /etc/os-release`*. |
+| Power Supply        | ATX 3.1 Certified or better                                  |
+| Operating System    | Ubuntu version 22.04 (Jammy Jellyfish)<br />*To check your version, type `cat /etc/os-release`*. |
 | Internet Connection | Required for driver and stack installation.                  |
 
 ## Environment Specifications
