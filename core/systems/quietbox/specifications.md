@@ -16,7 +16,7 @@ The Tenstorrent TT-QuietBox Liquid-Cooled Desktop Workstation system package inc
 | ------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **CPU**                               | AMD EPYC™ 8124P<br />(16C/32T, up to 3 GHz, 125W, [AMD](https://www.amd.com/en/products/cpu/amd-epyc-8124p)) | AMD EPYC™ 8124P<br />(16C/32T, up to 3 GHz, 125W, [AMD](https://www.amd.com/en/products/cpu/amd-epyc-8124p)) |
 | **Motherboard**                       | ASRock Rack [SIENAD8-2L2T](https://www.asrockrack.com/general/productdetail.asp?Model=SIENAD8-2L2T#Specifications)* | ASRock Rack [SIENAD8-2L2T](https://www.asrockrack.com/general/productdetail.asp?Model=SIENAD8-2L2T#Specifications)* |
-| **Memory**                            | 512 GB (8x64 GB)<br />DDR5-4800 ECC RDIMM<br />(0 Slots Free) | 512 GB (8x64 GB)<br />DDR5-4800 ECC RDIMM<br />(0 Slots Free) |
+| **Memory**                            | 512 GB (8x64 GB)<br />DDR5-4800 ECC RDIMM<br />(0 Slots Free) | 256 GB (8x32 GB)<br />DDR5-4800 ECC RDIMM<br />(0 Slots Free) |
 | **Storage**                           | 4 TB NVMe PCIe 4.0 x4                                        | 4 TB NVMe PCIe 4.0 x4                                        |
 | **Tensix Processors**                 | 4x Tenstorrent Wormhole™ n300 Tensix Processor               | 4x Tenstorrent Blackhole™ p150c Tensix Processor             |
 | **Cables**                            | 4x [Warp 100 Bridge](../../aibs/warp100.md)<br />2x QSFP-DD 400GbE Cable | TBD                                                          |
