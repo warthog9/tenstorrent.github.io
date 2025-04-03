@@ -5,4 +5,3 @@ This section outlines the specifications, requirements, and initial set-up for t
 - [Specifications and Requirements](./specifications.md)
 - [Software Setup](https://docs.tenstorrent.com/getting-started/README.html)
 - [Support](./support.md)
-

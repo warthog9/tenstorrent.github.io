@@ -5,8 +5,8 @@
 The Wormhole™ n150d, n150s, n300d, and n300s Tensix Processor add-in boards are built using the Tenstorrent Wormhole™ Tensix Processor:
 
 - **Tensix Core Count:** 80
-- **SRAM:** 120MB (1.5MB per Tensix Core)
-- **Memory:** 12GB GDDR6, 192-bit memory bus
+- **SRAM:** 120 MB (1.5 MB per Tensix Core)
+- **Memory:** 12 GB GDDR6, 192-bit memory bus
 
 ## Card Comparison Table
 
@@ -18,8 +18,8 @@ The Wormhole™ n150d, n150s, n300d, and n300s Tensix Processor add-in boards ar
 | Wormhole™ ASICs                     | 1                                                 | 1                                                 | 2                                                 | 2                                                 |
 | Tensix Cores                        | 72                                                | 72                                                | 128 (64 per ASIC)                                 | 128 (64 per ASIC)                                 |
 | AI Clock                            | 1 GHz                                             | 1 GHz                                             | 1 GHz                                             | 1 GHz                                             |
-| SRAM                                | 108MB                                             | 108MB                                             | 192MB (96MB per ASIC)                             | 192MB (96MB per ASIC)                             |
-| Memory                              | 12GB GDDR6                                        | 12GB GDDR6                                        | 24GB GDDR6                                        | 24GB GDDR6                                        |
+| SRAM                                | 108 MB                                            | 108 MB                                            | 192 MB (96 MB per ASIC)                           | 192 MB (96 MB per ASIC)                           |
+| Memory                              | 12 GB GDDR6                                       | 12 GB GDDR6                                       | 24 GB GDDR6                                       | 24 GB GDDR6                                       |
 | Memory Speed                        | 12 GT/sec                                         | 12 GT/sec                                         | 12 GT/sec                                         | 12 GT/sec                                         |
 | Memory Bandwidth                    | 288 GB/sec                                        | 288 GB/sec                                        | 576 GB/sec                                        | 576 GB/sec                                        |
 | TeraFLOPS (FP8)                     | 262                                               | 262                                               | 466                                               | 466                                               |
@@ -70,11 +70,11 @@ The Wormhole™ Tensix Processor supports the following data precision formats:
 | CPU                               | x86_64 architecture*                                         |
 | Motherboard                       | PCI Express 4.0 x16 slot<br />Dual-slot-width (n150s/n300s)<br />2.5-slot-width (n150d/n300d) |
 | Memory                            | 64 GB                                                        |
-| Storage                           | 100 GB (≥2TB recommended)                                    |
+| Storage                           | 100 GB (≥2 TB recommended)                                   |
 | Power Connectors                  | 4+4-pin EPS12V<br />6+2-pin PCIe (if using Active Cooling Kit) |
 | Total Board Power                 | Up to 160W (n150d/n150s) / 300W (n300d/n300s)                |
 | Operating Temperature Range (Die) | 0C - 75C                                                     |
-| Operating System                  | Ubuntu version 20.04 (Focal Fossa) **                        |
+| Operating System                  | Ubuntu version 22.04 (Jammy Jellyfish) **                    |
 | Internet Connection               | Required for driver and stack installation.                  |
 
 ** CPU core count and number of sockets will depend on the amount of host preprocessing and post-processing required before and after the accelerator processing.*

@@ -5,8 +5,8 @@
 The Grayskull™ e75 and e150 Tensix Processor add-in boards are built using the Tenstorrent Grayskull™ Tensix Processor:
 
 - **Tensix Core Count:** 120
-- **SRAM:** 120MB (1MB per Tensix Core)
-- **Memory:** 8GB LPDDR4, 256-bit memory bus
+- **SRAM:** 120 MB (1MB per Tensix Core)
+- **Memory:** 8 GB LPDDR4, 256-bit memory bus
 
 ## e75/e150 Comparison Table
 
@@ -24,8 +24,8 @@ The Grayskull™ e75 and e150 Tensix Processor add-in boards are built using the
 | Part Number                          | TC-01001                                    | TC-01002                                       |
 | Tensix Cores                         | 96                                          | 120                                            |
 | AI Clock                             | 1 GHz                                       | 1.2 GHz                                        |
-| SRAM                                 | 96MB                                        | 120MB                                          |
-| Memory                               | 8GB LPDDR4                                  | 8GB LPDDR4                                     |
+| SRAM                                 | 96 MB                                       | 120 MB                                         |
+| Memory                               | 8 GB LPDDR4                                 | 8 GB LPDDR4                                    |
 | Memory Speed                         | 3.2 GT/sec                                  | 3.7 GT/sec                                     |
 | Memory Bandwidth                     | 102 GB/sec                                  | 118 GB/sec                                     |
 | TeraFLOPS (FP8)                      | 221                                         | 332                                            |
@@ -59,7 +59,7 @@ The e75/e150 support the following data precision formats:
 | CPU                               | x86_64 architecture*                                         |
 | Motherboard                       | PCI Express 4.0 x16 slot<br />- Single-slot-width (e75)<br />- Dual-slot-width (e150) |
 | Memory                            | 64 GB                                                        |
-| Storage                           | 100 GB (≥2TB recommended)                                    |
+| Storage                           | 100 GB (≥2 TB recommended)                                   |
 | Power Connectors                  | PCIe 6-pin (e75)<br />PCIe 6+2-pin and PCIe 6-pin (e150)     |
 | Total Board Power                 | Up to 75W (e75) / 200W (e150)                                |
 | Operating Temperature Range (Die) | 0C - 75C                                                     |
