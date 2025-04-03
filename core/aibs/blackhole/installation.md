@@ -3,9 +3,7 @@
 Follow these instructions to install your Tenstorrent Blackhole™ p100a/p150a/p150b add-in board.
 
 1. [Pre-Installation](#pre-installation)
-2. System Installation
-   - [Desktop Workstation](#desktop-workstation-installation)
-   - [Server](#server-installation)
+2. [Desktop Workstation](#desktop-workstation-installation)
 3. [Connecting Power](#connecting-power)
 4. [Software Setup](#software-setup)
 
@@ -25,27 +23,9 @@ Follow these instructions to install your Tenstorrent Blackhole™ p100a/p150a/p
 
 *(NOTE: Images shown may not be fully representative of your system.)*
 
-### Physical Installation
-
 Insert the **card** into the **PCIe x16 slot** and secure with necessary screws. *(p150a pictured.)*
 
 ![](./images/bh_d_install.png)
-
-## Server Installation (p150b Only)
-
-*(NOTE: Images shown may not be fully representative of your system.)*
-
-### 1. Attach Housing
-
-House the **card** in the **casing**.
-
-![](./images/bh_ws_install1.png)
-
-### 2. Card Installation
-
-Lower the **encased card** into the **chassis** and secure with the required screws.
-
-![](./images/bh_ws_install2.png)
 
 ## Connecting Power
 
