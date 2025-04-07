@@ -40,6 +40,7 @@ The Bounty will be applicable for Accepted Contributions in the following Tensto
 * [luwen](https://github.com/tenstorrent/luwen)
 * [tt-flash](https://github.com/tenstorrent/tt-flash)
 * [tt-kmd](https://github.com/tenstorrent/tt-kmd)
+* [tt-llk](https://github.com/tenstorrent/tt-llk)
 
 An **"Accepted Contribution"** refers to merged pull requests, to the above listed Tenstorrent repositories, that address an open GitHub issue which is tagged with both (1) “bounty” and (2) one of the categories listed in Exhibit A.
 
