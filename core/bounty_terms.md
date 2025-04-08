@@ -51,7 +51,7 @@ An **"Accepted Contribution"** refers to merged pull requests, to the above list
 Subject to these Terms, you will receive payments based on the category of Contribution in accordance with Exhibit A. In order to receive a Bounty payment, you:
 
 * must not be in breach of these Terms;
-* must be assigned on GitHub to the ssue for which you are submitting a pull request, and your pull request must be submitted while you are still assigned to the issue (you have forfeited your right to any Bounty once the issue is re-assigned to another contributor). Tenstorrent reserves the right to re-assign any issue if the assigned contributor becomes unresponsive for over two (2) weeks or if the assigned contributor explicitly forfeits the assignment;
+* must be assigned on GitHub to the issue for which you are submitting a pull request, and your pull request must be submitted while you are still assigned to the issue (you have forfeited your right to any Bounty once the issue is re-assigned to another contributor). Tenstorrent reserves the right to re-assign any issue if the assigned contributor becomes unresponsive for over two (2) weeks or if the assigned contributor explicitly forfeits the assignment;
 * must release your Contributions under the license of the repository in which you are submitting a pull request;
 * provide additional information as may be required by us (such as payment information) and meet all requirements to receive such Bounty as may be required by applicable law and regulations. If you do not provide such additional information or meet such requirements, we may not provide payment; and
 * may not designate someone else to receive your Bounty payout.
