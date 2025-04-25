@@ -10,6 +10,8 @@ The Tenstorrent TT-QuietBox Liquid-Cooled Desktop Workstation system package inc
 
 **WARNING:** TT-QuietBox is shipped in a wooden crate weighing a total of 131 lbs. / 59.4 kg. The system itself weighs 96 lbs. / 43.5 kg. We strongly recommend at least two people for moving and uncrating the system.
 
+If you have any issues with your TT-QuietBox, please visit the TT-QuietBox [support](./support.md) page.
+
 ## System Specifications
 
 | Specification                         | TT-QuietBox Wormhole (TW-04001)                              | TT-QuietBox Blackhole (TW-04002)                             |
