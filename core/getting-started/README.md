@@ -58,7 +58,7 @@ Tenstorrent provides a bash script, [tt-installer](https://github.com/tenstorren
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/tenstorrent/tt-installer/refs/heads/main/install.sh)"
 ```
 
-By default, TT-Metalium is installed as a container using Podman. This containerized environment is appropriate for most users, but advanced users and developers may wish to install Metalium natively on the host system. To skip installing Podman and Metalium, answer "n" when asked. After the installation is completed, proceed to [TT-NN / TT-Metalium Installation](https://docs.tenstorrent.com/tt-metal/latest/tt-metalium/installing.html#tt-nn-tt-metalium-installation) for manual installation instructions.
+By default, TT-Metalium is installed as a container using Podman. This containerized environment is appropriate for most users as explained [here](https://github.com/tenstorrent/tt-installer/wiki/Using-the-tt%E2%80%90metalium-container), but advanced users and developers may wish to install Metalium natively on the host system or use Docker instead of Podman. To skip installing Podman and Metalium, answer "n" when asked. After the installation is completed, proceed to [TT-NN / TT-Metalium Installation](https://docs.tenstorrent.com/tt-metal/latest/tt-metalium/installing.html#tt-nn-tt-metalium-installation) for manual installation instructions.
 
 For more information about tt-installer, please see the [repository](https://github.com/tenstorrent/tt-installer).
 If you would prefer to install the software stack manually, proceed to [Manual Installation](#manual-installation).
