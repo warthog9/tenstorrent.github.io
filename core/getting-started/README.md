@@ -52,11 +52,13 @@ To interact with the Tensix Processor(s), you’ll need to install the system-le
 
 ### Quick Installation
 
-Tenstorrent provides a bash script, [tt-installer](https://github.com/tenstorrent/tt-installer/), for fast and easy setup of our software stack. The tool will install necessary packages on your system, update your device firmware, and install a containerized tt-metalium development environment. tt-installer supports Ubuntu, Fedora, and Debian. To use it, paste this into your terminal:
+Tenstorrent provides a bash script, [tt-installer](https://github.com/tenstorrent/tt-installer/), for fast and easy setup of our software stack. The installer supports Ubuntu, Fedora, and Debian. To use it, paste this into your terminal:
 
 ```{code-block} bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/tenstorrent/tt-installer/refs/heads/main/install.sh)"
 ```
+
+By default, TT-Metalium is installed as a container using Podman. This containerized environment is appropriate for most users, but advanced users and developers may wish to install Metalium natively on the host system. To skip installing Podman and Metalium, answer "n" when asked. After the installation is completed, proceed to [TT-NN / TT-Metalium Installation](https://docs.tenstorrent.com/tt-metal/latest/tt-metalium/installing.html#tt-nn-tt-metalium-installation) for manual installation instructions.
 
 For more information about tt-installer, please see the [repository](https://github.com/tenstorrent/tt-installer).
 If you would prefer to install the software stack manually, proceed to [Manual Installation](#manual-installation).
