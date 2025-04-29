@@ -52,7 +52,7 @@ To interact with the Tensix Processor(s), you’ll need to install the system-le
 
 ### Quick Installation
 
-Tenstorrent provides a bash script, [tt-installer](https://github.com/tenstorrent/tt-installer/), for fast and easy setup of our software stack. The installer supports Ubuntu, Fedora, and Debian. To use it, paste this into your terminal:
+Tenstorrent provides a bash script, [tt-installer](https://github.com/tenstorrent/tt-installer/), for fast and easy setup of our software stack. The installer supports Ubuntu, Fedora, and Debian. To use it, paste the following into your terminal:
 
 ```{code-block} bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/tenstorrent/tt-installer/refs/heads/main/install.sh)"
