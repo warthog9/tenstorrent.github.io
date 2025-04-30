@@ -176,6 +176,12 @@ You should see an interface like this one:
 
 Within TT-SMI, you can see device information, telemetry, and firmware. If TT-SMI runs without errors, congratulations! You're ready to use your Tenstorrent device. Take note of any host compatibility warnings.
 
+If you are using a TT-QuietBox and have reboot issues while using TT-SMI, and you've recently updated/reset the BIOS, you will need to update a setting. In the BIOS, find the following setting:
+
+​	Advanced -> AMD CBS -> NBIO Common Options -> PCIe Aer Reporting Mechanism
+
+And change the setting to **OS First**.
+
 ## Installation
 
 Tenstorrent provides open-source software stacks for developing on Tensix Processors:

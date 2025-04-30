@@ -22,6 +22,16 @@ For support with the Tenstorrent n300 Tensix Processors and related Tenstorrent 
 
 ## Troubleshooting
 
+### Stability/reboot issues (BIOS reset)
+
+If for whatever reason the BIOS has been reset (for example, an update to the BIOS), a setting change needs to be made to prevent the system from having reboot issues.
+
+In the BIOS, find the following setting:
+
+​	Advanced -> AMD CBS -> NBIO Common Options -> PCIe Aer Reporting Mechanism
+
+And change the setting to **OS First**.
+
 ### Boot issues (unseated cards)
 
 If you're having issues with delayed boot times or booting at all, it's possible that in shipment, one or more n300 cards in TT-QuietBox become unseated.
