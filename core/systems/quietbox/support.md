@@ -32,20 +32,21 @@ To fix this issue:
 
 1. Lay the system on its side to access the PCIe cards. Unscrew the top of the box with a **2.5mm security hex bit**.
 
-   ![](.\qb_1_1.jpg)
+   ![](qb_1_1.jpg)
 
 2. Remove the front glass panel and put it somewhere safe; safety glass is breakable.
 
-      ![](.\qb_1_2.png)
+   ![](qb_1_2.png)
 
 3. Remove the center retention bar and PCIe bracket screws. Use the **2.0mm security hex bit** to unscrew the middle bar holding the PCIe cards.
-      ![](.\qb_1_3.png)
+
+   ![](qb_1_3.png)
 
 4. Remove phillips screws connecting PCIe shields to back of computer.
 
 5. Pull quick disconnect shield back and pull on hose to remove tubes.
 
-      ![](.\qb_1_4.png)
+   ![](qb_1_4.png)
 
 6. Cards can then be carefully removed from PCIe slots.
 7. Manually reseat the PCIe cards while holding the motherboard to prevent flexing.
@@ -65,11 +66,11 @@ To top-up the coolant in your TT-QuietBox:
 
 1. Remove the top cover of the system by removing the four corner screws.
 
-      ![](.\qb_2_1.png)
+   ![](qb_2_1.png)
 
 2. On the reservoir, you should see a **fill port** and a **purge port**. The port closer to the long side of the reservoir is the **fill port** (the port near the top of the image below); the port closer to the short side of the reservoir is the **purge port** (the port near the bottom of the image below).
 
-         ![](.\qb_2_2.png)
+   ![](qb_2_2.png)
 
 3. Unscrew both G1/4 plugs and use the **fill port** for adding coolant; the purge port will release air trapped in the cooling loop.
 4. Rescrew the G1/4 plugs and replace the top cover of your system. 
