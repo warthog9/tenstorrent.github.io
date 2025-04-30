@@ -50,11 +50,26 @@ If for whatever reason the BIOS needs to be updated or is reset, this setting mu
 
 To interact with the Tensix Processor(s), you’ll need to install the system-level dependencies on your host machine.
 
+### Quick Installation
+
+Tenstorrent provides a bash script, [tt-installer](https://github.com/tenstorrent/tt-installer/), for fast and easy setup of our software stack. The installer supports Ubuntu, Fedora, and Debian. To use it, paste the following into your terminal:
+
+```{code-block} bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/tenstorrent/tt-installer/refs/heads/main/install.sh)"
+```
+
+By default, TT-Metalium is installed as a container using Podman. This containerized environment is appropriate for most users as explained [here](https://github.com/tenstorrent/tt-installer/wiki/Using-the-tt%E2%80%90metalium-container), but advanced users and developers may wish to install Metalium natively on the host system or use Docker instead of Podman. To skip installing Podman and Metalium, answer "n" when asked. After the installation is completed, proceed to [TT-NN / TT-Metalium Installation](https://docs.tenstorrent.com/tt-metal/latest/tt-metalium/installing.html#tt-nn-tt-metalium-installation) for manual installation instructions.
+
+For more information about tt-installer, please see the [repository](https://github.com/tenstorrent/tt-installer).
+If you would prefer to install the software stack manually, proceed to [Manual Installation](#manual-installation).
+
+### Manual Installation
+
 **Important!**
 
 This Starting Guide will reference each software utility where the latest version is available. However, each SDK will have its own compatibility matrix associated with each release. It is strongly recommended to consult each SDK's release compatibility matrix to ensure you are installing the correct versions of the system software packages.
 
-### Step 1: Install Software Dependencies
+#### Step 1: Install Software Dependencies
 
 Install git, wget, pip, and DKMS (Dynamic Kernel Module Support) by running the following command in your terminal according to your Linux distribution:
 
@@ -66,7 +81,7 @@ Install git, wget, pip, and DKMS (Dynamic Kernel Module Support) by running the 
 
 **\*NOTE**: Installation on non-Ubuntu distributions should be considered experimental at this time.\*
 
-### Step 2: Install the Kernel-Mode Driver (TT-KMD)
+#### Step 2: Install the Kernel-Mode Driver (TT-KMD)
 
 Install the driver (**[TT-KMD](https://github.com/tenstorrent/tt-kmd)**) by running these commands in the terminal:
 
@@ -79,11 +94,11 @@ sudo dkms install tenstorrent/{{ver_kmd}}
 sudo modprobe tenstorrent
 ```
 
-### Step 3: Device Firmware Update (TT-Flash / TT-Firmware)
+#### Step 3: Device Firmware Update (TT-Flash / TT-Firmware)
 
 The [**TT-Firmware**](https://github.com/tenstorrent/tt-firmware) file needs to be installed using the [TT-Flash](https://github.com/tenstorrent/tt-flash) utility.
 
-#### Install TT-Flash
+##### Install TT-Flash
 
 To install **[TT-Flash](https://github.com/tenstorrent/tt-flash)**, run this command in the terminal:
 
@@ -93,7 +108,7 @@ pip install git+https://github.com/tenstorrent/tt-flash.git
 
 **\*NOTE:** If you are not using a Python virtual environment (venv), you may see an error `externally-managed-environment` when installing via `pip`. To resolve this, [create and/or activate a venv](https://docs.python.org/3/tutorial/venv.html) or use a tool like pipx.\*
 
-#### Update Device Firmware
+##### Update Device Firmware
 
 To update Tenstorrent device firmware using TT-Flash, run these commands in the terminal:
 
@@ -114,7 +129,7 @@ tt-flash --fw-tar fw_pack-{{ver_fw}}.fwbundle --force
 
 Then reboot the system.
 
-### Step 4: Set Up HugePages
+#### Step 4: Set Up HugePages
 
 HugePages lets your system allocate dedicated memory to accelerate communication with Tenstorrent devices. Set up HugePages by running these commands in the terminal:
 
@@ -134,7 +149,7 @@ sudo reboot
 
 **\*NOTE:** This is a temporary solution for configuring hugepages. If the above fails, please check the latest available release from [TT-System-Tools](https://github.com/tenstorrent/tt-system-tools.git).\*
 
-### Step 5: (Optional) Multi-Card Configuration (TT-Topology)
+#### Step 5: (Optional) Multi-Card Configuration (TT-Topology)
 **NOTE:** TT-LoudBox and TT-QuietBox ship with their topology already configured. Use this application *only if you have modified or are trying to modify the topology of your Wormhole-based TT-LoudBox or TT-QuietBox*. If you are not doing so, *skip this step*. TT-Topology is provided as-is.
 
 If you are running on a multi-card Wormhole system such as TT-LoudBox or TT-QuietBox, install the Tenstorrent Topology utility (**[TT-Topology**](https://github.com/tenstorrent/tt-topology)) and configure a mesh topology by running these commands in the terminal:
@@ -144,14 +159,14 @@ pip install git+https://github.com/tenstorrent/tt-topology
 tt-topology -l mesh
 ```
 
-### Step 6: Install the System Management Interface (TT-SMI)
+#### Step 6: Install the System Management Interface (TT-SMI)
 Install the Tenstorrent Software Management Interface (**[TT-SMI](https://github.com/tenstorrent/tt-smi)**) by entering this command in the terminal:
 
 ```
 pip install git+https://github.com/tenstorrent/tt-smi
 ```
 
-### Step 7: Verify System Configuration and Test TT-SMI
+#### Step 7: Verify System Configuration and Test TT-SMI
 
 Once your hardware and system software are installed, verify that your system has been configured properly by running the `tt-smi` utility.
 
