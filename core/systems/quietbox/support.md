@@ -32,9 +32,9 @@ In the BIOS, find the following setting:
 
 And change the setting to **OS First**.
 
-### Boot issues (unseated cards)
+### Boot issues or cards not appearing in software (unseated cards)
 
-If you're having issues with delayed boot times or booting at all, it's possible that in shipment, one or more n300 cards in TT-QuietBox become unseated.
+If you're having issues with delayed boot times or booting at all, or cards aren't appearing in TT-SMI or other software, it's possible that in shipment, one or more n300 cards in TT-QuietBox become unseated.
 
 Note that some technical expertise and caution will be required to avoid damaging the system components.
 
